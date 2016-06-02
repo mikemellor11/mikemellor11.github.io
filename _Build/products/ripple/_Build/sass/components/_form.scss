@@ -1,0 +1,235 @@
+ .loginBox{
+    max-width: 60%;
+    margin: 0 auto;
+    padding: $spacing;
+
+    @include breakpoint(max-width $mobileMax){
+    	min-width: 90%;
+
+		.button{
+			width: 100%;
+		}
+    }
+}
+
+.form{
+	text-align: left;
+	display: inline-block;
+	min-width: 40%;
+	max-width: 530px;
+	width: 100%;
+
+	@include breakpoint(max-width $mobileMax){
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+	color: $color6;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: $color6;
+	opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: $color6;
+	opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: $color6;
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px $color2 inset;
+}
+
+input[type="Email"], input[type="password"], input[type="text"], input[type="tel"], textarea{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	background-color: $color2;
+	border: none;
+	padding: 0;
+	outline: none;
+	width: 90%;
+
+	&:last-child{
+		width: 100%;
+	}
+
+	&:focus::-webkit-input-placeholder { /* WebKit browsers */
+		color: $color1;
+	}
+	&:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		color: $color1;
+	}
+	&:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color: $color1;
+	}
+	&:focus:-ms-input-placeholder { /* Internet Explorer 10+ */
+		color: $color1;
+	}
+}
+
+.form__group{ 
+	margin: $spacing 0;
+}
+
+.form__input{
+	position: relative;
+	background-color: $color2;
+	border: 1px solid $color6;
+	border-radius: $borderRadius;
+	padding: $spacing;
+	width: 100%;
+	box-sizing: border-box;
+	color: $color6;
+}
+
+.validation-summary-valid{
+	display: none;
+}
+
+.selectBox {
+	position: relative;
+}
+
+select {
+	display: inline-block;
+	width: 100%;
+	padding: $spacing;
+	outline: none;
+	background-color: $color2;
+	border: 1px solid $color6;
+	border-radius: $borderRadius;
+	box-shadow: none;
+	outline: none;
+	color: $color6;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	&:focus{
+		color: $color1;
+	}
+
+	option {
+		color: $color5;
+		outline: none;
+	}
+
+	&:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 $color5;
+	}
+}
+
+.selectBox-noItems{
+	select{
+		border: 1px solid lighten($color6, $shadeMed);
+		color: lighten($color6, $shadeMed);
+	}
+
+	select::-ms-value{
+		color: lighten($color6, $shadeMed);
+	}
+
+	.fancyArrow{
+		display: none;
+	}
+}
+
+.innerFormButton {
+	position: absolute !important;
+	right: $spacing * 0.25;
+	top: $spacing * 0.25;
+}
+
+/* Select arrow styling */
+.fancyArrow {
+	width: $spacing;
+	height: 95%;
+	position: absolute;
+	display: inline-block;
+	top: 1px;
+	right: $spacing;
+	background-color: $color2;
+	background-position: 50%;
+	pointer-events: none;
+
+	& + select{
+		padding-right: $spacing * 3; /* width + spacing either side */
+	}
+
+	.lt-ie9 &{
+		display: none;
+
+		& + select{
+			padding-right: $spacing;
+		}
+	}
+	
+}
+
+/* PROJECT ONLY */
+
+#js_searchTerms{
+	width: 100%;
+}
+
+#js_searchTerms.clearShow{
+	width: 80%;
+}
+
+/*target Internet Explorer 9 and Internet Explorer 10:*/
+@media screen and (min-width:0\0) { 
+	.fancyArrow {
+		display:none;
+
+		& + select{
+			padding-right: $spacing;
+		}
+	}
+
+	#js_searchTerms.clearShow{
+		width: 100%;
+	}
+
+	.js_clearSearch{
+		display: none !important;
+	}
+}
+
+.ui-helper-hidden-accessible {
+	display: none;
+}
+
+ul.ui-autocomplete {
+	list-style-type: none;
+	background-color: #FFFFFF;
+	max-height: 200px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-left: 0px;
+	border: 1px solid #999999;
+	z-index: 2 !important;
+    position: absolute !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    top: 100% !important;
+    margin: 0px !important;
+    left: 0px !important;
+
+	li {
+		a {
+			padding-left: 5px;
+			display: block;
+		}
+	}
+	.ui-state-hover, .ui-widget-content li.ui-state-hover, .ui-widget-header li.ui-state-hover, .ui-state-focus, .ui-widget-content li.ui-state-focus, .ui-widget-header li.ui-state-focus {
+		background-color: $color3;
+	}
+}

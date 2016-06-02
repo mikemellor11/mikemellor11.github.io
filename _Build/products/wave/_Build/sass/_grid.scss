@@ -1,0 +1,71 @@
+$susy: (
+	columns: $gridCol,
+	math: fluid,
+    gutters: $gutterSize,
+	gutter-position: after
+);
+
+.container {
+	@include container(1400px);
+}
+
+.innerContainer{
+    @include span($calcInnerCol of $gridCol last);
+    @include pad($innerPad of $gridCol);
+    padding-top: (span($innerPad of $gridCol) + gutter());
+    padding-bottom: (span($innerPad of $gridCol) + gutter());
+}
+
+#dashboard .innerContainer{
+    padding-top: 0;
+
+    .gallery > div{
+        margin-top: (span($innerPad of $gridCol) + gutter());
+    }
+}
+
+@include nested($calcInnerCol) {
+    .layout__small{
+        @include span(($calcInnerCol / $splitRatio));
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    .layout__big{
+        @include span((($calcInnerCol / $splitRatio) * ($splitRatio - 1)));
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    .layout__split{
+        @include span(($calcInnerCol / 2));
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    .full{
+        @include full;
+    }
+
+    .gallery > *{
+        @include gallery($calcInnerCol / 2);
+
+        @include breakpoint(max-width $mobileMax){
+            @include gallery($calcInnerCol);
+            clear: both !important;
+        }
+    }
+
+
+    .iPhone{
+        .layout__split, .layout__small, .layout__big{
+            @include full;
+        }
+    }
+}

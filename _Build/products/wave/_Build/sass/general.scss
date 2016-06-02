@@ -1,0 +1,185 @@
+@import "susy";
+@import "breakpoint";
+@import "normalize";
+
+@import "_variables";
+
+@include normalize();
+
+@import "_utilities";
+
+@import "_grid";
+@import "_owl.carousel";
+@import "_owl.theme";
+@import "_owl.transitions";
+
+@import "components/_typography";
+@import "components/_owl";
+@import "components/_modal";
+@import "components/_controls";
+@import "components/_bios";
+@import "components/_flags";
+@import "components/_button";
+@import "components/_form";
+
+
+html{
+	background: $color1;
+}
+
+body{
+	background-color: $color5;
+}
+
+video{
+	width: 100%;
+	height: 100%;
+	background: $color3;
+}
+
+img{
+	width: 100%;
+	background: $color3;
+	display: block;
+}
+
+button{
+	background: none;
+	border: none;
+	padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.logoFlag{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition:all 0.6s;
+	transform:translate(-100%, 0);
+
+	@include breakpoint(max-width 1690px){
+		transform:translate(-100%, -100%);
+	}
+}
+
+.no-csstransforms .logoFlag{
+	display: none;
+}
+
+.logoIcon{
+	width: 100px !important;
+	height: 80px !important;
+	background-size: contain;
+	background-position: 50%;
+}
+
+.logoIconEmbed{
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+}
+
+.logoBig{
+    width: 250px !important;
+    height: 100px !important;
+    background-size: contain;
+    background-position: 50%;
+    margin: 0 auto;
+}
+
+.pageLogos{
+	@include breakpoint(max-width $mobileMax){
+		text-align: center;
+	}
+
+	& > *{
+	    max-width: 200px;
+	    max-height: 100px;
+    	margin-top: 50px;
+    	margin-bottom: 50px;
+
+    	background-size: 100%;
+
+    	@extend .ut-backgroundSizeFixOnly;
+
+    	@include breakpoint(max-width $mobileMax){
+    		margin-top: 0;
+    		margin-bottom: 0;
+    	}
+
+    	&:first-child{
+    		margin-right: $spacing;
+    	}
+	}
+}
+
+@include breakpoint(max-width $mobileMax){
+	.speaker__title, .mejs-controls{
+		display: none !important;
+	}
+}
+
+.iPhone{
+	.wave__video, .wave__ratio, .wave__quality, .wave__fullscreen{
+		display: none !important;
+	}
+
+	.speaker__title{
+		display: table-cell !important;
+	}
+}
+
+footer a:hover{
+    color: darken($color2, $shadeLow);
+}
+
+@-webkit-keyframes zoomIn {
+	from {
+		opacity: 0.3;
+		-webkit-transform: translateY($iconSize + px);
+		transform: translateY($iconSize + px);
+	}
+}
+
+@keyframes zoomIn {
+	from {
+		opacity: 0.3;
+		-webkit-transform: translateY($iconSize + px);
+		transform: translateY($iconSize + px);
+	}
+}
+
+@-webkit-keyframes zoomIn--Alt {
+	from {
+		opacity: 0.3;
+		-webkit-transform: translateY(-$iconSize + px);
+		transform: translateY(-$iconSize + px);
+	}
+}
+
+@keyframes zoomIn--Alt {
+	from {
+		opacity: 0.3;
+		-webkit-transform: translateY(-$iconSize + px);
+		transform: translateY(-$iconSize + px);
+	}
+}
+
+.spin180, .spin180--alt{
+	transform:rotate(180deg);
+}
+
+.mejs-controls {
+	background: transparentize($color6, 0.4)!important;
+}
+
+.mejs-time-loaded {
+	background: transparentize($color3, 0.4)!important;
+}
+
+.mejs-time-current {
+	background: $color2 !important;
+}
+
+/* PROJECT */

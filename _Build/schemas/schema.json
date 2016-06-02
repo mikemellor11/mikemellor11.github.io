@@ -1,0 +1,36 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"additionalProperties": false,
+	"required": ["attributes"],
+	"properties": {
+		"attributes": {
+			"description": "Generally toggles and settings that effect the build rather than the content",
+			"type": "object",
+            "properties": {
+            	"title": {
+		        	"type": "string"
+	            },
+	            "internal": {
+		        	"$ref": "_Build/schemas/deploy.json#/definitions/deploy"
+				},
+				"local": {
+		        	"$ref": "_Build/schemas/deploy.json#/definitions/deploy"
+				}
+            },
+            "required": ["title", "internal", "local"]
+		},
+		"index": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+			}
+		},
+		"global": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+			}
+		}
+	}
+}

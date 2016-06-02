@@ -1,0 +1,17 @@
+{{#each this.speakers}}
+    <div class="modal ut-bg3 ut-material ut-flipColor ut-padding" id="speaker{{@index}}">
+        <div>
+            <img class="bio__details bio__details--image" src="media/{{this.image}}"\>
+            <div class="bio__details bio__details--name">
+                <h2 class="ut-paddingLeft">{{{this.name}}}</h2>
+                {{#if this.format}}
+                    <h4 class="ut-paddingLeft">
+                        {{{stringFormat this}}}
+                    </h4>
+                {{/if}}
+            </div>
+        </div>
+        {{#if this.bio}}<p class="bio__bio">{{{this.bio}}}</p>{{/if}}
+        <button class="icon-times-color3 modal_close"></button>
+    </div>
+{{/each}}

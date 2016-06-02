@@ -1,0 +1,47 @@
+.icon{
+    width: $iconSize !important;
+    padding-bottom: $iconSize !important;
+    position: relative;
+
+    svg{
+        fill: $color3;
+    }
+}
+
+.icon--animation{
+    transition: transform 0.2s;
+}
+
+.icon--active{
+    svg{
+        fill: $color2 !important;
+    }
+
+    .icon--cog{
+        transform: rotate(25deg);
+    }
+}
+
+.icon--large{
+    width: $iconSize * 1.5 !important;
+    padding-bottom: $iconSize * 1.5 !important;
+}
+
+.icon--small{
+    width: $iconSize * 0.5 !important;
+    padding-bottom: $iconSize * 0.5 !important;
+}
+
+.icon--padSmall{
+    svg{
+        padding: $iconSize * 0.25;
+        width: $iconSize * 0.5;
+        height: $iconSize * 0.5;
+    }
+}
+
+.icon--altCol{
+    svg{
+        fill: $color1;
+    }
+}

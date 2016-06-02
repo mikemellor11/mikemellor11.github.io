@@ -1,0 +1,45 @@
+$susy: (
+	columns: $gridCol,
+	math: fluid,
+    gutters: $gutterSize,
+	gutter-position: after
+);
+
+.container {
+	@include container(auto);
+}
+
+@include nested($calcInnerCol) {
+	.full, .half, .third, .twoThirds, .quarter, .threeQuarters, .fifth, .twoFifths, .threeFifths, .fourFifths, .sixth, .fiveSixths{
+		display: inline-block;
+		vertical-align: middle;
+		word-wrap: break-word;
+		margin-right: gutter();
+	}
+
+	.full{width: span($calcInnerCol); margin-right: 0;}
+
+	.half{width: span(($calcInnerCol * 0.5));}
+
+	.third{width: span(($calcInnerCol / 3));}
+
+	.twoThirds{width: span((($calcInnerCol / 3)) * 2);}
+
+	.quarter{width: span(($calcInnerCol * 0.25));}
+
+	.threeQuarters{width: span((($calcInnerCol * 0.25)) * 3);}
+
+	.fifth{width: span(($calcInnerCol / 5));}
+
+	.twoFifths{width: span((($calcInnerCol / 5)) * 2);}
+
+	.threeFifths{width: span((($calcInnerCol / 5)) * 3);}
+
+	.fourFifths{width: span((($calcInnerCol / 5)) * 4);}
+
+	.sixth{width: span(($calcInnerCol / 6));}
+
+	.fiveSixths{width: span((($calcInnerCol / 6)) * 5);}
+
+	.last{margin-right: 0;}
+}

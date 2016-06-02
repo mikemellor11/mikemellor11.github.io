@@ -1,0 +1,49 @@
+.no-csstransforms{
+    .tab-active{
+        &:hover, &:active, &:focus{
+            background: $color2;
+        }
+    }
+}
+
+.csstransforms{
+    .tab-active{
+        &:before{
+            background: $color2;
+        }
+    }
+}
+
+@include breakpoint(min-width ($mobileMax + 1)){
+    .tab{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 1px solid $color6;
+        margin-bottom: -1px;
+        vertical-align: bottom;
+
+        &:after {
+            display: block;
+            content:attr(title);
+            font-weight:bold;
+            height:0px;
+            opacity: 0;
+            overflow: hidden;
+        }
+    }
+
+    .tab_seperate{
+        height: 1px;
+        background-color: $color6;
+    }
+
+    .tab-active{
+        border-bottom: 1px solid $color2;
+    }
+}
+
+.tab-active{
+    background: $color2;
+    font-weight:bolder;
+    pointer-events: none;
+}

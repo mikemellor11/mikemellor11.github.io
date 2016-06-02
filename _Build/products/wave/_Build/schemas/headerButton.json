@@ -1,0 +1,15 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"definitions": {
+		"headerButton": {
+			"type": "object",
+			"additionalProperties": false,
+    		"properties": {
+				"label": {"type": "string"},
+				"url": {"type": "string"}
+			},
+			"required": ["label", "url"]
+		}
+	}
+}

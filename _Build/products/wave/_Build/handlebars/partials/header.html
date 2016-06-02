@@ -1,0 +1,37 @@
+<header>
+    <div class="ut-bg1">
+        <div class="container ut-z">
+            <div class="innerContainer ut-paddingTop ut-paddingBottom">
+                <div class="ut-table">
+                    <div class="ut-tableCell ut-maxCell">
+                        {{#if this.subtitle}}<h2 class="ut-noMargin">{{{this.subtitle}}}</h2>{{/if}}
+                        {{#if this.date}}<h4 class="ut-noMargin">{{{this.date}}}</h4>{{/if}}
+                    </div>
+                    {{#if this.headerButton}}
+                    <div class="ut-tableCell">
+                        <a href="{{this.headerButton.url}}" class="button button--alt">{{this.headerButton.label}}</a>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="ut-padding ut-bg3 logoFlag">
+                <a href="{{{@root.attributes.logo3.url}}}">
+                    {{#if @root.attributes.logo3.embed}}
+                        <img class="ut-bgNone logoIconEmbed" src="media/{{@root.attributes.logo3.link}}">
+                    {{else}}
+                        <div class="icon-{{@root.attributes.logo3.link}} logoIcon"></div>
+                    {{/if}}
+                </a>
+            </div>
+        </div>
+    </div>
+    {{#if this.title}}
+    <div class="ut-bg2">
+        <div class="container">
+            <div class="innerContainer ut-paddingTop ut-paddingBottom">
+                <h1 class="ut-noMargin">{{{this.title}}}</h1>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</header>

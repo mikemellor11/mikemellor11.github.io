@@ -1,0 +1,91 @@
+{{#with content.key}}
+    <!doctype html>
+    {{> htmlTag}}
+        <head>
+            {{> head}}
+        </head>
+        <body>
+			{{> header}}
+
+			{{> breadcrumb results=true detail=true}}
+
+            <main class="container">
+                <div class="innerContainer">
+                    <div class="full ut-material">
+                        <div class="full ut-bg2 ut-paddingPercent ut-borderBox ut-paddingBottom">
+                        	<div class="full">
+                        		<div class="twoThirds ut-removeFloat ut-inlineBlock ut-vertAlignBottom">
+                        			<button id="js_tabQuestion" class="button button-alt2 ut-mobileFull tab js_tab tab-active" title="{{{this.question}}}">
+                                        {{{this.question}}}
+                                    </button>
+                        			<button id="js_tabReferences" class="button button-alt2 ut-mobileFull ut-mobileMarginTop tab js_tab" title="{{{this.reference}}}">
+                                        {{{this.reference}}}
+                                    </button>
+                        			{{#if @root.attributes.relatedQuestions}}
+                                        <button id="js_tabRelated" class="button button-alt2 ut-mobileFull ut-mobileMarginTop tab js_tab" title="{{{this.related}}}">
+                                            {{{this.related}}}
+                                        </button>
+                                    {{/if}}
+                    			</div>
+                    			<div class="third ut-removeFloat ut-textAlignRight ut-inlineBlock">
+                    				<a id="js_backButton" class="js_backButton button button-alt2 ut-mobileFull ut-mobileMarginTop tab">{{>icon name=@root.global.back.icon class="iconSmall"}}<span class="ut-vertAlignCenter">{{{@root.global.back.text}}}</span></a>
+                    			</div>
+                    		</div>
+                    		<div class="full tab_seperate"></div>
+                        </div>
+                        <div class="js_tabScreen">
+	                        <div class="full ut-bg2 ut-paddingPercent ut-borderBox ut-paddingTop ut-paddingBottom">
+	                        	<div class="full ut-paddingTopLarge ut-paddingBottom">
+                                    <p class="js_keyMessageNo ut-noMargin">{{{this.noKeyMessage}}}</p>
+	                    			<p class="injectRemoveMargins ut-noMargin ut-lightFont ut-fontCol-alt ut-paddingBottom" id="js_lastUpdated"></p>
+	                    			<h3 class="injectRemoveMargins ut-noMargin ut-lightFont js_messageTitle"></h3>
+                    			</div>
+	                        </div>
+	                        <div class="full ut-bg3 ut-paddingPercent ut-borderBox ut-paddingTopLarge ut-paddingBottomLarge js_hideKey">
+	                        	<p class="ut-fontCol-alt ut-noMargin ut-marginBottom">{{{this.keyMessage}}}</p>
+	                        	<p class="ut-noMargin injectRemoveMargins" id="js_keyMessageKEY"></p>
+	                        </div>
+	                        <div class="full ut-bg2 ut-paddingPercent ut-borderBox ut-paddingTopLarge">
+	                        	<p class="injectRemoveMargins ut-noMargin injectAnchors" id="js_keyMessage"></p>
+	                        </div>
+                            {{#if this.keyDownload}}
+                                {{> downloads this.keyDownload}}
+                            {{/if}}
+                        </div>
+                        <div class="js_tabScreen ut-hide">
+	                        <div class="full ut-bg2 ut-paddingPercent ut-borderBox ut-paddingTop ut-paddingBottom">
+                                <p class="js_referencesNo">{{{this.noReferences}}}</p>
+	                        	<div id="js_references"></div>
+	                        </div>
+                        </div>
+                        {{#if @root.attributes.relatedQuestions}}
+	                        <div class="js_tabScreen ut-hide">
+		                        <div class="full ut-bg2 ut-paddingPercent ut-borderBox ut-paddingTop ut-paddingBottom">
+		                        	<ul id="js_relatedKMs">
+                                        <li class="ut-paddingTopLarge ut-paddingBottomLarge">{{{this.noRelated}}}</li>  
+                                    </ul>
+		                        </div>
+	                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </main>
+			{{> footer}}
+        </body>
+        <script type="text/javascript">
+            function pageJS(){
+            	populateKeyMessage();
+
+            	$('.js_tab').click(function(){
+            		var index = $(this).index();
+
+            		$('.tab-active').removeClass('tab-active');
+            		$($('.js_tab')[index]).addClass('tab-active');
+            		$('.js_tabScreen').addClass('ut-hide');
+            		$($('.js_tabScreen')[index]).removeClass('ut-hide');
+            	});
+            };
+        </script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </html>
+{{/with}}

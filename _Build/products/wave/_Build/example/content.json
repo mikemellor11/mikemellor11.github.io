@@ -1,0 +1,114 @@
+{
+	"attributes": {
+		"title": "Wave",
+		"googleTrackingID": null,
+		"autoEmail": [
+			{
+				"email": "mike.mellor@f-grp.com",
+				"name": "z.FW Digital"
+			}
+		],
+		"external": {
+			"url": "https://secure.fishawack.com/Wave/Demo/Secure/",
+			"ftp": "./wwwroot/secure.fishawack.com/Wave/Demo/Secure/",
+			"username": "waveDemo",
+			"password": "FishawacK01"
+		},
+		"internal": {
+			"url": "http://internal.fishawack.dev/Wave/Demo/",
+			"ftp": "/internal/Wave/Demo"
+		},
+		"autoPackage": {
+			"url": "http://internal.fishawack.dev/Auto-Package/",
+			"ftp": "./Auto-Package/"
+		},
+		"local": {
+			"url": "http://localhost:9001/"
+		},
+		"content": {
+			"ftp": "./Auto-Content/Wave/Demo/",
+			"cut": 3
+		},
+		"modernizr": [
+            "csstransforms",
+            "backgroundsize"
+        ],
+		"logo1": {
+			"link": "__fishawack-logo-mono-color3",
+			"embed": false
+		},
+		"logo2": {
+			"link": "",
+			"embed": false
+		},
+		"logo3": {
+			"link": "__fishawack-logo-mono-color3",
+			"embed": false,
+			"url": "index.html"
+		},
+		"footer": "&copy; <a href='http://www.fishawack.com'>2015 Fishawack Communications</a> | <a id='terms' href='terms.html'>Terms and conditions</a>",
+		"logoAlign": "ut-vertAlignBottom",
+		"logoOffset": "0px",
+		"controls": true
+	},
+	"terms": {
+		"title": "HAPPEN - Hypertension Attitude PersPEctives & Needs",
+		"subtitle": "Fishawack Company Conference 2015",
+		"date": "Thursday August 14<sup>th</sup>, 2015 - Oxford UK",
+		"headerButton": {
+			"label": "Home",
+			"url": "index.html"
+		}
+	},
+	"dash": {
+		"title": "FIDE &ndash; Facilitation of International Dermatology Education",
+		"subtitle": "AAD 74<sup>TH</sup> ANNUAL MEETING",
+		"date": "March 4-8 2016, Washington DC",
+		"dashButtonText": "Watch Session",
+		"speakerSeparator": "&nbsp;|&nbsp;"
+	},
+	"content": [
+		{
+			"url": "index",
+			"title": "HAPPEN - Hypertension Attitude PersPEctives & Needs",
+			"subtitle": "Fishawack Company Conference 2015",
+			"date": "Thursday August 14<sup>th</sup>, 2015 - Oxford UK",
+			"duration": "00:10:00",
+			"poster": "Slide027.jpg",
+			"videoUrl": {
+				"low": "https://player.vimeo.com/external/143846337.mobile.mp4?s=79c2139441c0af3e8fb9dfab37cc71f2&profile_id=116",
+				"medium": "https://player.vimeo.com/external/143846337.sd.mp4?s=5c2812894e995cffc2e82deeb5059763&profile_id=112",
+				"high": "https://player.vimeo.com/external/143846337.hd.mp4?s=ba3edda1a60611234740400a64368b3e&profile_id=113",
+				"ultra": "https://player.vimeo.com/external/143846337.hd.mp4?s=ba3edda1a60611234740400a64368b3e&profile_id=119"
+			},
+			"slideFileNamePrefix": "Slide",
+			"slideFileExtension": "jpg",
+			"speakers": [
+				{
+					"name": "Laura Hancock",
+					"image": "default.png",
+					"job": "Client Service Director",
+					"company": "Fishawack",
+					"bio": "Following an honours degree in equine science and agriculture, Lara switched her farming diversification insights for ethical pharma, joining the industry 11 years ago with Schering-Plough (SP) as a medical sales representative.<br><br>Whilst working in the industry’s various field roles Lara found herself constantly drawn to working with Key Opinion Leaders (KOLs) and as a result secured a Professional Relations post allowing her to work with Global allergy KOLs. This role further consolidated her passion for medical education and refined her vision to successfully establish and go on to manage a team of nine National Professional Relations Managers across SPs/MSDs portfolio of primary and secondary care products.<br><br>Three years ago Lara moved into medical communications where she has continued to broaden her therapy area knowledge now covering, Allergy, Anaesthetics, CV, HCV, Immunology, PAH, Respiratory, and Substance Misuse. She has been responsible for managing both small and large account teams supporting overall client service in the delivery and mix of publications and meetings.<br><br>When not working Lara can normally be found amongst the company of her menagerie (dog, cat, horses). She competes in dressage. When not riding she can often been found shaking her tail at various music concerts and festivals.",
+					"format": "{2}<br>{3}"
+				}
+			],
+			"timeStamps": [
+				{
+					"label": "Quarter",
+					"stamp": "4"
+				},
+				{
+					"label": "Half",
+					"stamp": 300
+				},
+				{
+					"label": "Three Quarters",
+					"stamp": 450
+				}
+			],
+			"slideStamps": [],
+			"slideXml": "stamps.xml"
+		}
+	]
+}

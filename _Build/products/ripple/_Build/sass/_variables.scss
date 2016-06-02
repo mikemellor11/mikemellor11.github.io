@@ -1,0 +1,37 @@
+$color1 : #fe673a; // Orange
+$color2 : #fefefe; // White
+$color3 : #e9e9e9; // Light Gray
+$color4 : #007f90; // Turqoise
+$color5 : #595959; // Dark Gray
+$color6 : #9C9C9C; // Medium Gray
+$color7 : #8BC34A; // Green
+
+$spacing : 10px;
+$borderRadius : 4px;
+
+$shadeLow : 10%;
+$shadeMed : 15%;
+
+$containerSize: 1400px;
+$gridCol: 12;
+$innerPad: 0.15;
+$gutterSize: 1;
+$calcInnerCol: $gridCol - ($innerPad * 2);
+
+$shadowColor: #B0B6BD;
+$shadowBlur: 10px;
+
+$iconSize : 22;
+
+$iconColor : $color6;
+$iconHover : $color1;
+
+$iconColorFlip : $color2;
+$iconHoverFlip : $color1;
+
+$mobileMax : 767px;
+
+$normalize-vertical-rhythm: true;
+
+$mediaUrl: '../media/';
+$fontUrl: $mediaUrl + 'fonts/';

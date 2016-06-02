@@ -1,0 +1,37 @@
+.wave__flags{
+    position: relative;
+    height: $iconSize * 0.5 + px;
+
+    @include breakpoint(max-width $mobileMax){
+        display: none !important;
+    }
+}
+
+.flag{
+    position: absolute;
+    opacity: 0;
+    transition: opacity .2s;
+
+    &:hover .flag__label{
+        display: block;
+    }
+}
+
+.flag__label{
+    position: absolute;
+    top: 0;
+    margin: -#{$spacing * 0.5} $spacing 0 $spacing;
+    display: none;
+    z-index: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+}
+
+.flag__button [class^='icon-']{
+    filter: alpha(opacity=50); opacity: 0.5;
+
+    &:hover{
+        filter: alpha(opacity=100); opacity: 1;
+    }
+}

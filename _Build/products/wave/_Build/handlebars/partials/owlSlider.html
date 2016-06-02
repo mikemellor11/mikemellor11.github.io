@@ -1,0 +1,13 @@
+<div class="wave__stamps ut-clearList owl-carousel ut-noMargin">
+    {{#each this.slideStamps}}
+        <div>
+           <button class="ut-fullAbs stampButton{{#if @first}} lazyOwl__aspectCalc--static{{/if}}" data-stamp="{{{this.time}}}">
+           		<img class="ut-fullAbs lazyOwl{{#if @first}} lazyOwl__aspectCalc lazyOwl__aspectCalc--static{{/if}}" data-src="media/slidesThumb/{{#if ../this.slideUrl}}{{../this.slideUrl}}/{{else if ../this.url}}{{../this.url}}/{{/if}}{{{this.slideFileName}}}">
+           		<span class="owl-item__slideNum ut-bg2">{{{normalizeIndex @index}}}{{#if @first}} Start{{/if}}{{#if @last}} End{{/if}}</span>
+           	</button>
+        </div>
+    {{/each}}
+</div>
+<span id="owl-textUpdate">
+    <p class="ut-noMargin ut-flipColor">Slide <span class="currentSlide ut-bold">1</span> of <span class="ut-bold">{{this.slideStamps.length}}</span></p>
+</span>
