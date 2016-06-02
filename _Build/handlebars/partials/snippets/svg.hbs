@@ -1,9 +1,0 @@
-{{#if this.embed}}
-	<div {{#if this.class}}class="{{this.class}}"{{/if}}>
-		{{> (lookup this 'name')}}
-	</div>
-{{else}}
-	<svg {{#if this.class}}class="{{this.class}}"{{/if}}>
-		<use xlink:href="#{{this.name}}" />
-	</svg>
-{{/if}}
