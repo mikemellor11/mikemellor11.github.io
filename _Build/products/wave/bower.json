@@ -1,0 +1,17 @@
+{
+  "name": "Wave",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Mike Mellor <mike.mellor@f-grp.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "devDependencies": {
+    "susy": "~2.2.11",
+    "normalize-scss": "normalize.scss#~4.0.3",
+    "compass-breakpoint": "breakpoint-sass#~2.6.1"
+  }
+}

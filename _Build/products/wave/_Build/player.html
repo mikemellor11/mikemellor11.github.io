@@ -1,0 +1,100 @@
+{{#with content.[<!-- @@Player_Index -->]}}
+    {{{buildSlides <!-- @@Player_Index -->}}}
+    <!doctype html>
+    <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+    <!--[if gt IE 9]><!--> <html class="no-js gt-ie8" lang="en"> <!--<![endif]-->
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>{{{@root.attributes.title}}}</title>
+            <script type="text/javascript" src="js/crucial.js"></script>
+            <noscript><link href="media/svg/icons.fallback.css" rel="stylesheet"></noscript>
+            <link rel="stylesheet" href="css/general.css">
+            <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200' rel='stylesheet' type='text/css'>
+            <script src="build/mediaelement-and-player.min.js"></script>
+            <link rel="stylesheet" href="build/mediaelementplayer.css" />
+            <!-- @@Live_Reload -->
+            <script type="text/javascript">
+                grunticon(["svg/icons.data.svg.css", "svg/icons.data.png.css", "svg/icons.fallback.css"], grunticon.svgLoadedCallback);
+            </script>
+
+            {{#if @root.tour}}
+                <link rel="stylesheet" href="css/hopscotch.min.css">
+            {{/if}}
+        </head>
+        <body>
+
+            {{> header}}
+
+            <main class="container ut-safariTransformJumpFix">
+                <div class="innerContainer">
+                    <div class="innerContainer ut-bg3 ut-material ut-z">
+                        <div>
+                            <div class="screenBlock"></div>
+                            <div class="wave__layout full">
+                                <div class="layout__big">
+                                    {{> waveSlide}}
+
+                                    {{#if this.speakers}}
+                                        <div class="speaker__switch">{{> speakers}}</div>
+                                    {{/if}}
+                                </div>
+                                <div class="layout__small">
+                                    {{> waveVideo}}
+
+                                    {{#if this.speakers}}
+                                        <div class="speaker__full">{{> speakers}}</div>
+                                        <div class="speaker__switch">{{> speakers}}</div>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            <div class="full">
+                                {{> chapters player=<!-- @@Player_Index -->}}
+                                <div class="ut-table">
+                                    {{> scrubber}}
+                                </div>
+
+                                {{> controls}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="innerContainer ut-bg3 ut-material ut-marginTop">
+                        {{> owlSlider}}
+                    </div>
+
+                    <div class="full ut-opaque ut-marginTopLarge pageLogos">
+                        {{> logo @root.attributes.logo1}}
+                        {{> logo @root.attributes.logo2 offsetLogo=true}}
+                    </div>
+                </div>
+            </main>
+
+            {{> speakersBios}}
+            
+            {{> footer}}
+
+            <script type="text/javascript">
+                var slides = {{{stringifyJSON this.slideStamps}}};
+                var flags = {{#if this.duration}}false{{else}}true{{/if}};
+            </script>
+
+            {{#unless @root.attributes.controls}}
+                <style type="text/css">
+                    .mejs-video:not(.mejs-container-fullscreen) .mejs-controls{display: none !important;}
+                </style>
+            {{/unless}}
+
+            <script type="text/javascript" src="js/script.js"></script>
+
+            {{#if @root.tour}}
+                <script type="text/javascript" src="js/hopscotch.min.js"></script>
+                <script type="text/javascript">
+                    if (hopscotch.getState() === "offering-tour:4") {
+                        hopscotch.startTour({{{@root.tour}}});
+                    }
+                </script>
+            {{/if}}
+        </body>
+    </html>
+{{/with}}

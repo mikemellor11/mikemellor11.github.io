@@ -1,0 +1,5 @@
+{{#if this.embed}}
+    <img class="ut-inlineBlock ut-widthAuto ut-bgNone {{@root.attributes.logoAlign}}" style="{{#if offsetLogo}}transform: translateY({{@root.attributes.logoOffset}}); -moz-transform: translateY({{@root.attributes.logoOffset}}); -ms-transform: translateY({{@root.attributes.logoOffset}});{{/if}} {{#if this.maxWidth}}max-width:{{this.maxWidth}}px;{{/if}}" src="media/{{this.link}}">
+{{else}}
+    <div class="icon-{{this.link}} ut-inlineBlock {{@root.attributes.logoAlign}}" style="{{#if offsetLogo}}transform: translateY({{@root.attributes.logoOffset}}); -moz-transform: translateY({{@root.attributes.logoOffset}}); -ms-transform: translateY({{@root.attributes.logoOffset}});{{/if}} {{#if this.maxWidth}}max-width:{{this.maxWidth}}px;{{/if}}"></div>
+{{/if}}

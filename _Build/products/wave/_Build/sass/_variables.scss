@@ -1,0 +1,38 @@
+$color1 : #74CCD5; // Light Blue
+$color2 : #F5F5F5; // White
+$color3 : #6B7887; // Gray
+$color4 : darken($color3, 20%); // Hover Gray
+$color5 : #E5E4E4; // Background Gray
+$color6 : #B0B6BD; // Boxshadow Gray
+
+$spacing : 10px;
+$borderRadius : 2px;
+
+$shadeLow : 10%;
+$shadeMed : 20%;
+
+$gridCol: 12;
+$innerPad: 0.15;
+$gutterSize: 0.175;
+$calcInnerCol: $gridCol - ($innerPad * 2);
+$splitRatio: 4;
+
+$shadowColor: $color6;
+$shadowBlur: 10px;
+
+$iconSize : 44;
+
+$iconColor : $color6;
+$iconHover : $color1;
+
+$iconColorFlip : $color2;
+$iconHoverFlip : $color1;
+
+$mobileMax : 767px;
+
+$normalize-vertical-rhythm: true;
+
+$mediaUrl: '../media/';
+$fontUrl: $mediaUrl + 'fonts/';
+
+/* PROJECT */

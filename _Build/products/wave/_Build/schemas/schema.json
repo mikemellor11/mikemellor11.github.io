@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"additionalProperties": false,
+	"required": ["attributes", "terms", "content"],
+	"properties": {
+		"attributes": {
+			"$ref": "_Build/schemas/attributes.json#/definitions/attributes"
+        },
+        "terms": {
+			"$ref": "_Build/schemas/terms.json#/definitions/terms"
+		},
+		"dash": {
+			"$ref": "_Build/schemas/dash.json#/definitions/dash"
+		},
+		"content": {
+			"type": "array",
+			"items": {
+				"$ref": "_Build/schemas/content.json#/definitions/content"
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.wave__speakers{
+    position: relative;
+    z-index: 3;
+
+    a{
+        padding: $spacing !important;
+    }
+}
+
+.layout__big .speaker__switch, .layout__split .speaker__switch, .layout__big .speaker__full, .layout__small .speaker__full{
+    display: none;
+}
+
+.bio__details{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bio__details--name{
+    width: 70%;
+}
+
+.bio__details--image{
+    width: 30%;
+}
+
+.bio__bio{
+    max-height: 250px;
+    overflow-y: auto;
+
+    @include breakpoint(max-width 600px){
+        max-height: none;
+        overflow-y: visible;
+    }
+}

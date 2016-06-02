@@ -1,0 +1,36 @@
+[
+	{
+		"svg": "down-open",
+		"selector": [
+			".selectBox:hover"
+		]
+	},
+	{
+		"svg": "reply-iconColor",
+		"custom": true,
+		"selector": [
+			".button-alt2:hover"
+		]
+	},
+	{
+		"svg": "file-pdf-iconColor",
+		"custom": true,
+		"selector": [
+			".gih-pdf:hover"
+		]
+	},
+	{
+		"svg": "file-word-iconColor",
+		"custom": true,
+		"selector": [
+			".gih-word:hover"
+		]
+	},
+	{
+		"svg": "cancel-iconColorFlip",
+		"custom": true,
+		"selector": [
+			".button-alt:hover"
+		]
+	}
+]

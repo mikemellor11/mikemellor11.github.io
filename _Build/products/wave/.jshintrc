@@ -1,0 +1,25 @@
+{
+	"curly": true,
+	"eqeqeq": true,
+	"forin": true,
+	"freeze": true,
+	"funcscope": true,
+	"undef": true,
+	"latedef": true,
+	"nonbsp": true,
+	"strict": true,
+	"browser": true,
+	"globals": {
+	    "FastClick": true,
+	    "$": true,
+	    "History": true,
+	    "console": true,
+	    "flags": true,
+	    "slides": true,
+	    "wave": true,
+	    "MediaElementPlayer": true,
+	    "mejs": true,
+	    "alert": true,
+	    "Modernizr": true
+	}
+}

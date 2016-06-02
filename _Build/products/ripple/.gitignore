@@ -2,8 +2,11 @@
 .sass-cache
 _Output/
 node_modules/
+**/generated/**/*
 bower_components/
+_Build/xml/
 **/npm-debug.log
 .tmp/
+_Production/
+_Zips/
 coverage/
-**/generated/**/*

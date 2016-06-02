@@ -1,0 +1,60 @@
+{{#with content.results}}
+    <!doctype html>
+    {{> htmlTag}}
+        <head>
+            {{> head}}
+        </head>
+        <body>
+            {{> header}}
+
+            {{> breadcrumb results=true}}
+
+            <main class="container">
+                <div class="innerContainer">
+                    <div class="full ut-material">
+                        <div class="full ut-bg2 ut-paddingPercent ut-borderBox">
+                        	<div class="full ut-table">
+                        		<div class="ut-tableCell ut-mobileCell ut-paddingRight ut-maxWidth">
+                        			<h3 class="ut-noMargin">{{{this.result}}}</h3>
+                        			<p class="ut-noMargin ut-marginTop js_results ut-hide">
+                                        {{#each this.resultList}}
+                                            <span class="ut-noWrap">
+                                                {{{this.text}}}:&nbsp;
+                                                <strong class="{{#unless @last}}ut-paddingRight{{/unless}} {{this.id}} ut-wrap"></strong>
+                                                {{#unless @last}}<span class="ut-inlineBlock ut-paddingRight">|</span>{{/unless}}
+                                            </span>
+                                        {{/each}}
+                    				</p>
+                                    <p class="ut-noMargin ut-marginTop js_resultsAlt ut-hide">
+                                        {{#each this.resultListAlt}}
+                                            <span class="ut-noWrap">
+                                                {{{this.text}}}:&nbsp;
+                                                <strong class="{{#unless @last}}ut-paddingRight{{/unless}} {{this.id}} ut-wrap"></strong>
+                                                {{#unless @last}}<span class="ut-inlineBlock ut-paddingRight">|</span>{{/unless}}
+                                            </span>
+                                        {{/each}}
+                                    </p>
+                    			</div>
+                    			<div class="ut-tableCell ut-mobileCell ut-textAlignRight">
+                    				<a href="index.html" id="js_backButton" class="button button-alt2 ut-mobileFull">{{>icon name=@root.global.back.icon class="iconSmall"}}<span class="ut-vertAlignCenter">{{{@root.global.back.text}}}</span></a>
+                    			</div>
+                    		</div>
+                    		<div class="full">
+                            	<ul id="js_resultsList" class="results ut-clearListOnly ut-zebra">
+                                    <li class="ut-paddingTopLarge ut-paddingBottomLarge">{{{this.noResults}}}</li>
+                                </ul>
+                        	</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            {{> footer}}
+        </body>
+        <script type="text/javascript">
+            function pageJS(){
+                populateResults();
+            };
+        </script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </html>
+{{/with}}

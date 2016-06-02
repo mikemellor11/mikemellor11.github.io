@@ -1,0 +1,14 @@
+<nav class="container">
+    <ul class="ut-table innerContainer ut-paddingTopLarge ut-paddingBottomLarge ut-fontCol-alt ut-noMargin">
+    	<li class="ut-tableCell ut-paddingRightLarge"><a href="index.html" id="breadIndex">{{> icon name="home" class="ut-noMargin"}}</a></li>
+    	{{#if results}}
+    		<li class="ut-tableCell ut-paddingRightLarge ut-noEvents">{{> icon name="right-open" class="iconSmallest ut-noMargin"}}</li>
+    		<li class="ut-tableCell ut-noMargin ut-paddingRightLarge {{#unless detail}}ut-maxWidth{{/unless}}"><a class="ut-hoverText js_backButton" href="" id="breadResult"><h5 class="ut-noMargin">{{{@root.global.breadcrumbList.result}}}</h5></a></li>
+		{{/if}}
+		{{#if detail}}
+			<li class="ut-tableCell ut-paddingRightLarge ut-noEvents">{{> icon name="right-open" class="iconSmallest ut-noMargin"}}</li>
+    		<!-- <li class="ut-tableCell ut-noMargin ut-paddingRightLarge ut-maxWidth"><h5 class="ut-noMargin js_messageTitle injectSetInline"></h5></li> -->
+            <li class="ut-tableCell ut-noMargin ut-paddingRightLarge ut-maxWidth"><a class="ut-hoverText" href="" id="breadQuestion"><h5 class="ut-noMargin">{{{@root.global.breadcrumbList.detail}}}</h5></a></li>
+		{{/if}}
+    </ul>
+</nav>

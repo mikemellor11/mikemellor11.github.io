@@ -1,0 +1,19 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"definitions": {
+		"terms": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"title": {"type": "string"},
+				"subtitle": {"type": "string"},
+				"date": {"type": "string"},
+				"headerButton": {
+					"$ref": "headerButton.json#/definitions/headerButton"
+				}
+			},
+			"required": ["headerButton"]
+		}
+	}
+}

@@ -1,0 +1,69 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"definitions": {
+		"content": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"url": {"type": "string"},
+				"slideUrl": {"type": "string"},
+				"title": {"type": "string"},
+				"subtitle": {"type": "string"},
+				"date": {"type": "string"},
+				"duration": {"type": "string"},
+				"poster": {"type": "string"},
+				"videoUrl": {
+					"type": "object",
+	        		"properties": {
+						"low": {"type": "string"},
+						"medium": {"type": "string"},
+						"high": {"type": "string"},
+						"ultra": {"type": "string"},
+						"auto": {"type": "string"}
+					},
+					"required": ["low", "medium", "high"]
+				},
+				"headerButton": {
+					"$ref": "headerButton.json#/definitions/headerButton"
+				},
+				"slideFileNamePrefix": {"type": "string"},
+				"slideFileExtension": {"type": "string"},
+				"speakers": {
+					"type": "array",
+					"items": {
+						"description": "Any other type of information goes here e.g. references, presenter notes, supporting information and will sit in the slideout menu",
+		    			"type": "object",
+		    			"patternProperties": {
+	        				"^[a-zA-Z]+(-[a-zA-Z]+)*$": {"type": "string"}
+	        			},
+	        			"properties": {
+	        				"name": {"type": "string"},
+	        				"image": {"type": "string"},
+	        				"bio": {"type": "string"},
+	        				"format": {"type": "string"}
+	        			},
+	        			"required": ["name", "image", "format"]
+					}
+				},
+				"timeStamps": {
+					"type": "array",
+					"items": {
+						"description": "To specifiy seconds pass number, to lock chapter to a slide pass the slide number as a string",
+						"type": "object",
+						"properties": {
+							"label": {"type": "string"},
+							"stamp": {"type": ["number", "string"]}
+						},
+						"required": ["label", "stamp"]
+					}
+				},
+				"slideStamps": {
+					"type": "array"
+				},
+				"slideXml": {"type": "string"}
+			},
+			"required": ["url", "duration", "videoUrl"]
+		}
+	}
+}

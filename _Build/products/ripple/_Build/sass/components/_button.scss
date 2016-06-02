@@ -1,0 +1,83 @@
+.button{
+    padding: $spacing #{$spacing * 2};
+    background: $color4;
+    cursor: pointer;
+    border: 1px solid $color3;
+    border-radius: $borderRadius;
+    display: inline-block;
+    text-align:center;
+    white-space: nowrap;
+    outline: none;
+    box-sizing: border-box;
+    color: $color2;
+}
+
+.button-alt{
+    background: $color6;
+    padding: #{$spacing * 0.5} #{$spacing * 1};
+}
+
+.button-alt2{
+    background: $color3;
+    border: 1px solid $color6;
+    color: $color5;
+}
+
+.no-csstransforms{
+    .button{
+        &:hover, &:active, &:focus{
+            background: darken($color6, $shadeLow);
+        }
+    }
+
+    .button-alt{
+        &:hover, &:active, &:focus{
+            background: darken($color6, $shadeLow);
+        }
+    }
+
+    .button-alt2{
+        &:hover, &:active, &:focus{
+            background: darken($color3, $shadeLow);
+        }
+    }
+}
+
+.csstransforms{
+    .button{
+        position: relative;
+        z-index: 1;
+
+        &:before{
+            content: '';
+            position: absolute;
+            border-radius: $borderRadius;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: darken($color4, $shadeLow);
+            z-index: -1;
+            opacity: 0;
+            transform: scaleX(0.7);
+            transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        &:hover:before, &:focus:before {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+    }
+
+    .button-alt{
+        &:before{
+            background: darken($color6, $shadeLow);
+        }
+    }
+
+    .button-alt2{
+        &:before{
+            background: darken($color3, $shadeLow);
+        }
+    }
+}

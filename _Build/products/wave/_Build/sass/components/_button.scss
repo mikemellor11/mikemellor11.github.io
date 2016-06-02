@@ -1,0 +1,101 @@
+.button{
+    padding: $spacing #{$spacing * 2};
+    background: $color2;
+    cursor: pointer;
+    border: 1px solid $color3;
+    border-radius: $borderRadius;
+    display: inline-block;
+    text-align:center;
+    white-space: nowrap;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.button--alt{
+    background: $color1;
+    border-color: $color2;
+}
+
+.button--alt2{
+    border-color: $color1;
+    color: $color1;
+}
+
+.button--alt3{
+    border-color: $color1;
+    color: $color1;
+    padding: 0 #{$spacing * 2};
+}
+
+.button--control{
+    background: $color3;
+    border: none;
+    color: $color2;
+    padding: 0;
+    display: block;
+    text-align: left;
+    width: 100%;
+    border-radius: 0;
+}
+
+.button--full{
+    width: 100%;
+}
+
+.no-csstransforms{
+    .button{
+        &:hover, &:active, &:focus{
+            background: darken($color2, $shadeLow);
+        }
+    }
+
+    .button--alt{
+        &:hover, &:active, &:focus{
+            background: darken($color1, $shadeLow);
+        }
+    }
+
+    .button--control{
+        &:hover, &:active, &:focus{
+            background: darken($color3, $shadeLow);
+        }
+    }
+}
+
+.csstransforms{
+    .button{
+        position: relative;
+        z-index: 1;
+
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: darken($color2, $shadeLow);
+            z-index: -1;
+            opacity: 0;
+            transform: scaleX(0.7);
+            transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        &:hover:before, &:focus:before {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+    }
+
+    .button--alt{
+        &:before{
+            background-color: darken($color1, $shadeLow);
+        }
+    }
+
+    .button--control{
+        &:before{
+            background-color: darken($color3, $shadeLow);
+        }
+    }
+}

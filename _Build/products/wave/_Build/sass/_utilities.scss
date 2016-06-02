@@ -1,0 +1,285 @@
+.ut-table{
+    display: table;
+    width: 100%;
+}
+
+.ut-tableCell{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ut-maxCell{
+    width: 100%;
+}
+
+.ut-maxHeight{
+    height: 100%;
+}
+
+.ut-tableSpacing{
+    border-collapse: separate;
+    border-spacing: 1px;
+    width: calc(100% + 2px);
+    margin-left: -1px !important;
+}
+
+.ut-clearList{
+    list-style: none;
+    padding: 0;
+    
+    li{
+        display: inline-block;
+    }
+}
+
+.ut-clearListOnly{
+    list-style: none;
+    padding: 0;
+}
+
+.ut-noPadding{
+	padding: 0;
+}
+
+.ut-padding{
+    padding: $spacing;
+}
+
+.ut-paddingRight{
+	padding-right: $spacing;
+}
+
+.ut-paddingLeft{
+    padding-left: $spacing;
+}
+
+.ut-paddingBottom{
+    padding-bottom: $spacing;
+}
+
+.ut-paddingTop{
+    padding-top: $spacing;
+}
+
+.ut-noMargin{
+    margin: 0;
+}
+
+.ut-marginTop{
+    margin-top: (span($innerPad of $gridCol) + gutter());
+}
+
+.ut-marginTopLarge{
+    margin-top: $spacing * 2;
+}
+
+.ut-marginTopSpacing{
+    margin-top: $spacing;
+}
+
+.ut-marginBottomLarge{
+    margin-bottom: $spacing * 2;
+}
+
+.ut-vertAlignTop{
+	vertical-align: top;
+}
+
+.ut-vertAlignCenter{
+    vertical-align: middle;
+}
+
+.ut-vertAlignBottom{
+    vertical-align: bottom;
+}
+
+.ut-textAlignRight{
+    text-align: right;
+}
+
+.ut-textAlignCenter{
+    text-align: center;
+}
+
+.ut-textAlignLeft{
+    text-align: left;
+}
+
+.ut-bgNone{
+    background: transparent;
+}
+
+.ut-bg1{
+    background: $color1;
+}
+
+.ut-bg2{
+    background: $color3;
+}
+
+.ut-bg3{
+    background: $color2;
+}
+
+.ut-bg4{
+    background: $color6;
+}
+
+.ut-bg5{
+    background: $color3;
+}
+
+.ut-material{
+    box-shadow: 0px 0px $shadowBlur $shadowColor;
+    border-radius: $borderRadius;
+    opacity: 0.9;
+}
+
+.ut-opaque{
+    filter: alpha(opacity=60); opacity: 0.6;
+}
+
+.ut-flipColor{
+    color: $color3;
+}
+
+.ut-noWrap{
+    white-space: nowrap;
+}
+
+.ut-wrap{
+    white-space: normal !important;
+}
+
+.ut-hide{
+    display: none !important;
+}
+
+.ut-inlineBlock{
+    display: inline-block !important;
+}
+
+.ut-showing{
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: .2s;
+    animation-duration: .2s;
+}
+
+.ut-showing--alt{
+    -webkit-animation-name: zoomIn--Alt;
+    animation-name: zoomIn--Alt;
+    -webkit-animation-duration: .2s;
+    animation-duration: .2s;
+}
+
+.ut-thumbnail{
+    width: 40px;
+    height: 40px;
+
+    @include breakpoint(max-width $mobileMax){
+        display: none;
+    }
+}
+
+.ut-z{
+    position: relative;
+    z-index: 1;
+}
+
+.ut-borderBox{
+    box-sizing: border-box;
+}
+
+.ut-iconSize{
+    width: $iconSize + px !important;
+    height: $iconSize + px !important;
+    min-width: $iconSize + px !important;
+
+    @extend .ut-backgroundSizeFix;
+}
+
+.ut-backgroundSizeFix{
+    background-size: 100% 100%;
+
+    .no-backgroundsize & {
+        -ms-behavior: url($mediaUrl + "backgroundsize.min.htc");
+    }
+}
+
+.ut-backgroundSizeFixOnly{
+    .no-backgroundsize & {
+        -ms-behavior: url($mediaUrl + "backgroundsize.min.htc");
+    }
+}
+
+.ut-safariTransitionFix--opacity{
+    opacity: 0.99;
+}
+
+.ut-spinIcon{
+    transition: transform 0.2s;
+}
+
+.ut-safariTransitionFix{
+    transition: opacity 0.2s;
+}
+
+.ut-safariTransformJumpFix{
+    -webkit-transform: translateZ(0); 
+    -webkit-backface-visibility: hidden;
+}
+
+.ut-overflowHidden{
+    overflow: hidden;
+}
+
+.ut-highlight{
+    color: $color1;
+}
+
+.ut-borderFrame{
+    border: 1px solid $color1;
+}
+
+.ut-breakWord{
+    word-break: break-word;
+}
+
+.ut-capitals{
+    text-transform: uppercase;
+}
+
+.ut-widthAuto{
+    width: auto;
+}
+
+@include breakpoint(max-width $mobileMax){
+    .ut-desktopOnly{
+        display: none;
+    }
+
+    .ut-removePaddingMobile{
+        padding: 0 !important;
+    }
+}
+
+.ut-unselectable {
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.ut-bold{
+    font-weight: 400 !important;
+}
+
+.ut-fullAbs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

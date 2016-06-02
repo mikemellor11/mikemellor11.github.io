@@ -1,0 +1,10 @@
+<div class="ut-bg1 ut-borderFrame wave__video">
+    <p class="ut-paddingLeft ut-paddingRight ut-noMargin">Video</p>
+    <video width="100%" height="100%" src="{{this.videoUrl.low}}" class="my_video_1" controls="controls" preload="auto">
+    	{{#if this.captions}}<track kind="subtitles" src="media/{{this.captions}}" srclang="en" />{{/if}}
+    </video>
+
+    <audio width="100%" height="100%" src="{{this.videoUrl.low}}" class="my_video_1" controls="controls" preload="auto">
+    	{{#if this.captions}}<track kind="subtitles" src="media/{{this.captions}}" srclang="en" />{{/if}}
+    </audio>
+</div>
