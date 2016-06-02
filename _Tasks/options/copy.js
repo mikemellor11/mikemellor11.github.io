@@ -7,14 +7,6 @@ module.exports = {
             dest: '_Output/media/'
         }]
     },
-    products: {
-        files: [{
-            expand: true,
-            cwd: '_Build/products/',
-            src: ['*/_Output/**'],
-            dest: '_Output/products'
-        }]
-    },
     svg: {
         files: [{
             expand: true,
