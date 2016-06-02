@@ -9,6 +9,11 @@ $susy: (
 	@include container(auto);
 }
 
+.innerContainer{
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
 @include nested($calcInnerCol) {
 	.full, .half, .third, .twoThirds, .quarter, .threeQuarters, .fifth, .twoFifths, .threeFifths, .fourFifths, .sixth, .fiveSixths{
 		display: inline-block;
