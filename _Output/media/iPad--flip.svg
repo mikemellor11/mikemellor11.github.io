@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1216.7 914.9" enable-background="new 0 0 1216.7 914.9" xml:space="preserve">
+<g>
+	<path fill="#30302F" d="M1177.8,0c21.5,0,38.9,17.4,38.9,38.9v837c0,21.5-17.4,38.9-38.9,38.9H38.9C17.4,914.9,0,897.5,0,875.9
+		l0-837C0,17.4,17.4,0,38.9,0L1177.8,0z"/>
+	<circle fill="#151415" cx="43.8" cy="457.4" r="8.1"/>
+	<g>
+		<path fill="#212120" d="M1159.9,428.5c16,0,28.9,12.9,28.9,28.9c0,16-13,28.9-28.9,28.9c-16,0-28.9-13-28.9-28.9
+			C1131,441.5,1143.9,428.5,1159.9,428.5z"/>
+		<path fill="none" stroke="#30302F" stroke-width="0.4848" stroke-miterlimit="10" d="M1167.2,444.3c3.2,0,5.9,2.6,5.9,5.8v14.6
+			c0,3.2-2.6,5.9-5.9,5.9h-14.6c-3.2,0-5.9-2.6-5.9-5.9v-14.6c0-3.2,2.6-5.8,5.9-5.8H1167.2z"/>
+	</g>
+	<rect x="81.1" y="71.4" fill="none" width="1022" height="772.1"/>
+	<g>
+		<defs>
+			<rect id="SVGID_3_" x="81.1" y="71.4" width="1022" height="772.1"/>
+		</defs>
+		<use xlink:href="#SVGID_3_"  overflow="visible" fill="#FAAF40"/>
+		<clipPath id="SVGID_1_">
+			<use xlink:href="#SVGID_3_"  overflow="visible"/>
+		</clipPath>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="51">
+  <Title><![CDATA[<p>What is the efficacy of a fourth dose?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>The phase III efficacy trial has evaluated a fourth dose of RTS,S/AS01 given 18 months after the primary series of 3 doses.<sup>(a)</sup></p>
+
+<ul>
+	<li>Protection against clinical malaria was prolonged in both children and young infants by a fourth dose.</li>
+	<li>The increased risk for severe malaria in the older age-category as compared to the control group was reduced by the administration of a fourth dose of RTS,S/AS01.</li>
+	<li>The proportional increase in efficacy against clinical malaria associated with a fourth dose was similar in children and young infants but efficacy after the fourth dose remained lower in those who received their primary vaccination when aged 6-12 weeks rather than at the age of 5-17 months.</li>
+	<li>The incremental vaccine efficacy against clinical malaria provided by the booster dose (i.e., VE of the fourth dose in addition to the protection provided by the primary vaccination course) was (ATP cohort):</li>
+	<li><u>In children</u>: 29% over the first year after dose 4 and 21% up to study end.</li>
+	<li><u>In infants</u>: 24% over the first year after dose 4 and 20% up to study end.</li>
+</ul>]]></HtmlText>
+  <Topic>EFFICACY</Topic>
+  <SubTopic>PHASE III (MALARIA-055) EFFICACY RESULTS</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type: lower-alpha;">
+	<li><em>RTS,S Clinical Trial Partnership. The Lancet, 2015. dx.doi.org/10.1016/S0140-6736(15)60721-8</em></li>
+</ol>]]></References>
+  <pdf>xml/content/51/51.pdf</pdf>
+  <docx>xml/content/51/51.docx</docx>
+  <contentLastUpdated>2015-12-15</contentLastUpdated>
+  <RelatedFiles />
+</File>

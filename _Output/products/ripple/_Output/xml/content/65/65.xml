@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="65">
+  <Title><![CDATA[<p>Were any deaths reported in this Phase III efficacy trial?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>Sadly, deaths in children under the age of five from disease, malnutrition, and other illnesses are not uncommon in sub-Saharan Africa, and have unfortunately also occurred in children enrolled in the RTS,S clinical trials. However, no deaths were considered by the investigators to be caused by the study vaccines. In addition, the Independent Data Monitoring Committee (IDMC) also closely reviewed serious adverse events, including deaths, occurring in the RTS,S clinical trials, and did not raise any concern that would have required modifying or halting any trials. In the large Phase III efficacy study, mortality rates were similar in both the control and RTS,S study groups<sup>(a)</sup> and lower than that observed in the general population<sup>(b)</sup>, possibly related to the close follow-up and high quality of medical care provided to the study participants.</p>]]></HtmlText>
+  <Topic>SAFETY</Topic>
+  <SubTopic>PHASE III (MALARIA-055) SAFETY RESULTS</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type:lower-alpha">
+	<li><em>RTS,S Clinical Trial Partnership. The Lancet, 2015. dx.doi.org/10.1016/S0140-6736(15)60721-8.</em></li>
+	<li><em>Hamel, et al.&nbsp; ASTMH 2014, 63rd annual meeting; Abstract 631</em></li>
+</ol>]]></References>
+  <pdf>xml/content/65/65.pdf</pdf>
+  <docx>xml/content/65/65.docx</docx>
+  <contentLastUpdated>2015-05-19</contentLastUpdated>
+  <RelatedFiles />
+</File>

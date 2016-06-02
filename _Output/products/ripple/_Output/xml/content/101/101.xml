@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="101">
+  <Title><![CDATA[<p>What is the vaccine candidate ChAd63 ME-TRAP/MVA ME-TRAP and RTS,S/AS01</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>This is a pre-erythrocytic vaccine approach combining RTS,S/AS01 with a prime-boost approach targeting <em>P. falciparum</em>. The prime-boost approach developed by University of Oxford and Okairos uses a simian adenoviral vector (ChAd63) and the Modified Vaccinia Ankara vector (MVA) both encoding the highly conserved malarial antigen TRAP fused to a multi-epitope (ME) string containing epitopes from several malaria antigens. This approach has shown to induce high-level T cell responses and partial efficacy<sup>(a)</sup>.</p>
+
+<p>A proof-of concept clinical study (Malaria-077/Vac-055)<sup>(b)</sup> is ongoing to evaluate whether this combination could increase the protection against sporozoite challenge of na&iuml;ve adults as compared to RTS,S/AS01. Results are expected in 2014.</p>]]></HtmlText>
+  <Topic>OTHER MALARIA VACCINES</Topic>
+  <SubTopic>GSK SECOND GENERATION MALARIA VACCINES</SubTopic>
+  <References><![CDATA[<ol style="list-style-type:lower-alpha">
+	<li><em>Ogwang, C. et al, PLoSONE, 2013; DOI: 10.1371/journal.pone.0057726</em></li>
+	<li><em>ClinicalTrials.gov - NCT01883609</em></li>
+</ol>]]></References>
+  <pdf>xml/content/101/101.pdf</pdf>
+  <docx>xml/content/101/101.docx</docx>
+  <contentLastUpdated>2015-05-19</contentLastUpdated>
+  <RelatedFiles />
+</File>

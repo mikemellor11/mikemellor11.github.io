@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="55">
+  <Title><![CDATA[<p>Does the vaccine efficacy wane over time? How long does RTS,S protection last?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>In the Phase III efficacy trial, vaccine efficacy was highest shortly after vaccination and remained significant against clinical malaria over the 3-to-4 years follow-up period. Vaccine efficacy was enhanced by a fourth dose., <sup>(a,b)</sup></p>
+
+<p>Estimation of duration of vaccine efficacy is complex as the children in the control group were exposed to more episodes of malaria (especially in higher transmission areas) and thus acquired natural immunity more rapidly.</p>
+
+<p>Malaria-076, is an open-label study to follow-up children from three sites from Malaria-055 to further evaluate efficacy and safety over an additional 3 years (January 2014 to December 2016). <sup>(c)</sup></p>
+
+<p><u>Detailed analysis from Malaria-055 (Data on file):</u></p>
+
+<p>An analysis by periods showed a progressive decline in the efficacy against clinical malaria. Although the study groups were well matched during the first 6-month period this was no longer the case subsequently as children in the control group experienced more clinical malaria than children in the RTS,S/AS01 group, and thereby may have acquired natural immunity, making the vaccine appear less effective by comparison.</p>
+
+<table border="1" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="width: 189px; text-align: center;"><strong>VE against all episodes of clinical malaria </strong>(ITT cohort)</td>
+			<td colspan="2" style="width: 189px; text-align: center;"><strong>6-12 weeks old category</strong></td>
+			<td colspan="2" style="width: 203px; text-align: center;"><strong>5-17 months old category</strong></td>
+		</tr>
+		<tr>
+			<td style="width: 189px; text-align: center;">Months 0 to 8</td>
+			<td colspan="2" style="width: 189px; text-align: center;">44% <sup>(a)</sup></td>
+			<td colspan="2" style="width: 203px; text-align: center;">60% <sup>(a)</sup></td>
+		</tr>
+		<tr>
+			<td style="width: 189px; text-align: center;">Months 9 to 14</td>
+			<td colspan="2" style="width: 189px; text-align: center;">23% <sup>(a)</sup></td>
+			<td colspan="2" style="width: 203px; text-align: center;">41% <sup>(a)</sup></td>
+		</tr>
+		<tr>
+			<td style="width: 189px; text-align: center;">Months 15 to 20</td>
+			<td colspan="2" style="width: 189px; text-align: center;">12% <sup>(a)</sup></td>
+			<td colspan="2" style="width: 203px; text-align: center;">28% <sup>(a)</sup></td>
+		</tr>
+		<tr>
+			<td style="width: 189px; text-align: center;"><strong>Months 0 to 20</strong></td>
+			<td colspan="2" style="width: 189px; text-align: center;"><strong>27% </strong><sup>(a,b)</sup></td>
+			<td colspan="2" style="width: 203px; text-align: center;"><strong>45% </strong><sup>(a,b)</sup></td>
+		</tr>
+		<tr>
+			<td style="width: 189px; text-align: center;">&nbsp;</td>
+			<td style="width: 94px; text-align: center;"><strong>Primary</strong></td>
+			<td style="width: 95px; text-align: center;"><strong>+ 4<sup>th</sup> dose</strong></td>
+			<td style="width: 104px; text-align: center;"><strong>Primary</strong></td>
+			<td style="width: 99px; text-align: center;"><strong>+ 4<sup>th</sup> dose</strong></td>
+		</tr>
+		<tr>
+			<td style="width: 189px; text-align: center;">Months 21 to 32</td>
+			<td style="width: 94px; text-align: center;">8% <sup>(b)</sup></td>
+			<td style="width: 95px; text-align: center;">28% <sup>(b)</sup></td>
+			<td style="width: 104px; text-align: center;">16% <sup>(b)</sup></td>
+			<td style="width: 99px; text-align: center;">37% <sup>(b)</sup></td>
+		</tr>
+		<tr>
+			<td style="width: 189px; text-align: center;">Months 33 to study end</td>
+			<td style="width: 94px; text-align: center;">3% <sup>(b)</sup></td>
+			<td style="width: 95px; text-align: center;">12% <sup>(b)</sup></td>
+			<td style="width: 104px; text-align: center;">3% <sup>(b)</sup></td>
+			<td style="width: 99px; text-align: center;">12% <sup>(b)</sup></td>
+		</tr>
+		<tr>
+			<td style="width: 189px; text-align: center;"><strong>Months 0 to 32</strong></td>
+			<td style="width: 94px; text-align: center;"><strong>20%</strong> <sup>(b)</sup></td>
+			<td style="width: 95px; text-align: center;"><strong>28%</strong> <sup>(b)</sup></td>
+			<td style="width: 104px; text-align: center;"><strong>35%</strong> <sup>(b)</sup></td>
+			<td style="width: 99px; text-align: center;"><strong>44%</strong> <sup>(b)</sup></td>
+		</tr>
+		<tr>
+			<td style="width: 189px; text-align: center;"><strong>Months 0 to study end</strong></td>
+			<td style="width: 94px; text-align: center;"><strong>18%</strong> <sup>(b)</sup></td>
+			<td style="width: 95px; text-align: center;"><strong>26%</strong> <sup>(b)</sup></td>
+			<td style="width: 104px; text-align: center;"><strong>28%</strong> <sup>(b)</sup></td>
+			<td style="width: 99px; text-align: center;"><strong>36%</strong> <sup>(b)</sup></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span style="font-size:10px"><em>ITT cohort: Intention-To-Treat subjects received at least one dose of vaccine, with period at risk starting the day of the first dose</em></span></p>
+
+<p>These results are in alignment with previous Phase II studies which have investigated the long-term efficacy and safety of RTS,S. Sacarlal <em>et al</em> <sup>(d)</sup> reported clinical benefit for up to 42 months after the initial vaccination of children 1-4y of age. Olotu <em>et al</em> <sup>(e) </sup>reported a waning of vaccine efficacy in children 5-17 months of age from an initial 43.6% to zero per cent four years after vaccination and indicated possible rebound. However, over this 4-year period, 650 clinical cases were averted per 1000 vaccinees. A multivariate statistical analysis on pooled data from seven clinical studies reported by Bejon <em>et al</em> <sup>(f)</sup>indicated that vaccine efficacy varied significantly according to time since vaccination from 36% to zero per cent after 3 years across different transmission settings and adjuvants used.</p>]]></HtmlText>
+  <Topic>EFFICACY</Topic>
+  <SubTopic>LONG-TERM EFFICACY</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type:lower-alpha">
+	<li><em>RTS,S Clinical Trial Partnership. PloS Medicine 2014; doi/10.1371/journal.pmed.1001685</em></li>
+	<li><em>RTS,S Clinical Trial Partnership. The Lancet, 2015. dx.doi.org/10.1016/S0140-6736(15)60721-8</em></li>
+	<li><em>GSK study ID 200599; clintrials.gov NCT number NCT02207816</em></li>
+	<li><em>Sacarlal J, et al. J Infect Dis 2009; 200: 329-36.</em></li>
+	<li><em>Olotu A, et al. NEJM 2013; 368:1111-20</em></li>
+	<li><em>Bejon P. et al. </em><em>Lancet ID 2013; 13: 319&ndash;27</em></li>
+</ol>]]></References>
+  <pdf>xml/content/55/55.pdf</pdf>
+  <docx>xml/content/55/55.docx</docx>
+  <contentLastUpdated>2015-12-15</contentLastUpdated>
+  <RelatedFiles />
+</File>

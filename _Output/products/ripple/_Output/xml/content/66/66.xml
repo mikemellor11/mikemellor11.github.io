@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="66">
+  <Title><![CDATA[<p>Does RTS,S change the pattern of severe malaria, and increase the risk of more severe forms of malaria like cerebral malaria?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>In the Phase III efficacy study, in children aged 5-17 months at first dose, the incidence of severe malaria decreased over time in all groups. <sup>(a,b)</sup></p>
+
+<p>Whilst three doses of RTS,S reduced severe malaria by a third over 18 months of follow-up,<sup> (a)</sup> efficacy waned and after this period &mdash;unless a 4th vaccine dose was given&mdash; a trend to higher incidence of severe malaria was observed as compared to control children of the same age predominantly in sites with a high level of malaria transmission <sup>(b)</sup>. Such shift of disease to an older age has also been described for other malaria interventions <sup>(c)</sup>. This possibility needs to be explored in further studies eg the extended surveillance of study participants in three of the Malaria-055 centres, Malaria-076.<sup> (c)</sup></p>
+
+<p>In infants, no significant protection was seen against severe malaria beyond the 1st year of follow-up, whether with or without a fourth dose. There was no indication of increased incidence as compared to controls during the entire study period <sup>(b)</sup>.</p>
+
+<p>In a post-hoc analysis of the Phase III efficacy trial, severe malaria cases* were classified according to disease syndrome. There was a trend for more cases of cerebral malaria (defined as hospitalization with parasitaemia &gt; 5000 parasites/&micro;L and Blantyre coma score &le; 2, without excluding co-morbidities) in RTS,S/AS01 recipients (11.7% in R3R and 10.8% in R3C groups) than in controls (4.3%) in the older age category. Numbers were low and there is no direct mechanism for a pre-erythrocytic vaccine to predispose to sequestration of infected red blood cells. Syndrome changes according to the age and shift of disease onset linked to the efficacy of the vaccine may explain the imbalance in markers and syndromes. Further assessment is planned in the Phase IV studies.</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:567px; text-align:center;">
+	<tbody>
+		<tr>
+			<td style="width:85px">Time period</td>
+			<td style="width:132px">Syndrome</td>
+			<td colspan="2" style="width:189px"><strong>RTS,S</strong> group (N=5948)</td>
+			<td style="width:161px"><strong>Control </strong>group (N=2974)</td>
+		</tr>
+		<tr>
+			<td rowspan="6" style="width:85px">M0-M20</td>
+			<td style="width:132px">All Cases</td>
+			<td colspan="2" style="width:189px">205</td>
+			<td style="width:161px">158</td>
+		</tr>
+		<tr>
+			<td style="width:132px">Cerebral</td>
+			<td colspan="2" style="width:189px">16</td>
+			<td style="width:161px">5</td>
+		</tr>
+		<tr>
+			<td style="height:16px; width:132px">Cerebral + Anaemia</td>
+			<td colspan="2" style="height:16px; width:189px">6</td>
+			<td style="height:16px; width:161px">1</td>
+		</tr>
+		<tr>
+			<td style="width:132px">Anaemia</td>
+			<td colspan="2" style="width:189px">25</td>
+			<td style="width:161px">29</td>
+		</tr>
+		<tr>
+			<td style="width:132px">Other</td>
+			<td colspan="2" style="width:189px">157</td>
+			<td style="width:161px">123</td>
+		</tr>
+		<tr>
+			<td style="width:132px">Missing</td>
+			<td colspan="2" style="width:189px">1</td>
+			<td style="width:161px">0</td>
+		</tr>
+		<tr>
+			<td style="width:85px">Time period</td>
+			<td style="width:132px">Syndrome</td>
+			<td style="width:94px"><strong>R3C</strong> (N=2719)</td>
+			<td style="width:95px"><strong>R3R</strong> &nbsp;(N=2681)</td>
+			<td style="width:161px"><strong>C3C</strong> (N=2702)</td>
+		</tr>
+		<tr>
+			<td rowspan="5" style="width:85px">M21-SE</td>
+			<td style="width:132px">All Cases</td>
+			<td style="width:94px">103</td>
+			<td style="width:95px">76</td>
+			<td style="width:161px">76</td>
+		</tr>
+		<tr>
+			<td style="width:132px">Cerebral</td>
+			<td style="width:94px">9</td>
+			<td style="width:95px">11</td>
+			<td style="width:161px">2</td>
+		</tr>
+		<tr>
+			<td style="width:132px">Cerebral + Anaemia</td>
+			<td style="width:94px">0</td>
+			<td style="width:95px">1</td>
+			<td style="width:161px">2</td>
+		</tr>
+		<tr>
+			<td style="width:132px">Anaemia</td>
+			<td style="width:94px">18</td>
+			<td style="width:95px">11</td>
+			<td style="width:161px">17</td>
+		</tr>
+		<tr>
+			<td style="width:132px">Other</td>
+			<td style="width:94px">75</td>
+			<td style="width:95px">53</td>
+			<td style="width:161px">54</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>* Severe malaria secondary case definition = P. falciparum asexual parasitaemia at a density of &gt; 5000 parasites per cubic millimetre with one or more markers of disease severity, including cases in which a coexisting illness was present or could not be ruled out.</p>
+
+<p>The administration of a booster dose of RTS,S/AS01 prolonged the efficacy of the vaccine. <sup>(b)</sup> This finding suggests that if a decision is made to implement RTS,S/AS01 in an age category similar to that of the older children recruited to this trial, then strong consideration should be given to inclusion of a booster dose, especially in higher transmission areas and the possible impact of administration of further booster doses will need to be explored.</p>]]></HtmlText>
+  <Topic>SAFETY</Topic>
+  <SubTopic>PHASE III (MALARIA-055) SAFETY RESULTS</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type:lower-alpha">
+	<li><em>RTS,S Clinical Trial Partnership. PloS Medicine 2014; doi/10.1371/journal.pmed.1001685</em></li>
+	<li><em>RTS,S Clinical Trial Partnership. The Lancet, 2015. dx.doi.org/10.1016/S0140-6736(15)60721-8</em></li>
+	<li><em>GSK study ID 200599; clintrials.gov NCT number NCT02207816</em></li>
+</ol>]]></References>
+  <pdf>xml/content/66/66.pdf</pdf>
+  <docx>xml/content/66/66.docx</docx>
+  <contentLastUpdated>2015-12-16</contentLastUpdated>
+  <RelatedFiles />
+</File>

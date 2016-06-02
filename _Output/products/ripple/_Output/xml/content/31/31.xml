@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="31">
+  <Title><![CDATA[<p>What is the effect of RTS,S on different parasite strains?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>RTS,S will only induce protection against malaria caused by <em>Plasmodium falciparum</em>. Neafsey et al investigated the genetic diversity of <em>P falciparum</em> and the protective efficacy of RTS,S<sup>(a)</sup>. The authors conclude that their results suggest that among children 5 to 17 months of age, the RTS,S vaccine had greater activity against malaria parasites with the matched circumsporozoite protein allele than against mismatched malaria. The overall vaccine efficacy in this age category will therefore depend on the proportion of matched alleles in the local parasite population.</p>
+
+<p>Since in the efficacy trial, less than 10% of parasites had matched alleles, it also means that the results of the Malaria-055 trial are representative of the vaccine efficacy in an environment where the malaria parasites with the matched circumsporozoite protein allele are relatively rare. Genetic diversity will be actively monitored in the phase 4 program to evaluate if widespread RTS,S use has the potential to change parasite genetic diversity.</p>]]></HtmlText>
+  <Topic>BACKGROUND INFORMATION ON MALARIA AND RTS,S</Topic>
+  <SubTopic>GENERAL</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type: lower-alpha;">
+	<li><em>Neafsey D et al. N Engl J Med 2015; 373:2025-2037</em></li>
+</ol>]]></References>
+  <pdf>xml/content/31/31.pdf</pdf>
+  <docx>xml/content/31/31.docx</docx>
+  <contentLastUpdated>2015-12-16</contentLastUpdated>
+  <RelatedFiles />
+</File>

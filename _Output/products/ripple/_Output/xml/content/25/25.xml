@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="25">
+  <Title><![CDATA[<p>Why do we need a malaria vaccine?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>Vaccines have historically offered one of the most effective means of preventing infectious diseases and saving lives. Intensified roll-out of preventive interventions have significantly reduced the malaria burden worldwide over the most recent years. Malaria is nevertheless estimated to have killed 584,000 people in 2013 with the majority of deaths occurring in children under the age of five in sub-Saharan Africa<sup>(a)</sup>. Even a partially effective malaria vaccine, as a component of a comprehensive malaria control programme, could potentially prevent millions of malaria cases, and according to mathematical modelling, could save hundreds of thousands of lives.</p>]]></HtmlText>
+  <Topic>BACKGROUND INFORMATION ON MALARIA AND RTS,S</Topic>
+  <SubTopic>GENERAL</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type: lower-alpha;">
+	<li><em>World Malaria Report, WHO 2014 (<a href="http://www.who.int/malaria/publications/world_malaria_report_2014/en/">http://www.who.int/malaria/publications/world_malaria_report_2014/en/</a>)</em></li>
+</ol>]]></References>
+  <pdf>xml/content/25/25.pdf</pdf>
+  <docx>xml/content/25/25.docx</docx>
+  <contentLastUpdated>2015-05-19</contentLastUpdated>
+  <RelatedFiles />
+</File>

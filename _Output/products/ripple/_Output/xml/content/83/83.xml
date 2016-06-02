@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="83">
+  <Title><![CDATA[<p>For whom is Mosquirix<sup>TM</sup> indicated?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>Following review by the European Medicines Agency <sup>(a)</sup>, Mosquirix<sup>TM</sup> is indicated for active immunisation of children aged 6 weeks up to 17 months against malaria caused by <em>Plasmodium falciparum</em> and against hepatitis B. The use of Mosquirix should be based on official recommendations considering <em>Plasmodium falciparum</em> malaria epidemiology in different geographical areas.</p>
+
+<p>Mosquirix should not be used for the prevention of hepatitis B in settings where prevention against malaria caused by <em>P. falciparum</em> is not sought. The safety and efficacy of Mosquirix in children younger than 6 weeks and older than 17 months of age (at first dose) has not been established. Data regarding the efficacy of Mosquirix are limited to children from sub-Saharan Africa.</p>
+
+<p>In November 2015, WHO recommended 3-5 large pilot implementation projects in sub-Saharan Africa with moderate-to-high malaria transmission to understand how to best use RTS,S to protect young children against malaria. The pilot projects should evaluate the additional contacts with the health care system needed to deliver the four doses to children from the age of 5 months. <sup>(b)</sup></p>]]></HtmlText>
+  <Topic>LICENSURE, INDICATION, IMPLEMENTATION</Topic>
+  <SubTopic>REGULATORY PROCESS, INDICATION</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type:lower-alpha">
+	<li><em>Mosquirix SmPC July 2015; European Medicines Agency, ema.europa.eu/ema/</em></li>
+	<li><em>WHO Q&amp;A on malaria vaccines Nov 2015 who.int/immunization/research/development/malaria_vaccine_qa/en/</em></li>
+</ol>]]></References>
+  <pdf>xml/content/83/83.pdf</pdf>
+  <docx>xml/content/83/83.docx</docx>
+  <contentLastUpdated>2015-12-15</contentLastUpdated>
+  <RelatedFiles />
+</File>

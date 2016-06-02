@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="59">
+  <Title><![CDATA[<p>What does partial or moderate efficacy mean in real terms?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>Partial or moderate efficacy means that a vaccine is effective less than 100 percent of the time, and does not prevent all cases of the disease. Taking into account the important disease burden of malaria mainly in African children under five years of age <sup>(c)</sup>, even a vaccine with moderate efficacy could still provide considerable public health benefit.</p>
+
+<p>The importance of considering public health impact estimates is clearly illustrated by the example of the rotavirus vaccine trial in Malawi and South Africa<sup>(a)</sup>. Despite the higher efficacy of the vaccine in South-Africa (77% vs. 49% in Malawi), more severe rotavirus gastroenteritis cases are prevented in Malawi (67 episodes/1,000 person years at risk vs. 42 in South-Africa), and this due to the much higher disease burden in Malawi (131 episodes/1,000 infants/year vs. 54 in South-Africa).</p>
+
+<p>RTS,S reduces the chance of a child to develop clinical malaria by 50%. This reduction can be either all-or-nothing, (ie 50% of children are fully protected) or partial, ie everyone is protected to 50%. The results from our clinical trials indicate that the latter is the mechanism of the RTS,S malaria vaccine candidate. This is not overly surprising given that even people living in malaria endemic regions develop only partial immunity against malaria, despite being exposed regularly to infection by the malaria parasites.</p>
+
+<p>In the case of the Phase III efficacy trial, RTS,S reduces the chance of a child to develop clinical malaria by half in children and by a third in infants over the first year after primary vaccination. In terms of public health impact, this translates into for every thousand vaccinees, an average of over 500 clinical malaria cases was prevented in infants and over 1000 in children over the 3-4 years of the study.&nbsp; Impact was further enhanced by a 4<sup>th</sup> dose preventing over 3000 and 6000 cases in infants and children living in areas of high malaria transmission <sup>(b)</sup>.</p>]]></HtmlText>
+  <Topic>EFFICACY</Topic>
+  <SubTopic>PUBLIC HEALTH IMPACT/PARTIAL EFFICACY</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type:lower-alpha">
+	<li>Madhi S. et al. NEJM 2010; 362: 289-98.</li>
+	<li>RTS,S Clinical Trial Partnership. The Lancet, 2015. dx.doi.org/10.1016/S0140-6736(15)60721-8</li>
+	<li>Malaria Fact sheet n&deg;94, &nbsp;WHO 2015 (http://www.who.int/mediacentre/factsheets/fs094/en/)</li>
+</ol>]]></References>
+  <pdf>xml/content/59/59.pdf</pdf>
+  <docx>xml/content/59/59.docx</docx>
+  <contentLastUpdated>2015-12-15</contentLastUpdated>
+  <RelatedFiles />
+</File>

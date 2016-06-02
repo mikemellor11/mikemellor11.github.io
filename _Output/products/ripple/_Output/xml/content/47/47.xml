@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="47">
+  <Title><![CDATA[<p>Are you sure that your disease surveillance did not miss a lot of malaria cases?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>The attack rate for malaria reported in the trial is an average of 1 clinical attack per year per child, over the different participating sites. This varied considerably from less than 0.1 episode per year to more than 5 episodes per year in high transmission areas.</p>
+
+<p>In the phase III efficacy trial, over the first 20 months of follow-up, approximately 180,000 outpatient sick visits happened, of which almost 100,000 were for febrile illnesses. According to the study protocol<sup>(a,b)</sup>, a blood test was done to confirm or eliminate the diagnosis of malaria in all children presenting with a febrile illness. Malaria was found in 16-17% of the febrile cases, but the high rate of clinic visits indicates a very robust surveillance system for malaria in this trial, making it highly unlikely that malaria cases would have been missed.</p>]]></HtmlText>
+  <Topic>CLINICAL DEVELOPMENT OF RTS,S</Topic>
+  <SubTopic>DESIGN OF THE LARGE PHASE III EFFICACY STUDY</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type: lower-alpha;">
+	<li><em>Leach A, et al. Malaria Journal 2011; 10: 224.</em></li>
+	<li><em>Lievens M. et al. </em><em>Malaria Journal 2011; 10: 222</em></li>
+</ol>]]></References>
+  <pdf>xml/content/47/47.pdf</pdf>
+  <docx>xml/content/47/47.docx</docx>
+  <contentLastUpdated>2015-05-20</contentLastUpdated>
+  <RelatedFiles />
+</File>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="67">
+  <Title><![CDATA[<p>Can RTS,S be co-administered with other childhood vaccines?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>Mosquirix<sup>TM</sup> can be given concomitantly with any of the following monovalent or combination vaccines including diphtheria (D), tetanus (T), whole cell pertussis (Pw), acellular pertussis (Pa), hepatitis B (HepB), <em>Haemophilus influenzae</em> type b (Hib), oral polio (OPV), measles, yellow fever, rotavirus and pneumococcal&nbsp; conjugate vaccines (PCV).<sup> (a)</sup></p>
+
+<ul>
+	<li>If RTS,S/AS01 is to be given at the same time as another injectable vaccine, the vaccines should always be administered at different sites.<sup>(a)</sup></li>
+	<li>Concomitant administration of rotavirus and pneumococcal conjugate vaccines with RTS,S/AS01 may reduce the antibody response to the circumsporozoite (CS) antigen of RTS,S. The impact of this observation on the level of protection induced by RTS,S/AS01 is currently unknown. <sup>(a) </sup></li>
+	<li>The co-administration of Mosquirix<sup>TM</sup> with PCV increases the risk of fever within 7 days post-vaccination <sup>(a)</sup></li>
+</ul>
+
+<p>RTS,S/AS01 vaccine formulations were evaluated in co-administration with the following licensed vaccines<sup>(c,d)</sup>: DTPw/Hib (<em>TETRActHib</em>), DTPa/Hib <em>(Infanrix Hib)</em>, DTPw-HepB/Hib (<em>Tritanrix-HepB/Hib</em>), OPV (<em>Polio Sabin</em>), measles (<em>Rouvax/Attenuated Live Measles Vaccine</em>), yellow fever (<em>Stamaril</em>), rotavirus <em>(Rotarix)</em> and pneumococcal conjugated <em>(Synflorix)</em> vaccines.</p>
+
+<p>The non-inferiority of the immune response was demonstrated for D, T, Pw, Pa, Hib, polio and pneumococcal antigens (except for pneumococcal serotype 18C); although there was a trend for lower antibody geometric mean concentrations (GMCs) for these antigens when compared to the control group. These observations were considered as not clinically significant.<sup>(a)</sup></p>
+
+<p>In a clinical study in infants aged 8-12 weeks, fever was reported more frequently in infants receiving PCV in co-administration with Mosquirix, DTPa/Hib and OPV simultaneously (26%), as compared to infants receiving only Mosquirix, DTPa/Hib and OPV (14%). However, the frequency of grade 3 fever (defined as axillary temperature &gt; 39.0&deg;C) was low (&le; 1%).<sup>(a,d)</sup></p>
+
+<p>Another study,<strong> Malaria-073</strong><sup>(e)</sup>, is a Phase IIIb randomized, open-label, controlled study to evaluate the non-inferiority of immune response and the safety of the RTS,S/AS01, when administered as primary vaccination with or without co-administration of yellow fever (<em>Stamaril</em>&reg;), measles and rubella (<em>MR-VAC</em>&trade;) vaccines at 6, 7.5 and 9 months of age to children living in sub-Saharan Africa.</p>]]></HtmlText>
+  <Topic>SAFETY</Topic>
+  <SubTopic>CO-ADMINISTRATION</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type:lower-alpha">
+	<li><em>Mosquirix Global Datasheet v03, February 2015</em></li>
+	<li><em>Leach A, et al. Malaria Journal 2011; 10: 224.</em></li>
+	<li><em>Agnandji S, et al. J Infectious Diseases 2010, 202(7):1076&ndash;1087</em></li>
+	<li><em>Malaria-063, ClinicalTrials.gov NCT01345240 (GSK study ID 113681)</em></li>
+	<li><em>Malaria-073, (GSK study ID 200596)</em></li>
+</ol>]]></References>
+  <pdf>xml/content/67/67.pdf</pdf>
+  <docx>xml/content/67/67.docx</docx>
+  <contentLastUpdated>2015-12-15</contentLastUpdated>
+  <RelatedFiles />
+</File>

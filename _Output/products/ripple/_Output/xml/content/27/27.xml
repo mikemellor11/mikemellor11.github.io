@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="27">
+  <Title><![CDATA[<p>How does RTS,S work?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>The RTS,S malaria vaccine candidate aims to trigger the immune system to defend against the <em>P. falciparum</em> malaria parasite when it first enters the human host&rsquo;s bloodstream and/or when the parasite infects liver cells. This is the pre-erythrocytic part of the parasites lifecycle and explains why RTS,S is commonly referred to as a pre-erythrocytic vaccine. RTS,S is designed to prevent the parasite from infecting, maturing and multiplying in the liver, and from re-entering the bloodstream and invading red blood cells, at which point the infected person would begin to show symptoms of the disease<sup>(a)</sup>.</p>
+
+<p>Although no correlate of protection has currently been established, both humoral and cellular immune responses are considered to contribute to protection against&nbsp;<em>P. falciparum.&nbsp;</em><sup>(b)&nbsp;</sup>To stimulate an immune response to the malaria parasite, a portion of the circumsporozoite protein (the surface protein that helps the malaria parasite invade human liver cells) was fused with the hepatitis B surface protein (HBsAg). This &lsquo;RTS&rsquo; fusion protein is expressed together with &lsquo;free&rsquo; HBsAg (&rsquo;S&rsquo;) in yeast cells (<em>Saccharomyces cerevisiae</em>), allowing spontaneous formation of &lsquo;RTS,S&rsquo; particles known to enhance immune responses to the antigen. The addition of one of GSK&rsquo;s proprietary Adjuvant Systems (AS01) aims to further improve the immune response to the antigen and thereby induce protection<sup>(c,d)</sup>.</p>]]></HtmlText>
+  <Topic>BACKGROUND INFORMATION ON MALARIA AND RTS,S</Topic>
+  <SubTopic>GENERAL</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type: lower-alpha;">
+	<li><em>Gordon et al. </em>J Infect Dis<em> 1995; 171:1576-85</em></li>
+	<li><em>White et al 2013 PLoS ONE 8(4): e61395</em></li>
+	<li><em>Cohen et al. Ann Pharm Fran&ccedil;aises 2010;68:370-9</em></li>
+	<li><em>Cohen et al. in Parasitology, Springer-Verlag Berlin Heidelberg 2011, Chapter 7</em></li>
+</ol>]]></References>
+  <pdf>xml/content/27/27.pdf</pdf>
+  <docx>xml/content/27/27.docx</docx>
+  <contentLastUpdated>2015-12-15</contentLastUpdated>
+  <RelatedFiles />
+</File>

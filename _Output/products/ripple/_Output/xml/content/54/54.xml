@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="54">
+  <Title><![CDATA[<p>Does the vaccine work equally well across the clinical trial sites (across diverse malaria transmission settings?)</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>Among children aged 5-17 months at first vaccination, RTS,S provided protection across a wide range of malaria transmission settings. Vaccine efficacy varied between the 11 sites.<sup>(a)</sup>&nbsp; This site variation (VE ranging from 40-70%) was statistically significant over the first 20 months of follow-up,<sup>(a)</sup> but differences in vaccine efficacy between sites were not statistically significant when compared over the entire study period.<sup>(b)</sup></p>
+
+<p>In infants aged 6-12 weeks (at first dose) there is no statistical evidence that VE against clinical malaria varied according to <em>P. falciparum</em> transmission intensity (Malaria-055). <sup>(b)</sup></p>
+
+<p>Strictly internal use:<sup>(c)</sup></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%">
+	<tbody>
+		<tr>
+			<td colspan="1" rowspan="2" style="text-align:center">Children aged 5-17months<br>
+			ATP* cohort<br>
+			30 months of follow-up after dose 3</td>
+			<td colspan="2" rowspan="1" style="text-align:center"><strong>Vaccine efficacy against clinical malaria (95% CI)</strong></td>
+		</tr>
+		<tr>
+			<td style="text-align:center"><strong>Primary vaccination only</strong></td>
+			<td style="text-align:center"><strong>Primary and booster vaccination</strong></td>
+		</tr>
+		<tr>
+			<td>Low transmission intensity<br>
+			(Pp** &lt; 5%)</td>
+			<td style="text-align:center">58% (35;73)</td>
+			<td style="text-align:center">58% (35;74)</td>
+		</tr>
+		<tr>
+			<td>Moderate transmission intensity<br>
+			(Pp** 5-40%)</td>
+			<td style="text-align:center">39% (30;47)</td>
+			<td style="text-align:center">48% (40;56)</td>
+		</tr>
+		<tr>
+			<td>High transmission intensity<br>
+			(Pp** &gt;40%)</td>
+			<td style="text-align:center">28% (21;35)</td>
+			<td style="text-align:center">43% (36;49)</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span style="font-size:10px">* According-to-protocol (ATP) cohort: all children immunised according to schedule, N= total number in all 3 study groups<br>
+** <em>P. falciparum</em> parasite prevalence (Pp)</span></p>]]></HtmlText>
+  <Topic>EFFICACY</Topic>
+  <SubTopic>EFFICACY IN DIFFERENT TRANSMISSION SETTINGS</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type:lower-alpha">
+	<li><em>RTS,S Clinical Trial Partnership. PloS Medicine 2014; doi/10.1371/journal.pmed.1001685</em></li>
+	<li><em>RTS,S Clinical Trial partnership. The Lancet, 2015. dx.doi.org/10.1016/S0140-6736(15)60721-8</em></li>
+	<li><em>Mosquirix Global Data sheet v03, 2015</em></li>
+</ol>]]></References>
+  <pdf>xml/content/54/54.pdf</pdf>
+  <docx>xml/content/54/54.docx</docx>
+  <contentLastUpdated>2015-05-19</contentLastUpdated>
+  <RelatedFiles />
+</File>

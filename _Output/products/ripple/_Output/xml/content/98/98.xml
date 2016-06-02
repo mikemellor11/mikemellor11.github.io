@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="98">
+  <Title><![CDATA[<p>Is GSK developing any other malaria vaccines? Who are you partnering with?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>In parallel to the malaria vaccine candidate RTS,S currently in phase III clinical studies, GSK is also looking into developing other &lsquo;second generation&rsquo; malaria vaccines in alignment with the Malaria Vaccine technology roadmap from WHO<sup>(a)</sup>.</p>
+
+<p>Building on previous experience from RTS,S, the main strategy for GSK is to use different approaches to a) enhance or broaden the CS-specific immune response and b) add other&nbsp; antigens to enhance protection against disease and/or block transmission.</p>
+
+<p>GSK is committed to identify and work with partners that can provide expertise, know-how and funding that will accelerate the development of a second generation malaria vaccine. The main partner remains the PATH Malaria Vaccine Initiative (MVI). Other research or clinical development partners are eg WRAIR, University of Oxford and Crucell. Through the acquisition of Okairos and their adenovirus platform, GSK entered into a broader collaboration with the University of Oxford.</p>
+
+<p>The vaccine approaches which are currently in clinical development target <em>P. falciparum</em>:</p>
+
+<ul>
+	<li>RTS,S/AS01 delayed, fractional third dose (Malaria-071)<sup>(b)</sup>:&nbsp; assessment of third dose of RTS,S/AS01 given as 1/5<sup>th</sup> standard dose at month 7. A previous study with RTS,S/AS02 had indicated high protection after sporozoite challenge<sup>(c)</sup></li>
+	<li>Prime-boost with viral vector ChAd63 ME-TRAP/MVA ME-TRAP (Oxford) and RTS,S/AS01 (Malaria-077/Vac-055)<sup>(d)</sup></li>
+</ul>
+
+<p>Other candidates, eg. a prime-boost approach with Ad35.CS (Crucell) x RTS,S/AS01<sup>(e)</sup> and a blood-stage malaria vaccine candidate FMP2.1/AS02A<sup>(f)</sup>, failed to demonstrate clinical proof-of-concept and are no longer actively pursued.</p>
+
+<p>Several other candidates, including targets for <em>P. vivax</em>, are or have been in preclinical evaluation.</p>]]></HtmlText>
+  <Topic>OTHER MALARIA VACCINES</Topic>
+  <SubTopic>GSK SECOND GENERATION MALARIA VACCINES</SubTopic>
+  <References><![CDATA[<ol style="list-style-type:lower-alpha">
+	<li><a href="http://www.who.int/immunization/topics/malaria/vaccine_roadmap/en/"><em>www.who.int/immunization/topics/malaria/vaccine_roadmap/en</em></a></li>
+	<li><em>Clinicaltrials.gov - NCT01857869</em></li>
+	<li><em>Stoute J. et al. NEJM 1997; 336: 86-9</em></li>
+	<li><em>ClinicalTrials.gov - NCT01883609</em></li>
+	<li><em>ClinicalTrials.gov - NCT01366534; Ockenhouse, C. et al. LB-166, November 13, 2012, 61st annual meeting of the American Society for Tropical Medicine and Hygiene</em></li>
+	<li><em>Thera M, et al. NEJM 2011; 365: 1004-13.</em></li>
+</ol>]]></References>
+  <pdf>xml/content/98/98.pdf</pdf>
+  <docx>xml/content/98/98.docx</docx>
+  <contentLastUpdated>2014-03-03</contentLastUpdated>
+  <RelatedFiles />
+</File>

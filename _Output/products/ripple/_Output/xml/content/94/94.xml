@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<File id="94">
+  <Title><![CDATA[<p>What is the composition of the AS01 adjuvant contained in the malaria vaccine candidate?</p>]]></Title>
+  <HtmlTextKey><![CDATA[]]></HtmlTextKey>
+  <HtmlText><![CDATA[<p>GSK&rsquo;s proprietary AS01 Adjuvant System contains MPL, QS-21 and liposomes.</p>
+
+<p>MPL (monophosphoryl lipid A) is derived from the cell wall lipopolysaccharide of <em>Salmonella Minnesota</em> strain R595. It is the first and only toll-like receptor (TLR) ligand currently approved in a human vaccine<sup>(a)</sup>.</p>
+
+<p>QS-21 is a saponin extracted from the bark of the <em>Quillaja saponaria</em> tree, also known as the soap bark tree or Soapbark, an evergreen tree native to warm temperate central Chile. QS-21 is a purified fraction of saponin, and has been shown to enhance both antibody- and cell-mediated immune responses<sup>(b)</sup>. QS-21 is registered by Agenus Inc. as Stimulon<sup>&reg;</sup>. Agenus Inc. (Nasdaq: AGEN) is a US based biotechnology company (<a href="http://www.agenusbio.com" target="_blank">www.agenusbio.com</a>). QS-21: Quillaja saponaria Molina, fraction 21 is in-licensed from Antigenics Inc, a wholly owned subsidiary of Agenus Inc., Lexington, MA, USA.</p>
+
+<p>Liposomes are artificial vesicles that comprise an aqueous core enclosed in one or more phospholipid layers<sup>(c)</sup>. They have been developed and studied for over 30 years as a way to deliver drugs to cells. Liposomes alone are usually inert carriers. Over the last 20 years, this principle has been applied to vaccines in order to deliver antigens and other adjuvants to antigen-presenting cells<sup>(d,e)</sup>.</p>
+
+<p>MPL and Liposomes used in AS01 are property of GSK.</p>]]></HtmlText>
+  <Topic>ADJUVANTS</Topic>
+  <SubTopic>GENERAL</SubTopic>
+  <References><![CDATA[<ol start="1" style="list-style-type:lower-alpha">
+	<li><em>Mata-Haro V, et al. The vaccine adjuvant monophosphoryl lipid A as a TRIF-biased agonist of TLR4. Science 2007;316:1628-32.</em></li>
+	<li><em>Kensil CR &amp; Kammer R. QS-21: a water-soluble triterpene glycoside adjuvant. Expert Opin Investig Drugs 1998;7:1475-82.</em></li>
+	<li><em>Gar&ccedil;on N, et al. GlaxoSmithKline Adjuvant Systems in vaccines: concepts, achievements and perspectives. Expert Rev Vaccines 2007;6:723-39.</em></li>
+	<li><em>Alving CR, et al. Effectiveness of liposomes as potential carriers of vaccines: applications to cholera toxin and human malaria sporozoite antigen. Vaccine 1986;4:166-72.</em></li>
+	<li><em>Alving CR, et al. Liposomes as carriers of peptide antigens: induction of antibodies and cytotoxic T lymphocytes to conjugated and unconjugated peptides. Immunol Rev 1995;145:5-31.</em></li>
+</ol>]]></References>
+  <pdf>xml/content/94/94.pdf</pdf>
+  <docx>xml/content/94/94.docx</docx>
+  <contentLastUpdated>2015-12-16</contentLastUpdated>
+  <RelatedFiles />
+</File>
