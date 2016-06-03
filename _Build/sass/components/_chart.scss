@@ -4,7 +4,7 @@
 }
 
 .reverseColor{
-  fill: $color4;
+  fill: $color0;
 }
 
 polyline{
@@ -15,16 +15,16 @@ polyline{
 }
 
 .axis line, .axis path{
-  stroke: $color2;
+  stroke: transparentize($color5, 0.75);
   fill: none;
 }
 
 .marker, .line__stroke{
   stroke-width: 2px;
-  stroke: $color3;
+  stroke: $color1;
 }
 
-$colors-list: $color1 $color2 $color3 $color4;
+$colors-list: $color1 $color2 $color4;
 
 @each $current-color in $colors-list {
     $i: index($colors-list, $current-color);
@@ -47,5 +47,5 @@ $colors-list: $color1 $color2 $color3 $color4;
 
 .delta{
   position: relative;
-  padding-bottom: 50%;
+  padding-bottom: 56.25%;
 }

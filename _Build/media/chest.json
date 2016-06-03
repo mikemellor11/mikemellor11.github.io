@@ -1,40 +1,67 @@
 {
     "attributes": 
     {
-        "colors": ["fill1", "fill2"],
-        "yLabel": "Weight (kg)"
+        "yLabel": "Weight (kg)",
+        "xLabel": "Chest",
+        "yMin": "0"
     },
     "data":[
         {
+            "label": "Press (dumbbell)",
             "values": [
                 {
-                    "id": "Pre",
-                    "value": 25.9,
+                    "id": "28/05/16",
+                    "value": {
+                        "weight": 42,
+                        "sets": 3,
+                        "reps": 8
+                    },
                     "label": ""
                 },
                 {
-                    "id": "30 min",
-                    "value": 60.5,
+                    "id": "03/06/16",
+                    "value": {
+                        "weight": 42,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                }
+            ]
+        },
+        {
+            "label": "Press (bench)",
+            "values": [
+                {
+                    "id": "28/05/16",
+                    "value": {
+                        "weight": 90,
+                        "sets": 6,
+                        "reps": 8
+                    },
+                    "label": ""
+                }
+            ]
+        },
+        {
+            "label": "Flys (dumbbell)",
+            "values": [
+                {
+                    "id": "28/05/16",
+                    "value": {
+                        "weight": 24,
+                        "sets": 3,
+                        "reps": 8
+                    },
                     "label": ""
                 },
                 {
-                    "id": "1 h",
-                    "value": 59.7,
-                    "label": ""
-                },
-                {
-                    "id": "3 h",
-                    "value": 64.4,
-                    "label": ""
-                },
-                {
-                    "id": "6 h",
-                    "value": 58,
-                    "label": ""
-                },
-                {
-                    "id": "24 h",
-                    "value": 114.8,
+                    "id": "03/06/16",
+                    "value": {
+                        "weight": 24,
+                        "sets": 3,
+                        "reps": 8
+                    },
                     "label": ""
                 }
             ]

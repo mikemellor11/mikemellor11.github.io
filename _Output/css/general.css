@@ -629,19 +629,19 @@ th {
 }
 
 .ut-bg1 {
-  background: red;
+  background: #FF6F4F;
 }
 
 .ut-bg2 {
-  background: blue;
+  background: #FFCC73;
 }
 
 .ut-bg3 {
-  background: green;
+  background: #FFF4C8;
 }
 
 .ut-bg4 {
-  background: orange;
+  background: #FFAA78;
 }
 
 .ut-noWrap {
@@ -669,19 +669,19 @@ th {
 }
 
 .ut-borderBottom {
-  border-bottom: 1px solid rgba(255, 165, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 170, 120, 0.5);
 }
 
 .ut-borderRight {
-  border-right: 1px solid rgba(255, 165, 0, 0.5);
+  border-right: 1px solid rgba(255, 170, 120, 0.5);
 }
 
 .ut-borderLeft {
-  border-left: 1px solid rgba(255, 165, 0, 0.5);
+  border-left: 1px solid rgba(255, 170, 120, 0.5);
 }
 
 .ut-borderTop {
-  border-top: 1px solid rgba(255, 165, 0, 0.5);
+  border-top: 1px solid rgba(255, 170, 120, 0.5);
 }
 
 .ut-iconSize {
@@ -691,11 +691,11 @@ th {
 }
 
 .ut-highlight {
-  color: red;
+  color: #FF6F4F;
 }
 
 .ut-highlight--alt {
-  color: blue;
+  color: #FFCC73;
 }
 
 .ut-relative {
@@ -768,9 +768,9 @@ th {
 .button {
   @extends .button--clear;
   padding: 10px 20px;
-  background: blue;
+  background: #FFCC73;
   cursor: pointer;
-  border: 1px solid green;
+  border: 1px solid #FFF4C8;
   border-radius: 10px;
   display: inline-block;
   text-align: center;
@@ -787,7 +787,7 @@ th {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #0000cc;
+  background: #ffb940;
   z-index: -1;
   opacity: 0;
   -webkit-transform: scaleX(0.7);
@@ -805,14 +805,14 @@ th {
 }
 
 .button--alt {
-  background: green;
+  background: #FFF4C8;
   border: none;
   border-radius: 200px;
   padding: 10px 15px;
 }
 
 .button--alt:before {
-  background-color: #004d00;
+  background-color: #ffea95;
   border-radius: 200px;
 }
 
@@ -831,7 +831,7 @@ th {
 }
 
 .icon svg {
-  fill: green;
+  fill: #FFF4C8;
 }
 
 .icon--animation {
@@ -842,7 +842,7 @@ th {
 }
 
 .icon--active svg {
-  fill: blue !important;
+  fill: #FFCC73 !important;
 }
 
 .icon--active .icon--cog {
@@ -868,7 +868,7 @@ th {
 }
 
 .icon--altCol svg {
-  fill: red;
+  fill: #FF6F4F;
 }
 
 body {
@@ -974,18 +974,18 @@ a {
 }
 
 .toggle:focus + label:after {
-  box-shadow: inset 0 0 0px 1px green !important;
+  box-shadow: inset 0 0 0px 1px #FFF4C8 !important;
 }
 
 .toggle + label {
   display: inline-block;
   position: relative;
-  box-shadow: inset 0 0 0px 1px green;
+  box-shadow: inset 0 0 0px 1px #FFF4C8;
   text-indent: -5000px;
   height: 30px;
   width: 50px;
   border-radius: 15px;
-  background: blue;
+  background: #FFCC73;
   vertical-align: middle;
 }
 
@@ -1011,7 +1011,7 @@ a {
   top: 2px;
   left: 2px;
   border-radius: 15px;
-  background: orange;
+  background: #FFAA78;
   -webkit-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
@@ -1025,12 +1025,12 @@ a {
 }
 
 .fillFade {
-  fill: #cc0000;
-  color: #cc0000;
+  fill: #ff451c;
+  color: #ff451c;
 }
 
 .reverseColor {
-  fill: orange;
+  fill: white;
 }
 
 polyline {
@@ -1041,122 +1041,96 @@ polyline {
 }
 
 .axis line, .axis path {
-  stroke: blue;
+  stroke: rgba(128, 128, 128, 0.25);
   fill: none;
 }
 
 .marker, .line__stroke {
   stroke-width: 2px;
-  stroke: green;
+  stroke: #FF6F4F;
 }
 
 .fill1, .fill1-stacked1 {
-  fill: red;
-  color: red;
+  fill: #ff6f4f;
+  color: #ff6f4f;
 }
 
 .fill1-stacked2 {
-  fill: #ff3333;
-  color: #ff3333;
+  fill: #ff9982;
+  color: #ff9982;
 }
 
 .fill1-stacked3 {
-  fill: #ff6666;
-  color: #ff6666;
+  fill: #ffc2b5;
+  color: #ffc2b5;
 }
 
 .fill1-stacked4 {
-  fill: #ff9999;
-  color: #ff9999;
+  fill: #ffece8;
+  color: #ffece8;
 }
 
 .fill1-stroked {
-  stroke: red;
-  color: red;
+  stroke: #FF6F4F;
+  color: #FF6F4F;
   fill: none;
 }
 
 .fill2, .fill2-stacked1 {
-  fill: blue;
-  color: blue;
+  fill: #ffcc73;
+  color: #ffcc73;
 }
 
 .fill2-stacked2 {
-  fill: #3333ff;
-  color: #3333ff;
+  fill: #ffdfa6;
+  color: #ffdfa6;
 }
 
 .fill2-stacked3 {
-  fill: #6666ff;
-  color: #6666ff;
+  fill: #fff1d9;
+  color: #fff1d9;
 }
 
 .fill2-stacked4 {
-  fill: #9999ff;
-  color: #9999ff;
+  fill: white;
+  color: white;
 }
 
 .fill2-stroked {
-  stroke: blue;
-  color: blue;
+  stroke: #FFCC73;
+  color: #FFCC73;
   fill: none;
 }
 
 .fill3, .fill3-stacked1 {
-  fill: green;
-  color: green;
+  fill: #ffaa78;
+  color: #ffaa78;
 }
 
 .fill3-stacked2 {
-  fill: #00b300;
-  color: #00b300;
+  fill: #ffcaab;
+  color: #ffcaab;
 }
 
 .fill3-stacked3 {
-  fill: #00e600;
-  color: #00e600;
+  fill: #ffeade;
+  color: #ffeade;
 }
 
 .fill3-stacked4 {
-  fill: #1aff1a;
-  color: #1aff1a;
+  fill: white;
+  color: white;
 }
 
 .fill3-stroked {
-  stroke: green;
-  color: green;
-  fill: none;
-}
-
-.fill4, .fill4-stacked1 {
-  fill: orange;
-  color: orange;
-}
-
-.fill4-stacked2 {
-  fill: #ffb733;
-  color: #ffb733;
-}
-
-.fill4-stacked3 {
-  fill: #ffc966;
-  color: #ffc966;
-}
-
-.fill4-stacked4 {
-  fill: #ffdb99;
-  color: #ffdb99;
-}
-
-.fill4-stroked {
-  stroke: orange;
-  color: orange;
+  stroke: #FFAA78;
+  color: #FFAA78;
   fill: none;
 }
 
 .delta {
   position: relative;
-  padding-bottom: 50%;
+  padding-bottom: 56.25%;
 }
 
 #svgSprite {

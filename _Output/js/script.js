@@ -860,7 +860,8 @@ if (!String.format) {
 		symbolType: 'circle',
 		transitionType: 'cubic-in-out',
 		ticks: 10,
-		dashedLine: 0 // 0 means sold, '3, 3' would be 3 pixels sold 3 pixels gap and so on
+		dashedLine: 0, // 0 means sold, '3, 3' would be 3 pixels sold 3 pixels gap and so on
+		plotValue: null // if null value is considered the value to plot, if value is an object you need to set which key will be plotted instead. e.g. value: 40 = plotValue: null // value: {weight: 40} = plotValue: "weight"
 	};
 
 	/* Local Scope */
@@ -894,7 +895,7 @@ if (!String.format) {
 			.interpolate(att.interpolation)
 			.defined(function(d) { return d.value !== null; })
 		    .x(function(d) { return xScale(d.id); })
-		    .y(function(d) { return yScale(d.value); });
+		    .y(function(d) {return yScale(getValue(d)); });
 
 		var lines = draw.selectAll(".line").data(data);
 
@@ -924,7 +925,7 @@ if (!String.format) {
 		    	g_Plots.append("text")
 					.attr("y", '1em')
 					.attr("x", 0)
-					.attr("transform", function(d, i){ return "translate(" + xScale(d.id) + ", " + (yScale(+d.value) + att.labelPadding) + ")"; })
+					.attr("transform", function(d, i){ return "translate(" + xScale(d.id) + ", " + (yScale(+getValue(d)) + att.labelPadding) + ")"; })
 					.style('text-anchor', function(d, i){ 
 						if((_width - xScale(d.id)) < _width * 0.2){ return 'end'; } 
 						if((_width - xScale(d.id)) > _width * 0.8){ return 'start'; } 
@@ -938,7 +939,7 @@ if (!String.format) {
 					.delay(function(d, i) {return (i * att.stagger) + att.delaySpeed; })
 					.duration(att.transitionSpeed)
 					.attr('opacity', function(d){
-						if(!d.value){
+						if(!getValue(d)){
 							return 0;
 						}
 
@@ -950,7 +951,7 @@ if (!String.format) {
 				g_Plots.append("path")
 					.attr("class", function(d, i){return 'line__symbol ' + att.colors[(lineIndex % att.colors.length)]})
 					.attr("d", d3.svg.symbol().size(0))
-					.attr("transform", function(d) { return "translate(" + xScale(d.id) + "," + yScale(d.value) + ")"; })
+					.attr("transform", function(d) { return "translate(" + xScale(d.id) + "," + yScale(getValue(d)) + ")"; })
 					.attr('opacity', 0);
 
 				plots.select(".line__symbol")
@@ -961,9 +962,9 @@ if (!String.format) {
 					.attr("d", d3.svg.symbol().type(function(d, i){ 
 						return (d.symbolType) ? d.symbolType : (lineData.symbolType) ? lineData.symbolType : att.symbolType; 
 					}).size(att.symbolSize))
-					.attr("transform", function(d) { return "translate(" + xScale(d.id) + "," + yScale(d.value) + ")"; })
+					.attr("transform", function(d) { return "translate(" + xScale(d.id) + "," + yScale(getValue(d)) + ")"; })
 					.attr('opacity', function(d){
-						if(!d.value){
+						if(!getValue(d)){
 							return 0;
 						}
 
@@ -977,6 +978,10 @@ if (!String.format) {
 	    		.style("opacity", 0)
 	    		.remove();
 		});
+	}
+
+	function getValue(d){
+		return (!att.plotValue) ? d.value : d.value[att.plotValue];
 	}
 
 	function renderAxis() {
@@ -1005,8 +1010,8 @@ if (!String.format) {
 
 		yScale = d3.scale.linear()
 		    .domain([
-				(att.yMin) ? att.yMin : d3.min(data, function(d) { return d3.min(d.values, function(d) { return +d.value; }); }),
-				(att.yMax) ? att.yMax : d3.max(data, function(d) { return d3.max(d.values, function(d) { return +d.value; }); })])
+				(att.yMin) ? att.yMin : d3.min(data, function(d) { return d3.min(d.values, function(d) { return +getValue(d); }); }),
+				(att.yMax) ? att.yMax : d3.max(data, function(d) { return d3.max(d.values, function(d) { return +getValue(d); }); })])
 		    .range((att.flipYAxis) ? [0, _height] : [_height, 0]);
 
 		var xAxis = d3.svg.axis()
@@ -1064,7 +1069,7 @@ if (!String.format) {
 	}
 
 	function parseLabel(d) {
-		return String.format(att.labelFormat, d.value, d.label, d.id);
+		return String.format(att.labelFormat, getValue(d), d.label, d.id);
 	}
 
 	function calculateXAxis(){
@@ -1148,9 +1153,17 @@ if (!String.format) {
 
     var chestChart = createLine('#chart0');
 
+    var globalStyle = {
+    	colors: ['fill1', 'fill2', 'fill3'],
+    	margin: {
+    		right: 40,
+    		bottom: 40
+    	}
+    };
+
     d3.json('media/chest.json', function (err, JSON) {
         if(!err){
-            chestChart.width(d3.select('.delta').node().getBoundingClientRect().width).attr(JSON.attributes).data(JSON.data).call(chestChart);
+            chestChart.width(d3.select('.delta').node().getBoundingClientRect().width).attr(JSON.attributes).attr(globalStyle).attr({plotValue: "weight"}).data(JSON.data).call(chestChart);
         }
     });
 })();
