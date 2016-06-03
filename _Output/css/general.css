@@ -549,23 +549,23 @@ th {
 }
 
 .ut-padding {
-  padding: 15px !important;
+  padding: 10px !important;
 }
 
 .ut-paddingRight {
-  padding-right: 15px !important;
+  padding-right: 10px !important;
 }
 
 .ut-paddingLeft {
-  padding-left: 15px !important;
+  padding-left: 10px !important;
 }
 
 .ut-paddingBottom {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .ut-paddingTop {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .ut-noMargin {
@@ -573,31 +573,31 @@ th {
 }
 
 .ut-marginTopLarge {
-  margin-top: 30px !important;
+  margin-top: 20px !important;
 }
 
 .ut-marginTop {
-  margin-top: 15px !important;
+  margin-top: 10px !important;
 }
 
 .ut-marginRight {
-  margin-right: 15px !important;
+  margin-right: 10px !important;
 }
 
 .ut-marginLeft {
-  margin-left: 15px !important;
+  margin-left: 10px !important;
 }
 
 .ut-marginLeftLarge {
-  margin-left: 30px !important;
+  margin-left: 20px !important;
 }
 
 .ut-marginBottom {
-  margin-bottom: 15px !important;
+  margin-bottom: 10px !important;
 }
 
 .ut-marginBottomLarge {
-  margin-bottom: 30px !important;
+  margin-bottom: 20px !important;
 }
 
 .ut-vertAlignTop {
@@ -629,19 +629,19 @@ th {
 }
 
 .ut-bg1 {
-  background: #2C404D;
+  background: red;
 }
 
 .ut-bg2 {
-  background: #334B59;
+  background: blue;
 }
 
 .ut-bg3 {
-  background: #FFFFFF;
+  background: green;
 }
 
 .ut-bg4 {
-  background: #333333;
+  background: orange;
 }
 
 .ut-noWrap {
@@ -669,33 +669,33 @@ th {
 }
 
 .ut-borderBottom {
-  border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+  border-bottom: 1px solid rgba(255, 165, 0, 0.5);
 }
 
 .ut-borderRight {
-  border-right: 1px solid rgba(51, 51, 51, 0.5);
+  border-right: 1px solid rgba(255, 165, 0, 0.5);
 }
 
 .ut-borderLeft {
-  border-left: 1px solid rgba(51, 51, 51, 0.5);
+  border-left: 1px solid rgba(255, 165, 0, 0.5);
 }
 
 .ut-borderTop {
-  border-top: 1px solid rgba(51, 51, 51, 0.5);
+  border-top: 1px solid rgba(255, 165, 0, 0.5);
 }
 
 .ut-iconSize {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
 }
 
 .ut-highlight {
-  color: #2C404D;
+  color: red;
 }
 
 .ut-highlight--alt {
-  color: #334B59;
+  color: blue;
 }
 
 .ut-relative {
@@ -767,11 +767,11 @@ th {
 
 .button {
   @extends .button--clear;
-  padding: 15px 30px;
-  background: #334B59;
+  padding: 10px 20px;
+  background: blue;
   cursor: pointer;
-  border: 1px solid #FFFFFF;
-  border-radius: 2px;
+  border: 1px solid green;
+  border-radius: 10px;
   display: inline-block;
   text-align: center;
   white-space: nowrap;
@@ -787,7 +787,7 @@ th {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #203039;
+  background: #0000cc;
   z-index: -1;
   opacity: 0;
   -webkit-transform: scaleX(0.7);
@@ -805,15 +805,15 @@ th {
 }
 
 .button--alt {
-  background: #FFFFFF;
+  background: green;
   border: none;
-  border-radius: 40px;
-  padding: 15px 22.5px;
+  border-radius: 200px;
+  padding: 10px 15px;
 }
 
 .button--alt:before {
-  background-color: #e6e6e6;
-  border-radius: 40px;
+  background-color: #004d00;
+  border-radius: 200px;
 }
 
 .button--full {
@@ -825,13 +825,13 @@ th {
 }
 
 .icon {
-  width: 40px !important;
-  padding-bottom: 40px !important;
+  width: 48px !important;
+  padding-bottom: 48px !important;
   position: relative;
 }
 
 .icon svg {
-  fill: #FFFFFF;
+  fill: green;
 }
 
 .icon--animation {
@@ -842,7 +842,7 @@ th {
 }
 
 .icon--active svg {
-  fill: #334B59 !important;
+  fill: blue !important;
 }
 
 .icon--active .icon--cog {
@@ -852,23 +852,23 @@ th {
 }
 
 .icon--large {
-  width: 60px !important;
-  padding-bottom: 60px !important;
+  width: 72px !important;
+  padding-bottom: 72px !important;
 }
 
 .icon--small {
-  width: 20px !important;
-  padding-bottom: 20px !important;
+  width: 24px !important;
+  padding-bottom: 24px !important;
 }
 
 .icon--padSmall svg {
-  padding: 10px;
-  width: 20px;
-  height: 20px;
+  padding: 12px;
+  width: 24px;
+  height: 24px;
 }
 
 .icon--altCol svg {
-  fill: #2C404D;
+  fill: red;
 }
 
 body {
@@ -974,18 +974,18 @@ a {
 }
 
 .toggle:focus + label:after {
-  box-shadow: inset 0 0 0px 1px #FFFFFF !important;
+  box-shadow: inset 0 0 0px 1px green !important;
 }
 
 .toggle + label {
   display: inline-block;
   position: relative;
-  box-shadow: inset 0 0 0px 1px #FFFFFF;
+  box-shadow: inset 0 0 0px 1px green;
   text-indent: -5000px;
   height: 30px;
   width: 50px;
   border-radius: 15px;
-  background: #334B59;
+  background: blue;
   vertical-align: middle;
 }
 
@@ -1011,7 +1011,7 @@ a {
   top: 2px;
   left: 2px;
   border-radius: 15px;
-  background: #333333;
+  background: orange;
   -webkit-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
@@ -1022,6 +1022,141 @@ a {
 
 .toggle:checked + label:after {
   left: 22px;
+}
+
+.fillFade {
+  fill: #cc0000;
+  color: #cc0000;
+}
+
+.reverseColor {
+  fill: orange;
+}
+
+polyline {
+  opacity: .3;
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.axis line, .axis path {
+  stroke: blue;
+  fill: none;
+}
+
+.marker, .line__stroke {
+  stroke-width: 2px;
+  stroke: green;
+}
+
+.fill1, .fill1-stacked1 {
+  fill: red;
+  color: red;
+}
+
+.fill1-stacked2 {
+  fill: #ff3333;
+  color: #ff3333;
+}
+
+.fill1-stacked3 {
+  fill: #ff6666;
+  color: #ff6666;
+}
+
+.fill1-stacked4 {
+  fill: #ff9999;
+  color: #ff9999;
+}
+
+.fill1-stroked {
+  stroke: red;
+  color: red;
+  fill: none;
+}
+
+.fill2, .fill2-stacked1 {
+  fill: blue;
+  color: blue;
+}
+
+.fill2-stacked2 {
+  fill: #3333ff;
+  color: #3333ff;
+}
+
+.fill2-stacked3 {
+  fill: #6666ff;
+  color: #6666ff;
+}
+
+.fill2-stacked4 {
+  fill: #9999ff;
+  color: #9999ff;
+}
+
+.fill2-stroked {
+  stroke: blue;
+  color: blue;
+  fill: none;
+}
+
+.fill3, .fill3-stacked1 {
+  fill: green;
+  color: green;
+}
+
+.fill3-stacked2 {
+  fill: #00b300;
+  color: #00b300;
+}
+
+.fill3-stacked3 {
+  fill: #00e600;
+  color: #00e600;
+}
+
+.fill3-stacked4 {
+  fill: #1aff1a;
+  color: #1aff1a;
+}
+
+.fill3-stroked {
+  stroke: green;
+  color: green;
+  fill: none;
+}
+
+.fill4, .fill4-stacked1 {
+  fill: orange;
+  color: orange;
+}
+
+.fill4-stacked2 {
+  fill: #ffb733;
+  color: #ffb733;
+}
+
+.fill4-stacked3 {
+  fill: #ffc966;
+  color: #ffc966;
+}
+
+.fill4-stacked4 {
+  fill: #ffdb99;
+  color: #ffdb99;
+}
+
+.fill4-stroked {
+  stroke: orange;
+  color: orange;
+  fill: none;
+}
+
+.delta {
+  position: relative;
+  padding-bottom: 50%;
 }
 
 #svgSprite {

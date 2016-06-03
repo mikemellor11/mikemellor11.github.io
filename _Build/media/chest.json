@@ -1,27 +1,43 @@
 {
     "attributes": 
     {
-        "xMin": "20111001",
-        "xMax": "20111027",
-        "yAxis": "Hello",
-        "xAxis": "Today",
-        "average": 0
+        "colors": ["fill1", "fill2"],
+        "yLabel": "Weight (kg)"
     },
     "data":[
         {
-            "date": "20111002",
-            "n=187": "-98.5",
-            "n=376": "7.0"
-        },
-        {
-            "date": "20111004",
-            "n=187": "-110.7",
-            "n=376": "-5.9"
-        },
-        {
-            "date": "20111006",
-            "n=187": "-68.4",
-            "n=376": "-13.4"
+            "values": [
+                {
+                    "id": "Pre",
+                    "value": 25.9,
+                    "label": ""
+                },
+                {
+                    "id": "30 min",
+                    "value": 60.5,
+                    "label": ""
+                },
+                {
+                    "id": "1 h",
+                    "value": 59.7,
+                    "label": ""
+                },
+                {
+                    "id": "3 h",
+                    "value": 64.4,
+                    "label": ""
+                },
+                {
+                    "id": "6 h",
+                    "value": 58,
+                    "label": ""
+                },
+                {
+                    "id": "24 h",
+                    "value": 114.8,
+                    "label": ""
+                }
+            ]
         }
     ]
 }

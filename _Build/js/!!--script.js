@@ -7,7 +7,7 @@
 
     d3.json('media/chest.json', function (err, JSON) {
         if(!err){
-            chestChart.width(400).attr(JSON.attributes).data(JSON.data).call(chestChart);
+            chestChart.width(d3.select('.delta').node().getBoundingClientRect().width).attr(JSON.attributes).data(JSON.data).call(chestChart);
         }
     });
 })();
