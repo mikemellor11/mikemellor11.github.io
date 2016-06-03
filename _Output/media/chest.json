@@ -1,11 +1,32 @@
 {
     "attributes": 
     {
-        "yLabel": "Weight (kg)",
-        "xLabel": "Chest",
         "yMin": "0"
     },
     "data":[
+        {
+            "label": "Max",
+            "values": [
+                {
+                    "id": "28/05/16",
+                    "value": {
+                        "weight": 125,
+                        "sets": 1,
+                        "reps": 1
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "02/06/16",
+                    "value": {
+                        "weight": 130,
+                        "sets": 1,
+                        "reps": 1
+                    },
+                    "label": ""
+                }
+            ]
+        },
         {
             "label": "Press (dumbbell)",
             "values": [
@@ -19,7 +40,7 @@
                     "label": ""
                 },
                 {
-                    "id": "03/06/16",
+                    "id": "02/06/16",
                     "value": {
                         "weight": 42,
                         "sets": 3,
@@ -30,7 +51,31 @@
             ]
         },
         {
+            "label": "Press Incline (dumbbell)",
+            "values": [
+                {
+                    "id": "28/05/16",
+                    "value": {
+                        "weight": 36,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "02/06/16",
+                    "value": {
+                        "weight": 36,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                }
+            ]
+        },
+        {
             "label": "Press (bench)",
+            "symbolType": "square",
             "values": [
                 {
                     "id": "28/05/16",
@@ -45,6 +90,7 @@
         },
         {
             "label": "Flys (dumbbell)",
+            "symbolType": "square",
             "values": [
                 {
                     "id": "28/05/16",
@@ -56,11 +102,35 @@
                     "label": ""
                 },
                 {
-                    "id": "03/06/16",
+                    "id": "02/06/16",
                     "value": {
                         "weight": 24,
                         "sets": 3,
                         "reps": 8
+                    },
+                    "label": ""
+                }
+            ]
+        },
+        {
+            "label": "Push ups",
+            "symbolType": "square",
+            "values": [
+                {
+                    "id": "28/05/16",
+                    "value": {
+                        "weight": 95,
+                        "sets": 5,
+                        "reps": 20
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "02/06/16",
+                    "value": {
+                        "weight": 94,
+                        "sets": 5,
+                        "reps": 20
                     },
                     "label": ""
                 }
