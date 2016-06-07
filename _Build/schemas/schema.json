@@ -8,9 +8,6 @@
 			"description": "Generally toggles and settings that effect the build rather than the content",
 			"type": "object",
             "properties": {
-            	"title": {
-		        	"type": "string"
-	            },
 	            "internal": {
 		        	"$ref": "_Build/schemas/deploy.json#/definitions/deploy"
 				},
@@ -18,19 +15,42 @@
 		        	"$ref": "_Build/schemas/deploy.json#/definitions/deploy"
 				}
             },
-            "required": ["title", "internal", "local"]
+            "required": ["internal", "local"]
 		},
-		"index": {
-			"type": "object",
-			"additionalProperties": false,
-			"properties": {
+		"content": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"url": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"charts": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
 			}
 		},
 		"global": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-			}
+				"title": {
+		        	"type": "string"
+	            }
+			},
+			"required": ["title"]
 		}
 	}
 }

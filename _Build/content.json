@@ -1,6 +1,5 @@
 {
 	"attributes": {
-		"title": "Code / Gym / Sleep",
 		"internal": {
 			"url": "http://mikemellor11.github.io/"
 		},
@@ -8,8 +7,31 @@
 			"url": "http://localhost:9001/"
 		}
 	},
-	"index": {
-	},
+	"content": [
+		{
+			"url": "index",
+			"name": "Home",
+			"charts": [
+				{
+					"name": "chest"
+				},
+				{
+					"name": "back"
+				},
+				{
+					"name": "cardio"
+				},
+				{
+					"name": "weight"
+				}
+			]
+		},
+		{
+			"url": "gym",
+			"name": "Gym"
+		}
+	],
 	"global": {
+		"title": "Code / Gym / Sleep"
 	}
 }

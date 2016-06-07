@@ -10,9 +10,21 @@
         	{{> (lookup . 'baseInject')}}
     	</main>
 
+        {{> footer}}
+
         <script type="text/javascript" src="js/script.js"></script>
 
         <script type="text/javascript">
+            chartManager.charts = [
+                {{#each index.charts}}
+                    {
+                        "name": "{{name}}"
+                    },
+                {{/each}}
+            ];
+
+            chartManager.init();
+            chartManager.update();
 		</script>
     </body>
 </html>

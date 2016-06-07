@@ -1,19 +1,33 @@
-{{> header}}
-
-<div class="innerContainer">
-	<h1>{{attributes.title}}</h1>
-
-	<p>All the weights listed do <strong>not</strong> include the bar (most people add 20kg? to account for the bar but the bars at my gym are different sizes/thickness so it's easier to just write it without).</p>
-
-	<h2>Chest</h2>
-	<div class="delta">
-		<svg class="chart" id="chart0"></svg>
-	</div>
-
-	<h2>Back</h2>
-	<div class="delta">
-		<svg class="chart" id="chart1"></svg>
+<div class="ut-bg1">
+	<div class="innerContainer ut-padding ut-color--reverse">
+		<div class="half">
+			<h1>{{global.title}}</h1>
+			<p>{{{lorem '2s'}}}</p>
+		</div>
+		<div class="half last">
+			<div class="ut-tableChildren">
+				<p class="ut-paddingRight">Mike Mellor - Front end web developer / iOS developer</p>
+				<img class="gravitar ut-fullWidth" src="https://s.gravatar.com/avatar/c199be5cfdc1b7b8682712d98c68736a?s=80">
+			</div>
+		</div>
 	</div>
 </div>
 
-{{> footer}}
+<div class="innerContainer ut-padding ut-highlight--reverse">
+	<div class="ut-tableChildren ut-tableFixed ut-tableSpacing">
+		<a class="callout" href="./gym.html">
+			{{> icon name="chart-area" class="ut-blockCenter icon--large"}}
+			<p class="ut-noMargin ut-paddingTop">{{{lorem '1-2s'}}}</p>
+		</a>
+		<a class="callout" href="./blog.html">
+			{{> icon name="graduation-cap" class="ut-blockCenter icon--large"}}
+			<p class="ut-noMargin ut-paddingTop">{{{lorem '1-2s'}}}</p>
+		</a>
+		<a class="callout" href="./contact.html">
+			{{> icon name="user" class="ut-blockCenter icon--large"}}
+			<p class="ut-noMargin ut-paddingTop">{{{lorem '1-2s'}}}</p>
+		</a>
+	</div>
+
+	<p>{{lorem '10s'}}</p>
+</div>

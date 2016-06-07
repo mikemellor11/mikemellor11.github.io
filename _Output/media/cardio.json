@@ -1,0 +1,24 @@
+{
+    "attributes": 
+    {
+        "yMin": "0",
+        "yLabel": "Minutes"
+    },
+    "data":[
+        {
+            "label": "Max",
+            "values": [
+                {
+                    "id": "28/05/16",
+                    "value": 60,
+                    "label": ""
+                },
+                {
+                    "id": "02/06/16",
+                    "value": 60,
+                    "label": ""
+                }
+            ]
+        }
+    ]
+}

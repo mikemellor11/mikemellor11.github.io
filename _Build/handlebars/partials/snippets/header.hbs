@@ -1,7 +1,9 @@
 <header>
-	<nav>
-		<ul>
-			<li><a href="./">Home</a></li>
+	<nav class="innerContainer ut-padding">
+		<ul class="ut-clearList ut-noMargin">
+			{{#each content}}
+				<li><a href="./{{url}}.html">{{name}}</a></li>
+			{{/each}}
 		</ul>
 	</nav>
 </header>

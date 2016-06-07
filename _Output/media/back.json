@@ -15,6 +15,15 @@
                         "reps": 1
                     },
                     "label": ""
+                },
+                {
+                    "id": "04/06/16",
+                    "value": {
+                        "weight": 110,
+                        "sets": 1,
+                        "reps": 1
+                    },
+                    "label": ""
                 }
             ]
         },
@@ -25,6 +34,15 @@
                     "id": "29/05/16",
                     "value": {
                         "weight": 90,
+                        "sets": 9,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "04/06/16",
+                    "value": {
+                        "weight": 95,
                         "sets": 9,
                         "reps": 8
                     },
@@ -67,6 +85,20 @@
                     "id": "02/06/16",
                     "value": {
                         "weight": 42,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                }
+            ]
+        },
+        {
+            "label": "Pendlay Rows",
+            "values": [
+                {
+                    "id": "04/06/16",
+                    "value": {
+                        "weight": 50,
                         "sets": 3,
                         "reps": 8
                     },

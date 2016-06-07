@@ -21,6 +21,10 @@
     }
 }
 
+.ut-tableFixed{
+    table-layout: fixed;
+}
+
 .ut-tableRow{
     display: table-row;
 }
@@ -30,11 +34,11 @@
     vertical-align: middle;
 }
 
-.ut-maxWidth{
+.ut-fullWidth{
     width: 100%;
 }
 
-.ut-maxHeight{
+.ut-fullHeight{
     height: 100%;
 }
 
@@ -44,9 +48,9 @@
 
 .ut-tableSpacing{
     border-collapse: separate;
-    border-spacing: 1px;
-    width: calc(100% + 2px);
-    margin-left: -1px !important;
+    border-spacing: $spacing;
+    width: calc(100% + #{$spacing * 2});
+    margin-left: -#{$spacing} !important;
 }
 
 .ut-clearList{
@@ -217,6 +221,14 @@
     color: $color2;
 }
 
+.ut-color--reverse{
+    color: $color0;
+
+    .icon svg{
+        fill: $color0;
+    }
+}
+
 .ut-relative{
     position: relative;
 }
@@ -269,4 +281,8 @@
 
 .ut-uppercase{
     text-transform: uppercase;
+}
+
+.ut-borderRadius{
+    border-radius: $borderRadius;
 }

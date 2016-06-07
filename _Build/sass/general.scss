@@ -16,15 +16,24 @@
 @import "components/_grid";
 @import "components/_switch";
 @import "components/_chart";
+@import "components/_callout";
+
+body{
+	background: $color4;
+}
+
+main{
+	background: $color0;
+}
 
 #svgSprite{
     display: none;
 }
 
 svg{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend .ut-newContext;
+}
+
+.gravitar{
+	border-radius: 50%;
 }

@@ -1146,33 +1146,46 @@ if (!String.format) {
 	};
 
 	return my;
-};(function(){
+};var chartManager = (function() {
+    "use strict";
+
+    var chartHolder = null;
+
+    return {
+        charts: null,
+        chartIndex: 0,
+        init: function(){
+            chartHolder = createLine('.chart')
+                .width(document.querySelector('.delta').offsetWidth)
+                .attr({
+                    colors: ['fill1', 'fill2', 'fill3'],
+                    yLabel: "Weight (kg)",
+                    margin: {
+                        right: 40,
+                        bottom: 40
+                    },
+                    ticks: 5
+                })
+                .attr(JSON.attributes)
+                .attr({plotValue: "weight"});
+        },
+        update: function(){
+            d3.json('media/' + this.charts[this.chartIndex].name + '.json', function (err, JSON) {
+                if(!err){
+                    chartHolder
+                        .data(JSON.data)
+                        .call(chartHolder);
+                }
+            });
+        }
+    };
+})();;(function(){
     "use strict";
 
     FastClick.attach(document.body);
 
-    var chestChart = createLine('#chart0');
-
-    var chestChart2 = createLine('#chart1');
-
-    var globalStyle = {
-    	colors: ['fill1', 'fill2', 'fill3'],
-        yLabel: "Weight (kg)",
-    	margin: {
-    		right: 40,
-    		bottom: 40
-    	}
+    document.querySelector('.js-chartSelect').onchange = function(){
+    	chartManager.chartIndex = this.selectedIndex;
+    	chartManager.update();
     };
-
-    d3.json('media/chest.json', function (err, JSON) {
-        if(!err){
-            chestChart.width(d3.select('.delta').node().getBoundingClientRect().width).attr(JSON.attributes).attr(globalStyle).attr({plotValue: "weight"}).data(JSON.data).call(chestChart);
-        }
-    });
-
-    d3.json('media/back.json', function (err, JSON) {
-        if(!err){
-            chestChart2.width(d3.select('.delta').node().getBoundingClientRect().width).attr(JSON.attributes).attr(globalStyle).attr({plotValue: "weight"}).data(JSON.data).call(chestChart2);
-        }
-    });
 })();
