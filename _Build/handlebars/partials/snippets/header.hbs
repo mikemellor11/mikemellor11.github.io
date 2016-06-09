@@ -1,9 +1,14 @@
 <header>
-	<nav class="innerContainer ut-padding">
-		<ul class="ut-clearList ut-noMargin">
-			{{#each content}}
-				<li><a href="./{{url}}.html">{{name}}</a></li>
-			{{/each}}
-		</ul>
-	</nav>
+	<div class="ut-bg1">
+		<h2 class="innerContainer ut-padding ut-noMargin ut-textAlignRight">{{global.title}}</h2>
+	</div>
+	<div class="ut-bg4">
+		<nav class="innerContainer">
+			<ul class="ut-clearList ut-noMargin">
+				{{#each global.navigation}}
+					<li><a href="./{{url}}.html" class="ut-padding">{{name}}</a></li>
+				{{/each}}
+			</ul>
+		</nav>
+	</div>
 </header>

@@ -7,31 +7,72 @@
 			"url": "http://localhost:9001/"
 		}
 	},
-	"content": [
-		{
-			"url": "index",
-			"name": "Home",
-			"charts": [
-				{
-					"name": "chest"
-				},
-				{
-					"name": "back"
-				},
-				{
-					"name": "cardio"
-				},
-				{
-					"name": "weight"
-				}
-			]
-		},
-		{
-			"url": "gym",
-			"name": "Gym"
-		}
-	],
+	"index": {
+		"charts": [
+			{
+				"name": "chest"
+			},
+			{
+				"name": "back"
+			},
+			{
+				"name": "cardio"
+			},
+			{
+				"name": "weight"
+			}
+		],
+		"callouts": ["code", "gym", "contact"]
+	},
 	"global": {
-		"title": "Code / Gym / Sleep"
+		"title": "Code / Gym / Sleep",
+		"navigation": [
+			{
+				"url": "index",
+				"name": "Home",
+				"icon": "home",
+				"text": "Homepage of website"
+			},
+			{
+				"url": "gym",
+				"name": "Gym",
+				"icon": "chart-area",
+				"text": "Charts and info all about the gainz <span class='ut-noWrap'>(and lack thereof)</span>"
+			},
+			{
+				"url": "code",
+				"name": "Code",
+				"icon": "graduation-cap",
+				"text": "Things i think i know"
+			},
+			{
+				"url": "contact",
+				"name": "Contact",
+				"icon": "user",
+				"text": "Get in touch"
+			}
+		],
+		"social": [
+			{
+				"url": "https://twitter.com/mikemellor11",
+				"name": "Twitter",
+				"icon": "twitter"
+			},
+			{
+				"url": "http://stackoverflow.com/users/1213795/mike-mellor",
+				"name": "Stack Overflow",
+				"icon": "stackoverflow"
+			},
+			{
+				"url": "https://github.com/mikemellor11",
+				"name": "Github",
+				"icon": "github-circled"
+			},
+			{
+				"url": "https://www.linkedin.com/in/michael-mellor-279852121",
+				"name": "LinkedIn",
+				"icon": "linkedin"
+			}
+		]
 	}
 }

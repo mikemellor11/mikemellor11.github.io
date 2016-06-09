@@ -1,12 +1,9 @@
-<h1 class="mainTitle">{{attributes.title}}</h1>
-
 {{> header}}
 
 <div class="innerContainer ut-padding">
+	<h1>{{lookup (findObjectInArray value="gym" in=@root.global.navigation key="url") 'name'}}</h1>
 
 	<p>All the weights listed do <strong>not</strong> include the bar (most people add 20kg? to account for the bar but the bars at my gym are different sizes/thickness so it's easier to just write it without).</p>
-
-	<h2 class="half">{{content.[0].charts.[0].name}}</h2>
 
 	<select class="half last js-chartSelect">
 		{{#each index.charts}}

@@ -6,8 +6,8 @@
 		</div>
 		<div class="half last">
 			<div class="ut-tableChildren">
-				<p class="ut-paddingRight">Mike Mellor - Front end web developer / iOS developer</p>
-				<img class="gravitar ut-fullWidth" src="https://s.gravatar.com/avatar/c199be5cfdc1b7b8682712d98c68736a?s=80">
+				<p class="ut-paddingRight ut-textAlignRight">Mike Mellor - Front end web developer / iOS developer</p>
+				<img class="gravitar ut-fullWidth" src="https://s.gravatar.com/avatar/c199be5cfdc1b7b8682712d98c68736a?s=100" alt="my ugly mug">
 			</div>
 		</div>
 	</div>
@@ -15,18 +15,16 @@
 
 <div class="innerContainer ut-padding ut-highlight--reverse">
 	<div class="ut-tableChildren ut-tableFixed ut-tableSpacing">
-		<a class="callout" href="./gym.html">
-			{{> icon name="chart-area" class="ut-blockCenter icon--large"}}
-			<p class="ut-noMargin ut-paddingTop">{{{lorem '1-2s'}}}</p>
-		</a>
-		<a class="callout" href="./blog.html">
-			{{> icon name="graduation-cap" class="ut-blockCenter icon--large"}}
-			<p class="ut-noMargin ut-paddingTop">{{{lorem '1-2s'}}}</p>
-		</a>
-		<a class="callout" href="./contact.html">
-			{{> icon name="user" class="ut-blockCenter icon--large"}}
-			<p class="ut-noMargin ut-paddingTop">{{{lorem '1-2s'}}}</p>
-		</a>
+		{{#each index.callouts}}
+			{{#with (findObjectInArray value=this in=@root.global.navigation key="url")}}
+				{{> callout 
+					callout--url=url
+					callout--icon=icon
+					callout--name=name
+					callout--text=text
+				}}
+			{{/with}}
+		{{/each}}
 	</div>
 
 	<p>{{lorem '10s'}}</p>
