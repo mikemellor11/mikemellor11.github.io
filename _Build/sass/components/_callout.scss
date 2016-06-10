@@ -1,3 +1,7 @@
 .callout{
 	@extend .ut-bg1, .ut-padding, .ut-textAlignCenter, .ut-borderBox, .ut-borderRadius, .ut-color--reverse;
 }
+
+.callout--alt{
+	@extend .ut-bg4;
+}

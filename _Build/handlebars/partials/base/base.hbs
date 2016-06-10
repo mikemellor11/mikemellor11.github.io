@@ -12,19 +12,18 @@
 
         {{> footer}}
 
-        <script type="text/javascript" src="js/script.js"></script>
-
         <script type="text/javascript">
-            chartManager.charts = [
-                {{#each index.charts}}
-                    {
-                        "name": "{{name}}"
-                    },
-                {{/each}}
-            ];
+            function baseJS(){
+                chartManager.charts = [
+                    {{#each index.charts}}
+                        {
+                            "name": "{{name}}"
+                        },
+                    {{/each}}
+                ];
+            }
+        </script>
 
-            chartManager.init();
-            chartManager.update();
-		</script>
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

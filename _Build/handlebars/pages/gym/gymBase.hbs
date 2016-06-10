@@ -16,4 +16,14 @@
 	</div>
 </div>
 
-{{> footer}}
+<script type="text/javascript">
+	function pageJS(){
+		chartManager.init();
+        chartManager.update();
+        
+		document.querySelector('.js-chartSelect').onchange = function(){
+	    	chartManager.chartIndex = this.selectedIndex;
+	    	chartManager.update();
+	    };
+	}
+</script>

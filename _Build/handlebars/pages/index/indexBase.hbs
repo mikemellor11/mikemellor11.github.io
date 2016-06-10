@@ -1,4 +1,4 @@
-<div class="ut-bg1">
+<header class="ut-bg1">
 	<div class="innerContainer ut-padding ut-color--reverse">
 		<div class="half">
 			<h1>{{global.title}}</h1>
@@ -11,9 +11,9 @@
 			</div>
 		</div>
 	</div>
-</div>
+</header>
 
-<div class="innerContainer ut-padding ut-highlight--reverse">
+<div class="innerContainer ut-padding ut-marginTop ut-highlight--reverse">
 	<div class="ut-tableChildren ut-tableFixed ut-tableSpacing">
 		{{#each index.callouts}}
 			{{#with (findObjectInArray value=this in=@root.global.navigation key="url")}}
@@ -29,15 +29,35 @@
 
 	<p>{{lorem '10s'}}</p>
 
-	<div class="third">
+	<div class="half">
 		<h2>Latest post</h2>
 		<h3>Greatest icon flow ever</h3>
 		<p>{{{lorem '5-7s'}}}... <a class="ut-highlight ut-inline" href="./code.html">Read More</a></p>
 	</div>
 
-	<div class="third">
-		<h2>Latest workout</h2>
-		<h1>36kg</h1>
+	<div class="half last ut-vertAlignTop">
+		<h2>Current Max Lifts</h2>
+		<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter">
+			<div class="callout callout--alt">
+				<h2>Deadlift</h2>
+				<h1 class="d3-text-deadlift"></h1>
+			</div>
+			<div class="callout callout--alt last">
+				<h2>Bench</h2>
+				<h1 class="d3-text-bench"></h1>
+			</div>
+		</div>
+
+		<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter ut-marginTop">
+			<div class="callout callout--alt">
+				<h2>Squat</h2>
+				<h1 class="d3-text-squat"></h1>
+			</div>
+			<div class="callout callout--alt">
+				<h2>Shoulders</h2>
+				<h1 class="d3-text-shoulders"></h1>
+			</div>
+		</div>
 	</div>
 
 	<div>
@@ -45,3 +65,15 @@
 		<img src="https://camo.githubusercontent.com/500e1f543118b424a6007c31122f421f978ec6ca/68747470733a2f2f7472617669732d63692e6f72672f6d696b656d656c6c6f7231312f6772756e742d7376676669742e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/mikemellor11/grunt-svgfit.svg?branch=master" style="max-width:100%;">
 	</div>
 </div>
+
+<script type="text/javascript">
+	function pageJS(){
+		var delaySpeed = 200;
+		var delayAdd = 100;
+		
+		createHtmlText('.d3-text-deadlift').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(130).call(this);
+		createHtmlText('.d3-text-bench').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(90).call(this);
+		createHtmlText('.d3-text-squat').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(90).call(this);
+		createHtmlText('.d3-text-shoulders').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(38).call(this);
+	}
+</script>

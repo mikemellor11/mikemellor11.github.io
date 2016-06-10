@@ -528,7 +528,7 @@ th {
 
 .ut-tableSpacing {
   border-collapse: separate;
-  border-spacing: 10px;
+  border-spacing: 10px 0;
   width: -webkit-calc(100% + 20px);
   width: calc(100% + 20px);
   margin-left: -10px !important;
@@ -644,7 +644,7 @@ th {
   background: #FFF4C8;
 }
 
-.ut-bg4 {
+.ut-bg4, .callout--alt {
   background: #FFAA78;
 }
 
