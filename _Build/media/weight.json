@@ -1,7 +1,8 @@
 {
     "attributes": 
     {
-        "yMin": "0"
+        "yMin": "0",
+        "plotValue": null
     },
     "data":[
         {
@@ -15,6 +16,11 @@
                 {
                     "id": "02/06/16",
                     "value": 94,
+                    "label": ""
+                },
+                {
+                    "id": "09/06/16",
+                    "value": 94.5,
                     "label": ""
                 }
             ]

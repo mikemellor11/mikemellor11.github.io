@@ -2,7 +2,8 @@
     "attributes": 
     {
         "yMin": "0",
-        "yLabel": "Minutes"
+        "yLabel": "Minutes",
+        "plotValue": null
     },
     "data":[
         {
@@ -15,6 +16,16 @@
                 },
                 {
                     "id": "02/06/16",
+                    "value": 60,
+                    "label": ""
+                },
+                {
+                    "id": "06/06/16",
+                    "value": 60,
+                    "label": ""
+                },
+                {
+                    "id": "08/06/16",
                     "value": 60,
                     "label": ""
                 }

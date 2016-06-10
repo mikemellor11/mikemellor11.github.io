@@ -77,7 +77,9 @@ function createLine(selector){
 		var gLines = lines.enter().append('g').attr('class', 'line');
 
 		gLines.append("path")
-			.attr('class', function (d, i) { return 'line__stroke ' + att.colors[i % att.colors.length] + '-stroked'; })
+			.attr('class', function (d, i) { return 'line__stroke ' + att.colors[i % att.colors.length] + '-stroked'; });
+
+		lines.select("path")
 			.style("stroke-dasharray", function(d, i){ return (d.dashedLine) ? d.dashedLine : att.dashedLine; })
 			.attr("d", function(d){ return line(d.values); });
 
@@ -100,14 +102,14 @@ function createLine(selector){
 		    	g_Plots.append("text")
 					.attr("y", '1em')
 					.attr("x", 0)
+					.attr('opacity', 0);
+
+				plots.select('text')
 					.attr("transform", function(d, i){ return "translate(" + xScale(d.id) + ", " + (yScale(+getValue(d)) + att.labelPadding) + ")"; })
 					.style('text-anchor', function(d, i){ 
 						if((_width - xScale(d.id)) < _width * 0.2){ return 'end'; } 
 						if((_width - xScale(d.id)) > _width * 0.8){ return 'start'; } 
 						return 'middle'; })
-					.attr('opacity', 0);
-
-				plots.select('text')
 					.text(function(d, i){ return parseLabel(d); })
 					.call(wrap, 50)
 					.transition()
@@ -125,19 +127,17 @@ function createLine(selector){
 			if(att.symbols){
 				g_Plots.append("path")
 					.attr("class", function(d, i){return 'line__symbol ' + att.colors[(lineIndex % att.colors.length)]})
-					.attr("d", d3.svg.symbol().size(0))
-					.attr("transform", function(d) { return "translate(" + xScale(d.id) + "," + yScale(getValue(d)) + ")"; })
 					.attr('opacity', 0);
 
-				plots.select(".line__symbol")
+				plots.select("path")
+					.attr("transform", function(d) { return "translate(" + xScale(d.id) + "," + yScale(getValue(d)) + ")"; })
+					.attr("d", d3.svg.symbol().type(function(d, i){ 
+							return (d.symbolType) ? d.symbolType : (lineData.symbolType) ? lineData.symbolType : att.symbolType; 
+						}).size(att.symbolSize))
 					.transition()
 					.delay(function(d, i) {return (i * att.stagger) + att.delaySpeed; })
 					.duration(att.transitionSpeed)
 					.ease(att.transitionType)
-					.attr("d", d3.svg.symbol().type(function(d, i){ 
-						return (d.symbolType) ? d.symbolType : (lineData.symbolType) ? lineData.symbolType : att.symbolType; 
-					}).size(att.symbolSize))
-					.attr("transform", function(d) { return "translate(" + xScale(d.id) + "," + yScale(getValue(d)) + ")"; })
 					.attr('opacity', function(d){
 						if(!getValue(d)){
 							return 0;

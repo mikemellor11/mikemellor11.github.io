@@ -1,5 +1,7 @@
 <a class="callout" href="./{{callout--url}}.html">
-	{{> icon name=callout--icon class="ut-blockCenter icon--large ut-marginBottom"}}
+	{{#if callout--icon}}
+		{{> icon name=callout--icon class="ut-blockCenter icon--large ut-marginBottom"}}
+	{{/if}}
 	<strong>{{callout--name}}</strong>
-	<p class="ut-noMargin ut-paddingTop">{{{text}}}</p>
+	<p class="ut-noMargin ut-paddingTop">{{{callout--text}}}</p>
 </a>
