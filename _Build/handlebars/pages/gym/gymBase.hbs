@@ -1,10 +1,6 @@
-{{> header}}
+{{> header header--text=(findObjectInArray object="gym" in=@root.global.navigation key="url" getValue="name")}}
 
 <div class="innerContainer ut-padding">
-	<h1>{{lookup (findObjectInArray value="gym" in=@root.global.navigation key="url") 'name'}}</h1>
-
-	<p>All the weights listed do <strong>not</strong> include the bar (most people add 20kg? to account for the bar but the bars at my gym are different sizes/thickness so it's easier to just write it without).</p>
-
 	<select class="half last js-chartSelect">
 		{{#each index.charts}}
 			<option>{{name}}</option>

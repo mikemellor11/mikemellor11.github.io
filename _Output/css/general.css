@@ -648,6 +648,14 @@ th {
   background: #FFAA78;
 }
 
+.ut-bg5 {
+  background: gray;
+}
+
+.ut-bg6, .callout--goal {
+  background: #86E958;
+}
+
 .ut-noWrap {
   white-space: nowrap;
 }

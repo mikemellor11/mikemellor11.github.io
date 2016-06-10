@@ -19,6 +19,9 @@
 				"name": "shoulder"
 			},
 			{
+				"name": "leg"
+			},
+			{
 				"name": "cardio"
 			},
 			{
@@ -37,16 +40,16 @@
 				"text": "Homepage of website"
 			},
 			{
-				"url": "gym",
-				"name": "Gym",
-				"icon": "chart-area",
-				"text": "Charts and info all about the gainz <span class='ut-noWrap'>(and lack thereof)</span>"
-			},
-			{
 				"url": "code",
 				"name": "Code",
 				"icon": "graduation-cap",
 				"text": "Things i think i know"
+			},
+			{
+				"url": "gym",
+				"name": "Gym",
+				"icon": "chart-area",
+				"text": "Charts and info all about the gainz <span class='ut-noWrap'>(and lack thereof)</span>"
 			},
 			{
 				"url": "contact",

@@ -1,6 +1,11 @@
 <header>
 	<div class="ut-bg1">
-		<h2 class="innerContainer ut-padding ut-noMargin ut-textAlignRight">{{global.title}}</h2>
+		<div class="innerContainer ut-tableChildren">
+			{{#if header--text}}
+				<h1 class="ut-fullWidth ut-padding">{{header--text}}</h1>
+			{{/if}}
+			<h2 class="ut-padding ut-noMargin ut-textAlignRight ut-noWrap">{{global.title}}</h2>
+		</div>
 	</div>
 	<div class="ut-bg4">
 		<nav class="innerContainer">
