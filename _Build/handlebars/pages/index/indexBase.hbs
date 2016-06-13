@@ -14,7 +14,7 @@
 </header>
 
 <div class="innerContainer ut-padding ut-marginTop ut-highlight--reverse">
-	<div class="ut-tableChildren ut-tableFixed ut-tableSpacing">
+	<div class="ut-tableChildren ut-tableFixed ut-tableSpacing ut-mobileFullChildren">
 		{{#each index.callouts}}
 			{{#with (findObjectInArray object=this in=@root.global.navigation key="url")}}
 				{{> callout 
@@ -29,62 +29,35 @@
 
 	<p>{{lorem '10s'}}</p>
 
-	<div class="half ut-vertAlignTop">
+	<div class="half ut-vertAlignTop ut-mobileFull">
 		<h2>Latest post</h2>
 		<h3>Greatest icon flow ever</h3>
 		<p>{{{lorem '5-7s'}}}... <a class="ut-highlight ut-inline" href="./code.html">Read More</a></p>
 	</div>
 
-	<div class="half last">
-		<div>
-			<h2>Current Max Lifts</h2>
-			<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter">
-				<div class="callout callout--alt">
-					<h3 class="ut-noMargin">Deadlift</h3>
-					<p class="ut-noMargin d3-text-deadlift">0 kg</p>
-				</div>
-				<div class="callout callout--alt last">
-					<h3 class="ut-noMargin">Bench</h3>
-					<p class="ut-noMargin d3-text-bench">0 kg</p>
-				</div>
+	<div class="half last ut-mobileFull">
+		{{#each index.sideCallouts}}
+			<div>
+				<h2>{{text}}</h2>
+				{{#each charts}}
+					<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter {{#unless @first}}ut-marginTop{{/unless}}">
+						{{#if (isType this 'object')}}
+							{{#each this}}
+								<div class="callout {{#if ../../classes}}{{../../classes}}{{/if}}">
+									<h3 class="ut-noMargin">{{findObjectInArray object=this in=@root.index.charts key="name" value="altName"}}</h3>
+									<p data-chart="{{this}}" class="ut-noMargin d3-text">0 kg</p>
+								</div>
+							{{/each}}
+						{{else}}
+							<div class="callout {{#if ../classes}}{{../classes}}{{/if}}">
+								<h3 class="ut-noMargin">{{findObjectInArray object=this in=@root.index.charts key="name" value="altName"}}</h3>
+								<p class="ut-noMargin d3-text d3-text-{{this}}">0 kg</p>
+							</div>
+						{{/if}}
+					</div>
+				{{/each}}
 			</div>
-
-			<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter ut-marginTop">
-				<div class="callout callout--alt">
-					<h3 class="ut-noMargin">Squat</h3>
-					<p class="ut-noMargin d3-text-squat">0 kg</p>
-				</div>
-				<div class="callout callout--alt">
-					<h3 class="ut-noMargin">Shoulders</h3>
-					<p class="ut-noMargin d3-text-shoulders">0 kg</p>
-				</div>
-			</div>
-		</div>
-
-		<div>
-			<h2>Current Goals</h2>
-			<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter">
-				<div class="callout callout--goal">
-					<h3 class="ut-noMargin">Deadlift</h3>
-					<p class="ut-noMargin d3-text-deadlift-goal">0 kg</p>
-				</div>
-				<div class="callout callout--goal last">
-					<h3 class="ut-noMargin">Bench</h3>
-					<p class="ut-noMargin d3-text-bench-goal">0 kg</p>
-				</div>
-			</div>
-
-			<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter ut-marginTop">
-				<div class="callout callout--goal">
-					<h3 class="ut-noMargin">Squat</h3>
-					<p class="ut-noMargin d3-text-squat-goal">0 kg</p>
-				</div>
-				<div class="callout callout--goal">
-					<h3 class="ut-noMargin">Shoulders</h3>
-					<p class="ut-noMargin d3-text-shoulders-goal">0 kg</p>
-				</div>
-			</div>
-		</div>
+		{{/each}}
 	</div>
 
 	<div>
@@ -97,15 +70,9 @@
 	function pageJS(){
 		var delaySpeed = 200;
 		var delayAdd = 100;
-		
-		createHtmlText('.d3-text-deadlift').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(130).call(this);
-		createHtmlText('.d3-text-bench').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(90).call(this);
-		createHtmlText('.d3-text-squat').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(90).call(this);
-		createHtmlText('.d3-text-shoulders').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(38).call(this);
 
-		createHtmlText('.d3-text-deadlift-goal').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(150).call(this);
-		createHtmlText('.d3-text-bench-goal').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(100).call(this);
-		createHtmlText('.d3-text-squat-goal').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(100).call(this);
-		createHtmlText('.d3-text-shoulders-goal').attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(42).call(this);
+		d3.selectAll('.d3-text').each(function(d, i){
+			createHtmlText(this).attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(130).call(this);
+		});
 	}
 </script>

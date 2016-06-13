@@ -742,6 +742,18 @@ th {
   .ut-desktopOnly {
     display: none;
   }
+  .ut-mobileFull {
+    display: block !important;
+    width: 100% !important;
+  }
+  .ut-mobileFullChildren > * {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 10px;
+  }
+  .ut-mobileFullChildren > *:first-child {
+    margin-top: 0;
+  }
 }
 
 .ut-fontLight {

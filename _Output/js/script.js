@@ -828,7 +828,14 @@ if (!String.format) {
 		return null;
 	}
 
-	var chart = d3.selectAll(selector);
+	var chart;
+
+	if(typeof selector === 'string'){
+		chart = d3.selectAll(selector);
+	} else {
+		chart = d3.select(selector);
+	}
+
 	var data = 0;
 	var dataLast = 0;
 

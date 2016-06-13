@@ -27,6 +27,9 @@
 						"properties": {
 							"name": {
 								"type": "string"
+							},
+							"altName": {
+								"type": "string"
 							}
 						}
 					}
@@ -35,6 +38,33 @@
 					"type": "array",
 					"items": {
 						"type": "string"
+					}
+				},
+				"sideCallouts": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"text": {
+								"type": "string"
+							},
+							"key": {
+								"type": "string"
+							},
+							"classes": {
+								"type": "string"
+							},
+							"charts": {
+								"type": "array",
+								"items": {
+									"type": ["string", "array"],
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						},
+						"required": ["text", "key", "charts"]
 					}
 				}
 			}

@@ -10,25 +10,63 @@
 	"index": {
 		"charts": [
 			{
-				"name": "chest"
+				"name": "chest",
+				"altName": "Bench"
 			},
 			{
-				"name": "back"
+				"name": "back",
+				"altName": "Deadlift"
 			},
 			{
-				"name": "shoulder"
+				"name": "shoulder",
+				"altName": "Shoulders"
 			},
 			{
-				"name": "leg"
+				"name": "leg",
+				"altName": "Squat"
 			},
 			{
-				"name": "cardio"
+				"name": "cardio",
+				"altName": "Cardio"
 			},
 			{
-				"name": "weight"
+				"name": "weight",
+				"altName": "Weight"
 			}
 		],
-		"callouts": ["code", "gym", "contact"]
+		"callouts": ["code", "gym", "contact"],
+		"sideCallouts": [
+			{
+				"text": "Current max lifts",
+				"key": "max",
+				"classes": "callout--alt",
+				"charts": [
+					[
+						"back",
+						"chest"
+					],
+					[
+						"leg",
+						"shoulder"
+					]
+				]
+			},
+			{
+				"text": "Current goals",
+				"key": "goal",
+				"classes": "callout--goal",
+				"charts": [
+					[
+						"back",
+						"chest"
+					],
+					[
+						"leg",
+						"shoulder"
+					]
+				]
+			}
+		]
 	},
 	"global": {
 		"title": "Code / Gym / Sleep",
