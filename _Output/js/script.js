@@ -824,7 +824,7 @@ if (!String.format) {
     }));
   };
 };function createHtmlText(selector){
-	if(selector === null || selector === undefined){
+	if(!selector){
 		return null;
 	}
 
@@ -891,11 +891,20 @@ if (!String.format) {
 
 	return my;
 };function createLine(selector){
-	if(selector === null || selector === undefined){
+	if(!selector){
 		return null;
 	}
 
-	var chart = d3.selectAll(selector);
+	var chart;
+
+	if(typeof selector === 'string'){
+		chart = d3.selectAll(selector);
+	} else {
+		chart = d3.select(selector);
+	}
+
+	var parseDate = null;
+
 	var data = []; 	// Required //
 					// xAxis:num - yAxis:num - size:num //
 					
@@ -916,19 +925,24 @@ if (!String.format) {
 		colors : ['fill1', 'fill2', 'fill3', 'fill4', 'fill5', 'fill6'], 
 		yLabel : null,
         xLabel : null,
+        xMin : null,
+        xMax : null,
         yMin : null,
 		yMax : null,
-		foreignObjects: false,
-		flipYAxis: false,
-		autoAxis: 'x',
-		interpolation: 'linear', // https://github.com/mbostock/d3/wiki/SVG-Shapes#line_interpolate for more options,
-		symbols: true,
-		symbolSize: 100,
-		symbolType: 'circle',
-		transitionType: 'cubic-in-out',
-		ticks: 10,
-		dashedLine: 0, // 0 means sold, '3, 3' would be 3 pixels sold 3 pixels gap and so on
-		plotValue: null // if null value is considered the value to plot, if value is an object you need to set which key will be plotted instead. e.g. value: 40 = plotValue: null // value: {weight: 40} = plotValue: "weight"
+		foreignObjects : false,
+		flipYAxis : false,
+		autoAxis : 'x',
+		interpolation : 'linear', // https://github.com/mbostock/d3/wiki/SVG-Shapes#line_interpolate for more options,
+		symbols : true,
+		symbolSize : 100,
+		symbolType : 'circle',
+		transitionType : 'cubic-in-out',
+		ticks : 10,
+		dashedLine : 0, // 0 means sold, '3, 3' would be 3 pixels sold 3 pixels gap and so on
+		dateFormat : "%d/%m/%y",
+		xScale : null, // null = ordinal // 'date' = timescale // provide function for custom
+		plotXValue : null, // null = d.id // 'date' = parseDate(d.id) // provide function for custom
+		plotYValue : null // value: 40 = plotYValue: null // value: {weight: 40} = plotYValue: "weight"
 	};
 
 	/* Local Scope */
@@ -946,6 +960,10 @@ if (!String.format) {
 	setupBase();
 
 	function my(){
+		if(!parseDate){
+			parseDate = d3.time.format(att.dateFormat).parse;
+		}
+
 		updateViewBox();
 
 		// Flip this order to calc auto y
@@ -961,8 +979,8 @@ if (!String.format) {
 		var line = d3.svg.line()
 			.interpolate(att.interpolation)
 			.defined(function(d) { return d.value !== null; })
-		    .x(function(d) { return xScale(d.id); })
-		    .y(function(d) {return yScale(getValue(d)); });
+		    .x(function(d) { return xScale(getXValue(d)); })
+		    .y(function(d) { return yScale(getYValue(d)); });
 
 		var lines = draw.selectAll(".line").data(data);
 
@@ -997,10 +1015,10 @@ if (!String.format) {
 					.attr('opacity', 0);
 
 				plots.select('text')
-					.attr("transform", function(d, i){ return "translate(" + xScale(d.id) + ", " + (yScale(+getValue(d)) + att.labelPadding) + ")"; })
+					.attr("transform", function(d, i){ return "translate(" + xScale(getXValue(d)) + ", " + (yScale(+getYValue(d)) + att.labelPadding) + ")"; })
 					.style('text-anchor', function(d, i){ 
-						if((_width - xScale(d.id)) < _width * 0.2){ return 'end'; } 
-						if((_width - xScale(d.id)) > _width * 0.8){ return 'start'; } 
+						if((_width - xScale(getXValue(d))) < _width * 0.2){ return 'end'; } 
+						if((_width - xScale(getXValue(d))) > _width * 0.8){ return 'start'; } 
 						return 'middle'; })
 					.text(function(d, i){ return parseLabel(d); })
 					.call(wrap, 50)
@@ -1008,7 +1026,7 @@ if (!String.format) {
 					.delay(function(d, i) {return (i * att.stagger) + att.delaySpeed; })
 					.duration(att.transitionSpeed)
 					.attr('opacity', function(d){
-						if(!getValue(d)){
+						if(!getYValue(d)){
 							return 0;
 						}
 
@@ -1022,7 +1040,7 @@ if (!String.format) {
 					.attr('opacity', 0);
 
 				plots.select("path")
-					.attr("transform", function(d) { return "translate(" + xScale(d.id) + "," + yScale(getValue(d)) + ")"; })
+					.attr("transform", function(d) { return "translate(" + xScale(getXValue(d)) + "," + yScale(getYValue(d)) + ")"; })
 					.attr("d", d3.svg.symbol().type(function(d, i){ 
 							return (d.symbolType) ? d.symbolType : (lineData.symbolType) ? lineData.symbolType : att.symbolType; 
 						}).size(att.symbolSize))
@@ -1031,7 +1049,7 @@ if (!String.format) {
 					.duration(att.transitionSpeed)
 					.ease(att.transitionType)
 					.attr('opacity', function(d){
-						if(!getValue(d)){
+						if(!getYValue(d)){
 							return 0;
 						}
 
@@ -1047,8 +1065,18 @@ if (!String.format) {
 		});
 	}
 
-	function getValue(d){
-		return (!att.plotValue) ? d.value : d.value[att.plotValue];
+	function getYValue(d){
+		return (!att.plotYValue) ? d.value : d.value[att.plotYValue];
+	}
+
+	function getXValue(d){
+		if(att.plotXValue === null) {
+			return d.id;
+		} else if(att.plotXValue === 'date') {
+			return parseDate(d.id);
+		} else {
+			return att.plotXValue(d.id);
+		}
 	}
 
 	function renderAxis() {
@@ -1066,19 +1094,35 @@ if (!String.format) {
 
 
 		// Loop over data/values, put all id's into single array, then map to xScale below
-	    var combine = [];
-	    data.forEach(function(d){
-	    	combine.push(d.values);
-	    });
+	    var combine = data.map(function(d, i){
+	    	return d.values;
+		    }).reduce(function(a, b){
+		    	return a.concat(b);
+		    });
 
-	    xScale = d3.scale.ordinal()
-		    .domain([].concat.apply([], combine).map(function(d){return d.id;}))
-		    .rangeRoundPoints([0, _width], att.padding.outer);
+	    if(att.xScale === null){
+	    	xScale = d3.scale.ordinal()
+			    .domain(combine.map(function(d){return d.id;}))
+			    .rangeRoundPoints([0, _width], att.padding.outer);
+
+	    } else if(att.xScale === 'date') {
+	    	xScale = d3.time.scale()
+				.domain([
+					(att.xMin) ? parseDate(att.xMin) : d3.min(combine, function(d){ return parseDate(d.id); }), 
+					(att.xMax) ? parseDate(att.xMax) : d3.max(combine, function(d){ return parseDate(d.id); })
+					])
+				.nice(d3.time.week)
+				.range([0, _width]);
+
+	    } else {
+	    	xScale = att.xScale(att, data);
+	    }
 
 		yScale = d3.scale.linear()
 		    .domain([
-				(att.yMin) ? att.yMin : d3.min(data, function(d) { return d3.min(d.values, function(d) { return +getValue(d); }); }),
-				(att.yMax) ? att.yMax : d3.max(data, function(d) { return d3.max(d.values, function(d) { return +getValue(d); }); })])
+				(att.yMin) ? att.yMin : d3.min(data, function(d) { return d3.min(d.values, function(d) { return +getYValue(d); }); }),
+				(att.yMax) ? att.yMax : d3.max(data, function(d) { return d3.max(d.values, function(d) { return +getYValue(d); }); })
+				])
 		    .range((att.flipYAxis) ? [0, _height] : [_height, 0]);
 
 		var xAxis = d3.svg.axis()
@@ -1086,6 +1130,7 @@ if (!String.format) {
 		    .innerTickSize(-_height)
     		.outerTickSize(1)
     		.tickPadding(10)
+    		.ticks(att.ticks)
 		    .orient("bottom");
 
 		var yAxis = d3.svg.axis()
@@ -1136,7 +1181,7 @@ if (!String.format) {
 	}
 
 	function parseLabel(d) {
-		return String.format(att.labelFormat, getValue(d), d.label, d.id);
+		return String.format(att.labelFormat, getYValue(d), d.label, d.id);
 	}
 
 	function calculateXAxis(){
@@ -1225,7 +1270,12 @@ if (!String.format) {
             bottom: 40
         },
         ticks: 5,
-        plotValue: "weight"
+        plotYValue: "weight",
+        plotXValue: "date",
+        xScale: "date",
+        transitionSpeed: 0,
+        delaySpeed: 0,
+        stagger: 0
     };
 
     return {

@@ -5,12 +5,26 @@
     },
     "data":[
         {
+            "label": "Goal",
+            "values": [
+                {
+                    "id": "01/07/16",
+                    "value": {
+                        "weight": 120,
+                        "sets": 1,
+                        "reps": 1
+                    },
+                    "label": ""
+                }
+            ]
+        },
+        {
             "label": "Max",
             "values": [
                 {
                     "id": "28/05/16",
                     "value": {
-                        "weight": 125,
+                        "weight": 95,
                         "sets": 1,
                         "reps": 1
                     },
@@ -19,7 +33,7 @@
                 {
                     "id": "02/06/16",
                     "value": {
-                        "weight": 130,
+                        "weight": 100,
                         "sets": 1,
                         "reps": 1
                     },
@@ -47,6 +61,15 @@
                         "reps": 8
                     },
                     "label": ""
+                },
+                {
+                    "id": "11/06/16",
+                    "value": {
+                        "weight": 42,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
                 }
             ]
         },
@@ -66,6 +89,29 @@
                     "id": "02/06/16",
                     "value": {
                         "weight": 36,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "11/06/16",
+                    "value": {
+                        "weight": 36,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                }
+            ]
+        },
+        {
+            "label": "Press Decline (bench)",
+            "values": [
+                {
+                    "id": "11/06/16",
+                    "value": {
+                        "weight": 80,
                         "sets": 3,
                         "reps": 8
                     },

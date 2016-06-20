@@ -1,5 +1,5 @@
 function createHtmlText(selector){
-	if(selector === null || selector === undefined){
+	if(!selector){
 		return null;
 	}
 

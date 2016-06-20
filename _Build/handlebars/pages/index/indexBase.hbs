@@ -45,13 +45,13 @@
 							{{#each this}}
 								<div class="callout {{#if ../../classes}}{{../../classes}}{{/if}}">
 									<h3 class="ut-noMargin">{{findObjectInArray object=this in=@root.index.charts key="name" value="altName"}}</h3>
-									<p data-chart="{{this}}" class="ut-noMargin d3-text">0 kg</p>
+									<p data-chart="{{this}}" data-key={{../../key}} class="ut-noMargin d3-text">0 kg</p>
 								</div>
 							{{/each}}
 						{{else}}
 							<div class="callout {{#if ../classes}}{{../classes}}{{/if}}">
 								<h3 class="ut-noMargin">{{findObjectInArray object=this in=@root.index.charts key="name" value="altName"}}</h3>
-								<p class="ut-noMargin d3-text d3-text-{{this}}">0 kg</p>
+								<p data-chart="{{this}}" data-key={{../key}} class="ut-noMargin d3-text}">0 kg</p>
 							</div>
 						{{/if}}
 					</div>
@@ -72,7 +72,19 @@
 		var delayAdd = 100;
 
 		d3.selectAll('.d3-text').each(function(d, i){
-			createHtmlText(this).attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(130).call(this);
+			var chart = this;
+
+			d3.json('media/' + this.dataset.chart + '.json', function (err, JSON) {
+				var maxLift = JSON.data.find(function(d, i){
+					if(d.label === chart.dataset.key) {
+						return true;
+					}
+				});
+
+				maxLift = maxLift.values[maxLift.values.length - 1].value.weight;
+
+				createHtmlText(chart).attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(maxLift).call(chart);
+			});
 		});
 	}
 </script>

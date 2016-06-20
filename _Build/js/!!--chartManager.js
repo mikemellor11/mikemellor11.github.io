@@ -10,7 +10,12 @@ var chartManager = (function() {
             bottom: 40
         },
         ticks: 5,
-        plotValue: "weight"
+        plotYValue: "weight",
+        plotXValue: "date",
+        xScale: "date",
+        transitionSpeed: 0,
+        delaySpeed: 0,
+        stagger: 0
     };
 
     return {

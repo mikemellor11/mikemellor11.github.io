@@ -5,6 +5,20 @@
     },
     "data":[
         {
+            "label": "Goal",
+            "values": [
+                {
+                    "id": "01/07/16",
+                    "value": {
+                        "weight": 150,
+                        "sets": 1,
+                        "reps": 1
+                    },
+                    "label": ""
+                }
+            ]
+        },
+        {
             "label": "Max",
             "values": [
                 {

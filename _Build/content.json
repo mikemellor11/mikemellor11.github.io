@@ -38,7 +38,7 @@
 		"sideCallouts": [
 			{
 				"text": "Current max lifts",
-				"key": "max",
+				"key": "Max",
 				"classes": "callout--alt",
 				"charts": [
 					[
@@ -53,7 +53,7 @@
 			},
 			{
 				"text": "Current goals",
-				"key": "goal",
+				"key": "Goal",
 				"classes": "callout--goal",
 				"charts": [
 					[
