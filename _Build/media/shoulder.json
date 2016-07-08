@@ -29,6 +29,24 @@
                         "reps": 1
                     },
                     "label": ""
+                },
+                {
+                    "id": "25/06/16",
+                    "value": {
+                        "weight": 34,
+                        "sets": 1,
+                        "reps": 1
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "29/06/16",
+                    "value": {
+                        "weight": 36,
+                        "sets": 1,
+                        "reps": 1
+                    },
+                    "label": ""
                 }
             ]
         },
@@ -43,6 +61,33 @@
                         "reps": 8
                     },
                     "label": ""
+                },
+                {
+                    "id": "20/06/16",
+                    "value": {
+                        "weight": 36,
+                        "sets": 3,
+                        "reps": 6
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "25/06/16",
+                    "value": {
+                        "weight": 34,
+                        "sets": 3,
+                        "reps": 6
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "29/06/16",
+                    "value": {
+                        "weight": 36,
+                        "sets": 3,
+                        "reps": 6
+                    },
+                    "label": ""
                 }
             ]
         },
@@ -51,6 +96,15 @@
             "values": [
                 {
                     "id": "09/06/16",
+                    "value": {
+                        "weight": 20,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "29/06/16",
                     "value": {
                         "weight": 20,
                         "sets": 3,
@@ -71,6 +125,24 @@
                         "reps": 8
                     },
                     "label": ""
+                },
+                {
+                    "id": "25/06/16",
+                    "value": {
+                        "weight": 16,
+                        "sets": 6,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "29/06/16",
+                    "value": {
+                        "weight": 16,
+                        "sets": 6,
+                        "reps": 8
+                    },
+                    "label": ""
                 }
             ]
         },
@@ -85,6 +157,24 @@
                         "reps": 8
                     },
                     "label": ""
+                },
+                {
+                    "id": "25/06/16",
+                    "value": {
+                        "weight": 16,
+                        "sets": 6,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "29/06/16",
+                    "value": {
+                        "weight": 16,
+                        "sets": 6,
+                        "reps": 8
+                    },
+                    "label": ""
                 }
             ]
         },
@@ -93,6 +183,24 @@
             "values": [
                 {
                     "id": "09/06/16",
+                    "value": {
+                        "weight": 13,
+                        "sets": 6,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "25/06/16",
+                    "value": {
+                        "weight": 13,
+                        "sets": 6,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "29/06/16",
                     "value": {
                         "weight": 13,
                         "sets": 6,

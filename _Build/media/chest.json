@@ -38,6 +38,33 @@
                         "reps": 1
                     },
                     "label": ""
+                },
+                {
+                    "id": "26/06/16",
+                    "value": {
+                        "weight": 90,
+                        "sets": 1,
+                        "reps": 1
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "30/06/16",
+                    "value": {
+                        "weight": 90,
+                        "sets": 1,
+                        "reps": 1
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "08/07/16",
+                    "value": {
+                        "weight": 90,
+                        "sets": 1,
+                        "reps": 1
+                    },
+                    "label": ""
                 }
             ]
         },
@@ -66,6 +93,42 @@
                     "id": "11/06/16",
                     "value": {
                         "weight": 42,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "20/06/16",
+                    "value": {
+                        "weight": 42,
+                        "sets": 3,
+                        "reps": 6
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "26/06/16",
+                    "value": {
+                        "weight": 40,
+                        "sets": 3,
+                        "reps": 6
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "30/06/16",
+                    "value": {
+                        "weight": 42,
+                        "sets": 3,
+                        "reps": 6
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "08/07/16",
+                    "value": {
+                        "weight": 40,
                         "sets": 3,
                         "reps": 8
                     },
@@ -102,6 +165,33 @@
                         "reps": 8
                     },
                     "label": ""
+                },
+                {
+                    "id": "26/06/16",
+                    "value": {
+                        "weight": 36,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "30/06/16",
+                    "value": {
+                        "weight": 36,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "08/07/16",
+                    "value": {
+                        "weight": 34,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
                 }
             ]
         },
@@ -109,7 +199,34 @@
             "label": "Press Decline (bench)",
             "values": [
                 {
+                    "id": "28/05/16",
+                    "value": {
+                        "weight": 80,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
                     "id": "11/06/16",
+                    "value": {
+                        "weight": 80,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "26/06/16",
+                    "value": {
+                        "weight": 80,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "30/06/16",
                     "value": {
                         "weight": 80,
                         "sets": 3,
@@ -121,10 +238,18 @@
         },
         {
             "label": "Press (bench)",
-            "symbolType": "square",
             "values": [
                 {
                     "id": "28/05/16",
+                    "value": {
+                        "weight": 90,
+                        "sets": 6,
+                        "reps": 8
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "30/06/16",
                     "value": {
                         "weight": 90,
                         "sets": 6,
@@ -136,7 +261,6 @@
         },
         {
             "label": "Flys (dumbbell)",
-            "symbolType": "square",
             "values": [
                 {
                     "id": "28/05/16",
@@ -155,12 +279,20 @@
                         "reps": 8
                     },
                     "label": ""
+                },
+                {
+                    "id": "30/06/16",
+                    "value": {
+                        "weight": 24,
+                        "sets": 3,
+                        "reps": 8
+                    },
+                    "label": ""
                 }
             ]
         },
         {
             "label": "Push ups",
-            "symbolType": "square",
             "values": [
                 {
                     "id": "28/05/16",
@@ -173,6 +305,15 @@
                 },
                 {
                     "id": "02/06/16",
+                    "value": {
+                        "weight": 94,
+                        "sets": 5,
+                        "reps": 20
+                    },
+                    "label": ""
+                },
+                {
+                    "id": "30/06/16",
                     "value": {
                         "weight": 94,
                         "sets": 5,

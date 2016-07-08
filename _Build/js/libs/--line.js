@@ -45,6 +45,7 @@ function createLine(selector){
 		symbolSize : 100,
 		symbolType : 'circle',
 		transitionType : 'cubic-in-out',
+		keySelector: '.key',
 		ticks : 10,
 		dashedLine : 0, // 0 means sold, '3, 3' would be 3 pixels sold 3 pixels gap and so on
 		dateFormat : "%d/%m/%y",
@@ -82,6 +83,8 @@ function createLine(selector){
 		_height = att.height - att.margin.top - _margin.bottom;
 
 		renderAxis();
+
+		drawKey(data);
 		// Flip this order to calc auto y
 
 		var line = d3.svg.line()
@@ -290,6 +293,18 @@ function createLine(selector){
 
 	function parseLabel(d) {
 		return String.format(att.labelFormat, getYValue(d), d.label, d.id);
+	}
+
+	function drawKey(d){
+		var buildString = '<ul class="key__list">';
+		d.forEach(function(dl, il){
+			buildString += '<li class="key__key ' + att.colors[il % att.colors.length] + '">'
+			buildString += dl.label;
+			buildString += '</li>'
+		});
+		buildString += '</ul>';
+
+		d3.select(att.keySelector).html(buildString);
 	}
 
 	function calculateXAxis(){

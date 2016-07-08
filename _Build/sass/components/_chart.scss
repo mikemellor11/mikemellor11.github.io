@@ -24,7 +24,7 @@ polyline{
   stroke: $color1;
 }
 
-$colors-list: $color1 $color2 $color4;
+$colors-list: #47ACB1 #F26522 #F9AA7B #A5A8AA #676766 #ADD5D7 #FFA4AF #FFCD34;
 
 @each $current-color in $colors-list {
     $i: index($colors-list, $current-color);
@@ -48,4 +48,8 @@ $colors-list: $color1 $color2 $color4;
 .delta{
   position: relative;
   padding-bottom: 56.25%;
+}
+
+.key__list{
+  margin: 0;
 }

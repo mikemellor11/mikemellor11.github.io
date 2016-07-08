@@ -3,7 +3,7 @@ var chartManager = (function() {
 
     var chartHolder = null;
     var globalAttr = {
-        colors: ['fill1', 'fill2', 'fill3'],
+        colors: ['fill1', 'fill2', 'fill3', 'fill4', 'fill5', 'fill6', 'fill7', 'fill8'],
         yLabel: "Weight (kg)",
         margin: {
             right: 40,
