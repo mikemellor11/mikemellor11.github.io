@@ -1,0 +1,27 @@
+{
+    "attributes": 
+    {
+    },
+    "data":[
+        {
+            "label": "Press incline",
+            "values": [
+            ]
+        },
+        {
+            "label": "Press decline",
+            "values": [
+            ]
+        },
+        {
+            "label": "Press",
+            "values": [
+            ]
+        },
+        {
+            "label": "Push up",
+            "values": [
+            ]
+        }
+    ]
+}

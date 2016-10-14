@@ -1,0 +1,121 @@
+{
+    "attributes": {},
+    "data": [
+        {
+            "exercise": "Press incline"
+        },
+        {
+            "exercise": "Press decline",
+            "sets": 3,
+            "peak": 3,
+            "incPercent": 0.1,
+            "startPercent": 0.8,
+            "endPercent": 1,
+            "incInterval": 3,
+            "sessions": [
+                {
+                    "date": "01/10/2016",
+                    "sets": [
+                        {
+                            "weight": 70,
+                            "reps": 1,
+                            "split": "00:00:00:000"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "exercise": "Press bench",
+            "sets": 9,
+            "peak": 5,
+            "incPercent": 0.1,
+            "startPercent": 0.6,
+            "endPercent": 0.3,
+            "incInterval": 3,
+            "sessions": [
+                {
+                    "date": "01/10/2016",
+                    "sets": [
+                        {
+                            "weight": 80,
+                            "reps": 1,
+                            "split": "00:00:00:000"
+                        }
+                    ]
+                },
+                {
+                    "date": "13/10/2016",
+                    "sets": [
+                        {
+                            "weight": 55,
+                            "reps": 8,
+                            "split": "00:00:00:000"
+                        },
+                        {
+                            "weight": 62.5,
+                            "reps": 8,
+                            "split": "00:03:25:573"
+                        },
+                        {
+                            "weight": 70,
+                            "reps": 8,
+                            "split": "00:02:39:486"
+                        },
+                        {
+                            "weight": 75,
+                            "reps": 8,
+                            "split": "00:01:59:396"
+                        },
+                        {
+                            "weight": 82.5,
+                            "reps": 8,
+                            "split": "00:02:05:801"
+                        },
+                        {
+                            "weight": 82.5,
+                            "reps": 6,
+                            "split": "00:02:36:630"
+                        },
+                        {
+                            "weight": 75,
+                            "reps": 8,
+                            "split": "00:02:55:428"
+                        },
+                        {
+                            "weight": 75,
+                            "reps": 8,
+                            "split": "00:02:57:839"
+                        },
+                        {
+                            "weight": 70,
+                            "reps": 8,
+                            "split": "00:02:16:062"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "exercise": "Push ups",
+            "sets": 5,
+            "peak": 5,
+            "incPercent": "0",
+            "startPercent": 1,
+            "endPercent": 1,
+            "incInterval": 3,
+            "sessions": [
+                {
+                    "date": "01/10/2016",
+                    "sets": [
+                        {
+                            "weight": 80,
+                            "reps": 1,
+                            "split": "00:00:00:000"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

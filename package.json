@@ -44,6 +44,7 @@
     "karma-sinon": "1.0.4",
     "load-grunt-tasks": "3.1.0",
     "mocha": "2.3.3",
+    "moment": "2.15.1",
     "nodemailer": "2.3.0",
     "phantomjs": "1.9.18",
     "postcss-assets": "4.1.0",
@@ -57,7 +58,9 @@
   "scripts": {
     "setup": "npm install && bower install",
     "production": "grunt dist",
-    "validate": "grunt validate"
+    "validate": "grunt validate",
+    "deploy": "git subtree push --prefix _Output origin master",
+    "gym": "node _Node/gym/gym.js"
   },
   "pre-commit": [
     "validate"

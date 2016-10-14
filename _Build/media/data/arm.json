@@ -1,0 +1,75 @@
+{
+    "attributes": {},
+    "data": [
+        {
+            "exercise": "Bicep curls",
+            "sets": 3,
+            "peak": 3,
+            "sessions": [
+                {
+                    "date": "01/10/2016",
+                    "sets": [
+                        {
+                            "weight": 20,
+                            "reps": 1,
+                            "split": "00:00:00:000"
+                        }
+                    ]
+                },
+                {
+                    "date": "12/10/2016",
+                    "sets": [
+                        {
+                            "weight": 25,
+                            "reps": 8,
+                            "split": "00:01:02:349"
+                        },
+                        {
+                            "weight": 25,
+                            "reps": 8,
+                            "split": "00:00:47:467"
+                        },
+                        {
+                            "weight": 25,
+                            "reps": 8,
+                            "split": "00:00:53:674"
+                        },
+                        {
+                            "weight": 25,
+                            "reps": 8,
+                            "split": "00:00:40:658"
+                        },
+                        {
+                            "weight": 25,
+                            "reps": 8,
+                            "split": "00:01:00:881"
+                        },
+                        {
+                            "weight": 25,
+                            "reps": 8,
+                            "split": "00:00:59:378"
+                        },
+                        {
+                            "weight": 25,
+                            "reps": 8,
+                            "split": "00:01:03:477"
+                        },
+                        {
+                            "weight": 25,
+                            "reps": 8,
+                            "split": "00:01:13:577"
+                        },
+                        {
+                            "weight": 25,
+                            "reps": 8,
+                            "split": "00:01:09:069"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "exercise": "Overhead tricep"
+        }
+    ]
+}

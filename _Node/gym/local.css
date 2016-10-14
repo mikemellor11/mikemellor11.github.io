@@ -1,0 +1,14 @@
+header{
+	display: block !important;
+}
+
+.tag_reveals{
+    border-bottom: 2px solid #2F4552;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.tag_reveals:last-child{
+    border-bottom: none;
+    margin-bottom: 0px;
+}

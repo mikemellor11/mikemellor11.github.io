@@ -1,0 +1,94 @@
+{
+    "attributes": {},
+    "data": [
+        {
+            "exercise": "Deadlifts",
+            "sessions": [
+                {
+                    "date": "01/10/2016",
+                    "sets": [
+                        {
+                            "weight": 130,
+                            "reps": 1,
+                            "split": "00:00:00:000"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "exercise": "Lean-over Rows",
+            "sets": 9,
+            "peak": 9,
+            "incPercent": 0.1,
+            "startPercent": 1,
+            "endPercent": 0.3,
+            "incInterval": 3,
+            "sessions": [
+                {
+                    "date": "01/10/2016",
+                    "sets": [
+                        {
+                            "weight": 40,
+                            "reps": 1,
+                            "split": "00:00:00:000"
+                        }
+                    ]
+                },
+                {
+                    "date": "13/10/2016",
+                    "sets": [
+                        {
+                            "weight": 40,
+                            "reps": 8,
+                            "split": "00:01:02:284"
+                        },
+                        {
+                            "weight": 35,
+                            "reps": 8,
+                            "split": "00:01:19:951"
+                        },
+                        {
+                            "weight": 35,
+                            "reps": 8,
+                            "split": "00:01:02:887"
+                        },
+                        {
+                            "weight": 35,
+                            "reps": 8,
+                            "split": "00:01:09:775"
+                        },
+                        {
+                            "weight": 35,
+                            "reps": 8,
+                            "split": "00:00:59:951"
+                        },
+                        {
+                            "weight": 35,
+                            "reps": 8,
+                            "split": "00:01:20:304"
+                        },
+                        {
+                            "weight": 35,
+                            "reps": 8,
+                            "split": "00:01:10:125"
+                        },
+                        {
+                            "weight": 35,
+                            "reps": 8,
+                            "split": "00:01:22:721"
+                        },
+                        {
+                            "weight": 35,
+                            "reps": 8,
+                            "split": "00:01:04:570"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "exercise": "Shrugs"
+        }
+    ]
+}

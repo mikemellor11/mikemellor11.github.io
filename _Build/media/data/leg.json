@@ -1,0 +1,70 @@
+{
+    "attributes": {},
+    "data": [
+        {
+            "exercise": "Squats",
+            "sessions": [
+                {
+                    "date": "01/10/2016",
+                    "sets": [
+                        {
+                            "weight": 100,
+                            "reps": 1,
+                            "split": "00:00:00:000"
+                        }
+                    ]
+                },
+                {
+                    "date": "12/10/2016",
+                    "sets": [
+                        {
+                            "weight": 80,
+                            "reps": 8,
+                            "split": "00:00:00:000"
+                        },
+                        {
+                            "weight": 90,
+                            "reps": 8,
+                            "split": "00:02:43:091"
+                        },
+                        {
+                            "weight": 100,
+                            "reps": 6,
+                            "split": "00:02:59:090"
+                        },
+                        {
+                            "weight": 90,
+                            "reps": 8,
+                            "split": "00:02:46:823"
+                        },
+                        {
+                            "weight": 90,
+                            "reps": 8,
+                            "split": "00:02:33:239"
+                        },
+                        {
+                            "weight": 90,
+                            "reps": 7,
+                            "split": "00:02:59:628"
+                        },
+                        {
+                            "weight": 90,
+                            "reps": 8,
+                            "split": "00:03:28:208"
+                        },
+                        {
+                            "weight": 80,
+                            "reps": 8,
+                            "split": "00:03:00:119"
+                        },
+                        {
+                            "weight": 80,
+                            "reps": 8,
+                            "split": "00:03:41:887"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
