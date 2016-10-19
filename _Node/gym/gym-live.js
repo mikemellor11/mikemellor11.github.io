@@ -28,14 +28,33 @@ function baseJS(){
 			e.preventDefault();
 
 			socket.emit('saveLift', {
+				"exercise": $(this).data('exercise'),
+				"group": $(this).data('group'),
 				"weight": $('.weight', this).val(),
 				"reps": $('.reps', this).val(),
-				"split":  $('#time').text(),
-				"exercise": $(this).data('exercise'),
-				"group": $(this).data('group')
+				"split":  $('#time').text()
 			});
 
 			reset();
+		});
+
+		$('body').on('change', '.change__config', function(e){
+			e.preventDefault();
+
+			socket.emit('changeConfig', {
+				"exercise": $(this).data('exercise'),
+				"group": $(this).data('group'),
+				"gymDefaults": {
+					"sets": $('.sets', this).val(),
+		            "reps": $('.reps', this).val(),
+		            "peak": $('.peak', this).val(),
+		            "increase": $('.increase', this).val(),
+		            "startPercent": (+$('.startPercent', this).val() / 100),
+		            "endPercent": (+$('.endPercent', this).val() / 100),
+		            "incInterval": $('.incInterval', this).val(),
+		            "equipmentWeight": $('.equipmentWeight', this).val()
+				}
+			});
 		});
 	});
 
@@ -64,7 +83,7 @@ function baseJS(){
 					html += ' data-group="' + d.name + '"';
 					html += ' id="' + dl.exercise + '"';
 					html += ' value="' + dl.exercise + '"';
-					html += (dl.exercise === 'Deadlifts') ? 'checked' : '';
+					html += (dl.exercise === 'asdf') ? 'checked' : '';
 					html += ' type="checkbox"/>';
 					html += ' <label class="checkbox-custom-label" for="' + dl.exercise + '">';
 					html += '<span class="checkbox-custom-icon"></span><span class="checkbox-custom-text">'
@@ -99,8 +118,15 @@ function baseJS(){
 				var currentSet = 0;
 				var maxLast = 0;
 				var weightSplit = 0;
-				var totalSets = contentJson.attributes.gymDefaults.sets;
 				var weightIncrement = 2.5;
+
+				for(var key in contentJson.attributes.gymDefaults){
+					gD[key] = (
+						(gymData[d.value][key]) ? 
+							gymData[d.value] : 
+							contentJson.attributes.gymDefaults
+					)[key];
+				}
 
 				if(gymData[d.value].sessions){
 					if(gymData[d.value].sessions.last().date === today){
@@ -123,14 +149,6 @@ function baseJS(){
 						maxLast = d3.max(gymData[d.value].sessions.fromEnd(1).sets, function(dl, il){
 							return dl.weight;
 						});
-					}
-
-					for(var key in contentJson.attributes.gymDefaults){
-						gD[key] = (
-							(gymData[d.value][key]) ? 
-								gymData[d.value] : 
-								contentJson.attributes.gymDefaults
-						)[key];
 					}
 
 					var readyForIncrase = false;
@@ -184,8 +202,6 @@ function baseJS(){
 						} else if(i === currentSet + 1){
 							next = weightIncrement * Math.round(currentWeight / weightIncrement);
 						}
-
-						console.log(i, incrememnt, currentWeight, currentSet);
 					}
 
 					weightSplit = ((target - gD.equipmentWeight) * 0.5);
@@ -196,6 +212,23 @@ function baseJS(){
 
 				html += '<div class="ut-padding">';
 				html += '<h3 class="ut-textAlignCenter">' + d.value + '</h3>';
+
+				html += '<form data-group="' + $(d).data('group') + '" data-exercise="' + d.value + '" class="change__config">';
+				html += '<div class="half ut-fontLarge">';
+				html += displaySelect(gD.sets, 12, 'Sets', 'sets', 1, 1);
+				html += displaySelect(gD.peak, 12, 'Peak', 'peak', 1, 1);
+				html += displaySelect((gD.startPercent * 100), 100, 'Start percent', 'startPercent', 1, 0);
+				html += displaySelect((gD.endPercent * 100), 100, 'End percent', 'endPercent', 1, 0);
+				
+				html += '</div>';
+
+				html += '<div class="half ut-fontLarge last">';
+				html += displaySelect(gD.increase, 20, 'Increase', 'increase', 2.5, 0);
+				html += displaySelect(gD.reps, 12, 'Reps', 'reps', 1, 1);
+				html += displaySelect(gD.incInterval, 12, 'Inc interval', 'incInterval', 1, 1);
+				html += displaySelect(gD.equipmentWeight, 40, 'Equipment weight', 'equipmentWeight', 2.5, 0);
+				html += '</div>';
+				html += '</form>';
 
 				html += '<div class="half ut-fontLarge">';
 				html += displayField(max, 'All-time max', 'callout--alt');
@@ -214,8 +247,7 @@ function baseJS(){
 				html += '<form data-group="' + $(d).data('group') + '" data-exercise="' + d.value + '" class="session__submit">';
 
 				html += displaySelect(target, 200, 'Weight', 'weight', 2.5, 0);
-				html += displaySelect(8, 8, 'Reps', 'reps', 1, 1);
-				html += displaySelect(totalSets, 12, 'Sets', 'sets', 1, 1);
+				html += displaySelect(gD.reps, 30, 'Reps', 'reps', 1, 1);
 
 				html += '<button type="submit" class="button button--full ut-marginTop">Set done</button>'
 				html += '</form>';

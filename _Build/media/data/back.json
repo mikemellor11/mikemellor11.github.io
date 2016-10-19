@@ -13,6 +13,46 @@
                             "split": "00:00:00:000"
                         }
                     ]
+                },
+                {
+                    "date": "15/10/2016",
+                    "sets": [
+                        {
+                            "weight": 97.5,
+                            "reps": 8,
+                            "split": "00:00:00:000"
+                        },
+                        {
+                            "weight": 105,
+                            "reps": 8,
+                            "split": "00:02:27:831"
+                        },
+                        {
+                            "weight": 115,
+                            "reps": 8,
+                            "split": "00:02:46:735"
+                        },
+                        {
+                            "weight": 122.5,
+                            "reps": 8,
+                            "split": "00:04:21:604"
+                        },
+                        {
+                            "weight": 130,
+                            "reps": 8,
+                            "split": "00:05:51:417"
+                        },
+                        {
+                            "weight": 122.5,
+                            "reps": 8,
+                            "split": "00:04:28:099"
+                        },
+                        {
+                            "weight": 117.5,
+                            "reps": 8,
+                            "split": "00:04:34:646"
+                        }
+                    ]
                 }
             ]
         },
@@ -20,10 +60,11 @@
             "exercise": "Lean-over Rows",
             "sets": 9,
             "peak": 9,
-            "incPercent": 0.1,
+            "increase": 2.5,
             "startPercent": 1,
-            "endPercent": 0.3,
+            "endPercent": 1,
             "incInterval": 3,
+            "equipmentWeight": 10,
             "sessions": [
                 {
                     "date": "01/10/2016",
@@ -85,10 +126,29 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "reps": 9
         },
         {
-            "exercise": "Shrugs"
+            "exercise": "Shrugs",
+            "sets": 3,
+            "peak": 3,
+            "increase": 2.5,
+            "startPercent": 1,
+            "endPercent": 1,
+            "incInterval": 3,
+            "sessions": [
+                {
+                    "date": "01/10/2016",
+                    "sets": [
+                        {
+                            "weight": 100,
+                            "reps": 1,
+                            "split": "00:00:00:000"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

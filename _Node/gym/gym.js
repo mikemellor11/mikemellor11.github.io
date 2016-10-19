@@ -9,7 +9,7 @@ io.on('connection', function (socket) {
 	});
 
     socket.on('saveLift', function(data){
-        modifyJson(JSON.parse(fs.readFileSync('_Build/media/data/' + data.group + '.json')), data, socket, 'saveLift', function(d, i){
+        modifyJson(JSON.parse(fs.readFileSync('_Build/media/data/' + data.group + '.json')), data, socket, 'exerciseLevel', function(d, i){
 
             if(!d.sessions || d.sessions[d.sessions.length - 1].date !== moment().format('DD/MM/YYYY')){
                 if(!d.sessions){
@@ -27,6 +27,15 @@ io.on('connection', function (socket) {
                 "reps": +data.reps,
                 "split":  data.split
             });
+        });
+    });
+
+    socket.on('changeConfig', function(data){
+        modifyJson(JSON.parse(fs.readFileSync('_Build/media/data/' + data.group + '.json')), data, socket, 'exerciseLevel', function(d, i){
+
+            for(var key in data.gymDefaults){
+                d[key] = +data.gymDefaults[key];
+            }
         });
     });
 
