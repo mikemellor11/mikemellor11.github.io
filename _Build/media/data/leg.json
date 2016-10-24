@@ -1,70 +1,125 @@
-{
-    "attributes": {},
-    "data": [
-        {
-            "exercise": "Squats",
-            "sessions": [
-                {
-                    "date": "01/10/2016",
-                    "sets": [
-                        {
-                            "weight": 100,
-                            "reps": 1,
-                            "split": "00:00:00:000"
-                        }
-                    ]
-                },
-                {
-                    "date": "12/10/2016",
-                    "sets": [
-                        {
-                            "weight": 80,
-                            "reps": 8,
-                            "split": "00:00:00:000"
-                        },
-                        {
-                            "weight": 90,
-                            "reps": 8,
-                            "split": "00:02:43:091"
-                        },
-                        {
-                            "weight": 100,
-                            "reps": 6,
-                            "split": "00:02:59:090"
-                        },
-                        {
-                            "weight": 90,
-                            "reps": 8,
-                            "split": "00:02:46:823"
-                        },
-                        {
-                            "weight": 90,
-                            "reps": 8,
-                            "split": "00:02:33:239"
-                        },
-                        {
-                            "weight": 90,
-                            "reps": 7,
-                            "split": "00:02:59:628"
-                        },
-                        {
-                            "weight": 90,
-                            "reps": 8,
-                            "split": "00:03:28:208"
-                        },
-                        {
-                            "weight": 80,
-                            "reps": 8,
-                            "split": "00:03:00:119"
-                        },
-                        {
-                            "weight": 80,
-                            "reps": 8,
-                            "split": "00:03:41:887"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "exercise": "Squats",
+        "sessions": [
+            {
+                "date": "01/10/2016",
+                "sets": [
+                    {
+                        "weight": 100,
+                        "reps": 1,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "12/10/2016",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:02:43:091"
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 6,
+                        "split": "00:02:59:090"
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:02:46:823"
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:02:33:239"
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 7,
+                        "split": "00:02:59:628"
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:03:28:208"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:03:00:119"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:03:41:887"
+                    }
+                ]
+            },
+            {
+                "date": "19/10/2016",
+                "sets": [
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:03:47:736"
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:02:23:573"
+                    },
+                    {
+                        "weight": 95,
+                        "reps": 8,
+                        "split": "00:03:04:151"
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 5,
+                        "split": "00:03:14:032"
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 5,
+                        "split": "00:03:07:079"
+                    },
+                    {
+                        "weight": 95,
+                        "reps": 8,
+                        "split": "00:04:35:918"
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:03:38:424"
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:03:20:051"
+                    }
+                ]
+            }
+        ],
+        "sets": 9,
+        "reps": 8,
+        "peak": 5,
+        "increase": 5,
+        "startPercent": 0.75,
+        "endPercent": 0.8,
+        "incInterval": 3,
+        "equipmentWeight": 20
+    }
+]

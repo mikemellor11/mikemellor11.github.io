@@ -8,7 +8,7 @@
         },
         "gymDefaults": {
             "sets": 9,
-            "reps": 9,
+            "reps": 8,
             "peak": 5,
             "increase": 5,
             "startPercent": 0.75,
@@ -48,31 +48,55 @@
         "sideCallouts": [
             {
                 "text": "Current max lifts",
-                "key": "Max",
+                "key": "max",
                 "classes": "callout--alt",
                 "charts": [
                     [
-                        "back",
-                        "chest"
+                        {
+                            "group": "back",
+                            "exercise": "Deadlifts"
+                        },
+                        {
+                            "group": "leg",
+                            "exercise": "Squats"
+                        }
                     ],
                     [
-                        "leg",
-                        "shoulder"
+                        {
+                            "group": "chest",
+                            "exercise": "Bench press"
+                        },
+                        {
+                            "group": "shoulder",
+                            "exercise": "Overhead press"
+                        }
                     ]
                 ]
             },
             {
                 "text": "Current goals",
-                "key": "Goal",
+                "key": "goal",
                 "classes": "callout--goal",
                 "charts": [
                     [
-                        "back",
-                        "chest"
+                        {
+                            "group": "back",
+                            "exercise": "Deadlifts"
+                        },
+                        {
+                            "group": "back",
+                            "exercise": "Deadlifts"
+                        }
                     ],
                     [
-                        "leg",
-                        "shoulder"
+                        {
+                            "group": "back",
+                            "exercise": "Deadlifts"
+                        },
+                        {
+                            "group": "back",
+                            "exercise": "Deadlifts"
+                        }
                     ]
                 ]
             }

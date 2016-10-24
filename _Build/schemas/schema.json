@@ -13,9 +13,38 @@
 				},
 				"local": {
 		        	"$ref": "_Build/schemas/deploy.json#/definitions/deploy"
-				}
+				},
+				"gymDefaults": {
+	            	"type": "object",
+	            	"properties": {
+	            		"sets": {
+			            	"type": "number"
+			            },
+			            "reps": {
+			            	"type": "number"
+			            },
+			            "peak": {
+			            	"type": "number"
+			            },
+			            "increase": {
+			            	"type": "number"
+			            },
+			            "startPercent": {
+			            	"type": "number"
+			            },
+			            "endPercent": {
+			            	"type": "number"
+			            },
+			            "incInterval": {
+			            	"type": "number"
+			            },
+			            "equipmentWeight": {
+			            	"type": "number"
+			            }
+	            	}
+		        }
             },
-            "required": ["internal", "local"]
+            "required": ["internal", "local", "gymDefaults"]
 		},
 		"index": {
 			"type": "object",
@@ -57,9 +86,25 @@
 							"charts": {
 								"type": "array",
 								"items": {
-									"type": ["string", "array"],
+									"type": ["object", "array"],
 									"items": {
-										"type": "string"
+										"type": "object",
+										"properties": {
+											"group": {
+												"type": "string"
+											},
+											"exercise": {
+												"type": "string"
+											}
+										}
+									},
+									"properties": {
+										"group": {
+											"type": "string"
+										},
+										"exercise": {
+											"type": "string"
+										}
 									}
 								}
 							}

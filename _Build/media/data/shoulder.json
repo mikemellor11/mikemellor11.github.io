@@ -1,198 +1,311 @@
-{
-    "attributes": {},
-    "data": [
-        {
-            "exercise": "Press barbell",
-            "startPercent": 0.8,
-            "endPercent": 0.8,
-            "sessions": [
-                {
-                    "date": "01/10/2016",
-                    "sets": [
-                        {
-                            "weight": 40,
-                            "reps": 1,
-                            "split": "00:00:00:000"
-                        }
-                    ]
-                },
-                {
-                    "date": "14/10/2016",
-                    "sets": [
-                        {
-                            "weight": 32.5,
-                            "reps": 8,
-                            "split": "00:00:00:000"
-                        },
-                        {
-                            "weight": 35,
-                            "reps": 8,
-                            "split": "00:00:00:000"
-                        },
-                        {
-                            "weight": 35,
-                            "reps": 8,
-                            "split": "00:01:35:884"
-                        },
-                        {
-                            "weight": 37.5,
-                            "reps": 8,
-                            "split": "00:02:07:317"
-                        },
-                        {
-                            "weight": 40,
-                            "reps": 8,
-                            "split": "00:01:57:925"
-                        },
-                        {
-                            "weight": 40,
-                            "reps": 8,
-                            "split": "00:02:04:301"
-                        },
-                        {
-                            "weight": 40,
-                            "reps": 8,
-                            "split": "00:02:31:813"
-                        },
-                        {
-                            "weight": 40,
-                            "reps": 8,
-                            "split": "00:02:34:031"
-                        },
-                        {
-                            "weight": 40,
-                            "reps": 8,
-                            "split": "00:02:35:782"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "exercise": "Lateral Raises",
-            "sets": 3,
-            "increase": 2.5,
-            "peak": 3,
-            "startPercent": 1,
-            "endPercent": 1,
-            "incInterval": 4,
-            "equipmentWeight": 10,
-            "sessions": [
-                {
-                    "date": "01/10/2016",
-                    "sets": [
-                        {
-                            "weight": 20,
-                            "reps": 1,
-                            "split": "00:00:00:000"
-                        }
-                    ]
-                },
-                {
-                    "date": "14/10/2016",
-                    "sets": [
-                        {
-                            "weight": 20,
-                            "reps": 8,
-                            "split": "00:00:44:010"
-                        },
-                        {
-                            "weight": 20,
-                            "reps": 8,
-                            "split": "00:00:06:188"
-                        },
-                        {
-                            "weight": 20,
-                            "reps": 8,
-                            "split": "00:00:40:350"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "exercise": "Front Raises",
-            "sets": 3,
-            "increase": 2.5,
-            "peak": 3,
-            "startPercent": 1,
-            "endPercent": 1,
-            "incInterval": 4,
-            "equipmentWeight": 10,
-            "sessions": [
-                {
-                    "date": "01/10/2016",
-                    "sets": [
-                        {
-                            "weight": 20,
-                            "reps": 1,
-                            "split": "00:00:00:000"
-                        }
-                    ]
-                },
-                {
-                    "date": "14/10/2016",
-                    "sets": [
-                        {
-                            "weight": 20,
-                            "reps": 8,
-                            "split": "00:01:08:319"
-                        },
-                        {
-                            "weight": 20,
-                            "reps": 8,
-                            "split": "00:00:53:339"
-                        },
-                        {
-                            "weight": 20,
-                            "reps": 8,
-                            "split": "00:01:01:735"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "exercise": "Wide lateral Raises",
-            "sets": 3,
-            "increase": 2.5,
-            "peak": 3,
-            "startPercent": 1,
-            "endPercent": 1,
-            "incInterval": 4,
-            "equipmentWeight": 10,
-            "sessions": [
-                {
-                    "date": "01/10/2016",
-                    "sets": [
-                        {
-                            "weight": 20,
-                            "reps": 1,
-                            "split": "00:00:00:000"
-                        }
-                    ]
-                },
-                {
-                    "date": "14/10/2016",
-                    "sets": [
-                        {
-                            "weight": 20,
-                            "reps": 8,
-                            "split": "00:00:43:850"
-                        },
-                        {
-                            "weight": 20,
-                            "reps": 8,
-                            "split": "00:00:34:486"
-                        },
-                        {
-                            "weight": 20,
-                            "reps": 8,
-                            "split": "00:00:56:143"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "exercise": "Overhead press",
+        "startPercent": 0.8,
+        "endPercent": 0.7,
+        "sessions": [
+            {
+                "date": "01/10/2016",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 1,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "14/10/2016",
+                "sets": [
+                    {
+                        "weight": 32.5,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:35:884"
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:02:07:317"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:57:925"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:04:301"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:31:813"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:34:031"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:35:782"
+                    }
+                ]
+            },
+            {
+                "date": "22/10/2016",
+                "sets": [
+                    {
+                        "weight": 32.5,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:44:665"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:49:679"
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:02:30:304"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 6,
+                        "split": "00:02:27:798"
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:02:02:944"
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:02:23:811"
+                    },
+                    {
+                        "weight": 32.5,
+                        "reps": 8,
+                        "split": "00:02:04:731"
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:02:21:565"
+                    }
+                ]
+            }
+        ],
+        "sets": 9,
+        "reps": 8,
+        "peak": 5,
+        "increase": 2.5,
+        "incInterval": 3,
+        "equipmentWeight": 20
+    },
+    {
+        "exercise": "Lateral Raises",
+        "sets": 3,
+        "increase": 2.5,
+        "peak": 3,
+        "startPercent": 1,
+        "endPercent": 1,
+        "incInterval": 4,
+        "equipmentWeight": 10,
+        "sessions": [
+            {
+                "date": "01/10/2016",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 1,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "14/10/2016",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:44:010"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:06:188"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:40:350"
+                    }
+                ]
+            },
+            {
+                "date": "22/10/2016",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:03:892"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:46:339"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:57:824"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "exercise": "Front Raises",
+        "sets": 3,
+        "increase": 2.5,
+        "peak": 3,
+        "startPercent": 1,
+        "endPercent": 1,
+        "incInterval": 4,
+        "equipmentWeight": 10,
+        "sessions": [
+            {
+                "date": "01/10/2016",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 1,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "14/10/2016",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:08:319"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:53:339"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:01:735"
+                    }
+                ]
+            },
+            {
+                "date": "22/10/2016",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:49:391"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:11:600"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:59:735"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "exercise": "Wide lateral Raises",
+        "sets": 3,
+        "increase": 2.5,
+        "peak": 3,
+        "startPercent": 1,
+        "endPercent": 1,
+        "incInterval": 4,
+        "equipmentWeight": 10,
+        "sessions": [
+            {
+                "date": "01/10/2016",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 1,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "14/10/2016",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:43:850"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:34:486"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:56:143"
+                    }
+                ]
+            },
+            {
+                "date": "22/10/2016",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:34:782"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:33:959"
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:00:744"
+                    }
+                ]
+            }
+        ]
+    }
+]

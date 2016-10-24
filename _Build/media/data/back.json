@@ -1,154 +1,281 @@
-{
-    "attributes": {},
-    "data": [
-        {
-            "exercise": "Deadlifts",
-            "sessions": [
-                {
-                    "date": "01/10/2016",
-                    "sets": [
-                        {
-                            "weight": 130,
-                            "reps": 1,
-                            "split": "00:00:00:000"
-                        }
-                    ]
-                },
-                {
-                    "date": "15/10/2016",
-                    "sets": [
-                        {
-                            "weight": 97.5,
-                            "reps": 8,
-                            "split": "00:00:00:000"
-                        },
-                        {
-                            "weight": 105,
-                            "reps": 8,
-                            "split": "00:02:27:831"
-                        },
-                        {
-                            "weight": 115,
-                            "reps": 8,
-                            "split": "00:02:46:735"
-                        },
-                        {
-                            "weight": 122.5,
-                            "reps": 8,
-                            "split": "00:04:21:604"
-                        },
-                        {
-                            "weight": 130,
-                            "reps": 8,
-                            "split": "00:05:51:417"
-                        },
-                        {
-                            "weight": 122.5,
-                            "reps": 8,
-                            "split": "00:04:28:099"
-                        },
-                        {
-                            "weight": 117.5,
-                            "reps": 8,
-                            "split": "00:04:34:646"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "exercise": "Lean-over Rows",
-            "sets": 9,
-            "peak": 9,
-            "increase": 2.5,
-            "startPercent": 1,
-            "endPercent": 1,
-            "incInterval": 3,
-            "equipmentWeight": 10,
-            "sessions": [
-                {
-                    "date": "01/10/2016",
-                    "sets": [
-                        {
-                            "weight": 40,
-                            "reps": 1,
-                            "split": "00:00:00:000"
-                        }
-                    ]
-                },
-                {
-                    "date": "13/10/2016",
-                    "sets": [
-                        {
-                            "weight": 40,
-                            "reps": 8,
-                            "split": "00:01:02:284"
-                        },
-                        {
-                            "weight": 35,
-                            "reps": 8,
-                            "split": "00:01:19:951"
-                        },
-                        {
-                            "weight": 35,
-                            "reps": 8,
-                            "split": "00:01:02:887"
-                        },
-                        {
-                            "weight": 35,
-                            "reps": 8,
-                            "split": "00:01:09:775"
-                        },
-                        {
-                            "weight": 35,
-                            "reps": 8,
-                            "split": "00:00:59:951"
-                        },
-                        {
-                            "weight": 35,
-                            "reps": 8,
-                            "split": "00:01:20:304"
-                        },
-                        {
-                            "weight": 35,
-                            "reps": 8,
-                            "split": "00:01:10:125"
-                        },
-                        {
-                            "weight": 35,
-                            "reps": 8,
-                            "split": "00:01:22:721"
-                        },
-                        {
-                            "weight": 35,
-                            "reps": 8,
-                            "split": "00:01:04:570"
-                        }
-                    ]
-                }
-            ],
-            "reps": 9
-        },
-        {
-            "exercise": "Shrugs",
-            "sets": 3,
-            "peak": 3,
-            "increase": 2.5,
-            "startPercent": 1,
-            "endPercent": 1,
-            "incInterval": 3,
-            "sessions": [
-                {
-                    "date": "01/10/2016",
-                    "sets": [
-                        {
-                            "weight": 100,
-                            "reps": 1,
-                            "split": "00:00:00:000"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "exercise": "Deadlifts",
+        "sessions": [
+            {
+                "date": "01/10/2016",
+                "sets": [
+                    {
+                        "weight": 130,
+                        "reps": 1,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "15/10/2016",
+                "sets": [
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:02:27:831"
+                    },
+                    {
+                        "weight": 115,
+                        "reps": 8,
+                        "split": "00:02:46:735"
+                    },
+                    {
+                        "weight": 122.5,
+                        "reps": 8,
+                        "split": "00:04:21:604"
+                    },
+                    {
+                        "weight": 130,
+                        "reps": 8,
+                        "split": "00:05:51:417"
+                    },
+                    {
+                        "weight": 122.5,
+                        "reps": 8,
+                        "split": "00:04:28:099"
+                    },
+                    {
+                        "weight": 117.5,
+                        "reps": 8,
+                        "split": "00:04:34:646"
+                    }
+                ]
+            },
+            {
+                "date": "23/10/2016",
+                "sets": [
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:02:27:506"
+                    },
+                    {
+                        "weight": 115,
+                        "reps": 8,
+                        "split": "00:03:17:735"
+                    },
+                    {
+                        "weight": 122.5,
+                        "reps": 8,
+                        "split": "00:03:36:200"
+                    },
+                    {
+                        "weight": 130,
+                        "reps": 8,
+                        "split": "00:05:05:388"
+                    },
+                    {
+                        "weight": 127.5,
+                        "reps": 8,
+                        "split": "00:05:06:620"
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:09:18:372"
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 8,
+                        "split": "00:04:02:514"
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:03:11:496"
+                    }
+                ]
+            }
+        ],
+        "sets": 9,
+        "reps": 8,
+        "peak": 5,
+        "increase": 5,
+        "startPercent": 0.75,
+        "endPercent": 0.75,
+        "incInterval": 3,
+        "equipmentWeight": 20
+    },
+    {
+        "exercise": "Lean-over Rows",
+        "sets": 9,
+        "peak": 9,
+        "increase": 2.5,
+        "startPercent": 1,
+        "endPercent": 1,
+        "incInterval": 3,
+        "equipmentWeight": 10,
+        "sessions": [
+            {
+                "date": "01/10/2016",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 1,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "13/10/2016",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:02:284"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:19:951"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:02:887"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:09:775"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:00:59:951"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:20:304"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:10:125"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:22:721"
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:04:570"
+                    }
+                ]
+            },
+            {
+                "date": "21/10/2016",
+                "sets": [
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:00:53:698"
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:00:48:171"
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:00:52:402"
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:00:53:671"
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:01:08:042"
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:00:59:113"
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:00:50:769"
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:00:50:845"
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:00:45:296"
+                    }
+                ]
+            }
+        ],
+        "reps": 8
+    },
+    {
+        "exercise": "Shrugs",
+        "sets": 3,
+        "peak": 1,
+        "increase": 2.5,
+        "startPercent": 1,
+        "endPercent": 1,
+        "incInterval": 3,
+        "sessions": [
+            {
+                "date": "01/10/2016",
+                "sets": [
+                    {
+                        "weight": 100,
+                        "reps": 1,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "23/10/2016",
+                "sets": [
+                    {
+                        "weight": 100,
+                        "reps": 8,
+                        "split": "00:02:09:221"
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 8,
+                        "split": "00:01:53:533"
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 8,
+                        "split": "00:01:44:969"
+                    }
+                ]
+            }
+        ],
+        "reps": 8,
+        "equipmentWeight": 20
+    }
+]

@@ -1,27 +1,320 @@
-{
-    "attributes": 
+[
     {
+        "exercise": "Bench press incline"
     },
-    "data":[
-        {
-            "label": "Press incline",
-            "values": [
-            ]
-        },
-        {
-            "label": "Press decline",
-            "values": [
-            ]
-        },
-        {
-            "label": "Press",
-            "values": [
-            ]
-        },
-        {
-            "label": "Push up",
-            "values": [
-            ]
-        }
-    ]
-}
+    {
+        "exercise": "Bench press decline",
+        "sets": 3,
+        "peak": 3,
+        "startPercent": 1,
+        "endPercent": 1,
+        "sessions": [
+            {
+                "date": "01/10/2016",
+                "sets": [
+                    {
+                        "weight": 70,
+                        "reps": 1,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "16/10/2016",
+                "sets": [
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:04:00:283"
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:01:47:869"
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:01:55:729"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:08:627"
+                    }
+                ]
+            },
+            {
+                "date": "21/10/2016",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:06:58:861"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 6,
+                        "split": "00:01:59:197"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 6,
+                        "split": "00:01:56:656"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "exercise": "Bench press",
+        "endPercent": 0.8,
+        "sessions": [
+            {
+                "date": "01/10/2016",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 1,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "13/10/2016",
+                "sets": [
+                    {
+                        "weight": 55,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 62.5,
+                        "reps": 8,
+                        "split": "00:03:25:573"
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:02:39:486"
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:01:59:396"
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:05:801"
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 6,
+                        "split": "00:02:36:630"
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:02:55:428"
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:02:57:839"
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:02:16:062"
+                    }
+                ]
+            },
+            {
+                "date": "16/10/2016",
+                "sets": [
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 57.5,
+                        "reps": 8,
+                        "split": "00:01:36:434"
+                    },
+                    {
+                        "weight": 60,
+                        "reps": 8,
+                        "split": "00:02:21:291"
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:02:03:888"
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:31:910"
+                    },
+                    {
+                        "weight": 72.5,
+                        "reps": 8,
+                        "split": "00:02:00:484"
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:01:51:121"
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:02:09:728"
+                    }
+                ]
+            },
+            {
+                "date": "21/10/2016",
+                "sets": [
+                    {
+                        "weight": 67.5,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:02:21:489"
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:02:04:532"
+                    },
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:02:13:000"
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:39:766"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:18:473"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:32:337"
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:02:46:854"
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:02:25:261"
+                    }
+                ]
+            }
+        ],
+        "sets": 9,
+        "reps": 8,
+        "peak": 5,
+        "increase": 5,
+        "startPercent": 0.8,
+        "incInterval": 3,
+        "equipmentWeight": 20
+    },
+    {
+        "exercise": "Push ups",
+        "sets": 5,
+        "peak": 1,
+        "increase": 0,
+        "startPercent": 1,
+        "endPercent": 1,
+        "incInterval": 1,
+        "sessions": [
+            {
+                "date": "01/10/2016",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 1,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "16/10/2016",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:02:12:971"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:03:23:867"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:02:31:373"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:57:348"
+                    }
+                ]
+            },
+            {
+                "date": "21/10/2016",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:02:09:325"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:03:36:611"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:02:11:242"
+                    }
+                ]
+            }
+        ],
+        "reps": 20,
+        "equipmentWeight": 0
+    }
+]

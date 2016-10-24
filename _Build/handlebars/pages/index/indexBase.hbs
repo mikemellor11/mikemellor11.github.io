@@ -41,17 +41,17 @@
 				<h2>{{text}}</h2>
 				{{#each charts}}
 					<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter {{#unless @first}}ut-marginTop{{/unless}}">
-						{{#if (isType this 'object')}}
+						{{#if (isType this 'array')}}
 							{{#each this}}
 								<div class="callout {{#if ../../classes}}{{../../classes}}{{/if}}">
-									<h3 class="ut-noMargin">{{findObjectInArray object=this in=@root.index.charts key="name" value="altName"}}</h3>
-									<p data-chart="{{this}}" data-key={{../../key}} class="ut-noMargin d3-text">0 kg</p>
+									<h3 class="ut-noMargin">{{this.exercise}}</h3>
+									<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../../key}} class="ut-noMargin d3-text">0 kg</p>
 								</div>
 							{{/each}}
 						{{else}}
 							<div class="callout {{#if ../classes}}{{../classes}}{{/if}}">
-								<h3 class="ut-noMargin">{{findObjectInArray object=this in=@root.index.charts key="name" value="altName"}}</h3>
-								<p data-chart="{{this}}" data-key={{../key}} class="ut-noMargin d3-text}">0 kg</p>
+								<h3 class="ut-noMargin">{{this.exercise}}</h3>
+								<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../key}} class="ut-noMargin d3-text">0 kg</p>
 							</div>
 						{{/if}}
 					</div>
@@ -74,16 +74,22 @@
 		d3.selectAll('.d3-text').each(function(d, i){
 			var chart = this;
 
-			d3.json('media/' + this.dataset.chart + '.json', function (err, JSON) {
-				var maxLift = JSON.data.find(function(d, i){
-					if(d.label === chart.dataset.key) {
-						return true;
-					}
-				});
+			d3.json('media/data/' + this.dataset.chart + '.json', function (err, JSON) {
+				if(!err){
+				 	var exerciseJSON = JSON.find(function(d, i){
+						if(d.exercise === chart.dataset.exercise) {
+							return true;
+						}
+					});
 
-				maxLift = maxLift.values[maxLift.values.length - 1].value.weight;
+					var max = d3.max(exerciseJSON.sessions, function(d, i){ 
+							return d3.max(d.sets, function(dl, il){
+								return dl.weight;
+							}); 
+						});
 
-				createHtmlText(chart).attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(maxLift).call(chart);
+					createHtmlText(chart).attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(max).call(chart);
+				}
 			});
 		});
 	}

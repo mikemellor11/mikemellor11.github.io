@@ -88,6 +88,9 @@ module.exports = function(grunt) {
                         else{
                             var ext = path.extname(tempPath);
                             switch(ext){
+                                case '.svg':
+                                    res.writeHead(200, {"Content-Type": 'image/svg+xml'});
+                                    break;
                                 case '.css':
                                     res.writeHead(200, {"Content-Type": 'text/css'});
                                     break;

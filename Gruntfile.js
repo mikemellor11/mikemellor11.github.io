@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
     watchSmokeTests();
 
-    grunt.registerTask('default', ['karma:unit:start', 'jshint', 'tv4', 'concat:dev', 'fontello_svg', 'svgfit', 'svgmin', 'svg_sprite', 'copy', 'sass:dev', 'postcss', 'compile-handlebars', 'includereplace', 'htmlmin', 'clean:build', 'browserSync', 'connect', 'watch']);
+    grunt.registerTask('default', ['karma:unit:start', 'jshint', 'tv4', 'concat:dev', 'fontello_svg', 'svgfit', 'svgmin', 'svg_sprite', 'copy', 'sass:dev', 'postcss', 'compile-handlebars', 'includereplace', 'htmlmin', 'clean:build', 'browserSync:dev', 'connect', 'watch']);
     
     grunt.registerTask('dist', ['clean:dist', 'jshint', 'tv4', 'concat:dist', 'uglify:dist', 'fontello_svg', 'svgfit', 'svgmin', 'svg_sprite', 'copy', 'sass:dist', 'postcss', 'compile-handlebars', 'includereplace', 'htmlmin', 'imagemin', 'clean:build', 'connect', 'casperjs:local', 'karma:continuous']);
 

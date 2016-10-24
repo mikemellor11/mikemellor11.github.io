@@ -13,6 +13,10 @@ function baseJS(){
 	   socket.emit('closeWindow');
 	}
 
+	$('.showMenu').on('click', function(){
+		$('.exercises').toggleClass('show');
+	});
+
 	socket.on('buildHtml', function (data) {
 		contentJson = data;
 
@@ -65,7 +69,7 @@ function baseJS(){
 	function buildStaticHtml(){
 		$('.dynamic').get(0).innerHTML = '';
 
-		var html = '<form class="ut-tableChildren ut-tableFixed">';
+		var html = '<form class="exercises">';
 		var index = 0;
 
 		contentJson.index.charts.forEach(function(d, i){
@@ -122,7 +126,7 @@ function baseJS(){
 
 				for(var key in contentJson.attributes.gymDefaults){
 					gD[key] = (
-						(gymData[d.value][key]) ? 
+						(gymData[d.value][key] !== undefined) ? 
 							gymData[d.value] : 
 							contentJson.attributes.gymDefaults
 					)[key];
@@ -224,7 +228,7 @@ function baseJS(){
 
 				html += '<div class="half ut-fontLarge last">';
 				html += displaySelect(gD.increase, 20, 'Increase', 'increase', 2.5, 0);
-				html += displaySelect(gD.reps, 12, 'Reps', 'reps', 1, 1);
+				html += displaySelect(gD.reps, 30, 'Reps', 'reps', 1, 1);
 				html += displaySelect(gD.incInterval, 12, 'Inc interval', 'incInterval', 1, 1);
 				html += displaySelect(gD.equipmentWeight, 40, 'Equipment weight', 'equipmentWeight', 2.5, 0);
 				html += '</div>';
