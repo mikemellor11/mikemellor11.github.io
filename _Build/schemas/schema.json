@@ -121,6 +121,9 @@
 				"title": {
 		        	"type": "string"
 	            },
+	            "loading": {
+		        	"type": "string"
+	            },
 	            "navigation": {
 	            	"$ref": "_Build/schemas/navigation.json#/definitions/navigation"
 	            },

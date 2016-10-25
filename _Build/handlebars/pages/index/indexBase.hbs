@@ -45,13 +45,13 @@
 							{{#each this}}
 								<div class="callout {{#if ../../classes}}{{../../classes}}{{/if}}">
 									<h3 class="ut-noMargin">{{this.exercise}}</h3>
-									<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../../key}} class="ut-noMargin d3-text">loading...</p>
+									<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
 								</div>
 							{{/each}}
 						{{else}}
 							<div class="callout {{#if ../classes}}{{../classes}}{{/if}}">
 								<h3 class="ut-noMargin">{{this.exercise}}</h3>
-								<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../key}} class="ut-noMargin d3-text">loading...</p>
+								<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
 							</div>
 						{{/if}}
 					</div>
@@ -86,8 +86,20 @@
 
 					for(var i = 0; i < exerciseJSON.sessions.length; i++){
 						for(var j = 0; j < exerciseJSON.sessions[i].sets.length; j++){
-							if(!maxObject || exerciseJSON.sessions[i].sets[j].weight > maxObject.weight){
-								maxObject = exerciseJSON.sessions[i].sets[j];
+							currentObject = exerciseJSON.sessions[i].sets[j];
+
+							if(!maxObject){
+								maxObject = currentObject;
+							}
+
+							if(currentObject.weight >= maxObject.weight){
+								if(currentObject.weight === maxObject.weight){
+									if((currentObject.weight * currentObject.reps) > (maxObject.weight * maxObject.reps)){
+										maxObject = currentObject;
+									}
+								} else {
+									maxObject = currentObject;
+								}
 							}
 						}
 					}

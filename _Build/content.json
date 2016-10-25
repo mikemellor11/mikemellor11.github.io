@@ -104,6 +104,7 @@
     },
     "global": {
         "title": "Code / Gym / Sleep",
+        "loading": "loading...",
         "navigation": [
             {
                 "url": "index",
