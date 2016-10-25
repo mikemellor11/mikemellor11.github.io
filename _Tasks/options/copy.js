@@ -17,7 +17,8 @@ module.exports = {
     },
     htaccess: {
         files: {
-            '_Output/.htaccess': ['_Build/.htaccess']
+            '_Output/.htaccess': ['_Build/.htaccess'],
+            '_Output/CNAME': ['_Build/CNAME']
         }
     }
 }
