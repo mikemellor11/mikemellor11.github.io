@@ -101,6 +101,56 @@
                         "split": "00:03:20:051"
                     }
                 ]
+            },
+            {
+                "date": "25/10/2016",
+                "sets": [
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:03:27:111"
+                    },
+                    {
+                        "weight": 95,
+                        "reps": 8,
+                        "split": "00:02:47:597"
+                    },
+                    {
+                        "weight": 95,
+                        "reps": 8,
+                        "split": "00:04:35:143"
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 8,
+                        "split": "00:03:49:224"
+                    },
+                    {
+                        "weight": 95,
+                        "reps": 8,
+                        "split": "00:04:03:228"
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:04:23:542"
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:02:24:405"
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:03:15:826"
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -108,7 +158,7 @@
         "peak": 5,
         "increase": 5,
         "startPercent": 0.75,
-        "endPercent": 0.8,
+        "endPercent": 0.75,
         "incInterval": 3,
         "equipmentWeight": 20
     }
