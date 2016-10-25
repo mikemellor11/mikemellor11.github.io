@@ -15,7 +15,8 @@ function createHtmlText(selector){
 	var dataLast = 0;
 
 	var att = {
-		textFormat : "{0}", // {0}value {1}percent {2}total
+		textFormat : "{value}",
+		extraFormatKeys : [],
 		transitionSpeed : 800,
 		transitionType: 'cubic-in-out',
 		delaySpeed : 1000,
@@ -24,7 +25,17 @@ function createHtmlText(selector){
 	};
 
 	function my(){
-		chart.text(String.format(att.textFormat, parseFloat(dataLast).toFixed(att.decimalPlaces), Math.round(((dataLast / att.totalCount) * 100)), att.totalCount))
+		var textObject = {
+                "value": parseFloat(dataLast).toFixed(att.decimalPlaces),
+                "percent": Math.round(((parseFloat(dataLast).toFixed(0) / att.totalCount) * 100)),
+                "total": att.totalCount
+            }
+
+        att.extraFormatKeys.forEach(function(d){
+        	textObject[d.name] = d.value;
+        });
+
+		chart.text(String.formatKeys(att.textFormat, textObject))
 			.transition()
 			.duration(att.transitionSpeed)
 			.delay(att.delaySpeed)
@@ -32,8 +43,14 @@ function createHtmlText(selector){
 			.tween("text", function(d) {
 	            var i = d3.interpolate(dataLast, data);
 	            return function(t) {
+
 	            	dataLast = parseFloat(i(t)).toFixed(att.decimalPlaces);
-	                this.textContent = String.format(att.textFormat, parseFloat(i(t)).toFixed(att.decimalPlaces), Math.round(((parseFloat(i(t)).toFixed(0) / att.totalCount) * 100)), att.totalCount);
+
+	            	textObject.value = parseFloat(i(t)).toFixed(att.decimalPlaces);
+	            	textObject.percent =  Math.round(((parseFloat(i(t)).toFixed(0) / att.totalCount) * 100));
+	            	textObject.total = att.totalCount;
+
+	                this.textContent = String.formatKeys(att.textFormat, textObject);
 	            };
 	        });
         return my;
@@ -50,7 +67,9 @@ function createHtmlText(selector){
 		if (!arguments.length) return att;
 		for(var keys in value){
 			if(value.hasOwnProperty(keys)){
-				if(att[keys] === Object(att[keys])){
+				if(Array.isArray(att[keys])){ // Override entire array, so setting colors = ['fillA'] will override ['fillA', 'fillB', 'fillC']
+					att[keys] = value[keys];
+				} else if(att[keys] === Object(att[keys])){ // if att[keys] is an object need to loop through sub keys to set
 					for(var innerKeys in att[keys]){
 						if(value[keys].hasOwnProperty(innerKeys)){
 							att[keys][innerKeys] = value[keys][innerKeys];
@@ -62,7 +81,7 @@ function createHtmlText(selector){
 			}	
 		}
 	    return my;
-	}
+	};
 
 	return my;
 }

@@ -49,3 +49,15 @@ if (!String.format) {
     }));
   };
 }
+
+if (!String.formatKeys) {
+  String.formatKeys = function(format) {
+    var args = arguments[1];
+    return String(format.replace(/{(\w+)}/g, function(match, key) { 
+      return typeof args[key] != 'undefined'
+        ? args[key] 
+        : match
+      ;
+    }));
+  };
+}

@@ -3,16 +3,6 @@
         "exercise": "Squats",
         "sessions": [
             {
-                "date": "01/10/2016",
-                "sets": [
-                    {
-                        "weight": 100,
-                        "reps": 1,
-                        "split": "00:00:00:000"
-                    }
-                ]
-            },
-            {
                 "date": "12/10/2016",
                 "sets": [
                     {

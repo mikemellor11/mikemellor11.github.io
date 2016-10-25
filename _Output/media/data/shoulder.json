@@ -5,16 +5,6 @@
         "endPercent": 0.7,
         "sessions": [
             {
-                "date": "01/10/2016",
-                "sets": [
-                    {
-                        "weight": 40,
-                        "reps": 1,
-                        "split": "00:00:00:000"
-                    }
-                ]
-            },
-            {
                 "date": "14/10/2016",
                 "sets": [
                     {
@@ -133,16 +123,6 @@
         "equipmentWeight": 10,
         "sessions": [
             {
-                "date": "01/10/2016",
-                "sets": [
-                    {
-                        "weight": 20,
-                        "reps": 1,
-                        "split": "00:00:00:000"
-                    }
-                ]
-            },
-            {
                 "date": "14/10/2016",
                 "sets": [
                     {
@@ -195,16 +175,6 @@
         "equipmentWeight": 10,
         "sessions": [
             {
-                "date": "01/10/2016",
-                "sets": [
-                    {
-                        "weight": 20,
-                        "reps": 1,
-                        "split": "00:00:00:000"
-                    }
-                ]
-            },
-            {
                 "date": "14/10/2016",
                 "sets": [
                     {
@@ -256,16 +226,6 @@
         "incInterval": 4,
         "equipmentWeight": 10,
         "sessions": [
-            {
-                "date": "01/10/2016",
-                "sets": [
-                    {
-                        "weight": 20,
-                        "reps": 1,
-                        "split": "00:00:00:000"
-                    }
-                ]
-            },
             {
                 "date": "14/10/2016",
                 "sets": [

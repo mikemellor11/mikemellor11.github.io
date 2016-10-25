@@ -45,13 +45,13 @@
 							{{#each this}}
 								<div class="callout {{#if ../../classes}}{{../../classes}}{{/if}}">
 									<h3 class="ut-noMargin">{{this.exercise}}</h3>
-									<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../../key}} class="ut-noMargin d3-text">0 kg</p>
+									<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../../key}} class="ut-noMargin d3-text">loading...</p>
 								</div>
 							{{/each}}
 						{{else}}
 							<div class="callout {{#if ../classes}}{{../classes}}{{/if}}">
 								<h3 class="ut-noMargin">{{this.exercise}}</h3>
-								<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../key}} class="ut-noMargin d3-text">0 kg</p>
+								<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../key}} class="ut-noMargin d3-text">loading...</p>
 							</div>
 						{{/if}}
 					</div>
@@ -82,13 +82,42 @@
 						}
 					});
 
-					var max = d3.max(exerciseJSON.sessions, function(d, i){ 
-							return d3.max(d.sets, function(dl, il){
-								return dl.weight;
-							}); 
-						});
+					var maxObject = null;
 
-					createHtmlText(chart).attr({textFormat: "{0} kg", delaySpeed: delaySpeed += delayAdd}).data(max).call(chart);
+					for(var i = 0; i < exerciseJSON.sessions.length; i++){
+						for(var j = 0; j < exerciseJSON.sessions[i].sets.length; j++){
+							if(!maxObject || exerciseJSON.sessions[i].sets[j].weight > maxObject.weight){
+								maxObject = exerciseJSON.sessions[i].sets[j];
+							}
+						}
+					}
+
+					if(chart.dataset.key === 'max'){
+						createHtmlText(chart).attr({
+								textFormat: "{value} kg" + " - {reps} reps", 
+								delaySpeed: delaySpeed += delayAdd,
+								decimalPlaces: 1,
+								extraFormatKeys: [{
+									name: "reps",
+									value: maxObject.reps
+								}]
+							})
+							.data(maxObject.weight)
+							.call(chart);
+					} else {
+						var a = moment().endOf('year');
+						var b = moment().today;
+
+						maxObject.weight += (a.diff(b, 'weeks') / exerciseJSON.incInterval) * exerciseJSON.increase;
+
+						createHtmlText(chart).attr({
+								textFormat: "{value} kg", 
+								delaySpeed: delaySpeed += delayAdd,
+								decimalPlaces: 1
+							})
+							.data(maxObject.weight)
+							.call(chart);
+					}
 				}
 			});
 		});

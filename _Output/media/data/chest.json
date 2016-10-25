@@ -10,16 +10,6 @@
         "endPercent": 1,
         "sessions": [
             {
-                "date": "01/10/2016",
-                "sets": [
-                    {
-                        "weight": 70,
-                        "reps": 1,
-                        "split": "00:00:00:000"
-                    }
-                ]
-            },
-            {
                 "date": "16/10/2016",
                 "sets": [
                     {
@@ -70,16 +60,6 @@
         "exercise": "Bench press",
         "endPercent": 0.8,
         "sessions": [
-            {
-                "date": "01/10/2016",
-                "sets": [
-                    {
-                        "weight": 80,
-                        "reps": 1,
-                        "split": "00:00:00:000"
-                    }
-                ]
-            },
             {
                 "date": "13/10/2016",
                 "sets": [
@@ -248,16 +228,6 @@
         "endPercent": 1,
         "incInterval": 1,
         "sessions": [
-            {
-                "date": "01/10/2016",
-                "sets": [
-                    {
-                        "weight": 80,
-                        "reps": 1,
-                        "split": "00:00:00:000"
-                    }
-                ]
-            },
             {
                 "date": "16/10/2016",
                 "sets": [

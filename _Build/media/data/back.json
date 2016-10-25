@@ -3,16 +3,6 @@
         "exercise": "Deadlifts",
         "sessions": [
             {
-                "date": "01/10/2016",
-                "sets": [
-                    {
-                        "weight": 130,
-                        "reps": 1,
-                        "split": "00:00:00:000"
-                    }
-                ]
-            },
-            {
                 "date": "15/10/2016",
                 "sets": [
                     {
@@ -122,16 +112,6 @@
         "incInterval": 3,
         "equipmentWeight": 10,
         "sessions": [
-            {
-                "date": "01/10/2016",
-                "sets": [
-                    {
-                        "weight": 40,
-                        "reps": 1,
-                        "split": "00:00:00:000"
-                    }
-                ]
-            },
             {
                 "date": "13/10/2016",
                 "sets": [
@@ -244,16 +224,6 @@
         "endPercent": 1,
         "incInterval": 3,
         "sessions": [
-            {
-                "date": "01/10/2016",
-                "sets": [
-                    {
-                        "weight": 100,
-                        "reps": 1,
-                        "split": "00:00:00:000"
-                    }
-                ]
-            },
             {
                 "date": "23/10/2016",
                 "sets": [

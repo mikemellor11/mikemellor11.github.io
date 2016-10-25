@@ -74,7 +74,7 @@
                 ]
             },
             {
-                "text": "Current goals",
+                "text": "End of year goal",
                 "key": "goal",
                 "classes": "callout--goal",
                 "charts": [
@@ -84,18 +84,18 @@
                             "exercise": "Deadlifts"
                         },
                         {
-                            "group": "back",
-                            "exercise": "Deadlifts"
+                            "group": "leg",
+                            "exercise": "Squats"
                         }
                     ],
                     [
                         {
-                            "group": "back",
-                            "exercise": "Deadlifts"
+                            "group": "chest",
+                            "exercise": "Bench press"
                         },
                         {
-                            "group": "back",
-                            "exercise": "Deadlifts"
+                            "group": "shoulder",
+                            "exercise": "Overhead press"
                         }
                     ]
                 ]
@@ -121,13 +121,13 @@
                 "url": "gym",
                 "name": "Gym",
                 "icon": "chart-area",
-                "text": "Charts and info all about the gainz <span class='ut-noWrap'>(and lack thereof)</span>"
+                "text": "Charts and info"
             },
             {
                 "url": "contact",
                 "name": "Contact",
                 "icon": "user",
-                "text": "Get in touch"
+                "text": "Get in touch<br>(Sleep doesn't really make sense)"
             }
         ],
         "social": [
