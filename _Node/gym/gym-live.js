@@ -81,7 +81,7 @@ function baseJS(){
 				html += '<div class="ut-vertAlignTop">';
 				html += '<h2>' + d.altName + '</h2>';
 
-				JSON.data.forEach(function(dl){
+				JSON.forEach(function(dl){
 					html += '<div>';
 					html += '<input class="group checkbox-custom"';
 					html += ' data-group="' + d.name + '"';
@@ -274,7 +274,7 @@ function baseJS(){
 					console.log("error: ", err);
 				}
 				
-				JSON.data.forEach(function(dl){
+				JSON.forEach(function(dl){
 					gymData[dl.exercise] = dl;
 				});
 
