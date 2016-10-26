@@ -1,4 +1,35 @@
-header{
+.header{
+	width: 100%;
+
+	&.stuck{
+		h1{
+			font-size: 1.5em;
+			margin: 0;
+		}
+
+		.gravitar{
+			width: 50px;
+		}
+	}
+}
+
+.header--real{
 	background: $color1;
 	color: $color0;
+	position: relative;
+	z-index: 1;
+
+	&.stuck{
+		position: fixed;
+	}
+}
+
+.header--fake{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&.stuck{
+		position: static;
+	}
 }

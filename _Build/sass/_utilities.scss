@@ -1,24 +1,7 @@
 .ut-table{
     display: table;
     width: 100%;
-}
-
-.ut-tableChildren{
-    display: table;
-    width: 100%;
-
-    & > *{
-        @extend .ut-tableCell;
-    }
-}
-
-.ut-tableChildrenRows{
-    display: table;
-    width: 100%;
-
-    & > *{
-        @extend .ut-tableRow;
-    }
+    box-sizing: border-box;
 }
 
 .ut-tableFixed{
@@ -32,6 +15,22 @@
 .ut-tableCell{
     display: table-cell !important;
     vertical-align: middle;
+}
+
+.ut-tableChildren{
+    @extend .ut-table;
+
+    & > *{
+        @extend .ut-tableCell;
+    }
+}
+
+.ut-tableChildrenRows{
+    @extend .ut-table;
+
+    & > *{
+        @extend .ut-tableRow;
+    }
 }
 
 .ut-fullWidth{
@@ -281,6 +280,10 @@
                 margin-top: 0;
             }
         }
+    }
+
+    .ut-textAlignCenter--mobile{
+        text-align: center !important;
     }
 }
 

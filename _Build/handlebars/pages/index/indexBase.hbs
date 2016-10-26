@@ -1,70 +1,83 @@
-<header class="ut-bg1">
-	<div class="innerContainer ut-padding ut-color--reverse">
-		<div class="half">
-			<h1>{{global.title}}</h1>
-			<p>{{{lorem '2s'}}}</p>
+<header class="container header header--real ut-bg1">
+	<div class="innerContainer ut-tableChildren ut-mobileFullChildren ut-textAlignCenter--mobile ut-padding ut-color--reverse">
+		<div class="ut-paddingRight">
+			<h1 class="ut-noWrap">{{global.title}}</h1>
 		</div>
-		<div class="half last">
-			<div class="ut-tableChildren">
-				<p class="ut-paddingRight ut-textAlignRight">Mike Mellor - Front end web developer / iOS developer</p>
-				<img class="gravitar ut-fullWidth" src="https://s.gravatar.com/avatar/c199be5cfdc1b7b8682712d98c68736a?s=100" alt="my ugly mug">
+		<div class="ut-fullWidth">
+			<div class="ut-tableChildren ut-mobileFullChildren">
+				<p class="ut-fullWidth ut-paddingRight ut-textAlignRight ut-textAlignCenter--mobile">Mike Mellor - Front end web developer / iOS developer</p>
+				<div>
+					<img class="gravitar ut-fullWidth" src="https://s.gravatar.com/avatar/c199be5cfdc1b7b8682712d98c68736a?s=100" alt="my ugly mug">
+				</div>
 			</div>
 		</div>
 	</div>
 </header>
 
-<div class="innerContainer ut-padding ut-marginTop ut-highlight--reverse">
-	<div class="ut-tableChildren ut-tableFixed ut-tableSpacing ut-mobileFullChildren">
-		{{#each index.callouts}}
-			{{#with (findObjectInArray object=this in=@root.global.navigation key="url")}}
-				{{> callout 
-					callout--url=url
-					callout--icon=icon
-					callout--name=name
-					callout--text=text
-				}}
-			{{/with}}
-		{{/each}}
-	</div>
-
-	<p>{{lorem '10s'}}</p>
-
-	<div class="half ut-vertAlignTop ut-mobileFull">
-		<h2>Latest post</h2>
-		<h3>Greatest icon flow ever</h3>
-		<p>{{{lorem '5-7s'}}}... <a class="ut-highlight ut-inline" href="./code.html">Read More</a></p>
-	</div>
-
-	<div class="half last ut-mobileFull">
-		{{#each index.sideCallouts}}
-			<div>
-				<h2>{{text}}</h2>
-				{{#each charts}}
-					<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter {{#unless @first}}ut-marginTop{{/unless}}">
-						{{#if (isType this 'array')}}
-							{{#each this}}
-								<div class="callout {{#if ../../classes}}{{../../classes}}{{/if}}">
-									<h3 class="ut-noMargin">{{this.exercise}}</h3>
-									<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
-								</div>
-							{{/each}}
-						{{else}}
-							<div class="callout {{#if ../classes}}{{../classes}}{{/if}}">
-								<h3 class="ut-noMargin">{{this.exercise}}</h3>
-								<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
-							</div>
-						{{/if}}
-					</div>
-				{{/each}}
+<div class="container header header--fake">
+	<div class="innerContainer ut-tableChildren ut-mobileFullChildren ut-padding">
+		<div class="ut-paddingRight">
+			<h1 class="ut-noWrap">{{global.title}}</h1>
+		</div>
+		<div class="ut-fullWidth">
+			<div class="ut-tableChildren ut-mobileFullChildren">
+				<p class="ut-fullWidth ut-paddingRight">Mike Mellor - Front end web developer / iOS developer</p>
+				<div>
+					<img class="gravitar ut-fullWidth" src="https://s.gravatar.com/avatar/c199be5cfdc1b7b8682712d98c68736a?s=100" alt="my ugly mug">
+				</div>
 			</div>
-		{{/each}}
-	</div>
-
-	<div>
-		<h3>Current site status</h3>
-		<img src="https://camo.githubusercontent.com/500e1f543118b424a6007c31122f421f978ec6ca/68747470733a2f2f7472617669732d63692e6f72672f6d696b656d656c6c6f7231312f6772756e742d7376676669742e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/mikemellor11/grunt-svgfit.svg?branch=master" style="max-width:100%;">
+		</div>
 	</div>
 </div>
+
+<main class="container ut-padding">
+	<div class="innerContainer index--padding ut-highlight--reverse">
+		<div class="ut-tableChildren ut-tableFixed ut-tableSpacing ut-mobileFullChildren">
+			{{#each index.callouts}}
+				{{#with (findObjectInArray object=this in=@root.global.navigation key="url")}}
+					{{> callout 
+						callout--url=url
+						callout--icon=icon
+						callout--name=name
+						callout--text=text
+					}}
+				{{/with}}
+			{{/each}}
+		</div>
+
+		<!-- <p>{{{lorem '3p'}}}</p> -->
+
+		<div class="half ut-vertAlignTop ut-mobileFull">
+			<h2>Latest posts</h2>
+			<p class="notification notification--missing">No posts found..</p>
+		</div>
+
+		<div class="half last ut-mobileFull">
+			{{#each index.sideCallouts}}
+				<div>
+					<h2>{{text}}</h2>
+					{{#each charts}}
+						<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter {{#unless @first}}ut-marginTop{{/unless}}">
+							{{#if (isType this 'array')}}
+								{{#each this}}
+									<div class="callout {{#if ../../classes}}{{../../classes}}{{/if}}">
+										<h3 class="ut-noMargin">{{this.exercise}}</h3>
+										<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
+									</div>
+								{{/each}}
+							{{else}}
+								<div class="callout {{#if ../classes}}{{../classes}}{{/if}}">
+									<h3 class="ut-noMargin">{{this.exercise}}</h3>
+									<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
+								</div>
+							{{/if}}
+						</div>
+					{{/each}}
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</main>
 
 <script type="text/javascript">
 	function pageJS(){

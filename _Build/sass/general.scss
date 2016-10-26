@@ -18,6 +18,7 @@
 @import "components/_chart";
 @import "components/_callout";
 @import "components/_radioCheck";
+@import "components/_notification";
 
 body{
 	background: $color4;
@@ -37,4 +38,7 @@ svg{
 
 .gravitar{
 	border-radius: 50%;
+	width: 100px;
+
+	transition: width 0.4s;
 }
