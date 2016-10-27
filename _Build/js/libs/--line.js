@@ -1,4 +1,4 @@
-function createLine(selector){
+function createLine(selector, svgText){
 	if(!selector){
 		return null;
 	}
@@ -13,21 +13,20 @@ function createLine(selector){
 
 	var parseDate = null;
 
-	var data = []; 	// Required //
-					// xAxis:num - yAxis:num - size:num //
-					
-					// Optional //
-					// label:string //
+	var data = [];
 
 	var att = {
-		margin : {top: 10, right: 10, bottom: 30, left: 75},
+		margin : {top: 10, right: 10, bottom: 10, left: 40},
 		padding : {outer: 0},
 		width : 768,
 		height : 432,
 		transitionSpeed : 800,
-		delaySpeed : 800,
-		stagger : 200,
+		delaySpeed : 0,
+		stagger : 0,
 		labelPadding: 10,
+		labelPosition: 'top', // bottom
+		labelWidth: 'auto', // different depending on scale // set as explicit integer
+		spacePadding : 0.6,
 		labelFormat : "{1}", // {0}value {1}label {2}id
 		aspectRatio : 0.5625,
 		colors : ['fill1', 'fill2', 'fill3', 'fill4', 'fill5', 'fill6'], 
@@ -37,7 +36,6 @@ function createLine(selector){
         xMax : null,
         yMin : null,
 		yMax : null,
-		foreignObjects : false,
 		flipYAxis : false,
 		autoAxis : 'x',
 		interpolation : 'linear', // https://github.com/mbostock/d3/wiki/SVG-Shapes#line_interpolate for more options,
@@ -46,10 +44,12 @@ function createLine(selector){
 		symbolType : 'circle',
 		transitionType : 'cubic-in-out',
 		keySelector: '.key',
-		ticks : 10,
+		xTicks : 10,
+		yTicks : 10,
+		roundPoints: true,
 		dashedLine : 0, // 0 means sold, '3, 3' would be 3 pixels sold 3 pixels gap and so on
-		dateFormat : "%d/%m/%y",
-		xScale : null, // null = ordinal // 'date' = timescale // provide function for custom
+		dateFormat : "%d/%m/%Y",
+		xScale : null, // null = ordinal // 'date' = timescale // 'linear' = linear // provide function for custom
 		plotXValue : null, // null = d.id // 'date' = parseDate(d.id) // provide function for custom
 		plotYValue : null // value: 40 = plotYValue: null // value: {weight: 40} = plotYValue: "weight"
 	};
@@ -64,7 +64,13 @@ function createLine(selector){
 		draw,
 		bottom,
 		xScale,
-		yScale;
+		yScale,
+		axisHeight = 0,
+		plotHeight = 0,
+		plotWidth = 0,
+		xAxis = null,
+		yAxis = null,
+		_spacePadding;
 
 	setupBase();
 
@@ -75,12 +81,21 @@ function createLine(selector){
 
 		updateViewBox();
 
+		var fontSize = parseFloat(chart.style('font-size'));
+
 		// Flip this order to calc auto y
 		_width = att.width - att.margin.left - att.margin.right;
+		_spacePadding = att.spacePadding * fontSize;
+
+		createXScale();
 
 		_margin.bottom = calculateXAxis();
 
 		_height = att.height - att.margin.top - _margin.bottom;
+
+		createYScale();
+
+		_margin.left = calculateYAxis();
 
 		renderAxis();
 
@@ -101,8 +116,15 @@ function createLine(selector){
 			.attr('class', function (d, i) { return 'line__stroke ' + att.colors[i % att.colors.length] + '-stroked'; });
 
 		lines.select("path")
-			.style("stroke-dasharray", function(d, i){ return (d.dashedLine) ? d.dashedLine : att.dashedLine; })
-			.attr("d", function(d){ return line(d.values); });
+			.attr("d", function(d){ return line(d.values); })
+			.attr("stroke-dasharray", function(d, i){ if(!d.dashedLine && !att.dashedLine){ return this.getTotalLength() + " " + this.getTotalLength(); } return (d.dashedLine) ? d.dashedLine : att.dashedLine; })
+  			.attr("stroke-dashoffset", function(d, i){ if(!d.dashedLine && !att.dashedLine){ return this.getTotalLength(); } return 0; })
+			.transition()
+			.ease(att.transitionType)
+			.delay(function(d, i) {return (i * att.stagger) + att.delaySpeed; })
+			.duration(att.transitionSpeed)
+			.ease("linear")
+    		.attr("stroke-dashoffset", 0);
 
 		lines.exit()
 			.transition()
@@ -118,7 +140,37 @@ function createLine(selector){
 				.append("g")
 				.attr("class", "plots");
 			
-			if(att.foreignObjects) {
+			if(!svgText) {
+				g_Plots.append("svg:foreignObject")
+					.attr("opacity", 0)
+				    .attr("width", plotWidth)
+				    .attr("class", "plotLabel")
+				    .append("xhtml:div")
+		            .html(function(d) {return d.label;});
+
+	            plots.select('.plotLabel')
+					.transition()
+					.ease(att.transitionType)
+					.delay(function(d, i) { return (lineIndex * att.stagger) + att.delaySpeed + ((att.transitionSpeed / lineData.values.length) * i); })
+					.duration(att.transitionSpeed)
+					.attr('opacity', function(d){
+						if(!getYValue(d)){
+							return 0;
+						}
+
+						return 1;
+					});
+
+		        plots.select('.plotLabel div')
+					.each(function(d, i){
+			        	d3.select(this.parentNode).attr("height", this.clientHeight);
+
+			        	if(att.labelPosition === 'bottom'){
+			        		d3.select(this.parentNode).attr("transform", "translate(" + (xScale(getXValue(d)) - (this.clientWidth * 0.5)) + ", " + (yScale(+getYValue(d)) + att.labelPadding) + ")");
+			        	} else {
+			        		d3.select(this.parentNode).attr("transform", "translate(" + (xScale(getXValue(d)) - (this.clientWidth * 0.5)) + ", " + ((yScale(+getYValue(d)) - att.labelPadding) - this.clientHeight) + ")");
+			        	}
+			        });
 		    } else {
 		    	g_Plots.append("text")
 					.attr("y", '1em')
@@ -134,7 +186,8 @@ function createLine(selector){
 					.text(function(d, i){ return parseLabel(d); })
 					.call(wrap, 50)
 					.transition()
-					.delay(function(d, i) {return (i * att.stagger) + att.delaySpeed; })
+					.ease(att.transitionType)
+					.delay(function(d, i) { return (lineIndex * att.stagger) + att.delaySpeed + ((att.transitionSpeed / lineData.values.length) * i); })
 					.duration(att.transitionSpeed)
 					.attr('opacity', function(d){
 						if(!getYValue(d)){
@@ -156,8 +209,8 @@ function createLine(selector){
 							return (d.symbolType) ? d.symbolType : (lineData.symbolType) ? lineData.symbolType : att.symbolType; 
 						}).size(att.symbolSize))
 					.transition()
-					.delay(function(d, i) {return (i * att.stagger) + att.delaySpeed; })
-					.duration(att.transitionSpeed)
+					.delay(function(d, i) { return (lineIndex * att.stagger) + att.delaySpeed + ((att.transitionSpeed / lineData.values.length) * i); })
+					.duration(att.transitionSpeed * 0.5)
 					.ease(att.transitionType)
 					.attr('opacity', function(d){
 						if(!getYValue(d)){
@@ -190,31 +243,33 @@ function createLine(selector){
 		}
 	}
 
-	function renderAxis() {
-		chart.select(".yLabel")
-			.attr("transform", "translate(0, " + (att.margin.top + (_height * 0.5)) + ") rotate(-90)")
-			.select('text')
-			.text(att.yLabel)
-			.call(wrap, _height);
-
-		chart.select(".xLabel")
-			.select('text')
-			.text(att.xLabel)
-			.call(wrap, _width)
-			.attr("transform", function(){ return "translate(" + (att.margin.left + (_width * 0.5)) + ", " + (_height + att.margin.top + _margin.bottom - this.getBBox().height) + ")"; });
-
+	function createXScale(){
+		var combine = [];
 
 		// Loop over data/values, put all id's into single array, then map to xScale below
-	    var combine = data.map(function(d, i){
-	    	return d.values;
-		    }).reduce(function(a, b){
-		    	return a.concat(b);
-		    });
+		if(data.length > 0){
+			combine = data.map(function(d, i){
+		    	return d.values;
+			    }).reduce(function(a, b){
+			    	return a.concat(b);
+			    });
+		}
 
 	    if(att.xScale === null){
 	    	xScale = d3.scale.ordinal()
-			    .domain(combine.map(function(d){return d.id;}))
-			    .rangeRoundPoints([0, _width], att.padding.outer);
+			    .domain(combine.map(function(d){return d.id;}));
+
+	    	if(att.roundPoints){
+				xScale.rangeRoundPoints([0, _width], att.padding.outer);
+	    	} else {
+	    		xScale.rangePoints([0, _width], att.padding.outer);
+	    	}
+
+	    	if(att.labelWidth === 'auto'){
+	    		plotWidth = (xScale.range()[1] - xScale.range()[0]);
+	    	} else {
+	    		plotWidth = +att.labelWidth;
+	    	}
 
 	    } else if(att.xScale === 'date') {
 	    	xScale = d3.time.scale()
@@ -225,31 +280,100 @@ function createLine(selector){
 				.nice(d3.time.week)
 				.range([0, _width]);
 
+			if(att.labelWidth === 'auto'){
+	    		plotWidth = (xScale.range()[1] - xScale.range()[0]);
+	    	} else {
+	    		plotWidth = +att.labelWidth;
+	    	}
+
+	    } else if(att.xScale === 'linear') {
+			xScale = d3.scale.linear()
+			    .domain([
+					(att.xMin) ? att.xMin : d3.min(combine, function(d){ return +d.id; }), 
+					(att.xMax) ? att.xMax : d3.max(combine, function(d){ return +d.id; })
+					])
+			    .range([0, _width]);
+
+		    if(att.labelWidth === 'auto'){
+	    		plotWidth = xScale.range()[1] / data[0].values.length;
+	    	} else {
+	    		plotWidth = +att.labelWidth;
+	    	}
+
 	    } else {
 	    	xScale = att.xScale(att, data);
 	    }
+	}
 
+	function createYScale(){
 		yScale = d3.scale.linear()
 		    .domain([
 				(att.yMin) ? att.yMin : d3.min(data, function(d) { return d3.min(d.values, function(d) { return +getYValue(d); }); }),
 				(att.yMax) ? att.yMax : d3.max(data, function(d) { return d3.max(d.values, function(d) { return +getYValue(d); }); })
 				])
 		    .range((att.flipYAxis) ? [0, _height] : [_height, 0]);
+	}
 
-		var xAxis = d3.svg.axis()
+	function renderAxis() {
+		if(!svgText) {
+	    	if(att.xLabel){
+	    		chart.select(".xLabel")
+	    			.attr("transform", "translate(0, 0)")
+				    .attr("width", _width)
+				    .select('div')
+			        .html(att.xLabel)
+			        .each(function(){
+			        	d3.select(this.parentNode).attr("height", this.clientHeight)
+			        	d3.select(this.parentNode).attr("transform", "translate(" + (att.margin.left) + ", " + (_height + att.margin.top + _margin.bottom - this.clientHeight) + ")")
+			        });
+	    	}
+
+	    	if(att.yLabel){
+	    		chart.select(".yLabel")
+					.attr("transform", "translate(0, " + (att.margin.top + _height) + ") rotate(-90)")
+				    .attr("width", _height)
+				    .select('div')
+			        .html(att.yLabel)
+			        .each(function(){
+			        	d3.select(this.parentNode).attr("height", this.clientHeight)
+			        });
+	    	}
+	    } else {
+	    	if(att.xLabel){
+	    		chart.select(".xLabel")
+					.select('text')
+					.text(att.xLabel)
+					.call(wrap, _width)
+					.attr("transform", function(){ return "translate(" + (att.margin.left + (_width * 0.5)) + ", " + (_height + att.margin.top + _margin.bottom - this.getBBox().height) + ")"; });
+	    	}
+
+    		if(att.yLabel){
+    			chart.select(".yLabel").attr("transform", "translate(0, " + (att.margin.top + (_height * 0.5)) + ") rotate(-90)")
+					.select('text')
+					.text(att.yLabel)
+					.call(wrap, _height);
+    		}
+	    }
+
+	    xAxis = d3.svg.axis()
 		    .scale(xScale)
 		    .innerTickSize(-_height)
     		.outerTickSize(1)
-    		.tickPadding(10)
-    		.ticks(att.ticks)
+    		.tickPadding(15)
 		    .orient("bottom");
 
-		var yAxis = d3.svg.axis()
+	    if(att.xScale === 'linear') {
+			xAxis.tickValues( xScale.ticks(att.xTicks).concat( xScale.domain() ) )
+	    } else {
+	    	xAxis.ticks(att.xTicks);
+	    }
+
+	    yAxis = d3.svg.axis()
 		    .scale(yScale)
 		    .innerTickSize(-_width)
     		.outerTickSize(1)
     		.tickPadding(10)
-    		.ticks(att.ticks)
+    		.ticks(att.yTicks)
 		    .orient("left");
 
 		chart.select(".x.axis")
@@ -267,17 +391,27 @@ function createLine(selector){
 	function setupBase(){
 		updateViewBox();
 
-		chart.append("g")
-			.attr("class", "yLabel")
-			.append("text")
-			.attr('y', '1em')
-			.attr('x', 0);
+		if(!svgText){
+			chart.append("svg:foreignObject")
+				.attr("class", "yLabel")
+			    .append("xhtml:div");
 
-		chart.append("g")
-			.attr("class", "xLabel")
-			.append("text")
-			.attr('y', '0.8em')
-			.attr('x', 0);
+			chart.append("svg:foreignObject")
+				.attr("class", "xLabel")
+			    .append("xhtml:div");
+		} else {
+			chart.append("g")
+				.attr("class", "yLabel")
+				.append("text")
+				.attr('y', '1em')
+				.attr('x', 0);
+
+			chart.append("g")
+				.attr("class", "xLabel")
+				.append("text")
+				.attr('y', '1em')
+				.attr('x', 0);
+		}
 
 		chart.append("g").attr("class", "x axis");
 		chart.append("g").attr("class", "y axis");
@@ -304,21 +438,30 @@ function createLine(selector){
 		});
 		buildString += '</ul>';
 
-		d3.select(att.keySelector).html(buildString);
+		d3.select(att.keySelector).html((data.length > 0) ? buildString : '');
 	}
 
 	function calculateXAxis(){
 		var calcHeight = 0;
 		if(att.autoAxis === 'x'){
-			if(att.foreignObjects) { // TODO, add foreign object support
+			if(att.xLabel){
+	    		axisHeight = checkText(att.xLabel, _width, svgText);
+	    	}
 
-		    } else {
-		    	if(att.xLabel){
-		    		calcHeight += +checkText(att.xLabel, _width);
-		    	}
-		    }
+    		plotHeight = 0;
 
-		    calcHeight += att.margin.bottom;
+    		for(var i = 0, ilen = data.length; i < ilen; i++){
+	    		for(var j = 0, jlen = data[i].values.length; j < jlen; j++){
+		    		var holdHeight = checkText(data[i].values[j].label, plotWidth, svgText);
+
+	    			if(holdHeight > plotHeight){
+	    				plotHeight = holdHeight;
+	    			}
+	    		}
+    		}
+
+    		calcHeight += axisHeight;
+    		calcHeight += plotHeight;
 		} else {
 			calcHeight = att.margin.bottom;
 		}
@@ -326,18 +469,42 @@ function createLine(selector){
 		return calcHeight;
 	}
 
-	function checkText(text, tempWidth){
+	function calculateYAxis(){
+		var calcHeight = att.margin.left;
+
+		if(att.autoAxis === 'y'){
+			
+		}
+
+		return calcHeight;
+	}
+
+	function checkText(text, tempWidth, foreign){
 		var holdHeight = 0;
 
-		chart.append('text')	
-    		.attr('y', '1em')
-			.attr('x', 0)
-			.text(text)
-			.call(wrap, tempWidth)
-			.each(function(){
-				holdHeight = this.getBBox().height;
-			})
-			.remove();
+		if(!foreign){
+			chart.append("svg:foreignObject")
+				.attr('class', 'tempRemove')
+			    .attr("width", tempWidth)
+			    .append("xhtml:div")
+	            .html(text)
+	            .each(function(){
+		        	holdHeight = this.clientHeight + _spacePadding;
+		        });
+
+	        chart.select('.tempRemove')
+	        	.remove();
+		} else {
+			chart.append('text')	
+	    		.attr('y', '1em')
+				.attr('x', 0)
+				.text(text)
+				.call(wrap, tempWidth)
+				.each(function(){
+					holdHeight = this.getBBox().height + _spacePadding;
+				})
+				.remove();
+		}
 
 		return holdHeight;
 	}
