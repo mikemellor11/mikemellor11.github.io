@@ -105,7 +105,7 @@
     {
         "exercise": "Lean-over Rows",
         "sets": 9,
-        "peak": 9,
+        "peak": 1,
         "increase": 2.5,
         "startPercent": 1,
         "endPercent": 1,
@@ -209,6 +209,56 @@
                         "weight": 30,
                         "reps": 8,
                         "split": "00:00:45:296"
+                    }
+                ]
+            },
+            {
+                "date": "27/10/2016",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:15:287"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:04:206"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:00:57:791"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:44:880"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:06:655"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:47:840"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:29:000"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:03:602"
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:29:739"
                     }
                 ]
             }
