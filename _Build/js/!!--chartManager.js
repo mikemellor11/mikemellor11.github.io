@@ -7,31 +7,58 @@ var chartManager = (function() {
         yLabel: "Weight (kg)",
         margin: {
             right: 40,
-            bottom: 40
+            bottom: 100,
+            left: 70
         },
-        ticks: 5,
-        plotYValue: "weight",
+        xTicks: 5,
         plotXValue: "date",
         xScale: "date",
         transitionSpeed: 0,
         delaySpeed: 0,
-        stagger: 0
+        stagger: 0,
+        yMin: "0",
+        xMax: "01/01/2017",
+        symbolSize: 50
     };
 
     return {
         charts: null,
         chartIndex: 0,
         init: function(){
-            chartHolder = createLine('.chart')
+            chartHolder = createLine('.chart', true)
                 .width(document.querySelector('.delta').offsetWidth);
         },
         update: function(){
-            d3.json('media/' + this.charts[this.chartIndex].name + '.json', function (err, JSON) {
+            d3.json('media/data/' + this.charts[this.chartIndex].name + '.json', function (err, JSON) {
                 if(!err){
+
+                    var data = [];
+
+                    JSON.forEach(function(d, i){
+                        if(d.sessions){
+                            var exercise = {
+                                "label": d.exercise,
+                                "values": []
+                            };
+
+                            d.sessions.forEach(function(dl, il){
+                                exercise.values.push({
+                                    "id": dl.date,
+                                    "value": dl.sets.reduce(function(a, b){
+                                        return a + b.weight;
+                                    }, 0),
+                                    "label": ""
+                                });
+                            });
+
+                            data.push(exercise);
+                        }
+                    });
+
                     chartHolder
                         .attr(globalAttr)
-                        .attr(JSON.attributes)
-                        .data(JSON.data)
+                        .attr({})
+                        .data(data)
                         .call(chartHolder);
                 }
             });

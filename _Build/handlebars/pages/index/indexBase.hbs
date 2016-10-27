@@ -32,7 +32,43 @@
 
 <main class="container ut-padding">
 	<div class="innerContainer index--padding ut-highlight--reverse">
-		<div class="ut-tableChildren ut-tableFixed ut-tableSpacing ut-mobileFullChildren">
+		<h2>Latest workout</h2>
+		<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter ut-marginTop">
+			<div class="callout">
+				<h3 class="ut-noMargin">Exercises</h3>
+				<ul class="ut-clearListOnly">
+					<li>Bench press</li>
+					<li>Squats</li>
+					<li>Bicep curls</li>
+				</ul>
+			</div>
+			<div class="callout">
+				<h3 class="ut-noMargin">Volume</h3>
+				<p>1045kg</p>
+			</div>
+			<div class="callout">
+				<h3 class="ut-noMargin">Workout duration</h3>
+				<p>01:23:03</p>
+			</div>
+		</div>
+
+		<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter ut-marginTop">
+			<div class="callout">
+				<h3 class="ut-noMargin">Rating</h3>
+				<p>8/10</p>
+			</div>
+			<div class="callout">
+				<h3 class="ut-noMargin">Volume</h3>
+				<p>1045kg</p>
+			</div>
+			<div class="callout">
+				<h3 class="ut-noMargin">Workout duration</h3>
+				<p>01:23:03</p>
+			</div>
+		</div>
+
+		<h2>Menu</h2>
+		<nav class="ut-tableChildren ut-tableFixed ut-tableSpacing ut-mobileFullChildren ut-marginTop">
 			{{#each index.callouts}}
 				{{#with (findObjectInArray object=this in=@root.global.navigation key="url")}}
 					{{> callout 
@@ -43,9 +79,7 @@
 					}}
 				{{/with}}
 			{{/each}}
-		</div>
-
-		<!-- <p>{{{lorem '3p'}}}</p> -->
+		</nav>
 
 		<div class="half ut-vertAlignTop ut-mobileFull">
 			<h2>Latest posts</h2>

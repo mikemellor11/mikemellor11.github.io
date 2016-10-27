@@ -1,25 +1,27 @@
 {{> header header--text=(findObjectInArray object="gym" in=@root.global.navigation key="url" value="name")}}
 
-<div class="innerContainer ut-padding">
+<main class="container">
+	<div class="innerContainer ut-padding ut-mobileFullChildren">
 
-	<div class="twoThirds">
-		<div class="delta">
-			<svg class="chart"></svg>
+		<div class="twoThirds">
+			<div class="delta">
+				<svg class="chart"></svg>
+			</div>
+		</div>
+
+		<div class="third last ut-vertAlignTop">
+			<div class="ut-padding ut-marginBottom">
+				<select class="full js-chartSelect">
+					{{#each index.charts}}
+						<option>{{name}}</option>
+					{{/each}}
+				</select>
+			</div>
+			<div class="key">
+			</div>
 		</div>
 	</div>
-
-	<div class="third last ut-vertAlignTop">
-		<div class="ut-padding ut-marginBottom">
-			<select class="full js-chartSelect">
-				{{#each index.charts}}
-					<option>{{name}}</option>
-				{{/each}}
-			</select>
-		</div>
-		<div class="key">
-		</div>
-	</div>
-</div>
+</main>
 
 <script type="text/javascript">
 	function pageJS(){
