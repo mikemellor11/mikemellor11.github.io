@@ -7,3 +7,11 @@ a{
     color: inherit;
     display: block;
 }
+
+.externalLink{
+	color: $color1;
+
+	&:hover{
+		color: $color4;
+	}
+}

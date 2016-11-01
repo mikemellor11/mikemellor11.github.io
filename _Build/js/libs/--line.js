@@ -127,8 +127,6 @@ function createLine(selector, svgText){
     		.attr("stroke-dashoffset", 0);
 
 		lines.exit()
-			.transition()
-			.duration(att.transitionSpeed)
     		.style("opacity", 0)
     		.remove();
 
@@ -222,8 +220,6 @@ function createLine(selector, svgText){
 			}
 
 			plots.exit()
-				.transition()
-				.duration(att.transitionSpeed)
 	    		.style("opacity", 0)
 	    		.remove();
 		});
@@ -452,7 +448,8 @@ function createLine(selector, svgText){
 
     		for(var i = 0, ilen = data.length; i < ilen; i++){
 	    		for(var j = 0, jlen = data[i].values.length; j < jlen; j++){
-		    		var holdHeight = checkText(data[i].values[j].label, plotWidth, svgText);
+
+		    		var holdHeight = checkText(data[i].values[j].id, plotWidth, svgText);
 
 	    			if(holdHeight > plotHeight){
 	    				plotHeight = holdHeight;
@@ -465,6 +462,8 @@ function createLine(selector, svgText){
 		} else {
 			calcHeight = att.margin.bottom;
 		}
+
+		console.log(calcHeight);
 
 		return calcHeight;
 	}

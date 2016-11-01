@@ -53,3 +53,11 @@ $colors-list: #47ACB1 #F26522 #F9AA7B #A5A8AA #676766 #ADD5D7 #FFA4AF #FFCD34;
 .key__list{
   margin: 0;
 }
+
+.chart {
+  text-align: center;
+  
+  text {
+    text-anchor: middle;
+  }
+}

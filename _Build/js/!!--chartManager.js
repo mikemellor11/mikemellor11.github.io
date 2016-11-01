@@ -4,18 +4,15 @@ var chartManager = (function() {
     var chartHolder = null;
     var globalAttr = {
         colors: ['fill1', 'fill2', 'fill3', 'fill4', 'fill5', 'fill6', 'fill7', 'fill8'],
-        yLabel: "Weight (kg)",
+        yLabel: "Volume (kg)",
+        xLabel: "Date",
         margin: {
             right: 40,
-            bottom: 100,
             left: 70
         },
         xTicks: 5,
         plotXValue: "date",
         xScale: "date",
-        transitionSpeed: 0,
-        delaySpeed: 0,
-        stagger: 0,
         yMin: "0",
         xMax: "01/01/2017",
         symbolSize: 50

@@ -231,8 +231,14 @@
 .ut-color--reverse{
     color: $color0;
 
-    .icon svg{
-        fill: $color0;
+    .icon{
+        svg{
+            fill: $color0;
+        }
+
+        &:hover svg{
+            fill: $color3;
+        }
     }
 }
 

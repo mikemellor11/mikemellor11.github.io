@@ -3,6 +3,12 @@
     border: none;
     background: transparent;
     padding: 0;
+
+    &:hover{
+        .icon svg{
+            fill: $color4;
+        }
+    }
 }
 
 .button{
