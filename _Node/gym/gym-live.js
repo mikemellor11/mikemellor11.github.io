@@ -123,6 +123,9 @@ function baseJS(){
 				var maxLast = 0;
 				var weightSplit = 0;
 				var weightIncrement = 2.5;
+				var readyForIncrease = false;
+				var maxSession = 0;
+				var volume = 0;
 
 				for(var key in contentJson.attributes.gymDefaults){
 					gD[key] = (
@@ -135,6 +138,10 @@ function baseJS(){
 				if(gymData[d.value].sessions){
 					if(gymData[d.value].sessions.last().date === today){
 						currentSet = gymData[d.value].sessions.last().sets.length;
+
+						volume = gymData[d.value].sessions.last().sets.reduce(function(a, b){
+							return a + b.weight;
+						}, 0);
 					}
 
 					max = d3.max(gymData[d.value].sessions, function(d, i){ 
@@ -155,22 +162,36 @@ function baseJS(){
 						});
 					}
 
-					var readyForIncrase = false;
-
+					// Intervals set and theres enough sessions to calculate
 					if(gD.incInterval > 0 && gymData[d.value].sessions.length > (gD.incInterval - 1)){
-						readyForIncrase = true;
+						readyForIncrease = true;
 
-						var barLast = d3.max(gymData[d.value].sessions.fromEnd((gD.incInterval - 1)).sets, function(dl, il){
+						var todayBegan = 0;
+
+						if(gymData[d.value].sessions.last().date === today){
+							todayBegan = 1;
+						}
+
+						// These should be average or something different
+						var barLast = d3.max(gymData[d.value].sessions.fromEnd((gD.incInterval - 1) + todayBegan).sets, function(dl, il){
 								return dl.weight;
 							});
+
+						var volumeLast = gymData[d.value].sessions.fromEnd((gD.incInterval - 1) + todayBegan).sets.reduce(function(a, b){
+							return a + b.weight;
+						}, 0);
 
 						for(var i = 0; i < gD.incInterval; i++){
-							var tempLastMax = d3.max(gymData[d.value].sessions.fromEnd(i).sets, function(dl, il){
+							var tempLastMax = d3.max(gymData[d.value].sessions.fromEnd(i + todayBegan).sets, function(dl, il){
 								return dl.weight;
 							});
 
-							if(tempLastMax < barLast){
-								readyForIncrase = false;
+							var tempVolumeLast = gymData[d.value].sessions.fromEnd(i + todayBegan).sets.reduce(function(a, b){
+								return a + b.weight;
+							}, 0);
+
+							if(tempLastMax < barLast && tempVolumeLast < volumeLast){
+								readyForIncrease = false;
 								break;
 							}
 						}
@@ -197,8 +218,12 @@ function baseJS(){
 							currentWeight = maxLast - (incrememnt * (i - (gD.peak - 1)));
 						}
 
-						if(readyForIncrase){
+						if(readyForIncrease){
 							currentWeight += gD.increase;
+						}
+
+						if(currentWeight > maxSession){
+							maxSession = currentWeight;
 						}
 
 						if(i === currentSet){
@@ -235,8 +260,12 @@ function baseJS(){
 				html += '</form>';
 
 				html += '<div class="half ut-fontLarge">';
-				html += displayField(max, 'All-time max', 'callout--alt');
-				html += displayField(maxLast, 'Last session max', 'callout--alt');
+				html += displayField(maxLast, 'Last max', 'callout--alt', 'half');
+				html += displayField(volume, 'Volume', 'callout--alt', 'half last');
+				html += displayField(readyForIncrease, 'Increase session', readyForIncrease ? 'callout--goal' : 'callout--alt', readyForIncrease ? 'half' : null, ' ');
+				if(readyForIncrease){
+					html += displayField(maxSession, 'Max session', 'callout--alt', 'half last');
+				}
 				html += displayField(currentSet, 'Sets done', null, 'half', ' ');
 				html += displayField(gD.sets - currentSet, 'Sets left', 'callout--alt', 'half last', ' ');
 				html += '</div>';
