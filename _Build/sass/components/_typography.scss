@@ -1,5 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
+    color: $color5;
 }
 
 a{
@@ -14,4 +15,8 @@ a{
 	&:hover{
 		color: $color4;
 	}
+}
+
+%headings{
+	color: $color5;
 }

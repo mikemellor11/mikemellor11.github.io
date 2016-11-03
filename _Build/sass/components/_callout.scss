@@ -1,5 +1,12 @@
 .callout{
-	@extend .ut-bg1, .ut-padding, .ut-textAlignCenter, .ut-borderBox, .ut-borderRadius, .ut-color--reverse;
+	@extend .ut-padding, 
+		.ut-textAlignCenter, 
+		.ut-borderBox, 
+		.ut-borderRadius,
+		.ut-bg1,
+		.ut-color--reverse;
+
+	box-shadow: 0 3px 10px 0 rgba(0,0,0,0.1);
 }
 
 .callout--alt{

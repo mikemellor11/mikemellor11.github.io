@@ -231,6 +231,10 @@
 .ut-color--reverse{
     color: $color0;
 
+    %headings{
+        color: $color0;
+    }
+
     .icon{
         svg{
             fill: $color0;
@@ -328,4 +332,8 @@
 
 .ut-borderRadius{
     border-radius: $borderRadius;
+}
+
+.ut-boxShadow{
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15);
 }

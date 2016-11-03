@@ -17,34 +17,32 @@
 			{{/each}}
 		</nav>
 
-		<div class="half ut-vertAlignTop ut-mobileFull">
-			<h2>Latest posts</h2>
-			<p class="notification notification--missing">No posts found..</p>
-		</div>
+		{{#each index.sideCallouts}}
+		<div class="contentContainer">
+			<h3 class="divider">Latest posts</h3>
 
-		<div class="half last ut-mobileFull">
-			{{#each index.sideCallouts}}
-				<div>
-					<h2>{{text}}</h2>
-					{{#each charts}}
-						<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter {{#unless @first}}ut-marginTop{{/unless}}">
-							{{#if (isType this 'array')}}
-								{{#each this}}
-									<div class="callout {{#if ../../classes}}{{../../classes}}{{/if}}">
-										<h3 class="ut-noMargin">{{this.exercise}}</h3>
-										<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
-									</div>
-								{{/each}}
-							{{else}}
-								<div class="callout {{#if ../classes}}{{../classes}}{{/if}}">
-									<h3 class="ut-noMargin">{{this.exercise}}</h3>
-									<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
-								</div>
-							{{/if}}
+			<h4>{{text}}</h4>
+				{{#each charts}}
+				<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter {{#unless @first}}ut-marginTop{{/unless}}">
+					{{#if (isType this 'array')}}
+						{{#each this}}
+							<div class="callout {{#if ../../classes}}{{../../classes}}{{/if}}">
+								<h5 class="ut-noMargin">{{this.exercise}}</h5>
+								<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
+							</div>
+						{{/each}}
+					{{else}}
+						<div class="callout {{#if ../classes}}{{../classes}}{{/if}}">
+							<h5 class="ut-noMargin">{{this.exercise}}</h5>
+							<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
 						</div>
-					{{/each}}
+					{{/if}}
 				</div>
-			{{/each}}
+				{{/each}}
+		{{/each}}
+
+			<h3 class="divider">Latest posts</h3>
+			<p class="notification notification--missing">No posts found..</p>
 		</div>
 	</div>
 </main>

@@ -3,6 +3,7 @@
 @import "normalize";
 
 @import "_variables";
+@import "_mixins";
 
 @include normalize();
 
@@ -22,11 +23,13 @@
 @import "components/_banner";
 
 body{
-	background: $color4;
+	background-color: $color4;
 }
 
 main{
-	background: $color0;
+	background-color: $color0;
+	background-image: resolve('background.svg');
+	background-size: 500px;
 }
 
 #svgSprite{
@@ -40,6 +43,15 @@ svg{
 .gravitar{
 	border-radius: 50%;
 	width: 100px;
-
 	transition: width 0.4s;
+}
+
+.divider{
+	text-align: center;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	padding: #{$spacing * 3} 0 1em 0;
+	margin-left: 15%;
+	margin-right: 15%;
+	border-bottom: 1px solid transparentize($color1, 0.5);
 }

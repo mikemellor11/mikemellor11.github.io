@@ -1,7 +1,8 @@
 .header{
+	@extend .ut-boxShadow;
+
 	width: 100%;
 	transition: background 0.4s;
-	box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.15);
 
 	h1{
 		transition: all 0.4s;
@@ -10,6 +11,10 @@
 	&.stuck{
 		background: $color0;
 		color: $color1;
+
+		%headings{
+			color: $color1;
+		}
 
 		h1{
 			font-size: 1.5em;
@@ -25,6 +30,11 @@
 .header--real{
 	background: $color1;
 	color: $color0;
+
+	%headings{
+		color: $color0;
+	}
+
 	position: relative;
 	z-index: 1;
 
