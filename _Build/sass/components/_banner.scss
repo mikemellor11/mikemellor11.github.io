@@ -1,0 +1,18 @@
+.banner{
+	text-align: center;
+	color: $color0;
+
+	& > *{
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 400px;
+		padding: $spacing $spacing * 2;
+		margin: $spacing 0;
+		text-align: left;
+
+		&:first-child{
+			border-right: 1px solid $color1;
+			font-size: 1.5em;
+		}
+	}
+}

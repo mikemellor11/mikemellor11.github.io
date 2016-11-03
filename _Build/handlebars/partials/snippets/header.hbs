@@ -1,39 +1,47 @@
-<header class="header header--real">
-	<div class="ut-bg1">
-		<div class="innerContainer ut-tableChildren">
-			{{#if header--text}}
-				<h1 class="ut-fullWidth ut-padding">{{header--text}}</h1>
-			{{/if}}
-			<h2 class="ut-padding ut-noMargin ut-textAlignRight ut-noWrap">{{global.title}}</h2>
+<header class="container header header--real ut-bg1">
+	<div class="innerContainer ut-tableChildren ut-mobileFullChildren ut-textAlignCenter--mobile ut-padding">
+		<div class="ut-paddingRight">
+			<h1 class="ut-noWrap"><a href="./">{{global.title}}</a></h1>
 		</div>
-	</div>
-	<div class="ut-bg4">
-		<nav class="innerContainer">
-			<ul class="ut-clearList ut-noMargin">
-				{{#each global.navigation}}
-					<li><a href="./{{url}}.html" class="ut-padding">{{name}}</a></li>
-				{{/each}}
-			</ul>
-		</nav>
+		<div class="ut-fullWidth">
+			{{#if homepage}}
+				<div class="ut-tableChildren ut-mobileFullChildren">
+					<p class="ut-fullWidth ut-paddingRight ut-textAlignRight ut-textAlignCenter--mobile">Mike Mellor - Front end web developer / iOS developer</p>
+					<div>
+						<img class="gravitar ut-fullWidth" src="https://s.gravatar.com/avatar/c199be5cfdc1b7b8682712d98c68736a?s=100" alt="my ugly mug">
+					</div>
+				</div>
+			{{else}}
+				<ul class="ut-clearList ut-noMargin ut-textAlignRight ut-textAlignCenter--mobile">
+					{{#each global.navigation}}
+						<li><a href="./{{url}}.html" class="ut-padding">{{name}}</a></li>
+					{{/each}}
+				</ul>
+			{{/if}}
+		</div>
 	</div>
 </header>
 
-<div class="header header--fake">
-	<div class="ut-bg1">
-		<div class="innerContainer ut-tableChildren">
-			{{#if header--text}}
-				<h1 class="ut-fullWidth ut-padding">{{header--text}}</h1>
-			{{/if}}
-			<h2 class="ut-padding ut-noMargin ut-textAlignRight ut-noWrap">{{global.title}}</h2>
+<div class="container header header--fake">
+	<div class="innerContainer ut-tableChildren ut-mobileFullChildren ut-padding">
+		<div class="ut-paddingRight">
+			<h1 class="ut-noWrap">{{global.title}}</h1>
 		</div>
-	</div>
-	<div class="ut-bg4">
-		<nav class="innerContainer">
-			<ul class="ut-clearList ut-noMargin">
-				{{#each global.navigation}}
-					<li><a href="./{{url}}.html" class="ut-padding">{{name}}</a></li>
-				{{/each}}
-			</ul>
-		</nav>
+		<div class="ut-fullWidth">
+			{{#if homepage}}
+				<div class="ut-tableChildren ut-mobileFullChildren">
+					<p class="ut-fullWidth ut-paddingRight">Mike Mellor - Front end web developer / iOS developer</p>
+					<div>
+						<img class="gravitar ut-fullWidth" src="https://s.gravatar.com/avatar/c199be5cfdc1b7b8682712d98c68736a?s=100" alt="my ugly mug">
+					</div>
+				</div>
+			{{else}}
+				<ul class="ut-clearList ut-noMargin">
+					{{#each global.navigation}}
+						<li><a href="./{{url}}.html" class="ut-padding">{{name}}</a></li>
+					{{/each}}
+				</ul>
+			{{/if}}
+		</div>
 	</div>
 </div>

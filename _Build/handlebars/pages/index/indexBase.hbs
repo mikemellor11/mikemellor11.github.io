@@ -1,39 +1,9 @@
-<header class="container header header--real ut-bg1">
-	<div class="innerContainer ut-tableChildren ut-mobileFullChildren ut-textAlignCenter--mobile ut-padding ut-color--reverse">
-		<div class="ut-paddingRight">
-			<h1 class="ut-noWrap">{{global.title}}</h1>
-		</div>
-		<div class="ut-fullWidth">
-			<div class="ut-tableChildren ut-mobileFullChildren">
-				<p class="ut-fullWidth ut-paddingRight ut-textAlignRight ut-textAlignCenter--mobile">Mike Mellor - Front end web developer / iOS developer</p>
-				<div>
-					<img class="gravitar ut-fullWidth" src="https://s.gravatar.com/avatar/c199be5cfdc1b7b8682712d98c68736a?s=100" alt="my ugly mug">
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
+{{> header homepage=true}}
 
-<div class="container header header--fake">
-	<div class="innerContainer ut-tableChildren ut-mobileFullChildren ut-padding">
-		<div class="ut-paddingRight">
-			<h1 class="ut-noWrap">{{global.title}}</h1>
-		</div>
-		<div class="ut-fullWidth">
-			<div class="ut-tableChildren ut-mobileFullChildren">
-				<p class="ut-fullWidth ut-paddingRight">Mike Mellor - Front end web developer / iOS developer</p>
-				<div>
-					<img class="gravitar ut-fullWidth" src="https://s.gravatar.com/avatar/c199be5cfdc1b7b8682712d98c68736a?s=100" alt="my ugly mug">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+{{> banner title="Home" content="A site about nothing useful at all"}}
 
 <main class="container ut-padding">
-	<div class="innerContainer index--padding ut-highlight--reverse">
-		<p>Code / Gym / Sleep - a site not really about anything useful, just a place for me to track my workouts and write random bits of info that are probably wrong, doesn't stop me trying though.</p>
-
+	<div class="innerContainer ut-highlight--reverse">
 		<nav class="ut-tableChildren ut-tableFixed ut-tableSpacing ut-mobileFullChildren ut-marginTop">
 			{{#each index.callouts}}
 				{{#with (findObjectInArray object=this in=@root.global.navigation key="url")}}
