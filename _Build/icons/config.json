@@ -6,7 +6,7 @@
   "units_per_em": 1000,
   "ascent": 850,
   "glyphs": [
-  	{
+    {
       "uid": "7d1ca956f4181a023de4b9efbed92524",
       "css": "chart-area",
       "code": 59392,
@@ -53,6 +53,12 @@
       "css": "home",
       "code": 59399,
       "src": "fontawesome"
+    },
+    {
+      "uid": "b4cc17a45ed7d179a2cc815e2da7a383",
+      "css": "ok-circle",
+      "code": 59400,
+      "src": "iconic"
     }
   ]
 }

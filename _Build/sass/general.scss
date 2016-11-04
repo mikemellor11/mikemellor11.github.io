@@ -55,3 +55,37 @@ svg{
 	margin-right: 15%;
 	border-bottom: 1px solid transparentize($color1, 0.5);
 }
+
+.siteStatus{
+	width: 100%;
+	text-align: center;
+
+	.icon{
+		@extend .ut-blockCenter;
+	}
+
+	tr{
+		border-top: 1px solid transparentize($color5, 0.9);
+
+		*:first-child{
+			text-align: left;
+		}
+	}
+
+	tr:first-child{
+		border: none;
+
+		th{
+			padding-top: $spacing;
+		}
+	}
+
+	td, th{
+		padding: $spacing 0;
+	}
+
+	th[scope='rowgroup']{
+		font-size: 1.5em;
+		padding-top: $spacing * 3;
+	}
+}
