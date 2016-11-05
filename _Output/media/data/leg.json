@@ -151,12 +151,62 @@
                         "split": "00:03:15:826"
                     }
                 ]
+            },
+            {
+                "date": "05/11/2016",
+                "sets": [
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:00:00:000"
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:02:42:235"
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:02:38:357"
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:03:12:350"
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:04:52:119"
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:03:43:196"
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:04:13:849"
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:03:17:186"
+                    },
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:04:55:913"
+                    }
+                ]
             }
         ],
         "sets": 9,
         "reps": 8,
         "peak": 5,
-        "increase": 5,
+        "increase": 2.5,
         "startPercent": 0.75,
         "endPercent": 0.75,
         "incInterval": 3,
