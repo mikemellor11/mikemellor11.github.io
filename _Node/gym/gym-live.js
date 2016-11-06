@@ -164,7 +164,7 @@ function baseJS(){
 
 					// Intervals set and theres enough sessions to calculate
 					if(gD.incInterval > 0 && gymData[d.value].sessions.length > (gD.incInterval - 1)){
-						readyForIncrease = true;
+						readyForIncrease = false;
 
 						var todayBegan = 0;
 
