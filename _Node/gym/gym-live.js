@@ -163,8 +163,8 @@ function baseJS(){
 					}
 
 					// Intervals set and theres enough sessions to calculate
-					if(gD.incInterval > 0 && gymData[d.value].sessions.length > (gD.incInterval - 1)){
-						readyForIncrease = false;
+					if(gD.incInterval > 0 && gymData[d.value].sessions.length > gD.incInterval){
+						readyForIncrease = true;
 
 						var todayBegan = 0;
 
@@ -172,14 +172,8 @@ function baseJS(){
 							todayBegan = 1;
 						}
 
-						// These should be average or something different
-						var barLast = d3.max(gymData[d.value].sessions.fromEnd((gD.incInterval - 1) + todayBegan).sets, function(dl, il){
-								return dl.weight;
-							});
-
-						var volumeLast = gymData[d.value].sessions.fromEnd((gD.incInterval - 1) + todayBegan).sets.reduce(function(a, b){
-							return a + b.weight;
-						}, 0);
+						var holdLastMax = 0;
+						var holdVolumeLast = 0;
 
 						for(var i = 0; i < gD.incInterval; i++){
 							var tempLastMax = d3.max(gymData[d.value].sessions.fromEnd(i + todayBegan).sets, function(dl, il){
@@ -190,10 +184,13 @@ function baseJS(){
 								return a + b.weight;
 							}, 0);
 
-							if(tempLastMax < barLast && tempVolumeLast < volumeLast){
+							if(tempLastMax < holdLastMax || tempVolumeLast < holdVolumeLast){
 								readyForIncrease = false;
 								break;
 							}
+
+							holdVolumeLast = tempVolumeLast;
+							holdLastMax = tempLastMax;
 						}
 					}
 
