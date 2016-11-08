@@ -89,3 +89,13 @@ svg{
 		padding-top: $spacing * 3;
 	}
 }
+
+.async{
+	position: absolute;
+	top: $spacing * 0.5;
+	left: $spacing * 0.5;
+
+	& > div{
+		position: absolute;
+	}
+}

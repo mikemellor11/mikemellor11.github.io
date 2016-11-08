@@ -21,7 +21,8 @@ function createHtmlText(selector){
 		transitionType: 'cubic-in-out',
 		delaySpeed : 1000,
 		totalCount : 100,
-		decimalPlaces : 0
+		decimalPlaces : 0,
+		initialSet: true // Sets the text instantly, useful to turn off if loading indicator to be replaced
 	};
 
 	function my(){
@@ -35,8 +36,11 @@ function createHtmlText(selector){
         	textObject[d.name] = d.value;
         });
 
-		chart.text(String.formatKeys(att.textFormat, textObject))
-			.transition()
+        if(att.initialSet){
+			chart.text(String.formatKeys(att.textFormat, textObject))
+        }
+
+		chart.transition()
 			.duration(att.transitionSpeed)
 			.delay(att.delaySpeed)
 			.duration(att.transitionSpeed)

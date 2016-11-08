@@ -50,3 +50,22 @@
         fill: $color1;
     }
 }
+
+.icon--spin{
+    animation: rotate 1s infinite linear;
+}
+
+.icon--done{
+    transform: scale(0);
+}
+
+.async--finished .icon--spin{
+    animation: scale 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.async--finished .icon--done{
+    animation: scale 0.2s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
