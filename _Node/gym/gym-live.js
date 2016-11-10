@@ -136,7 +136,12 @@ function baseJS(){
 				}
 
 				if(gymData[d.value].sessions){
-					if(gymData[d.value].sessions.last().date === today){
+					var workout = Workout(gymData[d.value].sessions);
+					var lastWorkout = workout.last();
+
+					max = workout.max();
+
+					if(lastWorkout.date() === today){
 						currentSet = gymData[d.value].sessions.last().sets.length;
 
 						volume = gymData[d.value].sessions.last().sets.reduce(function(a, b){
@@ -144,22 +149,13 @@ function baseJS(){
 						}, 0);
 					}
 
-					max = d3.max(gymData[d.value].sessions, function(d, i){ 
-							return d3.max(d.sets, function(dl, il){
-								return dl.weight;
-							}); 
-						});
+					if(lastWorkout.date() !== today){
+						maxLast = lastWorkout.max();
 
-					if(gymData[d.value].sessions.last().date !== today){
-						maxLast = d3.max(gymData[d.value].sessions.last().sets, function(dl, il){
-							return dl.weight;
-						});
 					} else if(gymData[d.value].sessions.length > 1){
 						last = gymData[d.value].sessions.last().sets.last().weight;
 
-						maxLast = d3.max(gymData[d.value].sessions.fromEnd(1).sets, function(dl, il){
-							return dl.weight;
-						});
+						maxLast = workout.fromLast(1).max();
 					}
 
 					// Intervals set and theres enough sessions to calculate
@@ -168,7 +164,7 @@ function baseJS(){
 
 						var todayBegan = 0;
 
-						if(gymData[d.value].sessions.last().date === today){
+						if(lastWorkout.date === today){
 							todayBegan = 1;
 						}
 
@@ -176,13 +172,9 @@ function baseJS(){
 						var holdVolumeLast = 0;
 
 						for(var i = 0; i < gD.incInterval; i++){
-							var tempLastMax = d3.max(gymData[d.value].sessions.fromEnd(i + todayBegan).sets, function(dl, il){
-								return dl.weight;
-							});
-
-							var tempVolumeLast = gymData[d.value].sessions.fromEnd(i + todayBegan).sets.reduce(function(a, b){
-								return a + b.weight;
-							}, 0);
+							var index = i + todayBegan;
+							var tempLastMax = workout.fromLast(index).max();
+							var tempVolumeLast = workout.fromLast(index).volume();
 
 							if(tempLastMax < holdLastMax || tempVolumeLast < holdVolumeLast){
 								readyForIncrease = false;

@@ -1,5 +1,9 @@
 (function(exports){
 	exports.Workout = function(data){
+		if(!data){
+			return null;
+		}
+		
 		if (!(this instanceof Workout)) { 
 			return new Workout(data);
 		}
@@ -70,11 +74,22 @@
 		});
 	};
 
-	exports.Workout.prototype.volume = function(object){
+	exports.Workout.prototype.volume = function(){
 		return this.data.reduce(function(a, b){
 			return a + b.sets.reduce(function(al, bl){
 				return al + bl.weight;
 			}, 0);
 		}, 0);
 	};
+
+	exports.Workout.prototype.date = function(reverse){
+		if(this.data.length > 1){
+			return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
+				return d.date;
+			});
+		} else {
+			return this.data[0].date;
+		}
+	};
+
 })(typeof exports === 'undefined' ? this : exports);

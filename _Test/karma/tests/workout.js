@@ -15,6 +15,10 @@ describe('workout.js', function () {
         expect(group instanceof Workout).to.equal(true);
     });
 
+    it('Workout should return null if undefined object passed in', function () {
+        expect(Workout(undefined)).to.equal(null);
+    });
+
     // FLUENT //
 
     it("return null if incorrect params passed in", function () {
@@ -29,7 +33,7 @@ describe('workout.js', function () {
     // MAX //
 
     it('return the max weight lifted in the first workout', function () {
-        expect(group.first().max()).to.equal(90);
+        expect(group.first().max()).to.equal(100);
     });
 
     it('return the max weight lifted in the second workout', function () {
@@ -45,7 +49,7 @@ describe('workout.js', function () {
     });
 
     it('return the max weight lifted overall', function () {
-        expect(group.max()).to.equal(90);
+        expect(group.max()).to.equal(100);
     });
 
     it("return the max weight lifted in the first workout as an object", function () {
@@ -58,16 +62,16 @@ describe('workout.js', function () {
 
     it("return the max weight lifted overall as an object", function () {
         expect(group.max(true)).to.deep.equal({
-                "weight": 90,
+                "weight": 100,
                 "reps": 8,
-                "split": "00:01:47:869"
+                "split": "00:01:23:232"
             });
     });
 
     // VOLUME //
 
     it('return the volume lifted in the first workout', function () {
-        expect(group.first().volume()).to.equal(160);
+        expect(group.first().volume()).to.equal(280);
     });
 
     it('return the volume lifted in the second workout', function () {
@@ -83,6 +87,20 @@ describe('workout.js', function () {
     });
 
     it('return the volume lifted overall', function () {
-        expect(group.volume()).to.equal(450);
+        expect(group.volume()).to.equal(570);
+    });
+
+    // DATE //
+
+    it('return date as a string when only 1 workout is present', function () {
+        expect(group.last().date()).to.equal('25/10/2016');
+    });
+
+    it('return date as an array when multiple workouts present', function () {
+        expect(group.date()).to.deep.equal(['16/10/2016', '21/10/2016', '25/10/2016']);
+    });
+
+    it('return date as an array last to first when multiple workouts present and reverse is true', function () {
+        expect(group.date(true)).to.deep.equal(['25/10/2016', '21/10/2016', '16/10/2016']);
     });
 });
