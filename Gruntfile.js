@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     
     grunt.registerTask('dist', ['clean:dist', 'jshint', 'tv4', 'concat:dist', 'uglify:dist', 'fontello_svg', 'svgfit', 'svgmin', 'svg_sprite', 'copy', 'sass:dist', 'postcss', 'compile-handlebars', 'includereplace', 'htmlmin', 'imagemin', 'clean:build', 'connect', 'casperjs:local', 'karma:continuous']);
 
-    grunt.registerTask('validate', ['jshint', 'tv4', 'htmllint', 'connect', 'casperjs:local', 'karma:continuous']);
+    grunt.registerTask('validate', ['jshint', 'tv4', /*'htmllint', */'connect', 'casperjs:local', 'karma:continuous']);
 };
 
 function loadConfig(path) {
