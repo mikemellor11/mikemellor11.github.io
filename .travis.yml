@@ -11,3 +11,4 @@ before_install:
   - npm run setup
   - npm install glob
   - npm test
+  - grunt coveralls
