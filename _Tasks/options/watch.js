@@ -15,7 +15,7 @@ module.exports = {
     },
     html: {
         files: ['_Build/*.html', '_Build/*.json', '_Build/handlebars/**/*', '!_Build/handlebars/partials/generated/**/*', '_Build/media/**/*.json'],
-        tasks: ['jsonlint', 'tv4', 'compile-handlebars', 'includereplace', 'htmlmin', 'clean:build'],
+        tasks: ['jsonlint', 'tv4', 'compile-handlebars', 'htmlmin', 'clean:build'],
         options: {
             spawn: false,
         }
