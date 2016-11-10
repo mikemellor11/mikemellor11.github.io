@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "5"
+  - "4"
+  - "0.10"
+  - "iojs"
+  - "node"
+before_install:
+  - npm install -g grunt-cli
+  - npm install -g bower
+  - npm run setup
+  - npm test

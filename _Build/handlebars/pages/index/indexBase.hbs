@@ -75,27 +75,7 @@
 						}
 					});
 
-					var maxObject = null;
-
-					for(var i = 0; i < exerciseJSON.sessions.length; i++){
-						for(var j = 0; j < exerciseJSON.sessions[i].sets.length; j++){
-							currentObject = exerciseJSON.sessions[i].sets[j];
-
-							if(!maxObject){
-								maxObject = currentObject;
-							}
-
-							if(currentObject.weight >= maxObject.weight){
-								if(currentObject.weight === maxObject.weight){
-									if((currentObject.weight * currentObject.reps) > (maxObject.weight * maxObject.reps)){
-										maxObject = currentObject;
-									}
-								} else {
-									maxObject = currentObject;
-								}
-							}
-						}
-					}
+					var maxObject = Workout(exerciseJSON.sessions).max(true);
 
 					if(chart.dataset.key === 'max'){
 						createHtmlText(chart).attr({

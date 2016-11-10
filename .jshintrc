@@ -16,6 +16,7 @@
 	    "d3": true,
 	    "console": true,
 	    "pageJS": true,
-	    "baseJS": true
+	    "baseJS": true,
+	    "workout": true
 	}
 }

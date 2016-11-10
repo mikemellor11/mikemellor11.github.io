@@ -8,6 +8,7 @@
 			"description": "Generally toggles and settings that effect the build rather than the content",
 			"type": "object",
             "properties": {
+            	"googleTrackingID": {"type": ["string", "null"]},
 	            "internal": {
 		        	"$ref": "_Build/schemas/deploy.json#/definitions/deploy"
 				},
