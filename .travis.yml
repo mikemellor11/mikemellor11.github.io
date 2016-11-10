@@ -8,6 +8,6 @@ node_js:
 before_install:
   - npm install -g grunt-cli
   - npm install -g bower
-  - npm install -g glob
   - npm run setup
+  - npm install glob
   - npm test
