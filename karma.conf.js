@@ -35,7 +35,8 @@ module.exports = function(config) {
     preprocessors: {
         '**/*.html'   : ['html2js'],
         '**/*.json'   : ['json_fixtures'],
-        '_Build/js/libs/--workout.js' : 'coverage'
+        '_Build/js/libs/--workout.js' : 'coverage',
+        '_Build/js/libs/--set.js' : 'coverage'
     },
 
     jsonFixturesPreprocessor: {

@@ -137,36 +137,28 @@ function baseJS(){
 
 				if(gymData[d.value].sessions){
 					var workout = Workout(gymData[d.value].sessions);
-					var lastWorkout = workout.last();
+					var recentWorkout = workout.last();
+					var recentSets = recentWorkout.sets();
+					var todayBegan = 0;
+
+					if(recentWorkout.date() === today){
+						todayBegan = 1;
+					}
 
 					max = workout.max();
 
-					if(lastWorkout.date() === today){
-						currentSet = gymData[d.value].sessions.last().sets.length;
-
-						volume = gymData[d.value].sessions.last().sets.reduce(function(a, b){
-							return a + b.weight;
-						}, 0);
-					}
-
-					if(lastWorkout.date() !== today){
-						maxLast = lastWorkout.max();
-
-					} else if(gymData[d.value].sessions.length > 1){
-						last = gymData[d.value].sessions.last().sets.last().weight;
-
+					if(todayBegan){
+						currentSet = recentSets.length();
+						volume = recentWorkout.volume();
+						last = recentSets.last().weight();
 						maxLast = workout.fromLast(1).max();
+					} else {
+						maxLast = recentWorkout.max();
 					}
 
 					// Intervals set and theres enough sessions to calculate
-					if(gD.incInterval > 0 && gymData[d.value].sessions.length > gD.incInterval){
+					if(gD.incInterval > 0 && workout.length() > (gD.incInterval + todayBegan)){
 						readyForIncrease = true;
-
-						var todayBegan = 0;
-
-						if(lastWorkout.date === today){
-							todayBegan = 1;
-						}
 
 						var holdLastMax = 0;
 						var holdVolumeLast = 0;

@@ -3,7 +3,7 @@ describe('workout.js', function () {
 
     before(function(){
         fixture.setBase('_Test/karma/fixtures');
-        fixture.load('stub.json');
+        fixture.load('workout.json');
         group = Workout(fixture.json[0]);
     });
 
@@ -52,7 +52,7 @@ describe('workout.js', function () {
         expect(group.max()).to.equal(100);
     });
 
-    it("return the max weight lifted in the first workout as an object", function () {
+    it("return the max weight lifted in the second workout as an object", function () {
         expect(group.fromFirst(1).max(true)).to.deep.equal({
                 "weight": 80,
                 "reps": 8,
@@ -71,23 +71,23 @@ describe('workout.js', function () {
     // VOLUME //
 
     it('return the volume lifted in the first workout', function () {
-        expect(group.first().volume()).to.equal(280);
+        expect(group.first().volume()).to.equal(2420);
     });
 
     it('return the volume lifted in the second workout', function () {
-        expect(group.fromFirst(1).volume()).to.equal(160);
+        expect(group.fromFirst(1).volume()).to.equal(1120);
     });
 
     it('return the volume lifted in the last workout', function () {
-        expect(group.last().volume()).to.equal(130);
+        expect(group.last().volume()).to.equal(930);
     });
 
     it('return the volume lifted in the second to last workout', function () {
-        expect(group.fromLast(1).volume()).to.equal(160);
+        expect(group.fromLast(1).volume()).to.equal(1120);
     });
 
     it('return the volume lifted overall', function () {
-        expect(group.volume()).to.equal(570);
+        expect(group.volume()).to.equal(4470);
     });
 
     // DATE //
@@ -102,5 +102,23 @@ describe('workout.js', function () {
 
     it('return date as an array last to first when multiple workouts present and reverse is true', function () {
         expect(group.date(true)).to.deep.equal(['25/10/2016', '21/10/2016', '16/10/2016']);
+    });
+
+    // SETS //
+
+    it('return sets as an array of objects when only 1 workout is present', function () {
+        expect(typeof group.last().sets(true).data).to.equal('object');
+        expect(typeof group.last().sets()[0]).to.equal('undefined');
+    });
+
+    it('return sets as an array of arrays when multiple workouts present', function () {
+        expect(typeof group.sets()[0].data).to.equal('object');
+        expect(typeof group.sets(true).data).to.equal('undefined');
+    });
+
+    // UTILITY //
+
+    it('return amount of workouts in object', function () {
+        expect(group.length()).to.equal(3);
     });
 });

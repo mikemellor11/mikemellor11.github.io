@@ -77,7 +77,7 @@
 	exports.Workout.prototype.volume = function(){
 		return this.data.reduce(function(a, b){
 			return a + b.sets.reduce(function(al, bl){
-				return al + bl.weight;
+				return al + bl.weight * bl.reps;
 			}, 0);
 		}, 0);
 	};
@@ -90,6 +90,20 @@
 		} else {
 			return this.data[0].date;
 		}
+	};
+
+	exports.Workout.prototype.sets = function(reverse){
+		if(this.data.length > 1){
+			return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
+				return exports.Set(d.sets);
+			});
+		} else {
+			return exports.Set(this.data[0].sets);
+		}
+	};
+
+	exports.Workout.prototype.length = function(){
+		return this.data.length;
 	};
 
 })(typeof exports === 'undefined' ? this : exports);
