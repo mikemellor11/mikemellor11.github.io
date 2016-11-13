@@ -8,7 +8,7 @@ var chartManager = (function() {
         xLabel: "Date",
         margin: {
             right: 40,
-            left: 70
+            left: 80
         },
         xTicks: 5,
         plotXValue: "date",
@@ -33,6 +33,8 @@ var chartManager = (function() {
 
                     JSON.forEach(function(d, i){
                         if(d.sessions){
+                            var workout = Workout(d.sessions);
+
                             var exercise = {
                                 "label": d.exercise,
                                 "values": []
@@ -41,9 +43,7 @@ var chartManager = (function() {
                             d.sessions.forEach(function(dl, il){
                                 exercise.values.push({
                                     "id": dl.date,
-                                    "value": dl.sets.reduce(function(a, b){
-                                        return a + b.weight;
-                                    }, 0),
+                                    "value": Set(dl.sets).volume(),
                                     "label": ""
                                 });
                             });

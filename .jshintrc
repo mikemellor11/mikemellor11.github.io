@@ -17,6 +17,7 @@
 	    "console": true,
 	    "pageJS": true,
 	    "baseJS": true,
-	    "workout": true
+	    "Workout": true,
+	    "Set": true
 	}
 }

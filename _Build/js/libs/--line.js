@@ -463,8 +463,6 @@ function createLine(selector, svgText){
 			calcHeight = att.margin.bottom;
 		}
 
-		console.log(calcHeight);
-
 		return calcHeight;
 	}
 
