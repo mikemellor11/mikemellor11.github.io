@@ -17,98 +17,148 @@
 			{{/each}}
 		</nav>
 
-		{{#each index.sideCallouts}}
 		<div class="contentContainer">
-			<h3 class="divider">{{text}}</h3>
+			<section>
+				<h3 class="divider">Latest workout</h3>
+				<h4>Volume done</h4>
+				<p class="d3-latest"></p>
+			</section>
 
-			{{#each charts}}
-			<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter {{#unless @first}}ut-marginTop{{/unless}}">
-				{{#each this}}
-					<div class="callout {{#if ../../classes}}{{../../classes}}{{/if}}">
-						<h5 class="ut-noMargin">{{this.exercise}}</h5>
-						<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
-						<div class="async">
-							{{> icon name="spin3"
-								class="
-									icon--small 
-									icon--spin
-									ut-blockCenter
-								"
-							}}
+			{{#each index.sideCallouts}}
+			<section>
+				<h3 class="divider">{{text}}</h3>
 
-							{{> icon name="ok-circle"
-								class="
-									icon--small 
-									icon--done
-									ut-blockCenter
-								"
-							}}
+				{{#each charts}}
+				<div class="ut-tableChildren ut-tableSpacing ut-tableFixed ut-textAlignCenter {{#unless @first}}ut-marginTop{{/unless}}">
+					{{#each this}}
+						<div class="callout {{#if ../../classes}}{{../../classes}}{{/if}}">
+							<h4 class="ut-noMargin">{{this.exercise}}</h4>
+							<p data-chart="{{this.group}}" data-exercise="{{this.exercise}}" data-key={{../../key}} class="ut-noMargin d3-text">{{{@root.global.loading}}}</p>
+							<div class="async">
+								{{> icon name="spin3"
+									class="
+										icon--small 
+										icon--spin
+										ut-blockCenter
+									"
+								}}
+
+								{{> icon name="ok-circle"
+									class="
+										icon--small 
+										icon--done
+										ut-blockCenter
+									"
+								}}
+							</div>
 						</div>
-					</div>
+					{{/each}}
+				</div>
 				{{/each}}
-			</div>
+			</section>
 			{{/each}}
-		{{/each}}
 
-			<h3 class="divider">Latest posts</h3>
-			<p class="notification notification--missing">No posts found..</p>
+			<section>
+				<h3 class="divider">Latest posts</h3>
+				<p class="notification notification--missing">No posts found..</p>
+			</section>
 
-			<h3 class="divider">Website status</h3>
-			{{> siteStatus}}
+			<section>
+				<h3 class="divider">Website status</h3>
+				{{> siteStatus}}
+			</section>
 		</div>
 	</div>
 </main>
 
 <script type="text/javascript">
 	function pageJS(){
+		var index = 0;
+
+		chartManager.charts.forEach(function(d, i){
+			d3.json('media/data/' + d.name + '.json', function(err, JSON){
+				if(err){
+					console.log("error: ", err);
+				}
+
+				if(!chartManager.data){
+					chartManager.data = {};
+				}
+
+				chartManager.data[d.name] = JSON;
+
+				if (index++ === chartManager.charts.length - 1){ 
+					dataLoaded();
+				}
+			});
+		});
+	}
+
+	function dataLoaded(){
 		var delaySpeed = 200;
 		var delayAdd = 200;
 
-		d3.selectAll('.d3-text').each(function(d, i){
+		d3.selectAll('.d3-latest').each(function(){
 			var chart = this;
 
-			d3.json('media/data/' + this.dataset.chart + '.json', function (err, JSON) {
-				if(!err){
-				 	var exerciseJSON = JSON.find(function(d, i){
-						if(d.exercise === chart.dataset.exercise) {
-							return true;
-						}
-					});
+			var gymData = [];
 
-					var maxObject = Workout(exerciseJSON.sessions).max(true);
+			for(var key in chartManager.data){
+				if(chartManager.data.hasOwnProperty(key)){
+					gymData = gymData.concat(chartManager.data[key]);
+				}
+			}
 
-					if(chart.dataset.key === 'max'){
-						createHtmlText(chart).attr({
-								textFormat: "{value} kg" + " - {reps} reps", 
-								delaySpeed: delaySpeed += delayAdd,
-								decimalPlaces: 1,
-								extraFormatKeys: [{
-									name: "reps",
-									value: maxObject.reps
-								}]
-							})
-							.data(maxObject.weight)
-							.call(chart);
-					} else {
-						var a = moment().endOf('year');
-						var b = moment().today;
+			var gym = Gym(gymData);
 
-						maxObject.weight += (a.diff(b, 'weeks') / exerciseJSON.incInterval) * exerciseJSON.increase;
+			createHtmlText(chart).attr({
+					textFormat: "{value} tonnes", 
+					delaySpeed: delaySpeed
+				})
+				.data(gym.last().volume())
+				.call(chart);
+		});
 
-						createHtmlText(chart).attr({
-								textFormat: "{value} kg", 
-								delaySpeed: delaySpeed += delayAdd,
-								decimalPlaces: 1
-							})
-							.data(2.5 * Math.round(maxObject.weight / 2.5))
-							.call(chart);
-					}
-
-					setTimeout(function(){
-						chart.parentNode.classList.add('async--finished');
-					}, delaySpeed);
+		d3.selectAll('.d3-text').each(function(){
+			var chart = this;
+			var exerciseJSON = chartManager.data[chart.dataset.chart].find(function(d, i){
+				if(d.exercise === chart.dataset.exercise) {
+					return true;
 				}
 			});
+
+			var maxObject = Workout(exerciseJSON.sessions).max(true);
+
+			if(chart.dataset.key === 'max'){
+				createHtmlText(chart).attr({
+						textFormat: "{value} kg" + " - {reps} reps", 
+						delaySpeed: delaySpeed += delayAdd,
+						decimalPlaces: 1,
+						extraFormatKeys: [{
+							name: "reps",
+							value: maxObject.reps
+						}]
+					})
+					.data(maxObject.weight)
+					.call(chart);
+			} else {
+				var a = moment().endOf('year');
+				var b = moment().today;
+
+				maxObject.weight += (a.diff(b, 'weeks') / exerciseJSON.incInterval) * exerciseJSON.increase;
+
+				createHtmlText(chart).attr({
+						textFormat: "{value} kg", 
+						delaySpeed: delaySpeed += delayAdd,
+						decimalPlaces: 1
+					})
+					.data(2.5 * Math.round(maxObject.weight / 2.5))
+					.call(chart);
+			}
+
+			setTimeout(function(){
+				chart.parentNode.classList.add('async--finished');
+			}, delaySpeed);
 		});
 	}
 </script>

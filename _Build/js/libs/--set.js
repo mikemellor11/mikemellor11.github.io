@@ -10,104 +10,105 @@
 		this.data = data;
 	};
 
-	// Fluent methods
+	exports.Set.prototype = {
 
-	exports.Set.prototype.first = function(){
-		return this.fromFirst();
-	};
+		// Fluent methods
+		first: function(){
+			return this.fromFirst();
+		},
 
-	exports.Set.prototype.fromFirst = function(index){
-		index = (index) ? index : 0;
+		fromFirst: function(index){
+			index = (index) ? index : 0;
 
-		if(isNaN(index) || index > (this.data.length - 1) || index < 0){
-			return null;
-		}
+			if(isNaN(index) || index > (this.data.length - 1) || index < 0){
+				return null;
+			}
 
-		return exports.Set([this.data[0 + index]]);
-	};
+			return exports.Set([this.data[0 + index]]);
+		},
 
-	exports.Set.prototype.last = function(){
-		return this.fromLast();
-	};
+		last: function(){
+			return this.fromLast();
+		},
 
-	exports.Set.prototype.fromLast = function(index){
-		index = (index) ? index : 0;
+		fromLast: function(index){
+			index = (index) ? index : 0;
 
-		if(isNaN(index) || index > (this.data.length - 1) || index < 0){
-			return null;
-		}
+			if(isNaN(index) || index > (this.data.length - 1) || index < 0){
+				return null;
+			}
 
-		return exports.Set([this.data[this.data.length - 1 - index]]);
-	};
+			return exports.Set([this.data[this.data.length - 1 - index]]);
+		},
 
-	// Utility methods
-
-	exports.Set.prototype.max = function(object){
-		if(object){
-			var max = null;
-			
-			this.data.forEach(function(d, i){
-				if(!max){
-					max = d;
-				}
-
-				if(d.weight >= max.weight){
-					if(d.weight === max.weight){
-						if((d.weight * d.reps) > (max.weight * max.reps)){
-							max = d;
-						}
-					} else {
+		// Utility methods
+		max: function(object){
+			if(object){
+				var max = null;
+				
+				this.data.forEach(function(d, i){
+					if(!max){
 						max = d;
 					}
-				}
-			});
 
-			return max;
-		}
+					if(d.weight >= max.weight){
+						if(d.weight === max.weight){
+							if((d.weight * d.reps) > (max.weight * max.reps)){
+								max = d;
+							}
+						} else {
+							max = d;
+						}
+					}
+				});
 
-		return d3.max(this.data, function(d){ 
-			return d.weight;
-		});
-	};
+				return max;
+			}
 
-	exports.Set.prototype.volume = function(){
-		return this.data.reduce(function(a, b){
-			return a + b.weight * b.reps;
-		}, 0);
-	};
-
-	exports.Set.prototype.weight = function(reverse){
-		if(this.data.length > 1){
-			return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
+			return d3.max(this.data, function(d){
 				return d.weight;
 			});
-		} else {
-			return this.data[0].weight;
-		}
-	};
+		},
 
-	exports.Set.prototype.reps = function(reverse){
-		if(this.data.length > 1){
-			return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
-				return d.reps;
-			});
-		} else {
-			return this.data[0].reps;
-		}
-	};
+		volume: function(){
+			return this.data.reduce(function(a, b){
+				return a + b.weight * b.reps;
+			}, 0);
+		},
 
-	exports.Set.prototype.split = function(reverse){
-		if(this.data.length > 1){
-			return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
-				return d.split;
-			});
-		} else {
-			return this.data[0].split;
-		}
-	};
+		weight: function(reverse){
+			if(this.data.length > 1){
+				return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
+					return d.weight;
+				});
+			} else {
+				return this.data[0].weight;
+			}
+		},
 
-	exports.Set.prototype.length = function(){
-		return this.data.length;
+		reps: function(reverse){
+			if(this.data.length > 1){
+				return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
+					return d.reps;
+				});
+			} else {
+				return this.data[0].reps;
+			}
+		},
+
+		split: function(reverse){
+			if(this.data.length > 1){
+				return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
+					return d.split;
+				});
+			} else {
+				return this.data[0].split;
+			}
+		},
+
+		length: function(){
+			return this.data.length;
+		}
 	};
 
 })(typeof exports === 'undefined' ? this : exports);

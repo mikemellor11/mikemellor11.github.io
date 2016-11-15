@@ -106,14 +106,12 @@ describe('workout.js', function () {
 
     // SETS //
 
-    it('return sets as an array of objects when only 1 workout is present', function () {
-        expect(typeof group.last().sets(true).data).to.equal('object');
-        expect(typeof group.last().sets()[0]).to.equal('undefined');
+    it('return length of 3 if sets called after first has been called', function () {
+        expect(group.first().sets(true).length()).to.equal(3);
     });
 
-    it('return sets as an array of arrays when multiple workouts present', function () {
-        expect(typeof group.sets()[0].data).to.equal('object');
-        expect(typeof group.sets(true).data).to.equal('undefined');
+    it('return length of 7 if sets called with no prior fluent calls', function () {
+        expect(group.sets().length()).to.equal(7);
     });
 
     // UTILITY //

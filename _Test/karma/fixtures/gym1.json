@@ -1,0 +1,68 @@
+[
+    {
+        "exercise": "test1",
+        "sets": 9,
+        "reps": 8,
+        "peak": 5,
+        "increase": 5,
+        "startPercent": 0.75,
+        "endPercent": 0.75,
+        "incInterval": 3,
+        "equipmentWeight": 20,
+        "sessions": [
+            {
+                "date": "23/10/2016",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 10,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "09/11/2016",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 10,
+                        "split": "00:01:30:502"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "exercise": "test2",
+        "sets": 9,
+        "reps": 8,
+        "peak": 5,
+        "increase": 5,
+        "startPercent": 0.75,
+        "endPercent": 0.75,
+        "incInterval": 3,
+        "equipmentWeight": 20,
+        "sessions": [
+            {
+                "date": "23/10/2016",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 10,
+                        "split": "00:00:00:000"
+                    }
+                ]
+            },
+            {
+                "date": "09/11/2016",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 20,
+                        "split": "00:01:30:502"
+                    }
+                ]
+            }
+        ]
+    }
+]

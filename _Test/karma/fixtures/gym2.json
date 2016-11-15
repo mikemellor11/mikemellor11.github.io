@@ -1,0 +1,35 @@
+[
+    {
+        "exercise": "test3",
+        "sets": 6,
+        "reps": 20,
+        "peak": 2,
+        "increase": 5,
+        "startPercent": 0.5,
+        "endPercent": 0.5,
+        "incInterval": 6,
+        "equipmentWeight": 10,
+        "sessions": [
+            {
+                "date": "31/10/2016",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 10,
+                        "split": "00:06:02:160"
+                    }
+                ]
+            },
+            {
+                "date": "09/11/2016",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 10,
+                        "split": "00:05:00:702"
+                    }
+                ]
+            }
+        ]
+    }
+]

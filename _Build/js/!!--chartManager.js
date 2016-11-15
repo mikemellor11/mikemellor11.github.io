@@ -43,7 +43,7 @@ var chartManager = (function() {
                             d.sessions.forEach(function(dl, il){
                                 exercise.values.push({
                                     "id": dl.date,
-                                    "value": Set(dl.sets).volume(),
+                                    "value": Set(dl.sets).max(),
                                     "label": ""
                                 });
                             });

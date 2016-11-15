@@ -18,6 +18,7 @@
 	    "pageJS": true,
 	    "baseJS": true,
 	    "Workout": true,
-	    "Set": true
+	    "Set": true,
+	    "moment": true
 	}
 }
