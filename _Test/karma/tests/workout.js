@@ -106,12 +106,12 @@ describe('workout.js', function () {
 
     // SETS //
 
-    it('return length of 3 if sets called after first has been called', function () {
-        expect(group.first().sets(true).length()).to.equal(3);
+    it("return sets for the workouts given", function () {
+        expect(group.sets().weight()).to.deep.equal([90, 90, 100, 80, 80, 75, 55]);
     });
 
-    it('return length of 7 if sets called with no prior fluent calls', function () {
-        expect(group.sets().length()).to.equal(7);
+    it("return sets for the workouts given in reverse", function () {
+        expect(group.sets(true).weight()).to.deep.equal([75, 55, 80, 80, 90, 90, 100]);
     });
 
     // UTILITY //

@@ -20,8 +20,54 @@
 		<div class="contentContainer">
 			<section>
 				<h3 class="divider">Latest workout</h3>
-				<h4>Volume done</h4>
-				<p class="d3-latest"></p>
+				<section>
+					<div class="ut-tableChildren ut-tableFixed siteStatus">
+						<div>
+							<h4>Total sets</h4>
+							<p class="d3-totalSets"></p>
+						</div>
+						<div>
+							<h4>Total reps</h4>
+							<p class="d3-totalReps"></p>
+						</div>
+						<div>
+							<h4>Total volume</h4>
+							<p class="d3-totalVolume"></p>
+						</div>
+						<div>
+							<h4>Target Hit</h4>
+							<p class="d3-tarHit"></p>
+						</div>
+						<div>
+							<h4>Average intensity</h4>
+							<p class="d3-avInt"></p>
+						</div>
+					</div>
+					
+					<table class="siteStatus">
+						<colgroup span="14"></colgroup>
+						<thead>
+							<tr>
+								<th>Exercise</th>
+								<th>1</th>
+								<th>2</th>
+								<th>3</th>
+								<th>4</th>
+								<th>5</th>
+								<th>6</th>
+								<th>7</th>
+								<th>8</th>
+								<th>9</th>
+								<th>Max</th>
+								<th>Volume</th>
+								<th>Target Hit</th>
+								<th>Intensity</th>
+							</tr>
+						</thead>
+						<tbody class="d3-exercise">
+						</tbody>
+					</table>
+				</section>
 			</section>
 
 			{{#each index.sideCallouts}}
@@ -95,29 +141,74 @@
 	}
 
 	function dataLoaded(){
+		var gymData = [];
+
+		for(var key in chartManager.data){
+			if(chartManager.data.hasOwnProperty(key)){
+				gymData = gymData.concat(chartManager.data[key]);
+			}
+		}
+
+		var gym = Gym(gymData);
+		var exercises = '';
+		var last = gym.last();
+
+		last.each(function(d, i){
+			exercises += '<tr>';
+
+			exercises += '<td>' + d.exercise() + '</td>';
+
+			var sets = d.sets().weight();
+			for(var j = 0; j < 9; j++){
+				var weight = 0;
+				if(j < sets.length){
+					weight = sets[j];
+				}
+				exercises += '<td>' + weight + '</td>';
+			}
+
+			exercises += '<td>' + d.max() + '</td>';
+
+			exercises += '<td>' + d.volume() + '</td>';
+
+			exercises += '<td>' + '<div class="icon icon--small"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ok-circle"></use></svg></div>' + '</td>';
+
+			exercises += '<td>High</td>';
+
+			exercises +='</tr>';
+		});
+
+		d3.select('.d3-exercise').html(exercises);
+
 		var delaySpeed = 200;
 		var delayAdd = 200;
 
-		d3.selectAll('.d3-latest').each(function(){
-			var chart = this;
+		createHtmlText('.d3-totalSets').attr({
+				textFormat: "{value} sets", 
+				delaySpeed: delaySpeed += delayAdd
+			})
+			.data(last.sets().length())
+			.call();
 
-			var gymData = [];
+		createHtmlText('.d3-totalReps').attr({
+				textFormat: "{value} reps", 
+				delaySpeed: delaySpeed += delayAdd
+			})
+			.data(last.sets().reps().reduce(function(a, b){
+				return a + b;
+			}, 0))
+			.call();
 
-			for(var key in chartManager.data){
-				if(chartManager.data.hasOwnProperty(key)){
-					gymData = gymData.concat(chartManager.data[key]);
-				}
-			}
+		createHtmlText('.d3-totalVolume').attr({
+				textFormat: "{value} kg", 
+				delaySpeed: delaySpeed += delayAdd
+			})
+			.data(last.volume())
+			.call();
 
-			var gym = Gym(gymData);
+		d3.select('.d3-tarHit').html('<div class="icon icon--small"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ok-circle"></use></svg></div>');
 
-			createHtmlText(chart).attr({
-					textFormat: "{value} tonnes", 
-					delaySpeed: delaySpeed
-				})
-				.data(gym.last().volume())
-				.call(chart);
-		});
+		d3.select('.d3-avInt').html('High');
 
 		d3.selectAll('.d3-text').each(function(){
 			var chart = this;

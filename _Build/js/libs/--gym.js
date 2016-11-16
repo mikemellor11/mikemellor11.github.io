@@ -14,6 +14,24 @@
 
 	exports.Gym.prototype = {
 
+		// Fluent methods
+		first: function(){
+			var _this = this;
+
+			return exports.Gym(
+				this.data.map(function(d, i){
+					return _this.manipulate(d, d.sessions[0]);
+				})
+				.filter(function(d, i){
+					var holdDate = moment(d.sessions[0].date, 'DD/MM/YYYY');
+
+					if(holdDate.isSame(_this.earliest())){
+						return true;
+					}
+				})
+			);
+		},
+
 		last: function(){
 			var _this = this;
 
@@ -57,6 +75,10 @@
 			}
 		},
 
+		sets: function(reverse){
+			return this.workouts(reverse).sets();
+		},
+
 		latest: function(){
 			return this.data.reduce(function(a, b){
 				var holdDate = moment(b.sessions[b.sessions.length - 1].date, 'DD/MM/YYYY');
@@ -80,6 +102,16 @@
 			}, null);
 		},
 
+		exercise: function(reverse){
+			if(this.data.length > 1){
+				return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
+					return d.exercise;
+				});
+			} else {
+				return this.data[0].exercise;
+			}
+		},
+
 		manipulate: function(data, sessions){
 			var newObject = {};
 			for(var key in data){
@@ -87,6 +119,16 @@
 			}
 			newObject.sessions = [sessions];
 			return newObject;
+		},
+
+		each: function(cb){
+			this.data.forEach(function(d, i){
+				cb(exports.Gym([d]), i);
+			});
+		},
+
+		raw: function(){
+			return this.data;
 		},
 
 		length: function(){
