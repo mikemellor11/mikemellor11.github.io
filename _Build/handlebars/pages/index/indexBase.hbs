@@ -173,7 +173,7 @@
 
 			exercises += '<td>' + '<div class="icon icon--small"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ok-circle"></use></svg></div>' + '</td>';
 
-			exercises += '<td>High</td>';
+			exercises += '<td>' + d.intensity() + '</td>';
 
 			exercises +='</tr>';
 		});
@@ -208,7 +208,7 @@
 
 		d3.select('.d3-tarHit').html('<div class="icon icon--small"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ok-circle"></use></svg></div>');
 
-		d3.select('.d3-avInt').html('High');
+		d3.select('.d3-avInt').html(last.intensity());
 
 		d3.selectAll('.d3-text').each(function(){
 			var chart = this;

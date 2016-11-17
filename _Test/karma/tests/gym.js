@@ -60,6 +60,12 @@ describe('gym.js', function () {
         expect(group.volume()).to.equal(900);
     });
 
+    // INTENSITY //
+
+    it('return intensity for all sets', function () {
+        expect(group.intensity()).to.equal('Low');
+    });
+
     // REPS // 
 
     it('return exercise as a string when only 1 group is present', function () {

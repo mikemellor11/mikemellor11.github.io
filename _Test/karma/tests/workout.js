@@ -90,6 +90,12 @@ describe('workout.js', function () {
         expect(group.volume()).to.equal(4470);
     });
 
+    // INTENSITY //
+
+    it('return intensity for all sets', function () {
+        expect(group.intensity()).to.equal('Low');
+    });
+
     // DATE //
 
     it('return date as a string when only 1 workout is present', function () {

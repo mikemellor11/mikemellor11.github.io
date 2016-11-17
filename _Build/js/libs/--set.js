@@ -76,6 +76,32 @@
 			}, 0);
 		},
 
+		intensity: function(){
+			var split = this.split();
+			
+			if(Array.isArray(split)){
+				split = average(
+						split.filter(function(d, i){
+							if(d === '00:00:00:000'){
+								return false;
+							}
+							return true;
+						}).map(function(d, i){
+							return formatTime(d);
+						})
+					)
+			} else {
+				split = formatTime(split);
+			}
+
+			if(split < 120000){
+				return 'High'
+			} else if(split < 180000){
+				return 'Medium'
+			}
+			return 'Low';
+		},
+
 		weight: function(reverse){
 			if(this.data.length > 1){
 				return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
@@ -110,5 +136,29 @@
 			return this.data.length;
 		}
 	};
+
+	function average(array){
+		var sum = 0;
+
+		for( var i = 0; i < array.length; i++ ){
+			sum += parseInt(array[i], 10);
+		}
+
+		return sum / array.length;
+	}
+
+	function formatTime(time) {
+		var split = time.split(':');
+		var h = split[0];
+		var m = split[1];
+		var s = split[2];
+		var ms = split[3];
+
+		h = +h * (60 * 60 * 1000);
+		m = +m * (60 * 1000);
+		s = +s * 1000;
+
+		return h + m + s + +ms;
+	}
 
 })(typeof exports === 'undefined' ? this : exports);

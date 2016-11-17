@@ -50,6 +50,10 @@
 			return this.sets().volume();
 		},
 
+		intensity: function(){
+			return this.sets().intensity();
+		},
+
 		date: function(reverse){
 			if(this.data.length > 1){
 				return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){

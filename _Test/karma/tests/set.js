@@ -90,6 +90,20 @@ describe('set.js', function () {
         expect(group.volume()).to.equal(4630);
     });
 
+    // INTENSITY //
+
+    it('return intensity for first set', function () {
+        expect(group.first().intensity()).to.equal('Low');
+    });
+
+    it('return intensity for last set', function () {
+        expect(group.last().intensity()).to.equal('High');
+    });
+
+    it('return intensity for all sets', function () {
+        expect(group.intensity()).to.equal('Medium');
+    });
+
     // WEIGHT //
 
     it('return weight as a number when only 1 set is present', function () {
@@ -121,15 +135,15 @@ describe('set.js', function () {
     // SPLIT //
 
     it('return split as a string when only 1 set is present', function () {
-        expect(group.last().split()).to.equal('00:03:23:634');
+        expect(group.last().split()).to.equal('00:01:23:634');
     });
 
     it('return split as an array when multiple sets present', function () {
-        expect(group.split()).to.deep.equal(["00:04:00:283", "00:01:47:869", "00:01:23:232", "00:02:33:244", "00:02:59:001", "00:03:23:634"]);
+        expect(group.split()).to.deep.equal(["00:04:00:283", "00:01:47:869", "00:01:23:232", "00:02:33:244", "00:02:59:001", "00:01:23:634"]);
     });
 
     it('return split as an array last to first when multiple sets present and reverse is true', function () {
-        expect(group.split(true)).to.deep.equal(["00:03:23:634", "00:02:59:001", "00:02:33:244", "00:01:23:232", "00:01:47:869", "00:04:00:283"]);
+        expect(group.split(true)).to.deep.equal(["00:01:23:634", "00:02:59:001", "00:02:33:244", "00:01:23:232", "00:01:47:869", "00:04:00:283"]);
     });
 
     // UTILITY //
