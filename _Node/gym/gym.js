@@ -25,7 +25,8 @@ io.on('connection', function (socket) {
             d.sessions[d.sessions.length - 1].sets.push({
                 "weight": +data.weight,
                 "reps": +data.reps,
-                "split":  data.split
+                "split":  data.split,
+                "target": data.target
             });
         });
     });

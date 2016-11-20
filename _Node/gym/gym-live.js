@@ -36,7 +36,14 @@ function baseJS(){
 				"group": $(this).data('group'),
 				"weight": $('.weight', this).val(),
 				"reps": $('.reps', this).val(),
-				"split":  $('#time').text()
+				"split":  $('#time').text(),
+				"target": (
+						+$('.weight', this).val() > $(this).data('target') ||
+						(
+							+$('.weight', this).val() >= $(this).data('target') &&
+							+$('.reps', this).val() >= $(this).data('reps')
+						)
+					)
 			});
 
 			reset();
@@ -258,7 +265,7 @@ function baseJS(){
 				html += displayField(next, 'Next');
 				html += '</div>';
 
-				html += '<form data-group="' + $(d).data('group') + '" data-exercise="' + d.value + '" class="session__submit">';
+				html += '<form data-group="' + $(d).data('group') + '" data-exercise="' + d.value + '" data-target="' + target + '" data-reps="' + gD.reps + '" class="session__submit">';
 
 				html += displaySelect(target, 200, 'Weight', 'weight', 2.5, 0);
 				html += displaySelect(gD.reps, 30, 'Reps', 'reps', 1, 1);
