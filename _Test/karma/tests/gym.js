@@ -46,7 +46,8 @@ describe('gym.js', function () {
         expect(group.max(true)).to.deep.equal({
                 "weight": 20,
                 "reps": 10,
-                "split": "00:00:00:000"
+                "split": "00:00:00:000",
+                "target": true
             });
     });
 
@@ -64,6 +65,12 @@ describe('gym.js', function () {
 
     it('return intensity for all sets', function () {
         expect(group.intensity()).to.equal('Low');
+    });
+
+    // TARGET //
+
+    it('return if the target was hit for all sets', function () {
+        expect(group.target()).to.equal(true);
     });
 
     // REPS // 
@@ -127,7 +134,8 @@ describe('gym.js', function () {
                             {
                                 "weight": 20,
                                 "reps": 10,
-                                "split": "00:00:00:000"
+                                "split": "00:00:00:000",
+                                "target": true
                             }
                         ]
                     }

@@ -56,7 +56,8 @@ describe('set.js', function () {
         expect(group.fromFirst(1).max(true)).to.deep.equal({
             "weight": 90,
             "reps": 10,
-            "split": "00:01:47:869"
+            "split": "00:01:47:869",
+            "target": true
         });
     });
 
@@ -64,7 +65,8 @@ describe('set.js', function () {
         expect(group.max(true)).to.deep.equal({
             "weight": 100,
             "reps": 10,
-            "split": "00:02:59:001"
+            "split": "00:02:59:001",
+            "target": true
         });
     });
 
@@ -102,6 +104,20 @@ describe('set.js', function () {
 
     it('return intensity for all sets', function () {
         expect(group.intensity()).to.equal('Medium');
+    });
+
+    // TARGET //
+
+    it('return if the target was hit for the first set', function () {
+        expect(group.first().target()).to.equal(true);
+    });
+
+    it('return if the target was hit for last set', function () {
+        expect(group.last().target()).to.equal(false);
+    });
+
+    it('return if the target was hit for all sets', function () {
+        expect(group.target()).to.equal(false);
     });
 
     // WEIGHT //

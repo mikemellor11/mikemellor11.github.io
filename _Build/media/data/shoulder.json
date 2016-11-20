@@ -10,47 +10,56 @@
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:00:00:000"
+                        "split": "00:00:00:000",
+                        "target": true
                     },
                     {
                         "weight": 35,
                         "reps": 8,
-                        "split": "00:00:00:000"
+                        "split": "00:00:00:000",
+                        "target": true
                     },
                     {
                         "weight": 35,
                         "reps": 8,
-                        "split": "00:01:35:884"
+                        "split": "00:01:35:884",
+                        "target": true
                     },
                     {
                         "weight": 37.5,
                         "reps": 8,
-                        "split": "00:02:07:317"
+                        "split": "00:02:07:317",
+                        "target": true
                     },
                     {
                         "weight": 40,
                         "reps": 8,
-                        "split": "00:01:57:925"
+                        "split": "00:01:57:925",
+                        "target": true
                     },
                     {
                         "weight": 40,
                         "reps": 8,
-                        "split": "00:02:04:301"
+                        "split": "00:02:04:301",
+                        "target": true
                     },
                     {
                         "weight": 40,
                         "reps": 8,
-                        "split": "00:02:31:813"
+                        "split": "00:02:31:813",
+                        "target": true
                     },
                     {
                         "weight": 40,
                         "reps": 8,
-                        "split": "00:02:34:031"
+                        "split": "00:02:34:031",
+                        "target": true
                     },
                     {
                         "weight": 40,
                         "reps": 8,
-                        "split": "00:02:35:782"
+                        "split": "00:02:35:782",
+                        "target": true
                     }
                 ]
             },
@@ -60,47 +69,56 @@
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:00:00:000"
+                        "split": "00:00:00:000",
+                        "target": true
                     },
                     {
                         "weight": 35,
                         "reps": 8,
-                        "split": "00:01:44:665"
+                        "split": "00:01:44:665",
+                        "target": true
                     },
                     {
                         "weight": 35,
                         "reps": 8,
-                        "split": "00:01:49:679"
+                        "split": "00:01:49:679",
+                        "target": true
                     },
                     {
                         "weight": 37.5,
                         "reps": 8,
-                        "split": "00:02:30:304"
+                        "split": "00:02:30:304",
+                        "target": true
                     },
                     {
                         "weight": 40,
                         "reps": 6,
-                        "split": "00:02:27:798"
+                        "split": "00:02:27:798",
+                        "target": true
                     },
                     {
                         "weight": 37.5,
                         "reps": 8,
-                        "split": "00:02:02:944"
+                        "split": "00:02:02:944",
+                        "target": true
                     },
                     {
                         "weight": 37.5,
                         "reps": 8,
-                        "split": "00:02:23:811"
+                        "split": "00:02:23:811",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:02:04:731"
+                        "split": "00:02:04:731",
+                        "target": true
                     },
                     {
                         "weight": 30,
                         "reps": 8,
-                        "split": "00:02:21:565"
+                        "split": "00:02:21:565",
+                        "target": true
                     }
                 ]
             },
@@ -110,47 +128,56 @@
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:00:00:000"
+                        "split": "00:00:00:000",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:01:54:010"
+                        "split": "00:01:54:010",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:02:51:308"
+                        "split": "00:02:51:308",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:02:14:424"
+                        "split": "00:02:14:424",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:01:57:459"
+                        "split": "00:01:57:459",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:02:07:886"
+                        "split": "00:02:07:886",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:02:30:372"
+                        "split": "00:02:30:372",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:02:27:945"
+                        "split": "00:02:27:945",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:03:59:703"
+                        "split": "00:03:59:703",
+                        "target": true
                     }
                 ]
             },
@@ -160,47 +187,56 @@
                     {
                         "weight": 25,
                         "reps": 8,
-                        "split": "00:00:00:000"
+                        "split": "00:00:00:000",
+                        "target": true
                     },
                     {
                         "weight": 30,
                         "reps": 8,
-                        "split": "00:02:18:436"
+                        "split": "00:02:18:436",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:02:04:897"
+                        "split": "00:02:04:897",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:01:38:237"
+                        "split": "00:01:38:237",
+                        "target": true
                     },
                     {
                         "weight": 35,
                         "reps": 8,
-                        "split": "00:02:23:738"
+                        "split": "00:02:23:738",
+                        "target": true
                     },
                     {
                         "weight": 35,
                         "reps": 8,
-                        "split": "00:02:39:313"
+                        "split": "00:02:39:313",
+                        "target": true
                     },
                     {
                         "weight": 35,
                         "reps": 8,
-                        "split": "00:02:21:710"
+                        "split": "00:02:21:710",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:00:14:133"
+                        "split": "00:00:14:133",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:02:08:344"
+                        "split": "00:02:08:344",
+                        "target": true
                     }
                 ]
             },
@@ -210,47 +246,56 @@
                     {
                         "weight": 27.5,
                         "reps": 8,
-                        "split": "00:00:00:000"
+                        "split": "00:00:00:000",
+                        "target": true
                     },
                     {
                         "weight": 30,
                         "reps": 8,
-                        "split": "00:01:50:186"
+                        "split": "00:01:50:186",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:01:43:542"
+                        "split": "00:01:43:542",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:02:06:870"
+                        "split": "00:02:06:870",
+                        "target": true
                     },
                     {
                         "weight": 35,
                         "reps": 8,
-                        "split": "00:02:09:670"
+                        "split": "00:02:09:670",
+                        "target": true
                     },
                     {
                         "weight": 35,
                         "reps": 8,
-                        "split": "00:02:30:687"
+                        "split": "00:02:30:687",
+                        "target": true
                     },
                     {
                         "weight": 35,
                         "reps": 8,
-                        "split": "00:02:27:291"
+                        "split": "00:02:27:291",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:02:22:635"
+                        "split": "00:02:22:635",
+                        "target": true
                     },
                     {
                         "weight": 32.5,
                         "reps": 8,
-                        "split": "00:03:19:948"
+                        "split": "00:03:19:948",
+                        "target": true
                     }
                 ]
             }
@@ -278,17 +323,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:44:010"
+                        "split": "00:00:44:010",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:06:188"
+                        "split": "00:00:06:188",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:40:350"
+                        "split": "00:00:40:350",
+                        "target": true
                     }
                 ]
             },
@@ -298,17 +346,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:01:03:892"
+                        "split": "00:01:03:892",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:46:339"
+                        "split": "00:00:46:339",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:57:824"
+                        "split": "00:00:57:824",
+                        "target": true
                     }
                 ]
             },
@@ -318,17 +369,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:39:603"
+                        "split": "00:00:39:603",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:47:762"
+                        "split": "00:00:47:762",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:07:327"
+                        "split": "00:00:07:327",
+                        "target": true
                     }
                 ]
             },
@@ -338,17 +392,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:56:622"
+                        "split": "00:00:56:622",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:50:382"
+                        "split": "00:00:50:382",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:01:23:544"
+                        "split": "00:01:23:544",
+                        "target": true
                     }
                 ]
             },
@@ -358,17 +415,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:39:846"
+                        "split": "00:00:39:846",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:26:795"
+                        "split": "00:00:26:795",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:56:103"
+                        "split": "00:00:56:103",
+                        "target": true
                     }
                 ]
             }
@@ -391,17 +451,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:01:08:319"
+                        "split": "00:01:08:319",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:53:339"
+                        "split": "00:00:53:339",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:01:01:735"
+                        "split": "00:01:01:735",
+                        "target": true
                     }
                 ]
             },
@@ -411,17 +474,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:49:391"
+                        "split": "00:00:49:391",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:01:11:600"
+                        "split": "00:01:11:600",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:59:735"
+                        "split": "00:00:59:735",
+                        "target": true
                     }
                 ]
             },
@@ -431,17 +497,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:55:567"
+                        "split": "00:00:55:567",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:42:755"
+                        "split": "00:00:42:755",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:53:577"
+                        "split": "00:00:53:577",
+                        "target": true
                     }
                 ]
             },
@@ -451,17 +520,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:41:105"
+                        "split": "00:00:41:105",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:41:033"
+                        "split": "00:00:41:033",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:01:09:455"
+                        "split": "00:01:09:455",
+                        "target": true
                     }
                 ]
             },
@@ -471,17 +543,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:54:514"
+                        "split": "00:00:54:514",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:40:762"
+                        "split": "00:00:40:762",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:41:702"
+                        "split": "00:00:41:702",
+                        "target": true
                     }
                 ]
             }
@@ -503,17 +578,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:43:850"
+                        "split": "00:00:43:850",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:34:486"
+                        "split": "00:00:34:486",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:56:143"
+                        "split": "00:00:56:143",
+                        "target": true
                     }
                 ]
             },
@@ -523,17 +601,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:34:782"
+                        "split": "00:00:34:782",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:33:959"
+                        "split": "00:00:33:959",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:00:744"
+                        "split": "00:00:00:744",
+                        "target": true
                     }
                 ]
             },
@@ -543,17 +624,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:01:080"
+                        "split": "00:00:01:080",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:38:838"
+                        "split": "00:00:38:838",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:00:972"
+                        "split": "00:00:00:972",
+                        "target": true
                     }
                 ]
             },
@@ -563,17 +647,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:56:655"
+                        "split": "00:00:56:655",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:02:48:605"
+                        "split": "00:02:48:605",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:02:44:233"
+                        "split": "00:02:44:233",
+                        "target": true
                     }
                 ]
             },
@@ -583,17 +670,20 @@
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:00:28:286"
+                        "split": "00:00:28:286",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:01:41:128"
+                        "split": "00:01:41:128",
+                        "target": true
                     },
                     {
                         "weight": 20,
                         "reps": 8,
-                        "split": "00:03:09:557"
+                        "split": "00:03:09:557",
+                        "target": true
                     }
                 ]
             }

@@ -56,7 +56,8 @@ describe('workout.js', function () {
         expect(group.fromFirst(1).max(true)).to.deep.equal({
                 "weight": 80,
                 "reps": 8,
-                "split": "00:06:58:861"
+                "split": "00:06:58:861",
+                "target": true
             });
     });
 
@@ -64,7 +65,8 @@ describe('workout.js', function () {
         expect(group.max(true)).to.deep.equal({
                 "weight": 100,
                 "reps": 8,
-                "split": "00:01:23:232"
+                "split": "00:01:23:232",
+                "target": true
             });
     });
 
@@ -94,6 +96,12 @@ describe('workout.js', function () {
 
     it('return intensity for all sets', function () {
         expect(group.intensity()).to.equal('Low');
+    });
+
+    // TARGET //
+
+    it('return if the target was hit for all sets', function () {
+        expect(group.target()).to.equal(true);
     });
 
     // DATE //

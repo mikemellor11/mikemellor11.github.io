@@ -171,7 +171,13 @@
 
 			exercises += '<td>' + d.volume() + '</td>';
 
-			exercises += '<td>' + '<div class="icon icon--small"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ok-circle"></use></svg></div>' + '</td>';
+			var icon = 'cancel-circle';
+
+			if(d.target()){
+				icon = 'ok-circle';
+			}
+
+			exercises += '<td>' + '<div class="icon icon--small"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' + icon + '"></use></svg></div>' + '</td>';
 
 			exercises += '<td>' + d.intensity() + '</td>';
 
@@ -206,7 +212,13 @@
 			.data(last.volume())
 			.call();
 
-		d3.select('.d3-tarHit').html('<div class="icon icon--small"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ok-circle"></use></svg></div>');
+		var icon = 'cancel-circle';
+
+		if(last.target()){
+			icon = 'ok-circle';
+		}
+		
+		d3.select('.d3-tarHit').html('<div class="icon icon--small"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' + icon + '"></use></svg></div>');
 
 		d3.select('.d3-avInt').html(last.intensity());
 

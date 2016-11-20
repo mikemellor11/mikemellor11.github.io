@@ -5,17 +5,20 @@
             {
                 "weight": 90,
                 "reps": 8,
-                "split": "00:04:00:283"
+                "split": "00:04:00:283",
+                "target": true
             },
             {
                 "weight": 90,
                 "reps": 10,
-                "split": "00:01:47:869"
+                "split": "00:01:47:869",
+                "target": true
             },
             {
                 "weight": 100,
                 "reps": 8,
-                "split": "00:01:23:232"
+                "split": "00:01:23:232",
+                "target": true
             }
         ]
     },
@@ -25,12 +28,14 @@
             {
                 "weight": 80,
                 "reps": 8,
-                "split": "00:06:58:861"
+                "split": "00:06:58:861",
+                "target": true
             },
             {
                 "weight": 80,
                 "reps": 6,
-                "split": "00:01:59:197"
+                "split": "00:01:59:197",
+                "target": true
             }
         ]
     },
@@ -40,12 +45,14 @@
             {
                 "weight": 75,
                 "reps": 8,
-                "split": "00:05:43:861"
+                "split": "00:05:43:861",
+                "target": true
             },
             {
                 "weight": 55,
                 "reps": 6,
-                "split": "00:02:33:197"
+                "split": "00:02:33:197",
+                "target": true
             }
         ]
     }

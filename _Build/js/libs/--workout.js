@@ -54,6 +54,10 @@
 			return this.sets().intensity();
 		},
 
+		target: function(){
+			return this.sets().target();
+		},
+
 		date: function(reverse){
 			if(this.data.length > 1){
 				return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){

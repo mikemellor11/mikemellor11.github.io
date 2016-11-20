@@ -102,6 +102,17 @@
 			return 'Low';
 		},
 
+		target: function(){
+			if(this.data.length > 1){
+				return this.data.map(function(d, i){
+					return d.target;
+				})
+				.indexOf(false) === -1;
+			} else {
+				return this.data[0].target;
+			}
+		},
+
 		weight: function(reverse){
 			if(this.data.length > 1){
 				return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){

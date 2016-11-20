@@ -62,6 +62,10 @@
 			return this.workouts().intensity();
 		},
 
+		target: function(){
+			return this.workouts().target();
+		},
+
 		workouts: function(reverse){
 			if(this.data.length > 1){
 				return exports.Workout(
