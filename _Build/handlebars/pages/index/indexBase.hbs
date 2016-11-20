@@ -44,8 +44,8 @@
 						</div>
 					</div>
 					
-					<table class="siteStatus">
-						<colgroup span="14"></colgroup>
+					<table class="siteStatus table__responsive">
+						<colgroup span="13"></colgroup>
 						<thead>
 							<tr>
 								<th>Exercise</th>
@@ -58,7 +58,6 @@
 								<th>7</th>
 								<th>8</th>
 								<th>9</th>
-								<th>Max</th>
 								<th>Volume</th>
 								<th>Target Hit</th>
 								<th>Intensity</th>
@@ -156,20 +155,20 @@
 		last.each(function(d, i){
 			exercises += '<tr>';
 
-			exercises += '<td>' + d.exercise() + '</td>';
+			exercises += '<td data-label="Exercise">' + d.exercise() + '</td>';
 
 			var sets = d.sets().weight();
 			for(var j = 0; j < 9; j++){
-				var weight = 0;
+				exercises += '<td data-label="Set ' + (j + 1);
 				if(j < sets.length){
-					weight = sets[j];
+					exercises += '">' + sets[j];
+				} else {
+					exercises += '" class="table__empty">'
 				}
-				exercises += '<td>' + weight + '</td>';
+				exercises += '</td>';
 			}
 
-			exercises += '<td>' + d.max() + '</td>';
-
-			exercises += '<td>' + d.volume() + '</td>';
+			exercises += '<td data-label="Volume">' + d.volume() + '</td>';
 
 			var icon = 'cancel-circle';
 
@@ -177,9 +176,9 @@
 				icon = 'ok-circle';
 			}
 
-			exercises += '<td>' + '<div class="icon icon--small"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' + icon + '"></use></svg></div>' + '</td>';
+			exercises += '<td data-label="Target Hit">' + '<div class="icon icon--small"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' + icon + '"></use></svg></div>' + '</td>';
 
-			exercises += '<td>' + d.intensity() + '</td>';
+			exercises += '<td data-label="Intensity">' + d.intensity() + '</td>';
 
 			exercises +='</tr>';
 		});

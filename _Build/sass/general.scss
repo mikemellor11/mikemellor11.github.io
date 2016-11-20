@@ -98,6 +98,44 @@ svg{
 	}
 }
 
+@include breakpoint(max-width 767px){
+	.table__responsive{
+		&, thead, tbody, th, td, tr { 
+			display: block; 
+		}
+
+		thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+		td {
+			border: none;
+			border-bottom: 1px solid #eee; 
+			position: relative;
+			padding-left: 50% !important;
+			text-align: center !important;
+		}
+
+		td:before { 
+			position: absolute;
+			left: 0;
+			width: 50%;
+			white-space: nowrap;
+			content: attr(data-label);
+		}
+
+		.table__empty{
+			display: none;
+		}
+
+		tbody tr:nth-of-type(odd) { 
+			background: #eee; 
+		}
+	}
+}
+
 .async{
 	position: absolute;
 	top: $spacing * 0.5;
