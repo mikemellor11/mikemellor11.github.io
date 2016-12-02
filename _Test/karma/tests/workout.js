@@ -30,6 +30,78 @@ describe('workout.js', function () {
         expect(group.fromFirst('-5')).to.equal(null);
     });
 
+    it("return first workout", function () {
+        expect(group.first().data).to.deep.equal([
+            {
+                "date": "16/10/2016",
+                "sets": [
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:04:00:283",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 10,
+                        "split": "00:01:47:869",
+                        "target": true
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 8,
+                        "split": "00:01:23:232",
+                        "target": true
+                    }
+                ]
+            }
+        ]);
+    });
+
+    it("return last workout", function () {
+        expect(group.last().data).to.deep.equal([
+            {
+                "date": "25/10/2016",
+                "sets": [
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:05:43:861",
+                        "target": true
+                    },
+                    {
+                        "weight": 55,
+                        "reps": 6,
+                        "split": "00:02:33:197",
+                        "target": true
+                    }
+                ]
+            }
+        ]);
+    });
+
+    it("return workout from specified date", function () {
+        expect(group.workout('21/10/2016').data).to.deep.equal([
+            {
+                "date": "21/10/2016",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:06:58:861",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 6,
+                        "split": "00:01:59:197",
+                        "target": true
+                    }
+                ]
+            }
+        ]);
+    });
+
     // MAX //
 
     it('return the max weight lifted in the first workout', function () {
