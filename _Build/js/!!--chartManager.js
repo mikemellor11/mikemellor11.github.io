@@ -21,12 +21,28 @@ var chartManager = (function() {
     return {
         charts: null,
         chartIndex: 0,
-        init: function(){
-            chartHolder = createLine('.chart', true)
-                .width(document.querySelector('.delta').offsetWidth);
+        all: [],
+        init: function(cb){
+            var index = 0;
+
+            chartManager.charts.forEach(function(d, i){
+                d3.json('media/data/' + d.name + '.json', function(err, JSON){
+                    if(err){
+                        console.log("error: ", err);
+                    }
+
+                    chartManager[d.name] = JSON;
+
+                    chartManager.all = chartManager.all.concat(JSON);
+
+                    if (index++ === chartManager.charts.length - 1){ 
+                        cb();
+                    }
+                });
+            });
         },
         update: function(){
-            d3.json('media/data/' + this.charts[this.chartIndex].name + '.json', function (err, JSON) {
+            /*d3.json('media/data/' + this.charts[this.chartIndex].name + '.json', function (err, JSON) {
                 if(!err){
 
                     var data = [];
@@ -58,7 +74,17 @@ var chartManager = (function() {
                         .data(data)
                         .call(chartHolder);
                 }
+            });*/
+        },
+
+        htmlList: function(selector, array){
+            var html = '';
+
+            array.forEach(function(d){
+                html += '<li>' + d + '</li>';
             });
+
+            d3.select(selector).html(html);
         }
     };
 })();

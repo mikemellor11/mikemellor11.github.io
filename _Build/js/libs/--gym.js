@@ -49,6 +49,19 @@
 			);
 		},
 
+		workout: function(cond){
+			var _this = this;
+
+			return exports.Gym(
+				this.data.map(function(d, i){
+					return _this.manipulate(d, exports.Workout(d.sessions).workout(cond).data);
+				})
+				.filter(function(d, i){
+					return d.sessions.length;
+				})
+			);
+		},
+
 		// Utility methods
 		max: function(object){
 			return this.workouts().max(object);
@@ -85,6 +98,18 @@
 
 		sets: function(reverse){
 			return this.workouts(reverse).sets();
+		},
+
+		date: function(reverse){
+			return this.workouts().date().filter(function(item, i, ar){ 
+					return ar.indexOf(item) === i; 
+				}).sort(function (left, right) {
+					if(reverse){
+						return moment(right, 'DD/MM/YYYY').diff(moment(left, 'DD/MM/YYYY'));
+					} else {
+						return moment(left, 'DD/MM/YYYY').diff(moment(right, 'DD/MM/YYYY'));
+					}
+				});
 		},
 
 		latest: function(){
@@ -125,7 +150,7 @@
 			for(var key in data){
 				newObject[key] = data[key];
 			}
-			newObject.sessions = [sessions];
+			newObject.sessions = (Array.isArray(sessions)) ? sessions : [sessions];
 			return newObject;
 		},
 

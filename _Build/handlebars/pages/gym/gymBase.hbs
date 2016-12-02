@@ -5,6 +5,11 @@
 <main class="container">
 	<div class="innerContainer ut-padding ut-mobileFullChildren">
 
+		<div class="d3__table--week"></div>
+
+		<ul class="d3__list--workouts">
+		</ul>
+
 		<div class="twoThirds">
 			<div class="delta">
 				<svg class="chart"></svg>
@@ -27,8 +32,17 @@
 
 <script type="text/javascript">
 	function pageJS(){
-		chartManager.init();
-        chartManager.update();
+		chartManager.init(function(){
+			var gym = Gym(chartManager.all);
+			var chest = Gym(chartManager.chest);
+
+			chartManager.htmlList('.d3__list--workouts', gym.exercise());
+
+			gym.each(function(d, i){
+				console.log(d.sets().weight());
+			});
+		});
+        //chartManager.update();
         
 		document.querySelector('.js-chartSelect').onchange = function(){
 	    	chartManager.chartIndex = this.selectedIndex;

@@ -41,6 +41,12 @@
 			return exports.Workout([this.data[this.data.length - 1 - index]]);
 		},
 
+		workout: function(cond){
+			return exports.Workout(this.data.filter(function(d, i){
+				return cond === d.date;
+			}));
+		},
+
 		// Utility methods
 		max: function(object){
 			return this.sets().max(object);

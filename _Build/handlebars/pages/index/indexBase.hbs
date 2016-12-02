@@ -187,29 +187,29 @@
 
 		var delaySpeed = 200;
 		var delayAdd = 200;
-
-		createHtmlText('.d3-totalSets').attr({
+		
+		Text('.d3-totalSets').att({
 				textFormat: "{value} sets", 
 				delaySpeed: delaySpeed += delayAdd
 			})
 			.data(last.sets().length())
-			.call();
+			.render();
 
-		createHtmlText('.d3-totalReps').attr({
+		Text('.d3-totalReps').att({
 				textFormat: "{value} reps", 
 				delaySpeed: delaySpeed += delayAdd
 			})
 			.data(last.sets().reps().reduce(function(a, b){
 				return a + b;
 			}, 0))
-			.call();
+			.render();
 
-		createHtmlText('.d3-totalVolume').attr({
+		Text('.d3-totalVolume').att({
 				textFormat: "{value} kg", 
 				delaySpeed: delaySpeed += delayAdd
 			})
 			.data(last.volume())
-			.call();
+			.render();
 
 		var icon = 'cancel-circle';
 
@@ -232,7 +232,7 @@
 			var maxObject = Workout(exerciseJSON.sessions).max(true);
 
 			if(chart.dataset.key === 'max'){
-				createHtmlText(chart).attr({
+				Text(chart).att({
 						textFormat: "{value} kg" + " - {reps} reps", 
 						delaySpeed: delaySpeed += delayAdd,
 						decimalPlaces: 1,
@@ -242,20 +242,20 @@
 						}]
 					})
 					.data(maxObject.weight)
-					.call(chart);
+					.render();
 			} else {
 				var a = moment().endOf('year');
 				var b = moment().today;
 
 				maxObject.weight += (a.diff(b, 'weeks') / exerciseJSON.incInterval) * exerciseJSON.increase;
 
-				createHtmlText(chart).attr({
+				Text(chart).att({
 						textFormat: "{value} kg", 
 						delaySpeed: delaySpeed += delayAdd,
 						decimalPlaces: 1
 					})
 					.data(2.5 * Math.round(maxObject.weight / 2.5))
-					.call(chart);
+					.render();
 			}
 
 			setTimeout(function(){
