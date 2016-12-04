@@ -41,50 +41,66 @@ var chartManager = (function() {
                 });
             });
         },
-        update: function(){
-            /*d3.json('media/data/' + this.charts[this.chartIndex].name + '.json', function (err, JSON) {
-                if(!err){
-
-                    var data = [];
-
-                    JSON.forEach(function(d, i){
-                        if(d.sessions){
-                            var workout = Workout(d.sessions);
-
-                            var exercise = {
-                                "label": d.exercise,
-                                "values": []
-                            };
-
-                            d.sessions.forEach(function(dl, il){
-                                exercise.values.push({
-                                    "id": dl.date,
-                                    "value": Set(dl.sets).max(),
-                                    "label": ""
-                                });
-                            });
-
-                            data.push(exercise);
-                        }
-                    });
-
-                    chartHolder
-                        .attr(globalAttr)
-                        .attr({})
-                        .data(data)
-                        .call(chartHolder);
-                }
-            });*/
-        },
 
         htmlList: function(selector, array){
             var html = '';
 
-            array.forEach(function(d){
-                html += '<li>' + d + '</li>';
+            array.forEach(function(d, i){
+                html += '<li' + ((!i) ? ' class="externalLink"' : '') + '>' + d + '</li>';
             });
 
             d3.select(selector).html(html);
+        },
+
+        htmlWorkout: function(selector, workouts){
+            var thead = '<thead>';
+            thead += '<tr>';
+            thead += '<th>Exercise</th>';
+            for(var j = 0; j < 9; j++){
+                thead += '<th>' + j + '</th>';
+            }
+            thead += '<th>Volume</th>';
+            thead += '<th>Target Hit</th>';
+            thead += '<th>Intensity</th>';
+            thead += '</tr>';
+            thead += '</thead>';
+
+            var tbody = '<tbody>';
+
+            workouts.each(function(d, i){
+                tbody += '<tr>';
+
+                tbody += '<td data-label="Exercise">' + d.exercise() + '</td>';
+
+                var sets = d.sets().weight();
+                for(var j = 0; j < 9; j++){
+                    tbody += '<td data-label="Set ' + (j + 1);
+                    if(j < sets.length){
+                        tbody += '">' + sets[j];
+                    } else {
+                        tbody += '" class="table__empty">';
+                    }
+                    tbody += '</td>';
+                }
+
+                tbody += '<td data-label="Volume">' + d.volume() + '</td>';
+
+                var icon = 'cancel-circle';
+
+                if(d.target()){
+                    icon = 'ok-circle';
+                }
+
+                tbody += '<td data-label="Target Hit">' + '<div class="icon icon--small"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#' + icon + '"></use></svg></div>' + '</td>';
+
+                tbody += '<td data-label="Intensity">' + d.intensity() + '</td>';
+
+                tbody +='</tr>';
+            });
+
+            tbody += '</tbody>';
+
+            d3.select(selector).html('<colgroup span="13"></colgroup>' + thead + tbody);
         }
     };
 })();

@@ -7,16 +7,16 @@ function Text(selector){
 		return new Text(selector);
 	}
 
-	this.store = {};
+	this.store = {
+		data : 0,
+		dataLast : 0
+	};
 
 	if(typeof selector === 'string'){
 		this.store.chart = d3.selectAll(selector);
 	} else {
 		this.store.chart = d3.select(selector);
 	}
-
-	this.store.data = 0;
-	this.store.dataLast = 0;
 
 	this.store.att = {
 		textFormat : "{value}",

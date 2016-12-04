@@ -5,10 +5,15 @@
 <main class="container">
 	<div class="innerContainer ut-padding ut-mobileFullChildren">
 
-		<div class="d3__table--week"></div>
+		<div class="fifth">
+			<ul class="d3__list--workouts">
+			</ul>
+		</div>
 
-		<ul class="d3__list--workouts">
-		</ul>
+		<div class="fourFifths ut-vertAlignTop last">
+			<table class="siteStatus table__responsive d3-exercise">
+			</table>
+		</div>
 
 		<div class="twoThirds">
 			<div class="delta">
@@ -36,11 +41,24 @@
 			var gym = Gym(chartManager.all);
 			var chest = Gym(chartManager.chest);
 
-			chartManager.htmlList('.d3__list--workouts', gym.exercise());
+			chartManager.htmlList('.d3__list--workouts', gym.date(true));
 
-			gym.each(function(d, i){
-				console.log(d.sets().weight());
-			});
+			chartManager.htmlWorkout('.d3-exercise', gym.last());
+
+			Line('.chart').data([
+					{
+                        "id": 'sdfg',
+                        "value": 50,
+                        "label": ""
+                    }
+				])
+				.render();
+
+			document.querySelector('.d3__list--workouts').onclick = function(e){
+		    	chartManager.htmlWorkout('.d3-exercise', gym.workout(e.target.innerHTML));
+		    	this.querySelector('.externalLink').classList.remove('externalLink');
+		    	e.target.classList.add('externalLink');
+		    };
 		});
         //chartManager.update();
         
