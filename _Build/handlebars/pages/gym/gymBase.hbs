@@ -21,7 +21,13 @@
 			</div>
 		</div>
 
-		<div class="third last ut-vertAlignTop">
+		<div class="threeQuarters">
+			<div class="delta">
+				<svg class="chart2"></svg>
+			</div>
+		</div>
+
+		<div class="full last ut-vertAlignTop">
 			<div class="ut-padding ut-marginBottom">
 				<select class="full js-chartSelect">
 					{{#each index.charts}}
@@ -32,6 +38,7 @@
 			<div class="key">
 			</div>
 		</div>
+
 	</div>
 </main>
 
@@ -46,24 +53,48 @@
 			chartManager.htmlWorkout('.d3-exercise', gym.last());
 
 			var data = [];
+			var data2 = [];
 
 			gym.each(function(d, i){
 				var weights = d.workouts().sets().weight();
+				var exercise = d.exercise();
 
 				data.push({
-					"label": d.exercise(),
+					"label": exercise,
 					"values": weights.map(function(dl, il){
 						return {
 		                    "id": il,
 		                    "value": dl,
-		                    "label": (il === (weights.length - 1)) ? d.exercise() : ''
+		                    "label": (il === (weights.length - 1)) ? exercise : ''
 		                }
 					})
 				});
+
+				data2.push({ 
+					"data": d.max(),
+					"label": exercise
+				});
 			});
 
-			Line('.chart')
+			Line('.chart', true)
 				.data(data)
+				.att({
+					xLabel: "Set",
+					yLabel: "Weight",
+					margin: {
+						left: 50
+					}
+				})
+				.render();
+
+			Pie('.chart2', true)
+				.data(data2)
+				.att({
+					showLabels: true,
+					innerRadius: 0.5,
+					labelMaxWidth: 200,
+					labelFormat: "{0} kg {1}"
+				})
 				.render();
 
 			document.querySelector('.d3__list--workouts').onclick = function(e){
