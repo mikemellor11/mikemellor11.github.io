@@ -220,6 +220,76 @@ function drawKey(d){
 	d3.select(att.keySelector).html((data.length > 0) ? buildString : '');
 }
 
+function drawKeyAlt(){
+	d3.select(att.keySelector).html(drawKeyLevels(0, data));
+}
+
+function drawKeyLevels(i, d, uniqueArray){
+	var buildString = '';
+	var dataLevels = 3 - att.keyLevels;
+
+	if(!uniqueArray){
+		uniqueArray = [];
+	}
+
+	if(dataLevels >= 3) { dataLevels = 2; }
+
+	if(i < 3){ // 3 is the current max amount of levels
+		i += 1;
+
+		d.forEach(function(dl, il){
+			var label = (dl.label) ? dl.label : dl.key;
+			var check = (i > dataLevels && label && uniqueArray.indexOf(label) === -1);
+
+			if(check && !il){
+				buildString = '<ul class="key__list">';
+			}
+
+			if(check){
+				buildString += '<li class="key__key ' + att.colors[il % att.colors.length] + '">'
+				buildString += label;
+
+				uniqueArray.push(label);
+			}
+
+			buildString += drawKeyLevels(i, dl.values, uniqueArray);
+
+			if(check){
+				buildString += '</li>'
+			}
+
+			if(check && il === (d.length - 1)){
+				buildString += '</ul>';
+			}
+		});
+	} else {
+		d.forEach(function(dl, il){
+			var label = (dl.label) ? dl.label : dl.key;
+			var check = (i > dataLevels && label && uniqueArray.indexOf(label) === -1);
+			
+			if(check && !il){
+				buildString = '<ul class="key__list">';
+			}
+
+			if(check){
+				if(uniqueArray.indexOf(label) === -1){
+					buildString += '<li class="key__key ' + att.colors[il % att.colors.length] + '">'
+					buildString += label;
+					buildString += '</li>'
+
+					uniqueArray.push(label);
+				}
+			}
+
+			if(check && il === (d.length - 1)){
+				buildString += '</ul>';
+			}
+		});
+	}
+
+	return buildString;
+}
+
 function calculateXAxis(){
 	var att = this.store.att, data = this.store.data;
 
@@ -244,6 +314,61 @@ function calculateXAxis(){
 
 		calcHeight += this.store.axisHeight;
 		calcHeight += this.store.plotHeight;
+		calcHeight += att.margin.bottom;
+	} else {
+		calcHeight = att.margin.bottom;
+	}
+
+	return calcHeight;
+}
+
+function calculateXAxisAlt(){
+	var local = this.store, att = local.att, data = local.data;
+
+	var calcHeight = 0;
+	if(att.autoAxis === 'x'){
+		if(att.xLabel){
+    		local.axisHeight = checkText.call(this, att.xLabel, local._width, local.svgText);
+    	}
+
+		local.sectionHeight = 0;
+		local.groupHeight = 0;
+		local.barHeight = 0;
+
+		for(var i = 0, ilen = data.length; i < ilen; i++){
+			if(att.displaySection){
+    			var holdHeight = checkText.call(this, data[i].label, local.sectionWidth, local.svgText);
+
+    			if(holdHeight > local.sectionHeight){
+    				local.sectionHeight = holdHeight;
+    			}
+    		}
+
+    		for(var j = 0, jlen = data[i].values.length; j < jlen; j++){
+    			if(att.displayGroup){
+	    			var holdHeight = checkText.call(this, data[i].values[j].label, local.groupWidth, local.svgText);
+
+	    			if(holdHeight > local.groupHeight){
+	    				local.groupHeight = holdHeight;
+	    			}
+	    		}
+
+	    		for(var k = 0, klen = data[i].values[j].values.length; k < klen; k++){
+	    			if(att.displayBar){
+		    			var holdHeight = checkText.call(this, data[i].values[j].values[k].values[0].label, local.barWidth, local.svgText);
+
+		    			if(holdHeight > local.barHeight){
+		    				local.barHeight = holdHeight;
+		    			}
+		    		}
+	    		}
+    		}
+		}
+
+		calcHeight += local.axisHeight;
+		calcHeight += local.sectionHeight;
+		calcHeight += local.groupHeight;
+		calcHeight += local.barHeight;
 		calcHeight += att.margin.bottom;
 	} else {
 		calcHeight = att.margin.bottom;
@@ -354,6 +479,18 @@ function arcTweenShadow(a) {
 	return function(t) {
 		return arcShadow(i(t));
 	};
+}
+
+function getSectionIndex(i){
+	return ((att.sectionOrder) ? att.sectionOrder[i] : i);
+}
+
+function getGroupIndex(i){
+	return ((att.groupOrder) ? att.groupOrder[i] : i);
+}
+
+function getBarIndex(i){
+	return ((att.barOrder) ? att.barOrder[i] : i);
 }
 
 if (!String.format) {

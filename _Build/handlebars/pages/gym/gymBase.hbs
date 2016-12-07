@@ -17,6 +17,12 @@
 
 		<div class="full">
 			<div class="delta">
+				<svg class="chart3"></svg>
+			</div>
+		</div>
+
+		<div class="full">
+			<div class="delta">
 				<svg class="chart"></svg>
 			</div>
 		</div>
@@ -95,6 +101,27 @@
 					labelMaxWidth: 200,
 					labelFormat: "{0} kg {1}"
 				})
+				.render();
+
+			Bar('.chart3', true)
+				.data([
+			        {
+			            "id": "A",
+			            "label": "NEXThaler",
+			            "value": 80.3
+			        },
+			        {
+			            "id": "B",
+			            "label": "Accuhaler",
+			            "value": 12.1
+			        },
+			        {
+			            "id": "C",
+			            "label": "Turbohaler",
+			            "value": 7.6
+			        }
+			    ])
+				.att({})
 				.render();
 
 			document.querySelector('.d3__list--workouts').onclick = function(e){
