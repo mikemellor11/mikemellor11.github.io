@@ -6,18 +6,26 @@
 	<div class="innerContainer ut-padding ut-mobileFullChildren">
 
 		<div class="twoThirds">
+			<h3>Max weight</h3>
 			<div class="delta">
 				<svg class="chart chart3"></svg>
 			</div>
 		</div>
 
 		<div class="third last">
+			<h3>Targets hit</h3>
 			<div class="delta">
 				<svg class="chart chart2"></svg>
+			</div>
+
+			<h3>Intensity</h3>
+			<div class="delta">
+				<svg class="chart chart4"></svg>
 			</div>
 		</div>
 
 		<div class="full">
+			<h3>Sets</h3>
 			<div class="delta">
 				<svg class="chart chart1"></svg>
 			</div>
@@ -59,13 +67,29 @@
 			chartManager.htmlWorkout('.d3-exercise', gym.last());
 
 			var data = [];
-			var data2 = [];
+			var data2 = [0, 0];
+
 			var data3 = [];
+			var data4 = [
+				{
+					"data": 0,
+					"label": 'Low'
+				},
+				{
+					"data": 0,
+					"label": 'Medium'
+				},
+				{
+					"data": 0,
+					"label": 'High'
+				}
+			]
 
 			gym.each(function(d, i){
-				var weights = d.workouts().sets().weight();
+				var workout = d.workouts();
 				var exercise = d.exercise();
-				var data3Hold = [];
+				var sets = workout.sets();
+				var weights = sets.weight();
 
 				data.push({
 					"label": exercise,
@@ -78,26 +102,31 @@
 					})
 				});
 
-				data2.push({ 
-					"data": d.max(),
-					"label": exercise
-				});
+				workout.each(function(dl, il){
+					data2[dl.target() | 0] += 1;
 
-				d.workouts().each(function(dl, il){
-					if(il < d.workouts().length() - 4){
-						return;
+					switch(dl.intensity()){
+						case 'Low':
+							data4[0].data += 1;
+							break;
+						case 'Medium':
+							data4[1].data += 1;
+							break;
+						case 'High':
+							data4[2].data += 1;
+							break;
 					}
 
-					data3Hold.push({
-			            "id": i + 'a' + il,
-			            "label": (il === d.workouts().length() - 3) ? exercise : '',
-			            "value": dl.max()
-			        });
+					if(il < workout.length() - 4){
+						return;
+					}
 				});
 
 				data3.push({
-					"values": data3Hold
-				});
+		            "id": i,
+		            "label": exercise,
+		            "value": d.max()
+		        });
 			});
 
 			Line('.chart1', true)
@@ -112,13 +141,29 @@
 				.render();
 
 			Pie('.chart2', true)
-				.data(data2)
+				.data([
+					{
+						"data": data2[1],
+						"label": ''
+					}
+				])
 				.att({
 					showLabels: true,
 					innerRadius: 0.5,
-					labelFormat: "{0} kg {1}",
-					labelMaxWidth: 120
+					harveyBall: true,
+					totalCount: data2[0] + data2[1],
+					showCenterPercent: true
 				})
+				.init()
+				.render();
+
+			Pie('.chart4', true)
+				.data(data4)
+				.att({
+					showLabels: true,
+					innerRadius: 0.5
+				})
+				.init()
 				.render();
 
 			Bar('.chart3', true)
@@ -129,8 +174,7 @@
 						right: 0.01
 					},
 					displayBar: true,
-					dataLevels: 1,
-					yLabel: "Max weight (workouts stacked)",
+					yLabel: "Max weight",
 					margin: {
 						left: 60
 					}

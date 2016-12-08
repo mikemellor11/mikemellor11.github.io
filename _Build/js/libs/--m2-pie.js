@@ -50,26 +50,32 @@ function Pie(selector, svgText){
 		showBase: false, // If true when harvey ball will have the remaining pie filled with harvey color
 		centerBackground : false
 	}
+}
 
-    this.store.chart.attr("viewBox", "0 0 " + this.store.att.width + " " + this.store.att.height);
+Pie.prototype.init = function(){
+	var local = this.store, att = local.att, chart = local.chart;
 
-    bottom = this.store.chart.append("g")
+	chart.attr("viewBox", "0 0 " + att.width + " " + att.height);
+
+    bottom = chart.append("g")
     	.attr("class", "bottom");
-	group = this.store.chart.append("g")
+	group = chart.append("g")
 		.attr("class", "slices");
-	labels = this.store.chart.append("g")
+	labels = chart.append("g")
 	    .attr("class", "labels");
-	lines = this.store.chart.append("g")
+	lines = chart.append("g")
         .attr("class", "lines");
 
-    if(this.store.att.centerBackground){
+    if(att.centerBackground){
     	bottom.append("circle").attr("class", "centerBackground reverseColor--alt");
     }
 
-    if(this.store.att.showCenterPercent){
+    if(att.showCenterPercent){
     	bottom.append("text").attr("class", "centerPercent text--alt").text("0%").attr('opacity', 0);	
     }
-}
+
+    return this;
+};
 
 Pie.prototype.render = function(){
 	var local = this.store, att = local.att, data = local.data, chart = local.chart;
