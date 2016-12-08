@@ -202,6 +202,12 @@ describe('workout.js', function () {
 
     // UTILITY //
 
+    it('return length of workouts item for each group', function () {
+        group.last().each(function(d, i){
+            expect(d.sets().length()).to.equal(2);
+        })
+    });
+
     it('return amount of workouts in object', function () {
         expect(group.length()).to.equal(3);
     });

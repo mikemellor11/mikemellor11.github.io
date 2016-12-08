@@ -86,6 +86,12 @@
 			}
 		},
 
+		each: function(cb){
+			this.data.forEach(function(d, i){
+				cb(exports.Workout([d]), i);
+			});
+		},
+
 		length: function(){
 			return this.data.length;
 		}

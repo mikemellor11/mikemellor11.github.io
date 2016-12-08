@@ -102,7 +102,7 @@ function Bar(selector, svgText){
 
 	this.store.chart.attr("viewBox", "0 0 " + this.store.att.width + " " + this.store.att.height);
 
-	if(svgText){
+	if(!this.store.svgText){
 		this.store.chart.append("svg:foreignObject")
 			.attr("class", "yLabel")
 		    .append("xhtml:div");
@@ -327,17 +327,12 @@ Bar.prototype.render = function(){
 			.call(yAxis);
 	}
 
-	return this;
-
 	// SECTIONS //
-
-	// DATA //
 	var sections = draw.selectAll(".sections").data(data, function(d, i){return d.key;});
 
-    // APPENDS //
-    var g_Section = sections.enter().append("g")
-		.attr('class', 'sections')
-		.attr("transform", function(d, i) { return "translate(" + ((getSectionIndex(i) * (sectionWidth + _sectionGap)) + (att.margin.left + _padding.left)) + ", " + att.margin.top + ")"; });
+    var g_Section = sections.enter().append("g").attr('class', 'sections');
+
+	g_Section.attr("transform", function(d, i) { return "translate(" + ((getSectionIndex(i) * (sectionWidth + _sectionGap)) + (att.margin.left + _padding.left)) + ", " + att.margin.top + ")"; });
 
 	if(!local.svgText) {
 		g_Section.append("svg:foreignObject")
@@ -351,14 +346,16 @@ Bar.prototype.render = function(){
 	        	d3.select(this.parentNode).attr("transform", "translate(0, " + ((local._height + local._margin.bottom) - this.clientHeight - local.axisHeight) + ")")
 	        });
 
-        sections.select('.sectionLabel')
+        g_Section.merge(sections)
+        	.select('.sectionLabel')
         	.attr("width", sectionWidth)
 			.transition()
 			.ease(d3['ease' + att.transitionType])
 			.duration(att.transitionSpeed)
 			.attr('opacity', function(){if(att.displaySection){return 1;} return 0;});
 
-		sections.select('.sectionLabel div')
+		g_Section.merge(sections)
+			.select('.sectionLabel div')
 			.html(function(d) {return d.label;})
 			.each(function(){
 	        	d3.select(this.parentNode).attr("height", this.clientHeight)
@@ -375,15 +372,16 @@ Bar.prototype.render = function(){
 			.call(wrap, sectionWidth)
 			.attr("transform", function(){ return "translate(" + (sectionWidth * 0.5) + ", " + ((local._height + local._margin.bottom) - local.axisHeight - this.getBBox().height) + ")"; });
 
-		sections.select('.sectionLabel')
+		g_Section.merge(sections)
+			.select('.sectionLabel')
 			.transition()
 			.ease(d3['ease' + att.transitionType])
 			.duration(att.transitionSpeed)	
 			.attr('opacity', function(){if(att.displaySection){return 1;} return 0;});
 	}
 
-	// SELECTS //
-	sections.transition()
+	g_Section.merge(sections)
+		.transition()
 		.ease(d3['ease' + att.transitionType])
 		.duration(att.transitionSpeed)
 		.style("opacity", 1)
@@ -396,18 +394,17 @@ Bar.prototype.render = function(){
 		.style("opacity", 0)
 		.remove();
 
-	sections.each(function(sectionData, sectionIndex) {
+	g_Section.each(function(sectionData, sectionIndex) {
 		// GROUPS //
-
-		// DATA //
 		var groups = d3.select(this).selectAll('.groups').data(function(d, i){return d.values;}, function(d, i){return d.key;});
 
-	    // APPENDS //
-	    var g_Groups = groups.enter().append("g")
-			.attr('class', 'groups')
+	    var g_Groups = groups.enter().append("g").attr('class', 'groups');
+
 			/*.attr('font-size', function(){return ((groupWidth * 0.10 > 30)) ? 30 : (groupWidth * 0.10); })*/
-			.style("opacity", 0)
-			.attr("transform", function(d, i) { return "translate(" + ((getGroupIndex(i) * (groupWidth + _groupGap))) + ", 0)"; })
+		g_Groups.style("opacity", 0)
+			.attr("transform", function(d, i) { 
+				return "translate(" + ((getGroupIndex(i) * (groupWidth + _groupGap))) + ", 0)"; 
+			})
 
 		if(att.tip){
 			g_Groups.on('mouseover', tip.show)
@@ -426,14 +423,16 @@ Bar.prototype.render = function(){
 		        	d3.select(this.parentNode).attr("transform", "translate(0, " + ((local._height + local._margin.bottom) - this.clientHeight - local.axisHeight - local.sectionHeight) + ")")
 		        });
 
-	        groups.select('.groupLabel')
+	        g_Groups.merge(groups)
+	        	.select('.groupLabel')
 	        	.attr("width", groupWidth)
 				.transition()
 				.ease(d3['ease' + att.transitionType])
 				.duration(att.transitionSpeed)
 				.attr('opacity', function(){if(att.displayGroup){return 1;} return 0;});
 
-			groups.select('.groupLabel div')
+			g_Groups.merge(groups)
+				.select('.groupLabel div')
 				.html(function(d) {return d.label;})
 				.each(function(){
 		        	d3.select(this.parentNode).attr("height", this.clientHeight)
@@ -450,7 +449,8 @@ Bar.prototype.render = function(){
 				.call(wrap, groupWidth)
 				.attr("transform", function(){ return "translate(" + (groupWidth * 0.5) + ", " + ((local._height + local._margin.bottom) - local.axisHeight - local.sectionHeight - this.getBBox().height) + ")"; });
 
-			groups.select('.groupLabel')
+			g_Groups.merge(groups)
+				.select('.groupLabel')
 				.text(function(d) {return d.label;})
 				.call(wrap, groupWidth)
 				.transition()
@@ -459,9 +459,9 @@ Bar.prototype.render = function(){
 				.attr('opacity', function(){if(att.displayGroup){return 1;} return 0;});
 		}
 
-        // SELECTS //
-        groups.transition()
-        .ease(d3['ease' + att.transitionType])
+        g_Groups.merge(groups)
+        	.transition()
+        	.ease(d3['ease' + att.transitionType])
 			.duration(att.transitionSpeed)
 			/*.attr('font-size', function(){return ((groupWidth * 0.10 > 30)) ? 30 : (groupWidth * 0.10); })*/
 			.style("opacity", 1)
@@ -474,7 +474,7 @@ Bar.prototype.render = function(){
 	    	.style("opacity", 0)
 	    	.remove();
 
-		groups.each(function(groupData, groupIndex) {
+		g_Groups.each(function(groupData, groupIndex) {
 			// BARS //
 
 			var calcMaxGroup = d3.max(groupData.values, function(d) {
@@ -487,13 +487,16 @@ Bar.prototype.render = function(){
 			var bars = d3.select(this).selectAll('.bars').data(function(d, i){return d.values;}, function(d, i){return d.values[0].id;});
 
 		    // APPENDS //
-		    var gBars = bars.enter().append("g")
-				.attr('class', 'bars')
-				.attr("transform", function(d, i) { return "translate(" + ((getBarIndex(i) * (barWidth + _barGap))) + ", 0)"; });
+		    var gBars = bars.enter().append("g").attr('class', 'bars')
+
+			gBars.attr("transform", function(d, i) { 
+				return "translate(" + ((getBarIndex(i) * (barWidth + _barGap))) + ", 0)"; 
+			});
 
 			// SELECTS //
-			bars.transition()
-			.ease(d3['ease' + att.transitionType])
+			gBars.merge(bars)
+				.transition()
+				.ease(d3['ease' + att.transitionType])
 				.duration(att.transitionSpeed)
 				.style("opacity", 1)
 	        	.attr("transform", function(d, i) { return "translate(" + ((getBarIndex(i) * (barWidth + _barGap))) + ", 0)"; });
@@ -505,7 +508,7 @@ Bar.prototype.render = function(){
 	    		.style("opacity", 0)
 	    		.remove();
 
-			bars.each(function(barData, barIndex) {
+			gBars.each(function(barData, barIndex) {
 				// TRUNKS //
 				var trunks = d3.select(this).selectAll('.trunks').data(function(d, i){return d.values;}, function(d, i){return d.id});
 
@@ -514,8 +517,11 @@ Bar.prototype.render = function(){
 					local.dataLast['' + sectionIndex + groupIndex + barIndex] = 0;
 				}
 
-		    	trunks.transition()
-		    	.ease(d3['ease' + att.transitionType])
+				var g_Trunks = trunks.enter().insert("g", "g").attr('class', 'trunks');
+
+		    	g_Trunks.merge(trunks)
+		    		.transition()
+		    		.ease(d3['ease' + att.transitionType])
 			    	.duration(att.transitionSpeed)
 			    	.style("opacity", 1);
 
@@ -525,9 +531,6 @@ Bar.prototype.render = function(){
 					.duration(att.transitionSpeed)
 		    		.style("opacity", 0)
 		    		.remove();
-
-				var g_Trunks = trunks.enter().insert("g", "g")
-					.attr('class', 'trunks');
 
 				// BODY //
 				g_Trunks.append("path")
@@ -541,7 +544,8 @@ Bar.prototype.render = function(){
 				      	return roundedRect(0, y(0), barWidth, 0, 0, 0, 0, 0); // x y width height att.cornerRadius .. .. ..
 				    });
 
-				trunks.select('.body')
+				g_Trunks.merge(trunks)
+					.select('.body')
 					.attr("class", function(d, i){
 						if(!att.stackedColorsFade){
 							return "body " + att.colors[(i % att.colors.length)];
@@ -577,7 +581,8 @@ Bar.prototype.render = function(){
 					      	return roundedRect(barWidth, local._height, barWidth * 0.08, 0, 0, 0, 0, 0);
 					    });
 
-					trunks.select('.shadow')
+					g_Trunks.merge(trunks)
+						.select('.shadow')
 						.attr("class", function(d, i){return "shadow " + att.colors[(barIndex % att.colors.length)];})
 						.transition()
 						.ease(d3['ease' + att.transitionType])
@@ -599,7 +604,8 @@ Bar.prototype.render = function(){
 					    .attr("y1", local._height)
 					    .attr("y2", local._height);
 
-				    trunks.select('.marker__vert')
+				    g_Trunks.merge(trunks)
+				    	.select('.marker__vert')
 						.transition()
 						.ease(d3['ease' + att.transitionType])
 						.delay(function(d, i) { return ((((sectionData.values.length > 1) ? groupIndex : barIndex) * 5) * att.stagger) + att.delaySpeed; })
@@ -626,7 +632,8 @@ Bar.prototype.render = function(){
 						    .attr("opacity", 0)
 						    .attr("class", "marker marker__horz__top");
 
-					    trunks.select('.marker__horz__top')
+					    g_Trunks.merge(trunks)
+					    	.select('.marker__horz__top')
 							.transition()
 							.ease(d3['ease' + att.transitionType])
 							.delay(function(d, i) { return ((((sectionData.values.length > 1) ? groupIndex : barIndex) * 5) * att.stagger) + att.delaySpeed; })
@@ -655,7 +662,8 @@ Bar.prototype.render = function(){
 						    .attr("opacity", 0)
 						    .attr("class", "marker marker__horz__bottom");
 
-					    trunks.select('.marker__horz__bottom')
+					    g_Trunks.merge(trunks)
+					    	.select('.marker__horz__bottom')
 							.transition()
 							.ease(d3['ease' + att.transitionType])
 							.delay(function(d, i) { return ((((sectionData.values.length > 1) ? groupIndex : barIndex) * 5) * att.stagger) + att.delaySpeed; })
@@ -689,7 +697,8 @@ Bar.prototype.render = function(){
 				        	d3.select(this.parentNode).attr("transform", "translate(0, " + ((local._height + local._margin.bottom) - local.axisHeight - local.sectionHeight - local.groupHeight - local.barHeight + local._spacePadding) + ")")
 				        });
 
-					trunks.select('.barLabel')
+					g_Trunks.merge(trunks)
+						.select('.barLabel')
 						.attr("width", barWidth)
 						.transition()
 						.ease(d3['ease' + att.transitionType])
@@ -697,7 +706,8 @@ Bar.prototype.render = function(){
 						.attr('opacity', function(){if(att.displayBar){return 1;} return 0;})
 						.attr("transform", "translate(0, " + ((local._height + local._margin.bottom) - local.axisHeight - local.sectionHeight - local.groupHeight - local.barHeight + local._spacePadding) + ")");
 
-					trunks.select('.barLabel div')
+					g_Trunks.merge(trunks)
+						.select('.barLabel div')
 						.html(function(d) {return d.label;})
 						.each(function(){
 				        	d3.select(this.parentNode).attr("height", this.clientHeight)
@@ -714,7 +724,8 @@ Bar.prototype.render = function(){
 						.call(wrap, barWidth)
 						.attr("transform", function(){ return "translate(" + (barWidth * 0.5) + ", " + ((local._height + local._margin.bottom) - local.axisHeight - local.sectionHeight - local.groupHeight - local.barHeight + local._spacePadding) + ")"; });
 
-						trunks.select('.barLabel')
+						g_Trunks.merge(trunks)
+							.select('.barLabel')
 							.text(function(d) {return d.label;})
 							.call(wrap, barWidth)
 							.transition()
@@ -738,7 +749,8 @@ Bar.prototype.render = function(){
 				        	d3.select(this.parentNode).attr("height", this.clientHeight)
 				        });
 
-					trunks.select('.numberLabel')
+					g_Trunks.merge(trunks)
+						.select('.numberLabel')
 						.attr("width", barWidth)
 						.attr("class", function(d, i){ 
 					    	if(att.trunkOutside || this.getBBox().height > Math.abs(y(0) - y(+d.value))){
@@ -766,7 +778,8 @@ Bar.prototype.render = function(){
 							return 0;
 						});
 
-					trunks.select('.numberLabel div')
+					g_Trunks.merge(trunks)
+						.select('.numberLabel div')
 						.transition()
 						.ease(d3['ease' + att.transitionType])
 						.delay(function(d, i) { return ((((sectionData.values.length > 1) ? groupIndex : barIndex) * 5) * att.stagger) + att.delaySpeed; })
@@ -789,7 +802,8 @@ Bar.prototype.render = function(){
 					    .style('font-size', function(){return (((barWidth * 0.2 > 30)) ? 30 : (barWidth * 0.2)) + 'px'; })
 					    .text(0);
 
-					trunks.select('.numberLabel')
+					g_Trunks.merge(trunks)
+						.select('.numberLabel')
 						.transition()
 						.ease(d3['ease' + att.transitionType])
 						.delay(function(d, i) { return ((((sectionData.values.length > 1) ? groupIndex : barIndex) * 5) * att.stagger) + att.delaySpeed; })
@@ -904,5 +918,37 @@ Bar.prototype.data = function(value) {
 	}
 
 	return this;
+
+	/* 0 //
+	[
+		{
+            "id": "A",
+            "label": "zxcv",
+            "value": 50
+        },
+        {
+            "id": "B",
+            "label": "zxcv",
+            "value": 60
+        }
+	]
+	// 1 //
+	[
+		{
+			"values": [
+				{
+		            "id": "A",
+		            "label": "zxcv",
+		            "value": 50
+		        },
+		        {
+		            "id": "B",
+		            "label": "zxcv",
+		            "value": 60
+		        }
+			]
+		}
+	]
+	*/
 };
 Bar.prototype.att = att;
