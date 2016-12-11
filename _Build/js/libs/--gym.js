@@ -62,6 +62,18 @@
 			);
 		},
 
+		select: function(cond){
+			if(!Array.isArray(cond)){
+				return null;
+			}
+
+			return exports.Gym(
+				this.data.filter(function(d, i){
+					return !(cond.indexOf(d.exercise) === -1);
+				})
+			);
+		},
+
 		// Utility methods
 		max: function(object){
 			return this.workouts().max(object);

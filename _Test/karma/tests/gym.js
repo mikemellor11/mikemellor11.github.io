@@ -211,6 +211,74 @@ describe('gym.js', function () {
         ]);
     });
 
+    it('return selected group', function () {
+        expect(group.select(['test1', 'test5']).data).to.deep.equal([
+            {
+                "exercise": "test1",
+                "sets": 9,
+                "reps": 8,
+                "peak": 5,
+                "increase": 5,
+                "startPercent": 0.75,
+                "endPercent": 0.75,
+                "incInterval": 3,
+                "equipmentWeight": 20,
+                "sessions": [
+                    {
+                        "date": "23/10/2016",
+                        "sets": [
+                            {
+                                "weight": 20,
+                                "reps": 10,
+                                "split": "00:00:00:000",
+                                "target": true
+                            }
+                        ]
+                    },
+                    {
+                        "date": "09/11/2016",
+                        "sets": [
+                            {
+                                "weight": 10,
+                                "reps": 10,
+                                "split": "00:01:30:502",
+                                "target": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "exercise": "test5",
+                "sets": 6,
+                "reps": 20,
+                "peak": 2,
+                "increase": 5,
+                "startPercent": 0.5,
+                "endPercent": 0.5,
+                "incInterval": 6,
+                "equipmentWeight": 10,
+                "sessions": [
+                    {
+                        "date": "31/10/2016",
+                        "sets": [
+                            {
+                                "weight": 10,
+                                "reps": 10,
+                                "split": "00:06:02:160",
+                                "target": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]);
+    });
+
+    it('return null if anything but an array passed into select', function () {
+        expect(group.select('test1')).to.equal(null);
+    });
+
     // MAX //
 
     it('return the max weight lifted in the first workout', function () {

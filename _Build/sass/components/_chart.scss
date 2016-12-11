@@ -48,6 +48,23 @@ $colors-list: #47ACB1 #F26522 #F9AA7B #A5A8AA #676766 #ADD5D7 #FFA4AF #FFCD34;
 .delta{
   position: relative;
   padding-bottom: 56.25%;
+  background: $color0;
+
+  .chart{
+    padding: $spacing 0;
+    box-sizing: border-box;
+  }
+}
+
+.delta--loading{
+  border: 2px solid transparentize($color5, 0.75);
+  border-radius: $borderRadius;
+
+  /* transition: border-color .2s;
+
+  &.async--finished{
+    border: 2px solid transparent;
+  } */
 }
 
 .key__list{
