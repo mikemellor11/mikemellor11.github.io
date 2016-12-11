@@ -1,4 +1,4 @@
 module.exports = {
 	build: [".tmp"],
-    dist: ["_Output"]
+    dist: ["_Output/**/*"]
 }
