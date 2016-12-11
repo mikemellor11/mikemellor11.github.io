@@ -10,5 +10,6 @@ before_install:
   - npm install -g bower
   - npm run setup
   - npm install glob
+  - npm run production
   - npm test
   - grunt coveralls

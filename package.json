@@ -61,7 +61,21 @@
     "test": "grunt validate",
     "deploy": "git subtree push --prefix _Output origin master",
     "gym": "node _Node/gym/gym.js",
-    "save": "npm run production && git add --all && git commit -m \"workout saved\" && git push origin build && npm run deploy"
+    "save": "npm run production && git add --all && git commit -m \"workout saved\" && git push origin build && npm run deploy",
+    "asdf": "deploy-to-git"
   },
+    "config": {
+        "deployToGit": {
+            "repository": "https://github.com/mikemellor11/mikemellor11.github.io.git",
+            "branch": "master",
+            "folder": "_Output",
+            "script": "npm run production",
+            "commit": "Deployed",
+            "user": {
+                "email": "mikemellor11@hotmail.com",
+                "name": "Mike Mellor"
+            }
+        }
+    },
   "license": "MIT"
 }
