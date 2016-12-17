@@ -402,6 +402,65 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "17/12/2016",
+                "sets": [
+                    {
+                        "weight": 107.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 115,
+                        "reps": 8,
+                        "split": "00:02:36:361",
+                        "target": true
+                    },
+                    {
+                        "weight": 117.5,
+                        "reps": 8,
+                        "split": "00:04:26:999",
+                        "target": true
+                    },
+                    {
+                        "weight": 127.5,
+                        "reps": 8,
+                        "split": "00:04:39:761",
+                        "target": true
+                    },
+                    {
+                        "weight": 135,
+                        "reps": 6,
+                        "split": "00:05:59:076",
+                        "target": false
+                    },
+                    {
+                        "weight": 127.5,
+                        "reps": 8,
+                        "split": "00:04:31:781",
+                        "target": true
+                    },
+                    {
+                        "weight": 117.5,
+                        "reps": 8,
+                        "split": "00:06:11:783",
+                        "target": true
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 8,
+                        "split": "00:04:57:656",
+                        "target": true
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:04:53:607",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -410,7 +469,7 @@
         "increase": 5,
         "startPercent": 0.75,
         "endPercent": 0.75,
-        "incInterval": 3,
+        "incInterval": 4,
         "equipmentWeight": 20
     },
     {
@@ -1159,6 +1218,29 @@
                         "weight": 102.5,
                         "reps": 8,
                         "split": "00:00:12:073",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "17/12/2016",
+                "sets": [
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:01:47:064",
+                        "target": true
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:01:35:453",
+                        "target": true
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:01:51:880",
                         "target": true
                     }
                 ]
