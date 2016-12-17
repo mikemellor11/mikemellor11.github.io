@@ -60,7 +60,7 @@
     "production": "grunt dist",
     "test": "grunt validate",
     "deploy": "npm run save && npm run production && cd _Output && git add --all && git commit --allow-empty -m 'Deployed' && git reset --soft HEAD~2 && git commit -m 'Deployed' && git push origin master -f",
-    "save": "git add _Build/media/data && git commit -m 'workout saved'",
+    "save": "git add _Build/media/data && git commit --allow-empty -m 'workout saved' && git push origin build",
     "gym": "node _Node/gym/gym.js"
   },
     "config": {
