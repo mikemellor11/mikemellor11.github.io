@@ -2,7 +2,7 @@
     {
         "exercise": "Bicep curls",
         "sets": 9,
-        "peak": 1,
+        "peak": 5,
         "sessions": [
             {
                 "date": "12/10/2016",
@@ -475,12 +475,71 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "21/12/2016",
+                "sets": [
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:01:659",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:25:393",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:28:557",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:52:555",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:02:31:705",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:42:958",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:05:931",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:52:700",
+                        "target": true
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:01:24:460",
+                        "target": true
+                    }
+                ]
             }
         ],
         "reps": 8,
         "increase": 2.5,
         "startPercent": 1,
-        "endPercent": 1,
+        "endPercent": 0.9,
         "incInterval": 6,
         "equipmentWeight": 10
     },
