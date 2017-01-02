@@ -13,3 +13,4 @@ before_install:
   - npm run production
   - npm test
   - grunt coveralls
+  - npm run deploy

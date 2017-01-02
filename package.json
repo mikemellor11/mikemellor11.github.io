@@ -56,11 +56,11 @@
     "url": "https://mmellor@bitbucket.org/"
   },
   "scripts": {
-    "setup": "npm install && bower install",
+    "setup": "npm install && bower install && npm run repoSetup",
     "repoSetup": "git clone -b master https://github.com/mikemellor11/mikemellor11.github.io.git _Output",
     "production": "grunt dist",
     "test": "grunt validate",
-    "deploy": "npm run save && npm run production && npm run baseCommit",
+    "deploy": "npm run production && npm run baseCommit",
     "save": "git add _Build/media/data && git commit --allow-empty -m 'workout saved' && git push origin build",
     "baseCommit": "cd _Output && git add --all && git commit --allow-empty -m 'Deployed' && git reset --soft HEAD~2 && git commit -m 'Deployed' && git push origin master -f",
     "start": "node _Node/gym/gym.js"
