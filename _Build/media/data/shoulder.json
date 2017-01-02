@@ -540,7 +540,7 @@
         "reps": 8,
         "peak": 5,
         "increase": 2.5,
-        "incInterval": 2,
+        "incInterval": 3,
         "equipmentWeight": 20
     },
     {

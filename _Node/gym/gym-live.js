@@ -172,10 +172,11 @@ function baseJS(){
 
 						for(var i = 0; i < gD.incInterval; i++){
 							var index = i + todayBegan;
-							var tempLastMax = workout.fromLast(index).max();
-							var tempVolumeLast = workout.fromLast(index).volume();
+							var lastWorkout = workout.fromLast(index);
+							var tempLastMax = lastWorkout.max();
+							var tempVolumeLast = lastWorkout.volume();
 
-							if(tempLastMax < holdLastMax || tempVolumeLast < holdVolumeLast){
+							if(tempLastMax < holdLastMax || tempVolumeLast < holdVolumeLast || !lastWorkout.target()){
 								readyForIncrease = false;
 								break;
 							}
