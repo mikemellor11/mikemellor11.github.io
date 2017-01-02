@@ -118,9 +118,14 @@ function baseJS(){
 		$('.dynamic').get(1).innerHTML = '';
 
 		var html = '<div class="ut-tableChildren ut-tableFixed">';
+
+		// Check for none selected set timer to zero
+		var noneChecked = true;
 		
 		$('.group').each(function(i, d){
 			if(d.checked){
+				noneChecked = false;
+
 				var max = 0;
 				var last = 0;
 				var target = 0;
@@ -281,6 +286,11 @@ function baseJS(){
 		html += '</div>';
 
 		$('.dynamic').get(1).innerHTML = html;
+
+		if(noneChecked){
+			reset();
+			stop();
+		}
 	}
 
 	function updateData(){
