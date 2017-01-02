@@ -1,1 +1,38 @@
-{{> base baseInject='contactBase'}}
+{{#> base}}
+
+	{{> header header--text=(findObjectInArray object="contact" in=@root.global.navigation key="url" value="name")}}
+
+	{{> banner title="Contact" content="Why would you want? Really?"}}
+
+	<main class="container">
+		<div class="innerContainer ut-padding">
+			<ul class="ut-clearListOnly ut-tableChildren ut-tableFixed">
+				{{#each global.social}}
+					<li>
+						<a href="{{url}}" class="button--clear ut-textAlignCenter">
+							{{> icon name=icon class="ut-blockCenter ut-marginBottom icon--large"}}
+							{{this.name}}
+						</a>
+					</li>
+				{{/each}}
+			</ul>
+			<div class="contentContainer">
+				<h3 class="divider">Contacting me</h3>
+				<p>Feel free to contact me on any of the above platforms, alternatively you can leave me an email at and i'll get back to you as soon as i can.</p>
+				<a href="mailto:mikemellor11@hotmail.com" class="ut-textAlignCenter externalLink">mikemellor11@gmail.com</a>
+				<h3 class="divider">Reason for the site</h3>
+				<p>The main reason for the site was i wanted a place to track my workout stats, volume lifted / current max weight etc. Then i decided to take it one step further and build a node backend server to it where i could track my workouts live as i was doing them, it shows me what i should be lifting and automatically adds weight every set couple of weeks, it's like having a virtual coach. I'm going to do a post on the setup for this entire site at some point so keep an eye out for that.</p>
+				<p>Another reason is being a web developer i should really have some kind of online presence, even if it's just a bunch of random info that nobody really cares about but me. The site will have blog posts and about some of the things i work on outside and during work.</p>
+
+				<h3 class="divider">About me</h3>
+				<p>I live in manchester and currently work for Fishawack Communications based in Knutsford, England. I contribute to open source projects in my own time and even have a few of my own (although they are generally for strange use cases that i've come across myself, check them out at <a class="ut-inline externalLink" href="https://github.com/mikemellor11">https://github.com/mikemellor11</a>).</p>
+			</div>
+		</div>
+	</main>
+
+	<script type="text/javascript">
+		function pageJS(){
+		}
+	</script>
+
+{{/base}}
