@@ -60,23 +60,8 @@
     "repoSetup": "git clone -b master https://github.com/mikemellor11/mikemellor11.github.io.git _Output",
     "production": "grunt dist",
     "test": "grunt validate",
-    "deploy": "npm run production && npm run baseCommit",
-    "save": "git add _Build/media/data && git commit --allow-empty -m 'workout saved' && git push origin build",
-    "baseCommit": "cd _Output && git add --all && git commit --allow-empty -m 'Deployed' && git reset --soft HEAD~2 && git commit -m 'Deployed' && git push origin master -f",
+    "deploy": "git add _Build/media/data && git commit --allow-empty -m 'workout saved' && git push origin build",
     "start": "node _Node/gym/gym.js"
-  },
-  "config": {
-    "deployToGit": {
-      "repository": "https://github.com/mikemellor11/mikemellor11.github.io.git",
-      "branch": "master",
-      "folder": "_Output",
-      "script": "npm run production",
-      "commit": "Deployed",
-      "user": {
-        "email": "mikemellor11@hotmail.com",
-        "name": "Mike Mellor"
-      }
-    }
   },
   "license": "MIT"
 }

@@ -3,14 +3,18 @@ node_js:
   - "5"
   - "4"
   - "0.10"
-  - "iojs"
   - "node"
 before_install:
   - npm install -g grunt-cli
   - npm install -g bower
+install:
   - npm run setup
   - npm install glob
+script:
   - npm run production
   - npm test
+after_success:
   - grunt coveralls
-  - npm run deploy
+  - git config --global user.email "mikemellor11@hotmail.com"
+  - git config --global user.name "Mike Mellor"
+  - .travis/push.sh
