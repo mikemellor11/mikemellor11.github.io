@@ -1,0 +1,37 @@
+[
+    {
+        "date": "01/07/2016",
+        "weight": 98,
+        "calories": 5000
+    },
+    {
+        "date": "01/08/2016",
+        "weight": 95,
+        "calories": 2500
+    },
+    {
+        "date": "01/09/2016",
+        "weight": 92,
+        "calories": 2500
+    },
+    {
+        "date": "01/10/2016",
+        "weight": 90,
+        "calories": 2500
+    },
+    {
+        "date": "01/11/2016",
+        "weight": 89,
+        "calories": 2500
+    },
+    {
+        "date": "01/12/2016",
+        "weight": 88,
+        "calories": 2500
+    },
+    {
+        "date": "02/01/2017",
+        "weight": 87,
+        "calories": 2500
+    }
+]

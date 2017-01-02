@@ -1,4 +1,10 @@
 module.exports = function(grunt) {
+    this.fs = require('fs');
+    this.http = require('http');
+    this.opn = require('opn');
+    this.url = require('url');
+    this.path = require('path');
+    
     this.modifyJson = function(json, data, socket, level, callback){
         json.forEach(function(d, i){
             if(d.exercise === data.exercise){
@@ -9,13 +15,13 @@ module.exports = function(grunt) {
             }
         });
 
-        saveJson(json, data);
+        saveJson(json, data.group);
 
         socket.emit('update');
     }
 
-    this.saveJson = function(json, data){
-        fs.writeFile('_Build/media/data/' + data.group + '.json', JSON.stringify(json, null, 4), function (err) {
+    this.saveJson = function(json, file){
+        fs.writeFile('_Build/media/data/' + file + '.json', JSON.stringify(json, null, 4), function (err) {
             if (err) return console.log(err);
         });
     }
@@ -27,5 +33,9 @@ module.exports = function(grunt) {
         if (options.cleanup) console.log('clean');
         if (err) console.log(err.stack);
         if (options.exit) process.exit();
+    }
+
+    this.loadJson = function(file) {
+        return JSON.parse(fs.readFileSync('_Build/media/data/' + file + '.json'));
     }
 }

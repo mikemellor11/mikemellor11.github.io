@@ -1,9 +1,4 @@
 module.exports = function(grunt) {
-    this.fs = require('fs');
-    this.http = require('http');
-    this.opn = require('opn');
-    this.url = require('url');
-    this.path = require('path');
     this.io = require('socket.io')(http.createServer(function(req, res) {
     	var tempPath = url.parse(req.url).pathname;
 
