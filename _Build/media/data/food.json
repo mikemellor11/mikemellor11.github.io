@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 0,
+        "weight": 200,
         "calories": 165,
         "protein": 31,
         "carbohydrate": 0,
@@ -8,7 +8,7 @@
         "saturates": 1
     },
     "cod": {
-        "weight": 0,
+        "weight": 200,
         "calories": 98,
         "protein": 21.5,
         "carbohydrate": 0.5,
@@ -16,7 +16,7 @@
         "saturates": 0.3
     },
     "wholemeal bread": {
-        "weight": 0,
+        "weight": 160,
         "calories": 221,
         "protein": 10,
         "carbohydrate": 37.8,
@@ -24,7 +24,7 @@
         "saturates": 0.4
     },
     "broccoli": {
-        "weight": 0,
+        "weight": 500,
         "calories": 34,
         "protein": 2.8,
         "carbohydrate": 7,
@@ -32,7 +32,7 @@
         "saturates": 0
     },
     "brown rice": {
-        "weight": 0,
+        "weight": 50,
         "calories": 111,
         "protein": 2.6,
         "carbohydrate": 23,
@@ -40,7 +40,7 @@
         "saturates": 0.2
     },
     "oats": {
-        "weight": 0,
+        "weight": 50,
         "calories": 363,
         "protein": 10.3,
         "carbohydrate": 60.5,
@@ -48,7 +48,7 @@
         "saturates": 1
     },
     "milk": {
-        "weight": 0,
+        "weight": 200,
         "calories": 48,
         "protein": 3.5,
         "carbohydrate": 4.6,
@@ -56,7 +56,7 @@
         "saturates": 1.1
     },
     "egg": {
-        "weight": 0,
+        "weight": 100,
         "calories": 143,
         "protein": 14.1,
         "carbohydrate": 0.5,
@@ -64,7 +64,7 @@
         "saturates": 2.7
     },
     "coconut oil": {
-        "weight": 0,
+        "weight": 2,
         "calories": 899,
         "protein": 0.2,
         "carbohydrate": 0,
@@ -72,7 +72,7 @@
         "saturates": 94.9
     },
     "unsalted butter": {
-        "weight": 0,
+        "weight": 5,
         "calories": 751,
         "protein": 0.6,
         "carbohydrate": 0.6,
@@ -80,11 +80,43 @@
         "saturates": 49.3
     },
     "protein shake": {
-        "weight": 0,
+        "weight": 50,
         "calories": 412,
         "protein": 82,
         "carbohydrate": 4,
         "fat": 7.5,
         "saturates": 5
+    },
+    "banana": {
+        "weight": 236,
+        "calories": 89,
+        "protein": 1.1,
+        "carbohydrate": 23,
+        "fat": 0.3,
+        "saturates": 0.1
+    },
+    "sun-dried tomatoes": {
+        "weight": 25,
+        "calories": 213,
+        "protein": 5,
+        "carbohydrate": 23,
+        "fat": 14,
+        "saturates": 1.9
+    },
+    "lima bean": {
+        "weight": 25,
+        "calories": 335,
+        "protein": 21,
+        "carbohydrate": 63,
+        "fat": 0.9,
+        "saturates": 0.2
+    },
+    "peanut butter": {
+        "weight": 25,
+        "calories": 622,
+        "protein": 25.2,
+        "carbohydrate": 13.1,
+        "fat": 50.7,
+        "saturates": 5.3
     }
 }

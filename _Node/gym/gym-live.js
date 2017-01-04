@@ -7,13 +7,13 @@ function baseJS(){
 	var foodJson = null;
 	var today = moment().format('DD/MM/YYYY');
 
-	/*socket.on('closeWindow', function (data) {
+	socket.on('closeWindow', function (data) {
 		window.close();
 	});
 
 	window.onbeforeunload = function(){
 	   socket.emit('closeWindow');
-	}*/
+	}
 
 	$('.showMenu').on('click', function(){
 		$('.exercises').toggleClass('show');
@@ -347,11 +347,11 @@ function baseJS(){
 				}
 			}
 		}
-		html += '<p>calories: ' + calories + '</p>';
-		html += '<p>protein: ' + protein + '</p>';
-		html += '<p>carbohydrate: ' + carbohydrate + '</p>';
-		html += '<p>fat: ' + fat + '</p>';
-		html += '<p>saturates: ' + saturates + '</p>';
+		html += '<p>calories: ' + calories + ' - (2500 / 2400)</p>';
+		html += '<p>protein: ' + protein + ' - (55 / 194)</p>';
+		html += '<p>carbohydrate: ' + carbohydrate + ' - (300 / 194)</p>';
+		html += '<p>fat: ' + fat + ' - (95 / 43)</p>';
+		html += '<p>saturates: ' + saturates + ' - (30)</p>';
 
 		html += '<button type="submit" class="button button--full ut-marginTop">Save</button>';
 		html += '</form>';
