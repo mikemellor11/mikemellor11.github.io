@@ -6,6 +6,7 @@ var today = moment().format('DD/MM/YYYY');
 var stdio = require('stdio');
 
 var weightJson = loadJson('weight');
+var foodJson = loadJson('food');
 
 var lastKg = weightJson[weightJson.length - 1].weight;
 var lastCal = weightJson[weightJson.length - 1].calories;
@@ -75,6 +76,16 @@ function init(){
             });
         });
 
+        socket.on('saveFood', function(data){
+            for(var key in foodJson){
+                foodJson[key].weight = data[key];
+            }
+
+            saveJson(foodJson, 'food');
+
+            socket.emit('updateFood', foodJson);
+        });
+
         socket.on('changeConfig', function(data){
             modifyJson(loadJson(data.group), data, socket, 'exerciseLevel', function(d, i){
 
@@ -88,6 +99,10 @@ function init(){
         process.on('SIGINT', exitHandler.bind(null, {exit:true, socket: socket}));
         process.on('uncaughtException', exitHandler.bind(null, {exit:true, socket: socket}));
 
-        socket.emit('buildHtml', JSON.parse(fs.readFileSync('_Build/content.json')));
+        socket.emit('buildHtml', 
+            JSON.parse(fs.readFileSync('_Build/content.json')),
+            weightJson,
+            foodJson
+        );
     });
 }

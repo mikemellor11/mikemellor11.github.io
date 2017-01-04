@@ -3,22 +3,26 @@ function baseJS(){
 	var socket = io('http://127.0.0.1:8888');
 	var gymData = {};
 	var contentJson = null;
+	var weightJson = null;
+	var foodJson = null;
 	var today = moment().format('DD/MM/YYYY');
 
-	socket.on('closeWindow', function (data) {
+	/*socket.on('closeWindow', function (data) {
 		window.close();
 	});
 
 	window.onbeforeunload = function(){
 	   socket.emit('closeWindow');
-	}
+	}*/
 
 	$('.showMenu').on('click', function(){
 		$('.exercises').toggleClass('show');
 	});
 
-	socket.on('buildHtml', function (data) {
+	socket.on('buildHtml', function (data, weight, food) {
 		contentJson = data;
+		weightJson = weight;
+		foodJson = food;
 
 		updateData();
 
@@ -26,6 +30,18 @@ function baseJS(){
 
 		$('body').on('click', '.group', function(){
 			buildDynamicHtml();
+		});
+
+		$('body').on('submit', '.food', function(e){
+			e.preventDefault();
+
+			var foodSave = {};
+
+			for(var key in foodJson){
+				foodSave[key] = +$('#' + key.replace(' ', ''), this).val();
+			}
+
+			socket.emit('saveFood', foodSave);
 		});
 
 		$('body').on('submit', '.session__submit', function(e){
@@ -73,10 +89,16 @@ function baseJS(){
 		updateData();
 	});
 
+	socket.on('updateFood', function (data) {
+		foodJson = data;
+
+		buildDynamicHtml();
+	});
+
 	function buildStaticHtml(){
 		$('.dynamic').get(0).innerHTML = '';
 
-		var html = '<form class="exercises">';
+		html = '<form class="exercises">';
 		var index = 0;
 
 		contentJson.index.charts.forEach(function(d, i){
@@ -291,6 +313,50 @@ function baseJS(){
 			reset();
 			stop();
 		}
+
+
+
+		$('.dynamic').get(2).innerHTML = '';
+
+		var html = '<form class="food">';
+		var calories = 0;
+		var protein = 0;
+		var carbohydrate = 0;
+		var fat = 0;
+		var saturates = 0;
+
+		for(var key in foodJson) {
+			if(foodJson.hasOwnProperty(key)){
+				html += '<div>';
+				html += '<label for="' + key.replace(' ', '') + '">';
+				html += key + '</label>';
+
+				html += '<input class="foodItem"'; 
+				html += ' type="number"';
+				html += ' id="' + key.replace(' ', '') + '"';
+				html += ' value="' + foodJson[key].weight + '"';
+				html +=' />';
+				html += '</div>';
+
+				if(foodJson[key].weight >= 1){
+					calories += (foodJson[key].calories / 100) * foodJson[key].weight;
+					protein += (foodJson[key].protein / 100) * foodJson[key].weight;
+					carbohydrate += (foodJson[key].carbohydrate / 100) * foodJson[key].weight;
+					fat += (foodJson[key].fat / 100) * foodJson[key].weight;
+					saturates += (foodJson[key].saturates / 100) * foodJson[key].weight;
+				}
+			}
+		}
+		html += '<p>calories: ' + calories + '</p>';
+		html += '<p>protein: ' + protein + '</p>';
+		html += '<p>carbohydrate: ' + carbohydrate + '</p>';
+		html += '<p>fat: ' + fat + '</p>';
+		html += '<p>saturates: ' + saturates + '</p>';
+
+		html += '<button type="submit" class="button button--full ut-marginTop">Save</button>';
+		html += '</form>';
+
+		$('.dynamic').get(2).innerHTML = html;
 	}
 
 	function updateData(){
