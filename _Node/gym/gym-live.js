@@ -32,13 +32,13 @@ function baseJS(){
 			buildDynamicHtml();
 		});
 
-		$('body').on('submit', '.food', function(e){
+		$('body').on('submit change input', '.food', function(e){
 			e.preventDefault();
 
 			var foodSave = {};
 
 			for(var key in foodJson){
-				foodSave[key] = +$('#' + key.replace(' ', ''), this).val();
+				foodSave[key] = +$('#' + key.replace(/ /g, ''), this).val();
 			}
 
 			socket.emit('saveFood', foodSave);
@@ -96,6 +96,47 @@ function baseJS(){
 	});
 
 	function buildStaticHtml(){
+		$('.dynamic').get(2).innerHTML = '';
+
+		var html = '<form class="food">';
+		var calories = 0;
+		var protein = 0;
+		var carbohydrate = 0;
+		var fat = 0;
+		var saturates = 0;
+		var sugar = 0;
+		var salt = 0;
+
+		for(var key in foodJson) {
+			if(foodJson.hasOwnProperty(key)){
+				html += '<div>';
+				html += '<label for="' + key.replace(/ /g, '') + '">';
+				html += key + '</label>';
+
+				html += '<input class="foodItem"'; 
+				html += ' type="number"';
+				html += ' id="' + key.replace(/ /g, '') + '"';
+				html += ' value="' + foodJson[key].weight + '"';
+				html +=' />';
+				html += '</div>';
+
+				if(foodJson[key].weight >= 1){
+					calories += (foodJson[key].calories / 100) * foodJson[key].weight;
+					protein += (foodJson[key].protein / 100) * foodJson[key].weight;
+					carbohydrate += (foodJson[key].carbohydrate / 100) * foodJson[key].weight;
+					fat += (foodJson[key].fat / 100) * foodJson[key].weight;
+					saturates += (foodJson[key].saturates / 100) * foodJson[key].weight;
+					sugar += (foodJson[key].sugar / 100) * foodJson[key].weight;
+					salt += (foodJson[key].salt / 100) * foodJson[key].weight;
+				}
+			}
+		}
+
+		html += '<button type="submit" class="button button--full ut-marginTop">Save</button>';
+		html += '</form>';
+
+		$('.dynamic').get(2).innerHTML = html;
+
 		$('.dynamic').get(0).innerHTML = '';
 
 		html = '<form class="exercises">';
@@ -316,47 +357,40 @@ function baseJS(){
 
 
 
-		$('.dynamic').get(2).innerHTML = '';
+		$('.dynamic').get(3).innerHTML = '';
 
-		var html = '<form class="food">';
+		var html = '';
 		var calories = 0;
 		var protein = 0;
 		var carbohydrate = 0;
 		var fat = 0;
 		var saturates = 0;
+		var sugar = 0;
+		var salt = 0;
 
 		for(var key in foodJson) {
 			if(foodJson.hasOwnProperty(key)){
-				html += '<div>';
-				html += '<label for="' + key.replace(' ', '') + '">';
-				html += key + '</label>';
-
-				html += '<input class="foodItem"'; 
-				html += ' type="number"';
-				html += ' id="' + key.replace(' ', '') + '"';
-				html += ' value="' + foodJson[key].weight + '"';
-				html +=' />';
-				html += '</div>';
-
 				if(foodJson[key].weight >= 1){
 					calories += (foodJson[key].calories / 100) * foodJson[key].weight;
 					protein += (foodJson[key].protein / 100) * foodJson[key].weight;
 					carbohydrate += (foodJson[key].carbohydrate / 100) * foodJson[key].weight;
 					fat += (foodJson[key].fat / 100) * foodJson[key].weight;
 					saturates += (foodJson[key].saturates / 100) * foodJson[key].weight;
+					sugar += (foodJson[key].sugar / 100) * foodJson[key].weight;
+					salt += (foodJson[key].salt / 100) * foodJson[key].weight;
 				}
 			}
 		}
-		html += '<p>calories: ' + calories + ' - (2500 / 2400)</p>';
-		html += '<p>protein: ' + protein + ' - (55 / 194)</p>';
-		html += '<p>carbohydrate: ' + carbohydrate + ' - (300 / 194)</p>';
-		html += '<p>fat: ' + fat + ' - (95 / 43)</p>';
-		html += '<p>saturates: ' + saturates + ' - (30)</p>';
 
-		html += '<button type="submit" class="button button--full ut-marginTop">Save</button>';
-		html += '</form>';
+		html += '<p ' + ((calories > 2400) ? 'class="high"' : '') + '>calories: ' + +calories.toFixed(2) + ' - (2500 / 2400)</p>';
+		html += '<p ' + ((protein > 194) ? 'class="high"' : '') + '>protein: ' + +protein.toFixed(2) + ' - (55 / 194)</p>';
+		html += '<p ' + ((carbohydrate > 194) ? 'class="high"' : '') + '>carbohydrate: ' + +carbohydrate.toFixed(2) + ' - (300 / 194)</p>';
+		html += '<p ' + ((fat > 43) ? 'class="high"' : '') + '>fat: ' + +fat.toFixed(2) + ' - (95 / 43)</p>';
+		html += '<p ' + ((saturates > 30) ? 'class="high"' : '') + '>saturates: ' + +saturates.toFixed(2) + ' - (30)</p>';
+		html += '<p ' + ((sugar > 120) ? 'class="high"' : '') + '>sugar: ' + +sugar.toFixed(2) + ' - (120)</p>';
+		html += '<p ' + ((salt > 6) ? 'class="high"' : '') + '>salt: ' + +salt.toFixed(2) + ' - (6)</p>';
 
-		$('.dynamic').get(2).innerHTML = html;
+		$('.dynamic').get(3).innerHTML = html;
 	}
 
 	function updateData(){

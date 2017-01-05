@@ -38,3 +38,7 @@ header{
 .exercises div:first-child h2{
 	margin-top: 0px;
 }
+
+.high{
+	color: red;
+}

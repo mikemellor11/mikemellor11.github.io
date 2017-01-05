@@ -11,7 +11,7 @@ var foodJson = loadJson('food');
 var lastKg = weightJson[weightJson.length - 1].weight;
 var lastCal = weightJson[weightJson.length - 1].calories;
 
-if(weightJson[weightJson.length - 1].date !== today){
+if(weightJson[weightJson.length - 1].date !== today && process.argv[2] !== 'skip'){
     stdio.question('Weight (' + lastKg + 'kg)', function (err, vers) {
         if(vers.length <= 0){}
         else if(isNaN(vers)){
