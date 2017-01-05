@@ -520,6 +520,65 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "05/01/2017",
+                "sets": [
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 8,
+                        "split": "00:02:14:268",
+                        "target": true
+                    },
+                    {
+                        "weight": 117.5,
+                        "reps": 8,
+                        "split": "00:03:25:308",
+                        "target": true
+                    },
+                    {
+                        "weight": 127.5,
+                        "reps": 8,
+                        "split": "00:03:39:761",
+                        "target": true
+                    },
+                    {
+                        "weight": 135,
+                        "reps": 8,
+                        "split": "00:05:05:446",
+                        "target": true
+                    },
+                    {
+                        "weight": 127.5,
+                        "reps": 8,
+                        "split": "00:05:07:744",
+                        "target": true
+                    },
+                    {
+                        "weight": 117.5,
+                        "reps": 8,
+                        "split": "00:03:23:524",
+                        "target": true
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 8,
+                        "split": "00:04:13:993",
+                        "target": true
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:03:08:408",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -528,7 +587,7 @@
         "increase": 5,
         "startPercent": 0.75,
         "endPercent": 0.75,
-        "incInterval": 4,
+        "incInterval": 3,
         "equipmentWeight": 20
     },
     {
@@ -1441,6 +1500,29 @@
                         "weight": 105,
                         "reps": 8,
                         "split": "00:01:50:858",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "05/01/2017",
+                "sets": [
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:01:58:651",
+                        "target": true
+                    },
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:01:42:623",
                         "target": true
                     }
                 ]
