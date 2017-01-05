@@ -7,13 +7,13 @@ function baseJS(){
 	var foodJson = null;
 	var today = moment().format('DD/MM/YYYY');
 
-	socket.on('closeWindow', function (data) {
+	/*socket.on('closeWindow', function (data) {
 		window.close();
 	});
 
 	window.onbeforeunload = function(){
 	   socket.emit('closeWindow');
-	}
+	}*/
 
 	$('.showMenu').on('click', function(){
 		$('.exercises').toggleClass('show');
@@ -27,6 +27,10 @@ function baseJS(){
 		updateData();
 
 		buildStaticHtml(data);
+
+		$('body').on('click', '.random', function(){
+			randomMealPlan();
+		});
 
 		$('body').on('click', '.group', function(){
 			buildDynamicHtml();
@@ -95,6 +99,99 @@ function baseJS(){
 		buildDynamicHtml();
 	});
 
+	function randomMealPlan(){
+		var calories = 0;
+		var protein = 0;
+		var carbohydrate = 0;
+		var fat = 0;
+		var saturates = 0;
+		var sugar = 0;
+		var salt = 0;
+
+		for(var key in foodJson) {
+			if(foodJson.hasOwnProperty(key)){
+				if(foodJson[key].weight >= 1){
+					calories += (foodJson[key].calories / 100) * foodJson[key].weight;
+					protein += (foodJson[key].protein / 100) * foodJson[key].weight;
+					carbohydrate += (foodJson[key].carbohydrate / 100) * foodJson[key].weight;
+					fat += (foodJson[key].fat / 100) * foodJson[key].weight;
+					saturates += (foodJson[key].saturates / 100) * foodJson[key].weight;
+					sugar += (foodJson[key].sugar / 100) * foodJson[key].weight;
+					salt += (foodJson[key].salt / 100) * foodJson[key].weight;
+				}
+			}
+		}
+
+		if(calories > 2500 || 
+			protein > 204 ||
+			carbohydrate > 204 || 
+			fat > 50 ||
+			saturates > 35 ||
+			sugar > 130 ||
+			salt > 7){
+
+			/*if(calories > 2500){
+				console.log('calories');
+			} 
+			if(protein > 204){
+				console.log('protein');
+			}
+			if(carbohydrate > 204){
+				console.log('carbohydrate');
+			} 
+			if(fat > 50){
+				console.log('fat');
+			}
+			if(saturates > 35){
+				console.log('saturates');
+			}
+			if(sugar > 130){
+				console.log('sugar');
+			}
+			if(salt > 7){
+				console.log('salt');
+			}*/
+
+			$('.food input').val(0);
+			$('.food').trigger('change');
+			setTimeout(function(){
+				randomMealPlan();
+			}, 0)
+		} else if((calories > 2300 && calories < 2500) && 
+			(protein > 184 && protein < 204) &&
+			(carbohydrate > 184 && carbohydrate < 204) && 
+			(fat > 36 && fat < 50) &&
+			(saturates > 5 && saturates < 35) &&
+			(sugar > 40 && sugar < 130) &&
+			(salt > 1 && salt < 7)){
+			console.log("CHRIST ITS FOUND ONE");
+		} else {
+			var arr = Object.keys(foodJson).map(function(k) { return k; });
+			var random = 0;
+			var length = arr.length - 1;
+			var hold;
+			var value;
+
+			do{
+				random = Math.floor(Math.random()*(length-0+1)+0)
+				hold = $('#' + arr[random].replace(/ /g, ''));
+				value = +hold.val();
+			} while (value >= foodJson[arr[random]].max)
+
+			var maxAdd = foodJson[arr[random]].max - value;
+
+			value += Math.floor(Math.random()*(maxAdd-0+1)+0);
+
+			hold.val(value);
+
+			$('.food').trigger('change');
+
+			setTimeout(function(){
+				randomMealPlan();
+			}, 0)
+		}
+	}
+
 	function buildStaticHtml(){
 		$('.dynamic').get(2).innerHTML = '';
 
@@ -132,6 +229,7 @@ function baseJS(){
 			}
 		}
 
+		html += '<button class="button button--full ut-marginTop random">Random meal plan</button>';
 		html += '<button type="submit" class="button button--full ut-marginTop">Save</button>';
 		html += '</form>';
 
