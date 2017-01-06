@@ -23,31 +23,31 @@
                     "GDA": 2500,
                     "target": 2400,
                     "margin": {
-                        "upper": 50,
-                        "lower": 50
+                        "upper": 60,
+                        "lower": 60
                     }
                 },
                 "protein": {
                     "GDA": 55,
                     "target": 194,
                     "margin": {
-                        "upper": 50,
-                        "lower": 10
+                        "upper": 60,
+                        "lower": 20
                     }
                 },
                 "carbohydrate": {
                     "GDA": 300,
                     "target": 194,
                     "margin": {
-                        "upper": 10,
-                        "lower": 50
+                        "upper": 20,
+                        "lower": 60
                     }
                 },
                 "fat": {
                     "GDA": 43,
                     "target": 43,
                     "margin": {
-                        "upper": 7,
+                        "upper": 10,
                         "lower": 20
                     }
                 },
