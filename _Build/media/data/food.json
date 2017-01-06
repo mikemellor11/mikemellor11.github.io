@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 0,
+        "weight": 190,
         "max": 350,
         "calories": 141,
         "protein": 30.7,
@@ -11,7 +11,7 @@
         "salt": 0.13
     },
     "cod": {
-        "weight": 0,
+        "weight": 345,
         "max": 350,
         "calories": 98,
         "protein": 21.5,
@@ -33,7 +33,7 @@
         "salt": 0.9
     },
     "broccoli": {
-        "weight": 0,
+        "weight": 385,
         "max": 400,
         "calories": 40,
         "protein": 4.3,
@@ -44,7 +44,7 @@
         "salt": 0.02
     },
     "brown rice": {
-        "weight": 0,
+        "weight": 145,
         "max": 300,
         "calories": 119,
         "protein": 3.4,
@@ -110,7 +110,7 @@
         "salt": 0.02
     },
     "protein shake": {
-        "weight": 0,
+        "weight": 50,
         "max": 100,
         "calories": 412,
         "protein": 82,
@@ -121,7 +121,7 @@
         "salt": 0.5
     },
     "banana": {
-        "weight": 0,
+        "weight": 174,
         "max": 235,
         "calories": 103,
         "protein": 1.2,
@@ -143,7 +143,7 @@
         "salt": 11.2
     },
     "red kidney beans": {
-        "weight": 0,
+        "weight": 130,
         "max": 200,
         "calories": 105,
         "protein": 6.9,
@@ -165,7 +165,7 @@
         "salt": 0.68
     },
     "greek style natural yogurt": {
-        "weight": 0,
+        "weight": 140,
         "max": 400,
         "calories": 120,
         "protein": 4.1,
@@ -176,7 +176,7 @@
         "salt": 0.15
     },
     "low fat natural yogurt": {
-        "weight": 0,
+        "weight": 360,
         "max": 400,
         "calories": 60,
         "protein": 4.8,
@@ -198,7 +198,7 @@
         "salt": 0.35
     },
     "fat free cottage cheese": {
-        "weight": 0,
+        "weight": 65,
         "max": 400,
         "calories": 74,
         "protein": 10.7,
@@ -209,7 +209,7 @@
         "salt": 0.43
     },
     "hummus": {
-        "weight": 0,
+        "weight": 5,
         "max": 25,
         "calories": 305,
         "protein": 8,
@@ -220,7 +220,7 @@
         "salt": 0.92
     },
     "sweet potato": {
-        "weight": 0,
+        "weight": 45,
         "max": 400,
         "calories": 87,
         "protein": 1.1,
@@ -231,7 +231,7 @@
         "salt": 0.09
     },
     "chickpeas": {
-        "weight": 0,
+        "weight": 375,
         "max": 400,
         "calories": 122,
         "protein": 7.7,
@@ -242,7 +242,7 @@
         "salt": 0.03
     },
     "virgin olive oil": {
-        "weight": 0,
+        "weight": 5,
         "max": 5,
         "calories": 823,
         "protein": 0,
