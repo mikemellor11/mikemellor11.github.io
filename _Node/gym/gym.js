@@ -78,7 +78,7 @@ function init(){
 
         socket.on('saveFood', function(data){
             for(var key in foodJson){
-                foodJson[key].weight = data[key];
+                foodJson[key].weight = data[key].weight;
             }
 
             saveJson(foodJson, 'food');

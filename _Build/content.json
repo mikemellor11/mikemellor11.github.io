@@ -16,6 +16,66 @@
             "endPercent": 0.8,
             "incInterval": 3,
             "equipmentWeight": 20
+        },
+        "targets": {
+            "food": {
+                "calories": {
+                    "GDA": 2500,
+                    "target": 2400,
+                    "margin": {
+                        "upper": 50,
+                        "lower": 50
+                    }
+                },
+                "protein": {
+                    "GDA": 55,
+                    "target": 194,
+                    "margin": {
+                        "upper": 50,
+                        "lower": 10
+                    }
+                },
+                "carbohydrate": {
+                    "GDA": 300,
+                    "target": 194,
+                    "margin": {
+                        "upper": 10,
+                        "lower": 50
+                    }
+                },
+                "fat": {
+                    "GDA": 43,
+                    "target": 43,
+                    "margin": {
+                        "upper": 7,
+                        "lower": 20
+                    }
+                },
+                "saturates": {
+                    "GDA": 30,
+                    "target": 30,
+                    "margin": {
+                        "upper": 5,
+                        "lower": 20
+                    }
+                },
+                "sugar": {
+                    "GDA": 120,
+                    "target": 120,
+                    "margin": {
+                        "upper": 10,
+                        "lower": 50
+                    }
+                },
+                "salt": {
+                    "GDA": 6,
+                    "target": 6,
+                    "margin": {
+                        "upper": 1,
+                        "lower": 4
+                    }
+                }
+            }
         }
     },
     "index": {

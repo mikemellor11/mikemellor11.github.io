@@ -5,15 +5,27 @@ function baseJS(){
 	var contentJson = null;
 	var weightJson = null;
 	var foodJson = null;
+	var foodJsonArr = null;
 	var today = moment().format('DD/MM/YYYY');
+	var randoming = false;
 
-	/*socket.on('closeWindow', function (data) {
+	var food = {
+		calories: 0,
+		protein: 0,
+		carbohydrate: 0,
+		fat: 0,
+		saturates: 0,
+		sugar: 0,
+		salt: 0
+	};
+
+	socket.on('closeWindow', function (data) {
 		window.close();
 	});
 
 	window.onbeforeunload = function(){
 	   socket.emit('closeWindow');
-	}*/
+	}
 
 	$('.showMenu').on('click', function(){
 		$('.exercises').toggleClass('show');
@@ -23,12 +35,16 @@ function baseJS(){
 		contentJson = data;
 		weightJson = weight;
 		foodJson = food;
+		foodJsonArr = Object.keys(foodJson).map(function(k) { return k; });
 
 		updateData();
 
 		buildStaticHtml(data);
 
 		$('body').on('click', '.random', function(){
+			randoming = true;
+			$('.food input').val(0);
+			$('.food').trigger('change');
 			randomMealPlan();
 		});
 
@@ -39,13 +55,15 @@ function baseJS(){
 		$('body').on('submit change input', '.food', function(e){
 			e.preventDefault();
 
-			var foodSave = {};
-
 			for(var key in foodJson){
-				foodSave[key] = +$('#' + key.replace(/ /g, ''), this).val();
+				foodJson[key].weight = +$('#' + key.replace(/ /g, ''), this).val();
 			}
 
-			socket.emit('saveFood', foodSave);
+			if(!randoming){
+				socket.emit('saveFood', foodJson);
+			} else {
+				buildDynamicHtml();
+			}
 		});
 
 		$('body').on('submit', '.session__submit', function(e){
@@ -95,90 +113,55 @@ function baseJS(){
 
 	socket.on('updateFood', function (data) {
 		foodJson = data;
+		foodJsonArr = Object.keys(foodJson).map(function(k) { return k; });
 
 		buildDynamicHtml();
 	});
 
 	function randomMealPlan(){
-		var calories = 0;
-		var protein = 0;
-		var carbohydrate = 0;
-		var fat = 0;
-		var saturates = 0;
-		var sugar = 0;
-		var salt = 0;
+		calculateFood();
 
-		for(var key in foodJson) {
-			if(foodJson.hasOwnProperty(key)){
-				if(foodJson[key].weight >= 1){
-					calories += (foodJson[key].calories / 100) * foodJson[key].weight;
-					protein += (foodJson[key].protein / 100) * foodJson[key].weight;
-					carbohydrate += (foodJson[key].carbohydrate / 100) * foodJson[key].weight;
-					fat += (foodJson[key].fat / 100) * foodJson[key].weight;
-					saturates += (foodJson[key].saturates / 100) * foodJson[key].weight;
-					sugar += (foodJson[key].sugar / 100) * foodJson[key].weight;
-					salt += (foodJson[key].salt / 100) * foodJson[key].weight;
+		var found = true;
+
+		for(var keyAlt in food) {
+			if(food.hasOwnProperty(keyAlt)){
+				var target = contentJson.attributes.targets.food[keyAlt];
+
+				if(food[keyAlt] > (target.target + target.margin.upper)){
+
+					$('.food input').val(0);
+					$('.food').trigger('change');
+					setTimeout(function(){
+						randomMealPlan();
+						return;
+					}, 0)
+
+				} else if(
+					food[keyAlt] < (target.target - target.margin.lower) || 
+					food[keyAlt] > (target.target + target.margin.upper)
+				){
+					found = false;
+
 				}
 			}
 		}
 
-		if(calories > 2500 || 
-			protein > 204 ||
-			carbohydrate > 204 || 
-			fat > 50 ||
-			saturates > 35 ||
-			sugar > 130 ||
-			salt > 7){
-
-			/*if(calories > 2500){
-				console.log('calories');
-			} 
-			if(protein > 204){
-				console.log('protein');
-			}
-			if(carbohydrate > 204){
-				console.log('carbohydrate');
-			} 
-			if(fat > 50){
-				console.log('fat');
-			}
-			if(saturates > 35){
-				console.log('saturates');
-			}
-			if(sugar > 130){
-				console.log('sugar');
-			}
-			if(salt > 7){
-				console.log('salt');
-			}*/
-
-			$('.food input').val(0);
+		if(found){
+			randoming = false;
 			$('.food').trigger('change');
-			setTimeout(function(){
-				randomMealPlan();
-			}, 0)
-		} else if((calories > 2300 && calories < 2500) && 
-			(protein > 184 && protein < 204) &&
-			(carbohydrate > 184 && carbohydrate < 204) && 
-			(fat > 36 && fat < 50) &&
-			(saturates > 5 && saturates < 35) &&
-			(sugar > 40 && sugar < 130) &&
-			(salt > 1 && salt < 7)){
-			console.log("CHRIST ITS FOUND ONE");
 		} else {
-			var arr = Object.keys(foodJson).map(function(k) { return k; });
+			
 			var random = 0;
-			var length = arr.length - 1;
 			var hold;
 			var value;
 
 			do{
-				random = Math.floor(Math.random()*(length-0+1)+0)
-				hold = $('#' + arr[random].replace(/ /g, ''));
+				random = Math.floor(Math.random()*((foodJsonArr.length - 1)-0+1)+0)
+				hold = $('#' + foodJsonArr[random].replace(/ /g, ''));
 				value = +hold.val();
-			} while (value >= foodJson[arr[random]].max)
+			} while (value >= foodJson[foodJsonArr[random]].max)
 
-			var maxAdd = foodJson[arr[random]].max - value;
+			var maxAdd = foodJson[foodJsonArr[random]].max - value;
 
 			value += Math.floor(Math.random()*(maxAdd-0+1)+0);
 
@@ -188,7 +171,7 @@ function baseJS(){
 
 			setTimeout(function(){
 				randomMealPlan();
-			}, 0)
+			}, 0);
 		}
 	}
 
@@ -196,13 +179,6 @@ function baseJS(){
 		$('.dynamic').get(2).innerHTML = '';
 
 		var html = '<form class="food">';
-		var calories = 0;
-		var protein = 0;
-		var carbohydrate = 0;
-		var fat = 0;
-		var saturates = 0;
-		var sugar = 0;
-		var salt = 0;
 
 		for(var key in foodJson) {
 			if(foodJson.hasOwnProperty(key)){
@@ -216,16 +192,6 @@ function baseJS(){
 				html += ' value="' + foodJson[key].weight + '"';
 				html +=' />';
 				html += '</div>';
-
-				if(foodJson[key].weight >= 1){
-					calories += (foodJson[key].calories / 100) * foodJson[key].weight;
-					protein += (foodJson[key].protein / 100) * foodJson[key].weight;
-					carbohydrate += (foodJson[key].carbohydrate / 100) * foodJson[key].weight;
-					fat += (foodJson[key].fat / 100) * foodJson[key].weight;
-					saturates += (foodJson[key].saturates / 100) * foodJson[key].weight;
-					sugar += (foodJson[key].sugar / 100) * foodJson[key].weight;
-					salt += (foodJson[key].salt / 100) * foodJson[key].weight;
-				}
 			}
 		}
 
@@ -458,35 +424,21 @@ function baseJS(){
 		$('.dynamic').get(3).innerHTML = '';
 
 		var html = '';
-		var calories = 0;
-		var protein = 0;
-		var carbohydrate = 0;
-		var fat = 0;
-		var saturates = 0;
-		var sugar = 0;
-		var salt = 0;
 
-		for(var key in foodJson) {
-			if(foodJson.hasOwnProperty(key)){
-				if(foodJson[key].weight >= 1){
-					calories += (foodJson[key].calories / 100) * foodJson[key].weight;
-					protein += (foodJson[key].protein / 100) * foodJson[key].weight;
-					carbohydrate += (foodJson[key].carbohydrate / 100) * foodJson[key].weight;
-					fat += (foodJson[key].fat / 100) * foodJson[key].weight;
-					saturates += (foodJson[key].saturates / 100) * foodJson[key].weight;
-					sugar += (foodJson[key].sugar / 100) * foodJson[key].weight;
-					salt += (foodJson[key].salt / 100) * foodJson[key].weight;
-				}
+		calculateFood();
+
+		for(var keyAlt in food) {
+			if(food.hasOwnProperty(keyAlt)){
+				var target = contentJson.attributes.targets.food[keyAlt];
+				html += '<p ' + ((food[keyAlt] > target.GDA) ? 'class="high"' : '') + '>';
+				html += keyAlt
+				html += ': ' + +food[keyAlt].toFixed(2);
+				html += ' - (' + target.GDA + ' / ' + target.target;
+				html += ') - (' + (target.target - target.margin.lower);
+				html += ' - ' + (target.target + target.margin.upper) + ')';
+				html += '</p>';
 			}
 		}
-
-		html += '<p ' + ((calories > 2400) ? 'class="high"' : '') + '>calories: ' + +calories.toFixed(2) + ' - (2500 / 2400)</p>';
-		html += '<p ' + ((protein > 194) ? 'class="high"' : '') + '>protein: ' + +protein.toFixed(2) + ' - (55 / 194)</p>';
-		html += '<p ' + ((carbohydrate > 194) ? 'class="high"' : '') + '>carbohydrate: ' + +carbohydrate.toFixed(2) + ' - (300 / 194)</p>';
-		html += '<p ' + ((fat > 43) ? 'class="high"' : '') + '>fat: ' + +fat.toFixed(2) + ' - (95 / 43)</p>';
-		html += '<p ' + ((saturates > 30) ? 'class="high"' : '') + '>saturates: ' + +saturates.toFixed(2) + ' - (30)</p>';
-		html += '<p ' + ((sugar > 120) ? 'class="high"' : '') + '>sugar: ' + +sugar.toFixed(2) + ' - (120)</p>';
-		html += '<p ' + ((salt > 6) ? 'class="high"' : '') + '>salt: ' + +salt.toFixed(2) + ' - (6)</p>';
 
 		$('.dynamic').get(3).innerHTML = html;
 	}
@@ -509,6 +461,26 @@ function baseJS(){
 				}
 			});
 		});
+	}
+
+	function calculateFood(){
+		for(var keyAlt in food) {
+			if(food.hasOwnProperty(keyAlt)){
+				food[keyAlt] = 0;
+			}
+		}
+
+		for(var key in foodJson) {
+			if(foodJson.hasOwnProperty(key)){
+				if(foodJson[key].weight >= 1){
+					for(var keyAlt in food) {
+						if(food.hasOwnProperty(keyAlt)){
+							food[keyAlt] += (foodJson[key][keyAlt] / 100) * foodJson[key].weight;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
