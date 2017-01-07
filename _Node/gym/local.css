@@ -42,3 +42,11 @@ header{
 .high{
 	color: red;
 }
+
+.shopping h2{
+	margin-bottom: 0;
+}
+
+.shopping p{
+	margin: 0;
+}

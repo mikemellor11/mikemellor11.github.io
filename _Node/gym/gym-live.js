@@ -16,7 +16,8 @@ function baseJS(){
 		fat: 0,
 		saturates: 0,
 		sugar: 0,
-		salt: 0
+		salt: 0,
+		price: 0
 	};
 
 	socket.on('closeWindow', function (data) {
@@ -423,7 +424,8 @@ function baseJS(){
 
 		$('.dynamic').get(3).innerHTML = '';
 
-		var html = '';
+		html = '<div class="shopping">';
+		html += '<h2>Macros</h2>'
 
 		calculateFood();
 
@@ -432,7 +434,11 @@ function baseJS(){
 				var target = contentJson.attributes.targets.food[keyAlt];
 				html += '<p ' + ((food[keyAlt] > target.GDA) ? 'class="high"' : '') + '>';
 				html += keyAlt
-				html += ': ' + +food[keyAlt].toFixed(2);
+				if(keyAlt === 'price'){
+					html += ': ' + +(food[keyAlt] / 10).toFixed(2);
+				} else {
+					html += ': ' + +food[keyAlt].toFixed(2);
+				}
 				html += ' - (' + target.GDA + ' / ' + target.target;
 				html += ') - (' + (target.target - target.margin.lower);
 				html += ' - ' + (target.target + target.margin.upper) + ')';
@@ -440,7 +446,59 @@ function baseJS(){
 			}
 		}
 
+		html += '</div>';
+
 		$('.dynamic').get(3).innerHTML = html;
+
+
+
+		$('.dynamic').get(4).innerHTML = '';
+
+		html = '<div class="shopping">';
+		html += '<h2>Shopping for a day</h2>';
+
+		for(var key in foodJson) {
+			if(foodJson.hasOwnProperty(key)){
+				if(foodJson[key].weight > 0){
+					html += '<p>';
+					html += key + ' - ' + foodJson[key].weight;
+					html += '</p>';
+				}
+			}
+		}
+
+		html += '<h3>£';
+		html += +(food.price / 10).toFixed(2);
+		html += '</h3>';
+
+		html += '</div>';
+
+		$('.dynamic').get(4).innerHTML = html;
+
+
+
+		$('.dynamic').get(5).innerHTML = '';
+
+		html = '<div class="shopping">';
+		html += '<h2>Shopping for a week</h2>';
+
+		for(var key in foodJson) {
+			if(foodJson.hasOwnProperty(key)){
+				if(foodJson[key].weight > 0){
+					html += '<p>';
+					html += key + ' - ' + (foodJson[key].weight * 7);
+					html += '</p>';
+				}
+			}
+		}
+
+		html += '<h3>£';
+		html += +((food.price / 10) * 7).toFixed(2);
+		html += '</h3>';
+
+		html += '</div>';
+
+		$('.dynamic').get(5).innerHTML = html;
 	}
 
 	function updateData(){

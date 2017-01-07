@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 190,
+        "weight": 160,
         "max": 350,
         "calories": 141,
         "protein": 30.7,
@@ -8,10 +8,11 @@
         "fat": 1.7,
         "saturates": 0.4,
         "sugar": 0.1,
-        "salt": 0.13
+        "salt": 0.13,
+        "price": 6.15
     },
     "cod": {
-        "weight": 345,
+        "weight": 0,
         "max": 350,
         "calories": 98,
         "protein": 21.5,
@@ -19,7 +20,8 @@
         "fat": 1.3,
         "saturates": 0.3,
         "sugar": 0.1,
-        "salt": 0.19
+        "salt": 0.19,
+        "price": 13.2
     },
     "wholemeal bread": {
         "weight": 0,
@@ -30,10 +32,11 @@
         "fat": 1.8,
         "saturates": 0.4,
         "sugar": 4.1,
-        "salt": 0.9
+        "salt": 0.9,
+        "price": 1.3
     },
     "broccoli": {
-        "weight": 385,
+        "weight": 200,
         "max": 400,
         "calories": 40,
         "protein": 4.3,
@@ -41,10 +44,11 @@
         "fat": 0.6,
         "saturates": 0.2,
         "sugar": 1.8,
-        "salt": 0.02
+        "salt": 0.02,
+        "price": 1.15
     },
     "brown rice": {
-        "weight": 145,
+        "weight": 100,
         "max": 300,
         "calories": 119,
         "protein": 3.4,
@@ -52,7 +56,8 @@
         "fat": 1.1,
         "saturates": 0.2,
         "sugar": 0.1,
-        "salt": 0.01
+        "salt": 0.01,
+        "price": 1.5
     },
     "oats": {
         "weight": 0,
@@ -63,10 +68,11 @@
         "fat": 7,
         "saturates": 1,
         "sugar": 1.1,
-        "salt": 0.01
+        "salt": 0.01,
+        "price": 1
     },
     "semi skimmed milk": {
-        "weight": 0,
+        "weight": 275,
         "max": 400,
         "calories": 48,
         "protein": 3.5,
@@ -74,7 +80,8 @@
         "fat": 1.8,
         "saturates": 1.1,
         "sugar": 4.6,
-        "salt": 0.1
+        "salt": 0.1,
+        "price": 0.43
     },
     "egg": {
         "weight": 0,
@@ -85,18 +92,20 @@
         "fat": 9.6,
         "saturates": 2.7,
         "sugar": 0.1,
-        "salt": 0.38
+        "salt": 0.38,
+        "price": 3
     },
     "coconut oil": {
         "weight": 0,
-        "max": 10,
+        "max": 5,
         "calories": 899,
         "protein": 0.2,
         "carbohydrate": 0,
         "fat": 99.5,
         "saturates": 94.9,
         "sugar": 0,
-        "salt": 0.5
+        "salt": 0.5,
+        "price": 4.9
     },
     "unsalted butter": {
         "weight": 0,
@@ -107,10 +116,11 @@
         "fat": 82.9,
         "saturates": 49.3,
         "sugar": 0.6,
-        "salt": 0.02
+        "salt": 0.02,
+        "price": 4.4
     },
     "protein shake": {
-        "weight": 50,
+        "weight": 100,
         "max": 100,
         "calories": 412,
         "protein": 82,
@@ -118,10 +128,11 @@
         "fat": 7.5,
         "saturates": 5,
         "sugar": 4,
-        "salt": 0.5
+        "salt": 0.5,
+        "price": 11.44
     },
     "banana": {
-        "weight": 174,
+        "weight": 85,
         "max": 235,
         "calories": 103,
         "protein": 1.2,
@@ -129,7 +140,8 @@
         "fat": 0.1,
         "saturates": 0.01,
         "sugar": 21,
-        "salt": 0.1
+        "salt": 0.1,
+        "price": 0.72
     },
     "sun-dried tomatoes": {
         "weight": 0,
@@ -140,10 +152,11 @@
         "fat": 1,
         "saturates": 0.3,
         "sugar": 21.9,
-        "salt": 11.2
+        "salt": 11.2,
+        "price": 15.5
     },
     "red kidney beans": {
-        "weight": 130,
+        "weight": 155,
         "max": 200,
         "calories": 105,
         "protein": 6.9,
@@ -151,7 +164,8 @@
         "fat": 0.6,
         "saturates": 0.01,
         "sugar": 1,
-        "salt": 0.03
+        "salt": 0.03,
+        "price": 1.25
     },
     "smooth peanut butter": {
         "weight": 0,
@@ -162,10 +176,11 @@
         "fat": 50.7,
         "saturates": 5.3,
         "sugar": 7.7,
-        "salt": 0.68
+        "salt": 0.68,
+        "price": 3.8
     },
     "greek style natural yogurt": {
-        "weight": 140,
+        "weight": 200,
         "max": 400,
         "calories": 120,
         "protein": 4.1,
@@ -173,10 +188,11 @@
         "fat": 9.2,
         "saturates": 6,
         "sugar": 5.1,
-        "salt": 0.15
+        "salt": 0.15,
+        "price": 2
     },
     "low fat natural yogurt": {
-        "weight": 360,
+        "weight": 225,
         "max": 400,
         "calories": 60,
         "protein": 4.8,
@@ -184,7 +200,8 @@
         "fat": 1.6,
         "saturates": 1.1,
         "sugar": 6.4,
-        "salt": 0.14
+        "salt": 0.14,
+        "price": 1
     },
     "cottage cheese": {
         "weight": 0,
@@ -195,10 +212,11 @@
         "fat": 5,
         "saturates": 3.3,
         "sugar": 3.8,
-        "salt": 0.35
+        "salt": 0.35,
+        "price": 4.67
     },
     "fat free cottage cheese": {
-        "weight": 65,
+        "weight": 290,
         "max": 400,
         "calories": 74,
         "protein": 10.7,
@@ -206,10 +224,11 @@
         "fat": 0.1,
         "saturates": 0.01,
         "sugar": 7.4,
-        "salt": 0.43
+        "salt": 0.43,
+        "price": 3.17
     },
     "hummus": {
-        "weight": 5,
+        "weight": 25,
         "max": 25,
         "calories": 305,
         "protein": 8,
@@ -217,10 +236,11 @@
         "fat": 25.9,
         "saturates": 2.6,
         "sugar": 0.8,
-        "salt": 0.92
+        "salt": 0.92,
+        "price": 5.7
     },
     "sweet potato": {
-        "weight": 45,
+        "weight": 50,
         "max": 400,
         "calories": 87,
         "protein": 1.1,
@@ -228,10 +248,11 @@
         "fat": 0.1,
         "saturates": 0.01,
         "sugar": 8,
-        "salt": 0.09
+        "salt": 0.09,
+        "price": 1
     },
     "chickpeas": {
-        "weight": 375,
+        "weight": 370,
         "max": 400,
         "calories": 122,
         "protein": 7.7,
@@ -239,10 +260,11 @@
         "fat": 1.4,
         "saturates": 0.2,
         "sugar": 0.01,
-        "salt": 0.03
+        "salt": 0.03,
+        "price": 2.08
     },
     "virgin olive oil": {
-        "weight": 5,
+        "weight": 0,
         "max": 5,
         "calories": 823,
         "protein": 0,
@@ -250,6 +272,7 @@
         "fat": 91.5,
         "saturates": 13.1,
         "sugar": 0,
-        "salt": 0
+        "salt": 0,
+        "price": 3.5
     }
 }

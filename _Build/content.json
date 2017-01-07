@@ -74,6 +74,14 @@
                         "upper": 1,
                         "lower": 4
                     }
+                },
+                "price": {
+                    "GDA": 50,
+                    "target": 50,
+                    "margin": {
+                        "upper": 10,
+                        "lower": 50
+                    }
                 }
             }
         }
