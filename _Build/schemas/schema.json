@@ -43,6 +43,56 @@
 			            	"type": "number"
 			            }
 	            	}
+		        },
+		        "targets": {
+		        	"type": "object",
+	            	"properties": {
+	            		"food": {
+			            	"type": "object",
+			            	"properties": {
+				                "calories": {
+				                	"type": "object",
+			            			"properties": {
+			            				"GDA": {
+							            	"type": "number"
+							            },
+					                    "target": {
+							            	"type": "number"
+							            },
+					                    "margin": {
+					                    	"type": "object",
+			            					"properties": {
+						                        "upper": {
+									            	"type": "number"
+									            },
+						                        "lower": {
+									            	"type": "number"
+									            }
+									        }
+					                    }
+			            			}
+			            		},
+			            		"protein": {
+				                	"$ref": "#/properties/attributes/properties/targets/properties/food/properties/calories"
+			            		},
+			            		"carbohydrate": {
+				                	"$ref": "#/properties/attributes/properties/targets/properties/food/properties/calories"
+			            		},
+			            		"fat": {
+				                	"$ref": "#/properties/attributes/properties/targets/properties/food/properties/calories"
+			            		},
+			            		"saturates": {
+				                	"$ref": "#/properties/attributes/properties/targets/properties/food/properties/calories"
+			            		},
+			            		"sugar": {
+				                	"$ref": "#/properties/attributes/properties/targets/properties/food/properties/calories"
+			            		},
+			            		"salt": {
+				                	"$ref": "#/properties/attributes/properties/targets/properties/food/properties/calories"
+			            		}
+			            	}
+			            }
+		            }
 		        }
             },
             "required": ["internal", "local", "gymDefaults"]
