@@ -50,3 +50,9 @@ header{
 .shopping p{
 	margin: 0;
 }
+
+.food label{
+	min-width: 250px;
+	display: inline-block;
+	text-transform: capitalize;
+}
