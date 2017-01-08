@@ -274,5 +274,29 @@
         "sugar": 0,
         "salt": 0,
         "price": 3.5
+    },
+    "tuna": {
+        "weight": 0,
+        "max": 448,
+        "calories": 99,
+        "protein": 23.5,
+        "carbohydrate": 0.01,
+        "fat": 0.5,
+        "saturates": 0.1,
+        "sugar": 0,
+        "salt": 0.8,
+        "price": 7.8
+    },
+    "mayo": {
+        "weight": 0,
+        "max": 50,
+        "calories": 279,
+        "protein": 0.5,
+        "carbohydrate": 7.2,
+        "fat": 27.5,
+        "saturates": 2.4,
+        "sugar": 2.7,
+        "salt": 1.45,
+        "price": 2.1
     }
 }
