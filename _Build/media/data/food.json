@@ -2,6 +2,7 @@
     "chicken breast": {
         "weight": 160,
         "max": 350,
+        "min": 0,
         "calories": 141,
         "protein": 30.7,
         "carbohydrate": 0.1,
@@ -14,6 +15,7 @@
     "cod": {
         "weight": 0,
         "max": 350,
+        "min": 0,
         "calories": 98,
         "protein": 21.5,
         "carbohydrate": 0.1,
@@ -26,6 +28,7 @@
     "wholemeal bread": {
         "weight": 0,
         "max": 320,
+        "min": 0,
         "calories": 221,
         "protein": 10,
         "carbohydrate": 37.8,
@@ -38,6 +41,7 @@
     "broccoli": {
         "weight": 200,
         "max": 400,
+        "min": 0,
         "calories": 40,
         "protein": 4.3,
         "carbohydrate": 3.1,
@@ -50,6 +54,7 @@
     "brown rice": {
         "weight": 100,
         "max": 300,
+        "min": 0,
         "calories": 119,
         "protein": 3.4,
         "carbohydrate": 22.8,
@@ -62,6 +67,7 @@
     "oats": {
         "weight": 0,
         "max": 300,
+        "min": 0,
         "calories": 363,
         "protein": 10.3,
         "carbohydrate": 60.5,
@@ -74,6 +80,7 @@
     "semi skimmed milk": {
         "weight": 275,
         "max": 400,
+        "min": 0,
         "calories": 48,
         "protein": 3.5,
         "carbohydrate": 4.6,
@@ -86,6 +93,7 @@
     "egg": {
         "weight": 0,
         "max": 100,
+        "min": 0,
         "calories": 143,
         "protein": 14.1,
         "carbohydrate": 0.1,
@@ -98,6 +106,7 @@
     "coconut oil": {
         "weight": 0,
         "max": 5,
+        "min": 0,
         "calories": 899,
         "protein": 0.2,
         "carbohydrate": 0,
@@ -110,6 +119,7 @@
     "unsalted butter": {
         "weight": 0,
         "max": 0,
+        "min": 0,
         "calories": 751,
         "protein": 0.6,
         "carbohydrate": 0.6,
@@ -122,6 +132,7 @@
     "protein shake": {
         "weight": 100,
         "max": 100,
+        "min": 0,
         "calories": 412,
         "protein": 82,
         "carbohydrate": 4,
@@ -134,6 +145,7 @@
     "banana": {
         "weight": 85,
         "max": 235,
+        "min": 0,
         "calories": 103,
         "protein": 1.2,
         "carbohydrate": 23,
@@ -146,6 +158,7 @@
     "sun-dried tomatoes": {
         "weight": 0,
         "max": 20,
+        "min": 0,
         "calories": 179,
         "protein": 7.4,
         "carbohydrate": 29.6,
@@ -158,6 +171,7 @@
     "red kidney beans": {
         "weight": 155,
         "max": 200,
+        "min": 0,
         "calories": 105,
         "protein": 6.9,
         "carbohydrate": 15,
@@ -170,6 +184,7 @@
     "smooth peanut butter": {
         "weight": 0,
         "max": 25,
+        "min": 0,
         "calories": 622,
         "protein": 25.2,
         "carbohydrate": 13.1,
@@ -182,6 +197,7 @@
     "greek style natural yogurt": {
         "weight": 200,
         "max": 400,
+        "min": 0,
         "calories": 120,
         "protein": 4.1,
         "carbohydrate": 5.3,
@@ -194,6 +210,7 @@
     "low fat natural yogurt": {
         "weight": 225,
         "max": 400,
+        "min": 0,
         "calories": 60,
         "protein": 4.8,
         "carbohydrate": 6.4,
@@ -206,6 +223,7 @@
     "cottage cheese": {
         "weight": 0,
         "max": 400,
+        "min": 0,
         "calories": 107,
         "protein": 11.3,
         "carbohydrate": 3.8,
@@ -218,6 +236,7 @@
     "fat free cottage cheese": {
         "weight": 290,
         "max": 400,
+        "min": 0,
         "calories": 74,
         "protein": 10.7,
         "carbohydrate": 7.4,
@@ -230,6 +249,7 @@
     "hummus": {
         "weight": 25,
         "max": 25,
+        "min": 0,
         "calories": 305,
         "protein": 8,
         "carbohydrate": 14,
@@ -242,6 +262,7 @@
     "sweet potato": {
         "weight": 50,
         "max": 400,
+        "min": 0,
         "calories": 87,
         "protein": 1.1,
         "carbohydrate": 18.9,
@@ -254,6 +275,7 @@
     "chickpeas": {
         "weight": 370,
         "max": 400,
+        "min": 0,
         "calories": 122,
         "protein": 7.7,
         "carbohydrate": 16.5,
@@ -266,6 +288,7 @@
     "virgin olive oil": {
         "weight": 0,
         "max": 5,
+        "min": 0,
         "calories": 823,
         "protein": 0,
         "carbohydrate": 0,
@@ -278,6 +301,7 @@
     "tuna": {
         "weight": 0,
         "max": 448,
+        "min": 0,
         "calories": 99,
         "protein": 23.5,
         "carbohydrate": 0.01,
@@ -290,6 +314,7 @@
     "mayo": {
         "weight": 0,
         "max": 50,
+        "min": 0,
         "calories": 279,
         "protein": 0.5,
         "carbohydrate": 7.2,
@@ -302,6 +327,7 @@
     "red grapefruit": {
         "weight": 0,
         "max": 50,
+        "min": 0,
         "calories": 34,
         "protein": 0.8,
         "carbohydrate": 6.8,
@@ -310,5 +336,18 @@
         "sugar": 6.8,
         "salt": 0.001,
         "price": 2
+    },
+    "new potatoes": {
+        "weight": 0,
+        "max": 200,
+        "min": 0,
+        "calories": 81,
+        "protein": 1.8,
+        "carbohydrate": 17.5,
+        "fat": 0.1,
+        "saturates": 0.01,
+        "sugar": 0.8,
+        "salt": 0.001,
+        "price": 0.9
     }
 }
