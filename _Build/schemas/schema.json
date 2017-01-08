@@ -89,6 +89,9 @@
 			            		},
 			            		"salt": {
 				                	"$ref": "#/properties/attributes/properties/targets/properties/food/properties/calories"
+			            		},
+			            		"price": {
+				                	"$ref": "#/properties/attributes/properties/targets/properties/food/properties/calories"
 			            		}
 			            	}
 			            }

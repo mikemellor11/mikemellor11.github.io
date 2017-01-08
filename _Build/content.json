@@ -107,6 +107,10 @@
             {
                 "name": "arm",
                 "altName": "Arms"
+            },
+            {
+                "name": "weight",
+                "altName": "Weight"
             }
         ],
         "callouts": [
