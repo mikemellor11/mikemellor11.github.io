@@ -45,6 +45,15 @@ function baseJS(){
 		$('body').on('click', '.random', function(){
 			randoming = true;
 			$('.food input').val(0);
+
+			for(var key in foodJson) {
+				if(foodJson.hasOwnProperty(key)){
+					if(foodJson[key].min > 0){
+						$('#' + key.replace(/ /g, '')).val(foodJson[key].min);
+					}
+				}
+			}
+
 			$('.food').trigger('change');
 			randomMealPlan();
 		});
@@ -131,6 +140,15 @@ function baseJS(){
 				if(food[keyAlt] > (target.target + target.margin.upper)){
 
 					$('.food input').val(0);
+
+					for(var key in foodJson) {
+						if(foodJson.hasOwnProperty(key)){
+							if(foodJson[key].min > 0){
+								$('#' + key.replace(/ /g, '')).val(foodJson[key].min);
+							}
+						}
+					}
+
 					$('.food').trigger('change');
 					setTimeout(function(){
 						randomMealPlan();
