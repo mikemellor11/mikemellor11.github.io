@@ -298,5 +298,17 @@
         "sugar": 2.7,
         "salt": 1.45,
         "price": 2.1
+    },
+    "red grapefruit": {
+        "weight": 0,
+        "max": 50,
+        "calories": 34,
+        "protein": 0.8,
+        "carbohydrate": 6.8,
+        "fat": 0.1,
+        "saturates": 0.01,
+        "sugar": 6.8,
+        "salt": 0.001,
+        "price": 2
     }
 }
