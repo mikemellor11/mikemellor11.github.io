@@ -134,8 +134,9 @@ function baseJS(){
 					$('.food').trigger('change');
 					setTimeout(function(){
 						randomMealPlan();
-						return;
-					}, 0)
+					}, 0);
+
+					return;
 
 				} else if(
 					food[keyAlt] < (target.target - target.margin.lower) || 
