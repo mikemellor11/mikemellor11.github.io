@@ -176,9 +176,9 @@ function renderAxis() {
 		.tickPadding(15);
 
     if(att.xScale === 'linear') {
-		xAxis.tickValues( local._xScale.ticks(att.xTicks).concat( local._xScale.domain() ) )
+		xAxis.tickValues(local._xScale.ticks(att.xTicks).concat( local._xScale.domain()))
     } else {
-    	xAxis.ticks(att.xTicks);
+    	xAxis.tickValues(local._xScale.domain().filter(function(d, i) { return !(i % (10 - att.xTicks)); }))
     }
 
     yAxis = d3.axisLeft()

@@ -25,6 +25,11 @@
 				{{> chart name='chart1'}}
 			</div>
 
+			<div class="full">
+				<h3>Weight</h3>
+				{{> chart name='chart5'}}
+			</div>
+
 			<div class="fifth">
 				<ul class="d3__list--workouts">
 				</ul>
@@ -79,6 +84,21 @@
 					}
 				]
 
+				var data5 = [
+					{
+						"label": "",
+						"values": []
+					}
+				];
+
+				chartManager.weight.forEach(function(d, i){
+					data5[0].values.push({
+	                    "id": i,
+	                    "value": d.weight,
+	                    "label": ''
+					});
+				});
+
 				gym.select(['Deadlifts', 'Squats', 'Overhead press', 'Bench press']).each(function(d, i){
 					var workout = d.workouts();
 					var exercise = d.exercise();
@@ -123,8 +143,8 @@
 			        });
 				});
 
-				var delay = 1000;
-				var delaySpeed = 1000;
+				var delay = 500;
+				var delaySpeed = 500;
 
 				setTimeout(function(){
 					d3.select('.chart3').node().parentNode.classList.add('async--finished');
@@ -196,6 +216,25 @@
 							margin: {
 								left: 50
 							},
+							xTicks: 5,
+							delaySpeed: delaySpeed,
+						})
+						.render();
+				}, delay += delaySpeed);
+
+				setTimeout(function(){
+					d3.select('.chart5').node().parentNode.classList.add('async--finished');
+
+					Line('.chart5', true)
+						.data(data5)
+						.att({
+							xLabel: "Week",
+							yLabel: "Weight",
+							margin: {
+								left: 50
+							},
+							yMin: 50,
+							yMax: 100,
 							delaySpeed: delaySpeed,
 						})
 						.render();
