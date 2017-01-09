@@ -455,12 +455,16 @@ function baseJS(){
 				html += keyAlt
 				if(keyAlt === 'price'){
 					html += ': ' + +(food[keyAlt] / 10).toFixed(2);
+					html += ' - (' + (target.GDA / 10).toFixed(2) + ' / ' + (target.target / 10).toFixed(2);
+					html += ') - (' + ((target.target - target.margin.lower) / 10).toFixed(2);
+					html += ' - ' + ((target.target + target.margin.upper) / 10).toFixed(2) + ')';
 				} else {
 					html += ': ' + +food[keyAlt].toFixed(2);
+					html += ' - (' + target.GDA + ' / ' + target.target;
+					html += ') - (' + (target.target - target.margin.lower);
+					html += ' - ' + (target.target + target.margin.upper) + ')';
 				}
-				html += ' - (' + target.GDA + ' / ' + target.target;
-				html += ') - (' + (target.target - target.margin.lower);
-				html += ' - ' + (target.target + target.margin.upper) + ')';
+				
 				html += '</p>';
 			}
 		}
