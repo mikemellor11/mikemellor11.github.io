@@ -23,15 +23,15 @@
                     "GDA": 2500,
                     "target": 2400,
                     "margin": {
-                        "upper": 60,
-                        "lower": 60
+                        "upper": 70,
+                        "lower": 70
                     }
                 },
                 "protein": {
                     "GDA": 55,
                     "target": 194,
                     "margin": {
-                        "upper": 80,
+                        "upper": 90,
                         "lower": 20
                     }
                 },
@@ -40,7 +40,7 @@
                     "target": 194,
                     "margin": {
                         "upper": 20,
-                        "lower": 60
+                        "lower": 70
                     }
                 },
                 "fat": {
@@ -48,14 +48,14 @@
                     "target": 43,
                     "margin": {
                         "upper": 10,
-                        "lower": 20
+                        "lower": 25
                     }
                 },
                 "saturates": {
                     "GDA": 30,
                     "target": 30,
                     "margin": {
-                        "upper": 10,
+                        "upper": 15,
                         "lower": 20
                     }
                 },
@@ -64,7 +64,7 @@
                     "target": 120,
                     "margin": {
                         "upper": 10,
-                        "lower": 50
+                        "lower": 60
                     }
                 },
                 "salt": {

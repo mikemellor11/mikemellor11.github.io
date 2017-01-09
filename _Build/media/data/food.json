@@ -1,7 +1,7 @@
 {
     "chicken breast": {
-        "weight": 350,
-        "max": 350,
+        "weight": 280,
+        "max": 300,
         "min": 0,
         "calories": 141,
         "protein": 30.7,
@@ -14,7 +14,7 @@
     },
     "cod": {
         "weight": 0,
-        "max": 350,
+        "max": 300,
         "min": 0,
         "calories": 98,
         "protein": 21.5,
@@ -52,7 +52,7 @@
         "price": 1.15
     },
     "brown rice": {
-        "weight": 0,
+        "weight": 75,
         "max": 200,
         "min": 0,
         "calories": 119,
@@ -78,7 +78,7 @@
         "price": 1
     },
     "semi skimmed milk": {
-        "weight": 345,
+        "weight": 395,
         "max": 400,
         "min": 0,
         "calories": 48,
@@ -91,8 +91,8 @@
         "price": 0.43
     },
     "egg": {
-        "weight": 40,
-        "max": 100,
+        "weight": 0,
+        "max": 0,
         "min": 0,
         "calories": 143,
         "protein": 14.1,
@@ -130,7 +130,7 @@
         "price": 4.4
     },
     "protein shake": {
-        "weight": 90,
+        "weight": 100,
         "max": 100,
         "min": 0,
         "calories": 412,
@@ -143,7 +143,7 @@
         "price": 11.44
     },
     "banana": {
-        "weight": 190,
+        "weight": 110,
         "max": 235,
         "min": 0,
         "calories": 103,
@@ -156,7 +156,7 @@
         "price": 0.72
     },
     "sun-dried tomatoes": {
-        "weight": 20,
+        "weight": 0,
         "max": 20,
         "min": 0,
         "calories": 179,
@@ -169,7 +169,7 @@
         "price": 15.5
     },
     "red kidney beans": {
-        "weight": 0,
+        "weight": 140,
         "max": 200,
         "min": 0,
         "calories": 105,
@@ -195,7 +195,7 @@
         "price": 3.8
     },
     "greek style natural yogurt": {
-        "weight": 0,
+        "weight": 50,
         "max": 100,
         "min": 0,
         "calories": 120,
@@ -208,7 +208,7 @@
         "price": 2
     },
     "low fat natural yogurt": {
-        "weight": 0,
+        "weight": 40,
         "max": 100,
         "min": 0,
         "calories": 60,
@@ -247,7 +247,7 @@
         "price": 3.17
     },
     "hummus": {
-        "weight": 0,
+        "weight": 7,
         "max": 25,
         "min": 0,
         "calories": 305,
@@ -260,8 +260,8 @@
         "price": 5.7
     },
     "sweet potato": {
-        "weight": 90,
-        "max": 400,
+        "weight": 240,
+        "max": 250,
         "min": 0,
         "calories": 87,
         "protein": 1.1,
@@ -273,8 +273,8 @@
         "price": 1
     },
     "chickpeas": {
-        "weight": 245,
-        "max": 400,
+        "weight": 0,
+        "max": 250,
         "min": 0,
         "calories": 122,
         "protein": 7.7,
@@ -286,7 +286,7 @@
         "price": 2.08
     },
     "virgin olive oil": {
-        "weight": 5,
+        "weight": 2,
         "max": 5,
         "min": 0,
         "calories": 823,
@@ -299,7 +299,7 @@
         "price": 3.5
     },
     "tuna": {
-        "weight": 0,
+        "weight": 224,
         "max": 448,
         "min": 0,
         "calories": 99,
@@ -312,7 +312,7 @@
         "price": 7.8
     },
     "mayo": {
-        "weight": 0,
+        "weight": 25,
         "max": 50,
         "min": 0,
         "calories": 279,
@@ -351,7 +351,7 @@
         "price": 0.9
     },
     "mince": {
-        "weight": 60,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "calories": 166,
@@ -364,7 +364,7 @@
         "price": 7
     },
     "sprout": {
-        "weight": 130,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "calories": 50,
@@ -377,8 +377,8 @@
         "price": 2
     },
     "salmon": {
-        "weight": 15,
-        "max": 200,
+        "weight": 0,
+        "max": 350,
         "min": 0,
         "calories": 228,
         "protein": 23.5,
@@ -388,5 +388,31 @@
         "sugar": 0.01,
         "salt": 0.13,
         "price": 14.42
+    },
+    "egg white": {
+        "weight": 0,
+        "max": 300,
+        "min": 0,
+        "calories": 48,
+        "protein": 10.9,
+        "carbohydrate": 0.8,
+        "fat": 0,
+        "saturates": 0,
+        "sugar": 0.7,
+        "salt": 0.41,
+        "price": 6
+    },
+    "spinach": {
+        "weight": 0,
+        "max": 200,
+        "min": 0,
+        "calories": 26,
+        "protein": 3.1,
+        "carbohydrate": 0.01,
+        "fat": 0.8,
+        "saturates": 0.01,
+        "sugar": 0.1,
+        "salt": 0.04,
+        "price": 1.6
     }
 }

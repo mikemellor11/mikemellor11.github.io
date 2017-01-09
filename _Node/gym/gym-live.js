@@ -20,6 +20,17 @@ function baseJS(){
 		price: 0
 	};
 
+	var foodAverages = {
+		calories: 0,
+		protein: 0,
+		carbohydrate: 0,
+		fat: 0,
+		saturates: 0,
+		sugar: 0,
+		salt: 0,
+		price: 0
+	};
+
 	socket.on('closeWindow', function (data) {
 		window.close();
 	});
@@ -32,11 +43,22 @@ function baseJS(){
 		$('.exercises').toggleClass('show');
 	});
 
-	socket.on('buildHtml', function (data, weight, food) {
+	socket.on('buildHtml', function (data, weight, foodArg) {
 		contentJson = data;
 		weightJson = weight;
-		foodJson = food;
+		foodJson = foodArg;
 		foodJsonArr = Object.keys(foodJson).map(function(k) { return k; });
+
+		for(var keyAlt in food){
+			var hold = [];
+			for(var key in foodJson) {
+				if(foodJson.hasOwnProperty(key)){
+					hold.push(foodJson[key][keyAlt] * foodJson[key].max);
+				}
+			}
+			var sum = hold.reduce(function(a, b) { return a + b; });
+			foodAverages[keyAlt] = sum / hold.length;
+		}
 
 		updateData();
 
@@ -125,6 +147,17 @@ function baseJS(){
 		foodJson = data;
 		foodJsonArr = Object.keys(foodJson).map(function(k) { return k; });
 
+		for(var keyAlt in food){
+			var hold = [];
+			for(var key in foodJson) {
+				if(foodJson.hasOwnProperty(key)){
+					hold.push(foodJson[key][keyAlt] * foodJson[key].max);
+				}
+			}
+			var sum = hold.reduce(function(a, b) { return a + b; });
+			foodAverages[keyAlt] = sum / hold.length;
+		}
+
 		buildDynamicHtml();
 	});
 
@@ -170,6 +203,17 @@ function baseJS(){
 			randoming = false;
 			$('.food').trigger('change');
 		} else {
+			var biggest = 0;
+			var biggestSave = '';
+
+			for(var keyAlt in food) {
+				var target = contentJson.attributes.targets.food[keyAlt];
+				var percent = food[keyAlt] / target.target;
+				if(percent > biggest){
+					biggestSave = keyAlt;
+					biggest = percent;
+				}
+			}
 			
 			var random = 0;
 			var hold;
@@ -179,7 +223,10 @@ function baseJS(){
 				random = Math.floor(Math.random()*((foodJsonArr.length - 1)-0+1)+0)
 				hold = $('#' + foodJsonArr[random].replace(/ /g, ''));
 				value = +hold.val();
-			} while (value >= foodJson[foodJsonArr[random]].max)
+			} while (
+					value >= foodJson[foodJsonArr[random]].max && 
+					(foodJson[foodJsonArr[random]][biggestSave] * foodJson[foodJsonArr[random]].max) > foodAverages[biggestSave]
+				)
 
 			var maxAdd = foodJson[foodJsonArr[random]].max - value;
 
