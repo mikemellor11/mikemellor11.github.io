@@ -43,13 +43,15 @@ function getYValue(d, plotYValue){
 	return (!plotYValue) ? d.value : d.value[plotYValue];
 }
 
-function getXValue(d, plotXValue){
-	if(plotXValue === null) {
+function getXValue(d){
+	var att = this.store.att;
+
+	if(att.xScale === 'date') {
+		return att.parseDate(d.id);
+	} else if(att.plotXValue === null) {
 		return d.id;
-	} else if(plotXValue === 'date') {
-		return parseDate(d.id);
 	} else {
-		return plotXValue(d.id);
+		return att.plotXValue(d.id);
 	}
 }
 
@@ -83,22 +85,22 @@ function createXScale(){
     	}
 
     } else if(att.xScale === 'date') {
-    	xScale = d3.time.scale()
+    	this.store._xScale = d3.scaleTime()
 			.domain([
-				(att.xMin) ? parseDate(att.xMin) : d3.min(combine, function(d){ return parseDate(d.id); }), 
-				(att.xMax) ? parseDate(att.xMax) : d3.max(combine, function(d){ return parseDate(d.id); })
+				(att.xMin) ? att.parseDate(att.xMin) : d3.min(combine, function(d){ return att.parseDate(d.id); }), 
+				(att.xMax) ? att.parseDate(att.xMax) : d3.max(combine, function(d){ return att.parseDate(d.id); })
 				])
-			.nice(d3.time.week)
+			.nice(d3.timeWeek)
 			.range([0, this.store._width]);
 
 		if(att.labelWidth === 'auto'){
-    		this.store.plotWidth = (xScale.range()[1] - xScale.range()[0]);
+    		this.store.plotWidth = (this.store._xScale.range()[1] - this.store._xScale.range()[0]);
     	} else {
     		this.store.plotWidth = +att.labelWidth;
     	}
 
     } else if(att.xScale === 'linear') {
-		xScale = d3.scale.linear()
+		this.store._xScale = d3.scaleLinear()
 		    .domain([
 				(att.xMin) ? att.xMin : d3.min(combine, function(d){ return +d.id; }), 
 				(att.xMax) ? att.xMax : d3.max(combine, function(d){ return +d.id; })
@@ -106,7 +108,7 @@ function createXScale(){
 		    .range([0, this.store._width]);
 
 	    if(att.labelWidth === 'auto'){
-    		this.store.plotWidth = xScale.range()[1] / data[0].values.length;
+    		this.store.plotWidth = this.store._xScale.range()[1] / data[0].values.length;
     	} else {
     		this.store.plotWidth = +att.labelWidth;
     	}
@@ -175,10 +177,8 @@ function renderAxis() {
 		.tickSizeOuter(1)
 		.tickPadding(15);
 
-    if(att.xScale === 'linear') {
-		xAxis.tickValues(local._xScale.ticks(att.xTicks).concat( local._xScale.domain()))
-    } else {
-    	xAxis.tickValues(local._xScale.domain().filter(function(d, i) { return !(i % (10 - att.xTicks)); }))
+    if(att.xScale === 'linear' || att.xScale === 'date') {
+		xAxis.ticks(att.xTicks);
     }
 
     yAxis = d3.axisLeft()

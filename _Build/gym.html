@@ -93,7 +93,7 @@
 
 				chartManager.weight.forEach(function(d, i){
 					data5[0].values.push({
-	                    "id": i,
+	                    "id": d.date,
 	                    "value": d.weight,
 	                    "label": ''
 					});
@@ -216,7 +216,8 @@
 							margin: {
 								left: 50
 							},
-							xTicks: 5,
+							xScale: 'linear',
+							xTicks: (data[0].values.length / 5),
 							delaySpeed: delaySpeed,
 						})
 						.render();
@@ -233,6 +234,7 @@
 							margin: {
 								left: 50
 							},
+							xScale: 'date',
 							yMin: 50,
 							yMax: 100,
 							delaySpeed: delaySpeed,

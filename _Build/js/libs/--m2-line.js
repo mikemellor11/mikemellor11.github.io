@@ -1,4 +1,4 @@
-function Line(selector, svgText){
+function Line(selector, svgText, dateFormat){
 	if(!selector){
 		return null;
 	}
@@ -9,7 +9,6 @@ function Line(selector, svgText){
 
 	this.store = {
 		data : [],
-		parseDate : null,
 		_height : 0,
 		_width : 0,
 		_spacePadding : 0,
@@ -60,7 +59,7 @@ function Line(selector, svgText){
 		autoAxis : 'x',
 		interpolation : 'Linear', // https://github.com/d3/d3-shape/blob/master/README.md#curves for more options,
 		symbols : true,
-		symbolSize : 50,
+		symbolSize : 25,
 		symbolType : 'Circle',
 		transitionType : 'Linear', // https://github.com/d3/d3/blob/master/CHANGES.md#easings-d3-ease
 		keySelector: '.key',
@@ -70,19 +69,22 @@ function Line(selector, svgText){
 		dashedLine : 0, // 0 means solid, '3, 3' would be 3 pixels sold 3 pixels gap and so on
 		dateFormat : "%d/%m/%Y",
 		xScale : null, // null = ordinal // 'date' = timescale // 'linear' = linear // provide function for custom
-		plotXValue : null, // null = d.id // 'date' = parseDate(d.id) // provide function for custom
-		plotYValue : null // value: 40 = plotYValue: null // value: {weight: 40} = plotYValue: "weight"
+		plotXValue : null, // null = d.id // provide function for custom
+		plotYValue : null, // value: 40 = plotYValue: null // value: {weight: 40} = plotYValue: "weight"
+		parseDate : null
 	};
+
+	if(dateFormat){
+		this.store.att.parseDate = d3.timeParse(dateFormat);
+	} else {
+		this.store.att.parseDate = d3.timeParse("%d/%m/%Y");
+	}
 
 	setupBase.call(this);
 }
 
 Line.prototype.render = function(){
-	var local = this.store, att = local.att, data = local.data, chart = local.chart;
-
-	if(!local.parseDate){
-		local.parseDate = d3.timeFormat(att.dateFormat).parse;
-	}
+	var local = this.store, att = local.att, data = local.data, chart = local.chart, _this = this;
 
 	updateViewBox.call(this);
 
@@ -110,7 +112,7 @@ Line.prototype.render = function(){
 	var line = d3.line()
 		.curve(d3['curve' + att.interpolation])
 		.defined(function(d) { return d.value !== null; })
-	    .x(function(d) { return local._xScale(getXValue(d, att.plotXValue)); })
+	    .x(function(d) { return local._xScale(getXValue.call(_this, d)); })
 	    .y(function(d) { return local._yScale(getYValue(d, att.plotYValue)); });
 
 
@@ -186,9 +188,9 @@ Line.prototype.render = function(){
 		        	d3.select(this.parentNode).attr("height", this.clientHeight);
 
 		        	if(att.labelPosition === 'bottom'){
-		        		d3.select(this.parentNode).attr("transform", "translate(" + (local._xScale(getXValue(d, att.plotXValue)) - (this.clientWidth * 0.5)) + ", " + (local._yScale(+getYValue(d, att.plotYValue)) + att.labelPadding) + ")");
+		        		d3.select(this.parentNode).attr("transform", "translate(" + (local._xScale(getXValue.call(_this, d)) - (this.clientWidth * 0.5)) + ", " + (local._yScale(+getYValue(d, att.plotYValue)) + att.labelPadding) + ")");
 		        	} else {
-		        		d3.select(this.parentNode).attr("transform", "translate(" + (local._xScale(getXValue(d, att.plotXValue)) - (this.clientWidth * 0.5)) + ", " + ((local._yScale(+getYValue(d, att.plotYValue)) - att.labelPadding) - this.clientHeight) + ")");
+		        		d3.select(this.parentNode).attr("transform", "translate(" + (local._xScale(getXValue.call(_this, d)) - (this.clientWidth * 0.5)) + ", " + ((local._yScale(+getYValue(d, att.plotYValue)) - att.labelPadding) - this.clientHeight) + ")");
 		        	}
 		        });
 	    } else {
@@ -199,16 +201,16 @@ Line.prototype.render = function(){
 
 			g_Plots.merge(plots).select('text')
 				.style('text-anchor', function(d, i){ 
-					if((local._width - local._xScale(getXValue(d, att.plotXValue))) < local._width * 0.2){ return 'end'; } 
-					if((local._width - local._xScale(getXValue(d, att.plotXValue))) > local._width * 0.8){ return 'start'; } 
+					if((local._width - local._xScale(getXValue.call(_this, d))) < local._width * 0.2){ return 'end'; } 
+					if((local._width - local._xScale(getXValue.call(_this, d))) > local._width * 0.8){ return 'start'; } 
 					return 'middle'; })
 				.text(function(d, i){ return parseLabel(d, att.labelFormat, getYValue(d, att.plotYValue)); })
 				.call(wrap, local.plotWidth)
 				.attr("transform", function(d, i){ 
 					if(att.labelPosition === 'bottom'){
-		        		return "translate(" + local._xScale(getXValue(d, att.plotXValue)) + ", " + (local._yScale(+getYValue(d, att.plotYValue)) + att.labelPadding) + ")"; 
+		        		return "translate(" + local._xScale(getXValue.call(_this, d)) + ", " + (local._yScale(+getYValue(d, att.plotYValue)) + att.labelPadding) + ")"; 
 		        	} else {
-		        		return "translate(" + local._xScale(getXValue(d, att.plotXValue)) + ", " + (local._yScale(+getYValue(d, att.plotYValue)) - att.labelPadding - this.getBBox().height) + ")"; 
+		        		return "translate(" + local._xScale(getXValue.call(_this, d)) + ", " + (local._yScale(+getYValue(d, att.plotYValue)) - att.labelPadding - this.getBBox().height) + ")"; 
 		        	}
 				})
 				.transition()
@@ -230,7 +232,7 @@ Line.prototype.render = function(){
 				.attr('opacity', 0);
 
 			g_Plots.merge(plots).select("path")
-				.attr("transform", function(d) { return "translate(" + local._xScale(getXValue(d, att.plotXValue)) + "," + local._yScale(getYValue(d, att.plotYValue)) + ")"; })
+				.attr("transform", function(d) { return "translate(" + local._xScale(getXValue.call(_this, d)) + "," + local._yScale(getYValue(d, att.plotYValue)) + ")"; })
 				.attr("d", d3.symbol()
 					.type(function(d, i){ 
 						return d3['symbol' + ((d.symbolType) ? d.symbolType : (lineData.symbolType) ? lineData.symbolType : att.symbolType)]; 
