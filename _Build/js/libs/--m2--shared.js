@@ -465,22 +465,6 @@ function midAngle(d, startAngle) {
     return (d.startAngle + (startAngle * (Math.PI/180))) + (d.endAngle - d.startAngle) / 2;
 }
 
-function arcTween(a) {
-	var i = d3.interpolate(this._current, a);
-	this._current = i(0);
-	return function(t) {
-		return arc(i(t));
-	};
-}
-
-function arcTweenShadow(a) {
-	var i = d3.interpolate(this._current, a);
-	this._current = i(0);
-	return function(t) {
-		return arcShadow(i(t));
-	};
-}
-
 function getSectionIndex(i){
 	return ((att.sectionOrder) ? att.sectionOrder[i] : i);
 }

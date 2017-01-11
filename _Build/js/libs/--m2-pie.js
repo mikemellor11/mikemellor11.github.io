@@ -88,14 +88,14 @@ Pie.prototype.render = function(){
 		att.aspectRatio = att.height / att.width;
 	}
 
-	arc = d3.arc()
+	local.arc = d3.arc()
 	    .outerRadius(radius)
 	    .innerRadius(radius * att.innerRadius)
 	    .startAngle(function(d) { return d.startAngle + (att.startAngle * (Math.PI/180)); })
         .endAngle(function(d) { return d.endAngle + (att.startAngle * (Math.PI/180)); });
 
     if(att.shadow){
-    	arcShadow = d3.arc()
+    	local.arcShadow = d3.arc()
 		    .outerRadius((radius * att.innerRadius) * att.shadowInnerRadius)
 	    	.innerRadius(radius * att.innerRadius)
 		    .startAngle(function(d) { return d.startAngle + (att.startAngle * (Math.PI/180)); })
@@ -132,14 +132,14 @@ Pie.prototype.render = function(){
 		gHarvs.append("path").attr('class', 'harveyBase');
 
 		gHarvs.select('.harveyBase')
-			.attr('d', arc)
+			.attr('d', local.arc)
 			.attr('class', 'fillFade');
 
 		if(att.shadow){
 			gHarvs.append("path").attr('class', 'harveyShadow').attr("opacity", 0.3);
 
 			gHarvs.select('.harveyShadow')
-				.attr('d', arcShadow)
+				.attr('d', local.arcShadow)
 				.attr('class', 'reverseColor');
 		}
 	}
@@ -164,7 +164,7 @@ Pie.prototype.render = function(){
 			.attr("y", "0.25em")
 		    .attr("x", 0)
 		    .attr('opacity', 1)
-			.style('font-size', function(){return (((radius * 0.5 > 170)) ? 170 : (radius * 0.5)) + 'px'; })
+			.style('font-size', function(){return (((radius * 0.5 > 170)) ? 170 : (radius * 0.4)) + 'px'; })
 			.transition()
 			.delay(att.delaySpeed)
 			.duration(_transitionSpeed)
@@ -196,7 +196,13 @@ Pie.prototype.render = function(){
 		.transition()
 		.delay(function(d, i) { if(!att.stagger){return 0;} return (att.clockwise) ? (i * _transitionSpeed) + att.delaySpeed : (((data.length - 1) - i) * _transitionSpeed) + att.delaySpeed; })
 		.duration(_transitionSpeed)
-		.attrTween("d", arcTween);
+		.attrTween("d", function(d){
+			var i = d3.interpolate(this._current, d);
+			this._current = i(0);
+			return function(t) {
+				return local.arc(i(t));
+			};
+		});
 
 	if(att.shadow){
     	gPie.append("path")
@@ -210,7 +216,13 @@ Pie.prototype.render = function(){
 			.transition()
 			.delay(function(d, i) { if(!att.stagger){return 0;} return (att.clockwise) ? (i * _transitionSpeed) + att.delaySpeed : (((data.length - 1) - i) * _transitionSpeed) + att.delaySpeed; })
 			.duration(_transitionSpeed)
-			.attrTween("d", arcTweenShadow);
+			.attrTween("d", function(d){
+				var i = d3.interpolate(this._current, d);
+				this._current = i(0);
+				return function(t) {
+					return local.arcShadow(i(t));
+				};
+			});
     }
 
 	if (att.showLabels) {
@@ -294,7 +306,7 @@ Pie.prototype.render = function(){
                     var d2 = interpolate(t);
                     var pos = outerArc.centroid(d2);
                     pos[0] = ((radius * 0.95) + att.labelPadding) * (midAngle(d2, att.startAngle) < Math.PI ? (d.data.flip) ? -1 : 1 : (d.data.flip) ? 1 : -1);
-                    return [arc.centroid(d2), outerArc.centroid(d2), pos];
+                    return [local.arc.centroid(d2), outerArc.centroid(d2), pos];
                 };
             });
 

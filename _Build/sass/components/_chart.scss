@@ -56,6 +56,10 @@ $colors-list: #47ACB1 #F26522 #F9AA7B #A5A8AA #676766 #ADD5D7 #FFA4AF #FFCD34;
   }
 }
 
+.delta--full{
+  padding-bottom: 100%;
+}
+
 .delta--loading{
   border: 2px solid transparentize($color5, 0.75);
   border-radius: $borderRadius;

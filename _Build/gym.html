@@ -14,10 +14,10 @@
 
 			<div class="third last">
 				<h3>Targets hit</h3>
-				{{> chart name='chart2'}}
+				{{> chart name='chart2' class="delta--full"}}
 
 				<h3>Intensity</h3>
-				{{> chart name='chart4'}}
+				{{> chart name='chart4' class="delta--full"}}
 			</div>
 
 			<div class="full">
@@ -150,7 +150,9 @@
 					d3.select('.chart3').node().parentNode.classList.add('async--finished');
 
 					Bar('.chart3', true)
+						.data(data3)
 						.att({
+							width: 674,
 							barGap: 0.025,
 							padding: {
 								left: 0.025,
@@ -165,7 +167,7 @@
 							delaySpeed: delaySpeed,
 							showXAxis: false
 						})
-						.data(data3)
+						.init()
 						.render();
 				}, delay);
 
@@ -180,7 +182,8 @@
 							}
 						])
 						.att({
-							showLabels: true,
+							width: 328,
+							height: 328,
 							innerRadius: 0.5,
 							harveyBall: true,
 							totalCount: data2[0] + data2[1],
@@ -197,6 +200,9 @@
 					Pie('.chart4', true)
 						.data(data4)
 						.att({
+							width: 328,
+							height: 328,
+							labelMaxWidth: 70,
 							showLabels: true,
 							innerRadius: 0.5,
 							delaySpeed: delaySpeed,
@@ -211,6 +217,7 @@
 					Line('.chart1', true)
 						.data(data)
 						.att({
+							width: 1020,
 							xLabel: "Set",
 							yLabel: "Weight",
 							margin: {
@@ -229,6 +236,7 @@
 					Line('.chart5', true)
 						.data(data5)
 						.att({
+							width: 1020,
 							xLabel: "Week",
 							yLabel: "Weight",
 							margin: {

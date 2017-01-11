@@ -99,45 +99,49 @@ function Bar(selector, svgText){
         showBaseline: false, // Looks for baseline boolean on data, draws line across groups
         stackedColorsFade: true // Setting to false will make the colors be selected by trunk index instead of bar index, much more likely for repeats horizontally than vertically
 	};
+}
 
-	this.store.chart.attr("viewBox", "0 0 " + this.store.att.width + " " + this.store.att.height);
+Bar.prototype.init = function(){
+	var local = this.store, att = local.att, chart = local.chart;
+	
+	chart.attr("viewBox", "0 0 " + this.store.att.width + " " + this.store.att.height);
 
-	if(!this.store.svgText){
-		this.store.chart.append("svg:foreignObject")
+	if(!local.svgText){
+		chart.append("svg:foreignObject")
 			.attr("class", "yLabel")
 		    .append("xhtml:div");
 
-		this.store.chart.append("svg:foreignObject")
+		chart.append("svg:foreignObject")
 			.attr("class", "xLabel")
 		    .append("xhtml:div");
 	} else {
-		this.store.chart.append("g")
+		chart.append("g")
 			.attr("class", "yLabel")
 			.append("text")
 			.attr('y', '1em')
 			.attr('x', 0);
 
-		this.store.chart.append("g")
+		chart.append("g")
 			.attr("class", "xLabel")
 			.append("text")
 			.attr('y', '1em')
 			.attr('x', 0);
 	}
 
-	this.store.chart.append("g")
+	chart.append("g")
 		.attr("class", "y axis");
 
-	this.store.chart.append("g")
+	chart.append("g")
 		.attr("class", "x axis")
 		.append("line");
 
-	draw = this.store.chart.append("g")
+	draw = chart.append("g")
 		.attr("class", "draw");
 
-	top = this.store.chart.append("g")
+	top = chart.append("g")
 		.attr("class", "top");
 
-	if(this.store.att.tip){
+	if(att.tip){
 		tip = d3.tip()
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
@@ -148,7 +152,9 @@ function Bar(selector, svgText){
 
 		top.call(tip);
 	}
-}
+
+	return this;
+};
 
 Bar.prototype.render = function(){
 	var local = this.store, att = local.att, data = local.data, chart = local.chart;

@@ -158,7 +158,7 @@
 
 			var weight = chartManager.data.weight[chartManager.data.weight.length - 1];
 			var weightPrev = chartManager.data.weight[chartManager.data.weight.length - 2].weight;
-			weightPrev = (weight.weight - weightPrev).toFixed(2);
+			weightPrev = +(weight.weight - weightPrev).toFixed(2);
 			var weightText = '';
 
 			weightText += weight.weight + ' kg';
