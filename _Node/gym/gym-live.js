@@ -158,7 +158,7 @@ function baseJS(){
 			foodAverages[keyAlt] = sum / hold.length;
 		}
 
-		buildDynamicHtml();
+		buildDynamicHtml(true);
 	});
 
 	function randomMealPlan(){

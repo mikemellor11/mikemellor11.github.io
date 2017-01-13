@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 390,
+        "weight": 170,
         "max": 400,
         "min": 0,
         "calories": 141,
@@ -39,7 +39,7 @@
         "price": 0.13
     },
     "broccoli": {
-        "weight": 125,
+        "weight": 225,
         "max": 400,
         "min": 0,
         "calories": 40,
@@ -52,7 +52,7 @@
         "price": 0.115
     },
     "brown rice": {
-        "weight": 0,
+        "weight": 130,
         "max": 400,
         "min": 0,
         "calories": 119,
@@ -78,7 +78,7 @@
         "price": 0.1
     },
     "semi skimmed milk": {
-        "weight": 30,
+        "weight": 110,
         "max": 400,
         "min": 0,
         "calories": 48,
@@ -104,7 +104,7 @@
         "price": 0.3
     },
     "coconut oil": {
-        "weight": 4,
+        "weight": 2,
         "max": 5,
         "min": 0,
         "calories": 899,
@@ -130,7 +130,7 @@
         "price": 0.44
     },
     "protein shake": {
-        "weight": 50,
+        "weight": 100,
         "max": 100,
         "min": 0,
         "calories": 412,
@@ -143,7 +143,7 @@
         "price": 0.974
     },
     "banana": {
-        "weight": 135,
+        "weight": 290,
         "max": 300,
         "min": 0,
         "calories": 103,
@@ -156,7 +156,7 @@
         "price": 0.072
     },
     "sun-dried tomatoes": {
-        "weight": 0,
+        "weight": 10,
         "max": 20,
         "min": 0,
         "calories": 179,
@@ -169,7 +169,7 @@
         "price": 1.55
     },
     "red kidney beans": {
-        "weight": 230,
+        "weight": 20,
         "max": 300,
         "min": 0,
         "calories": 105,
@@ -182,7 +182,7 @@
         "price": 0.125
     },
     "smooth peanut butter": {
-        "weight": 0,
+        "weight": 20,
         "max": 25,
         "min": 0,
         "calories": 622,
@@ -195,7 +195,7 @@
         "price": 0.38
     },
     "greek style natural yogurt": {
-        "weight": 100,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "calories": 120,
@@ -208,7 +208,7 @@
         "price": 0.2
     },
     "low fat natural yogurt": {
-        "weight": 150,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "calories": 60,
@@ -247,7 +247,7 @@
         "price": 0.317
     },
     "hummus": {
-        "weight": 0,
+        "weight": 20,
         "max": 25,
         "min": 0,
         "calories": 305,
@@ -260,7 +260,7 @@
         "price": 0.57
     },
     "sweet potato": {
-        "weight": 250,
+        "weight": 230,
         "max": 300,
         "min": 0,
         "calories": 87,
@@ -273,7 +273,7 @@
         "price": 0.1
     },
     "chickpeas": {
-        "weight": 275,
+        "weight": 200,
         "max": 300,
         "min": 0,
         "calories": 122,
@@ -286,7 +286,7 @@
         "price": 0.208
     },
     "virgin olive oil": {
-        "weight": 2,
+        "weight": 0,
         "max": 5,
         "min": 0,
         "calories": 823,
@@ -325,7 +325,7 @@
         "price": 0.21
     },
     "red grapefruit": {
-        "weight": 60,
+        "weight": 0,
         "max": 100,
         "min": 0,
         "calories": 34,
@@ -338,7 +338,7 @@
         "price": 0.2
     },
     "new potatoes": {
-        "weight": 170,
+        "weight": 65,
         "max": 300,
         "min": 0,
         "calories": 81,
@@ -351,7 +351,7 @@
         "price": 0.09
     },
     "mince": {
-        "weight": 110,
+        "weight": 250,
         "max": 300,
         "min": 0,
         "calories": 166,
@@ -403,7 +403,7 @@
         "price": 0.6
     },
     "spinach": {
-        "weight": 125,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "calories": 26,
