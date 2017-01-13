@@ -185,7 +185,7 @@ function baseJS(){
 					$('.food').trigger('change');
 					setTimeout(function(){
 						randomMealPlan();
-					}, 0);
+					});
 
 					return;
 
@@ -203,13 +203,13 @@ function baseJS(){
 			randoming = false;
 			$('.food').trigger('change');
 		} else {
-			var biggest = 0;
-			var biggestSave = '';
+			var biggest = null;
+			var biggestSave = null;
 
 			for(var keyAlt in food) {
 				var target = contentJson.attributes.targets.food[keyAlt];
 				var percent = food[keyAlt] / target.target;
-				if(percent > biggest){
+				if(biggest === null || percent > biggest){
 					biggestSave = keyAlt;
 					biggest = percent;
 				}
@@ -218,19 +218,49 @@ function baseJS(){
 			var random = 0;
 			var hold;
 			var value;
+			var maxLoops = 0;
 
 			do{
 				random = Math.floor(Math.random()*((foodJsonArr.length - 1)-0+1)+0)
 				hold = $('#' + foodJsonArr[random].replace(/ /g, ''));
 				value = +hold.val();
+
+				var maxAdd = (foodJson[foodJsonArr[random]].max - value);
+
+				value += Math.floor(Math.random()*(maxAdd-0+1)+0);
+
+				var target = contentJson.attributes.targets.food[biggestSave];
+
+				while((food[biggestSave] + (value * (foodJson[foodJsonArr[random]][biggestSave] / 100))) > (target.target + target.margin.upper) && value > 0){
+					value--;
+				}
+
+				maxLoops += 1;
+
+				if(maxLoops > foodJsonArr.length * 2){
+					$('.food input').val(0);
+
+					for(var key in foodJson) {
+						if(foodJson.hasOwnProperty(key)){
+							if(foodJson[key].min > 0){
+								$('#' + key.replace(/ /g, '')).val(foodJson[key].min);
+							}
+						}
+					}
+
+					$('.food').trigger('change');
+					setTimeout(function(){
+						randomMealPlan();
+					});
+
+					return;
+				}
+
 			} while (
-					value >= foodJson[foodJsonArr[random]].max && 
+					value <= 0 ||
+					value >= foodJson[foodJsonArr[random]].max || 
 					(foodJson[foodJsonArr[random]][biggestSave] * foodJson[foodJsonArr[random]].max) > foodAverages[biggestSave]
 				)
-
-			var maxAdd = foodJson[foodJsonArr[random]].max - value;
-
-			value += Math.floor(Math.random()*(maxAdd-0+1)+0);
 
 			hold.val(value);
 
@@ -238,7 +268,7 @@ function baseJS(){
 
 			setTimeout(function(){
 				randomMealPlan();
-			}, 0);
+			});
 		}
 	}
 
@@ -302,13 +332,13 @@ function baseJS(){
 
 					$('.dynamic').get(0).innerHTML = html;
 
-					buildDynamicHtml();
+					buildDynamicHtml(true);
 				}
 			});
 		});
 	}
 
-	function buildDynamicHtml(){
+	function buildDynamicHtml(verbose){
 		$('.dynamic').get(1).innerHTML = '';
 
 		var html = '<div class="ut-tableChildren ut-tableFixed">';
@@ -498,19 +528,12 @@ function baseJS(){
 		for(var keyAlt in food) {
 			if(food.hasOwnProperty(keyAlt)){
 				var target = contentJson.attributes.targets.food[keyAlt];
-				html += '<p ' + ((food[keyAlt] > target.GDA) ? 'class="high"' : '') + '>';
+				html += '<p ' + ((food[keyAlt] > target.target) ? 'class="high"' : '') + '>';
 				html += keyAlt
-				if(keyAlt === 'price'){
-					html += ': ' + +(food[keyAlt] / 10).toFixed(2);
-					html += ' - (' + (target.GDA / 10).toFixed(2) + ' / ' + (target.target / 10).toFixed(2);
-					html += ') - (' + ((target.target - target.margin.lower) / 10).toFixed(2);
-					html += ' - ' + ((target.target + target.margin.upper) / 10).toFixed(2) + ')';
-				} else {
-					html += ': ' + +food[keyAlt].toFixed(2);
-					html += ' - (' + target.GDA + ' / ' + target.target;
-					html += ') - (' + (target.target - target.margin.lower);
-					html += ' - ' + (target.target + target.margin.upper) + ')';
-				}
+				html += ': ' + +food[keyAlt].toFixed(2);
+				html += ' - (' + target.GDA + ' / ' + target.target;
+				html += ') - (' + (target.target - target.margin.lower);
+				html += ' - ' + (target.target + target.margin.upper) + ')';
 				
 				html += '</p>';
 			}
@@ -522,53 +545,105 @@ function baseJS(){
 
 
 
-		$('.dynamic').get(4).innerHTML = '';
+		if(verbose){
+			$('.dynamic').get(4).innerHTML = '';
 
-		html = '<div class="shopping">';
-		html += '<h2>Shopping for a day</h2>';
+			html = '<div class="shopping">';
+			html += '<h2>Shopping for a day (4 meals)</h2>';
 
-		for(var key in foodJson) {
-			if(foodJson.hasOwnProperty(key)){
-				if(foodJson[key].weight > 0){
-					html += '<p>';
-					html += key + ' - ' + foodJson[key].weight;
-					html += '</p>';
+			for(var key in foodJson) {
+				if(foodJson.hasOwnProperty(key)){
+					if(foodJson[key].weight > 0){
+						html += '<p>';
+						html += key + ' - ' + foodJson[key].weight;
+						html += '</p>';
+					}
 				}
 			}
-		}
 
-		html += '<h3>£';
-		html += +(food.price / 10).toFixed(2);
-		html += '</h3>';
+			html += '<h3>£';
+			html += +food.price.toFixed(2);
+			html += '</h3>';
 
-		html += '</div>';
+			html += '</div>';
 
-		$('.dynamic').get(4).innerHTML = html;
-
+			$('.dynamic').get(4).innerHTML = html;
 
 
-		$('.dynamic').get(5).innerHTML = '';
 
-		html = '<div class="shopping">';
-		html += '<h2>Shopping for a week</h2>';
+			$('.dynamic').get(5).innerHTML = '';
 
-		for(var key in foodJson) {
-			if(foodJson.hasOwnProperty(key)){
-				if(foodJson[key].weight > 0){
-					html += '<p>';
-					html += key + ' - ' + (foodJson[key].weight * 7);
-					html += '</p>';
+			html = '<div class="shopping">';
+			html += '<h2>Shopping for first half of a week (12 meals)</h2>';
+
+			for(var key in foodJson) {
+				if(foodJson.hasOwnProperty(key)){
+					if(foodJson[key].weight > 0){
+						html += '<p>';
+						html += key + ' - ' + (foodJson[key].weight * 3);
+						html += '</p>';
+					}
 				}
 			}
+
+			html += '<h3>£';
+			html += +(food.price * 3).toFixed(2);
+			html += '</h3>';
+
+			html += '</div>';
+
+			$('.dynamic').get(5).innerHTML = html;
+
+
+
+			$('.dynamic').get(6).innerHTML = '';
+
+			html = '<div class="shopping">';
+			html += '<h2>Shopping for second half of a week (16 meals)</h2>';
+
+			for(var key in foodJson) {
+				if(foodJson.hasOwnProperty(key)){
+					if(foodJson[key].weight > 0){
+						html += '<p>';
+						html += key + ' - ' + (foodJson[key].weight * 4);
+						html += '</p>';
+					}
+				}
+			}
+
+			html += '<h3>£';
+			html += +(food.price * 4).toFixed(2);
+			html += '</h3>';
+
+			html += '</div>';
+
+			$('.dynamic').get(6).innerHTML = html;
+
+
+
+			$('.dynamic').get(7).innerHTML = '';
+
+			html = '<div class="shopping">';
+			html += '<h2>Shopping for a week (28 meals)</h2>';
+
+			for(var key in foodJson) {
+				if(foodJson.hasOwnProperty(key)){
+					if(foodJson[key].weight > 0){
+						html += '<p>';
+						html += key + ' - ' + (foodJson[key].weight * 7);
+						html += '</p>';
+					}
+				}
+			}
+
+			html += '<h3>£';
+			html += +(food.price * 7).toFixed(2);
+			html += '</h3>';
+
+			html += '</div>';
+
+			$('.dynamic').get(7).innerHTML = html;
 		}
-
-		html += '<h3>£';
-		html += +((food.price / 10) * 7).toFixed(2);
-		html += '</h3>';
-
-		html += '</div>';
-
-		$('.dynamic').get(5).innerHTML = html;
 	}
 
 	function updateData(){

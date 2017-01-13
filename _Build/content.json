@@ -76,11 +76,11 @@
                     }
                 },
                 "price": {
-                    "GDA": 50,
-                    "target": 50,
+                    "GDA": 5,
+                    "target": 5,
                     "margin": {
-                        "upper": 10,
-                        "lower": 50
+                        "upper": 1,
+                        "lower": 5
                     }
                 }
             }
