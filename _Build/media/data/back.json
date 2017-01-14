@@ -597,7 +597,7 @@
         "increase": 2.5,
         "startPercent": 0.9,
         "endPercent": 0.9,
-        "incInterval": 3,
+        "incInterval": 6,
         "equipmentWeight": 10,
         "sessions": [
             {
@@ -1363,6 +1363,65 @@
                         "weight": 40,
                         "reps": 8,
                         "split": "00:02:02:601",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "13/01/2017",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:56:964",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:34:236",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:03:18:065",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:03:16:687",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:03:00:697",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:03:02:312",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:02:53:228",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:23:705",
                         "target": true
                     }
                 ]
