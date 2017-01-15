@@ -39,7 +39,7 @@
         "price": 0.13
     },
     "broccoli": {
-        "weight": 225,
+        "weight": 0,
         "max": 400,
         "min": 0,
         "calories": 40,
@@ -156,7 +156,7 @@
         "price": 0.072
     },
     "sun-dried tomatoes": {
-        "weight": 10,
+        "weight": 0,
         "max": 20,
         "min": 0,
         "calories": 179,
@@ -247,7 +247,7 @@
         "price": 0.317
     },
     "houmous": {
-        "weight": 20,
+        "weight": 0,
         "max": 25,
         "min": 0,
         "calories": 305,
@@ -364,7 +364,7 @@
         "price": 0.533
     },
     "sprout": {
-        "weight": 0,
+        "weight": 225,
         "max": 300,
         "min": 0,
         "calories": 50,
