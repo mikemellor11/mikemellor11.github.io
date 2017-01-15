@@ -246,7 +246,7 @@
         "salt": 0.43,
         "price": 0.317
     },
-    "hummus": {
+    "houmous": {
         "weight": 20,
         "max": 25,
         "min": 0,
@@ -354,14 +354,14 @@
         "weight": 250,
         "max": 300,
         "min": 0,
-        "calories": 166,
-        "protein": 31,
-        "carbohydrate": 0.01,
-        "fat": 4.7,
-        "saturates": 2.1,
+        "calories": 206,
+        "protein": 28.7,
+        "carbohydrate": 0.8,
+        "fat": 9.8,
+        "saturates": 4.4,
         "sugar": 0.01,
-        "salt": 0.23,
-        "price": 0.7
+        "salt": 0.3,
+        "price": 0.533
     },
     "sprout": {
         "weight": 0,
