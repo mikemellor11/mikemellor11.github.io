@@ -25,9 +25,14 @@
 				{{> chart name='chart1'}}
 			</div>
 
-			<div class="full">
+			<div class="half">
 				<h3>Weight</h3>
 				{{> chart name='chart5'}}
+			</div>
+
+			<div class="half last">
+				<h3>Macros</h3>
+				{{> chart name='chart6'}}
 			</div>
 
 			<div class="fifth">
@@ -86,10 +91,26 @@
 
 				var data5 = [
 					{
-						"label": "",
+						"label": "cal",
+						"values": []
+					},
+					{
+						"label": "pro",
 						"values": []
 					}
 				];
+
+				var data6 = [
+				];
+
+				for(var key in chartManager.weight[0].food){
+					if(chartManager.weight[0].food.hasOwnProperty(key)){
+						data6.push({
+							label: key,
+							values: []
+						})
+					}
+				}
 
 				chartManager.weight.forEach(function(d, i){
 					data5[0].values.push({
@@ -97,6 +118,22 @@
 	                    "value": d.weight,
 	                    "label": ''
 					});
+				});
+
+				chartManager.weight.forEach(function(d, i){
+					var index = 0;
+					for(var key in d.food){
+						if(d.food.hasOwnProperty(key)){
+							if(key !== 'calories'){
+								data6[index].values.push({
+									"id": d.date,
+				                    "value": d.food[key],
+				                    "label": (i === (chartManager.weight.length - 1)) ? key : ''
+								});
+							}
+						}
+						index += 1;
+					}
 				});
 
 				gym.select(['Deadlifts', 'Squats', 'Overhead press', 'Bench press']).each(function(d, i){
@@ -143,8 +180,8 @@
 			        });
 				});
 
-				var delay = 500;
-				var delaySpeed = 500;
+				var delay = 0;
+				var delaySpeed = 0;
 
 				setTimeout(function(){
 					d3.select('.chart3').node().parentNode.classList.add('async--finished');
@@ -219,7 +256,7 @@
 						.att({
 							width: 1020,
 							xLabel: "Set",
-							yLabel: "Weight",
+							yLabel: "Weight (kg)",
 							margin: {
 								left: 50
 							},
@@ -236,15 +273,34 @@
 					Line('.chart5', true)
 						.data(data5)
 						.att({
-							width: 1020,
+							width: 501,
 							xLabel: "Week",
-							yLabel: "Weight",
+							yLabel: "Weight (kg)",
 							margin: {
 								left: 50
 							},
 							xScale: 'date',
 							yMin: 50,
 							yMax: 100,
+							delaySpeed: delaySpeed,
+						})
+						.render();
+				}, delay += delaySpeed);
+
+				setTimeout(function(){
+					d3.select('.chart6').node().parentNode.classList.add('async--finished');
+
+					Line('.chart6', true)
+						.data(data6)
+						.att({
+							width: 501,
+							xLabel: "Week",
+							yLabel: "Weight (g)",
+							margin: {
+								left: 55
+							},
+							xScale: 'date',
+							yMin: "0",
 							delaySpeed: delaySpeed,
 						})
 						.render();
