@@ -2,66 +2,184 @@
     {
         "date": "01/07/2016",
         "weight": 98,
-        "calories": 5000
+        "calories": 5000,
+        "food": {
+            "calories": 3242.13,
+            "protein": 175,
+            "carbohydrate": 279,
+            "fat": 60,
+            "saturates": 25,
+            "sugar": 100,
+            "salt": 3,
+            "price": 6
+        }
     },
     {
         "date": "01/08/2016",
         "weight": 95,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     },
     {
         "date": "01/09/2016",
         "weight": 92,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     },
     {
         "date": "01/10/2016",
         "weight": 90,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     },
     {
         "date": "01/11/2016",
         "weight": 89,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     },
     {
         "date": "01/12/2016",
         "weight": 88,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     },
     {
         "date": "02/01/2017",
         "weight": 87,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     },
     {
         "date": "04/01/2017",
         "weight": 85.5,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     },
     {
         "date": "05/01/2017",
         "weight": 85.6,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     },
     {
         "date": "06/01/2017",
         "weight": 86,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     },
     {
         "date": "11/01/2017",
         "weight": 86.6,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     },
     {
         "date": "13/01/2017",
         "weight": 86.5,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     },
     {
         "date": "14/01/2017",
         "weight": 86.8,
-        "calories": 2500
+        "food": {
+            "calories": 2445.53,
+            "protein": 251.08899999999997,
+            "carbohydrate": 209.81,
+            "fat": 57.085,
+            "saturates": 22.243500000000004,
+            "sugar": 97.49000000000001,
+            "salt": 2.34865,
+            "price": 5.0684000000000005
+        }
     }
 ]

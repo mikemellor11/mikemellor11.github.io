@@ -9,7 +9,6 @@ var weightJson = loadJson('weight');
 var foodJson = loadJson('food');
 
 var lastKg = weightJson[weightJson.length - 1].weight;
-var lastCal = weightJson[weightJson.length - 1].calories;
 
 if(weightJson[weightJson.length - 1].date !== today && process.argv[2] !== 'skip'){
     stdio.question('Weight (' + lastKg + 'kg)', function (err, vers) {
@@ -21,25 +20,15 @@ if(weightJson[weightJson.length - 1].date !== today && process.argv[2] !== 'skip
             lastKg = +vers;
         }
 
-        stdio.question('Calories (' + lastCal + 'cal)', function (err, vers) {
-            if(vers.length <= 0){}
-            else if(isNaN(vers)){
-                console.log("Enter a valid number without units e.g 2500");
-                return;
-            } else {
-                lastCal = +vers;
-            }
-
-            weightJson.push({
-                date: today,
-                weight: lastKg,
-                calories: lastCal
-            });
-
-            saveJson(weightJson, 'weight');
-
-            init();
+        weightJson.push({
+            date: today,
+            weight: lastKg,
+            food: calculateFood(foodJson)
         });
+
+        saveJson(weightJson, 'weight');
+
+        init();
     });
 } else {
     init();

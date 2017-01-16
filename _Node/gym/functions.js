@@ -38,4 +38,31 @@ module.exports = function(grunt) {
     this.loadJson = function(file) {
         return JSON.parse(fs.readFileSync('_Build/media/data/' + file + '.json'));
     }
+
+    this.calculateFood = function(foodJson){
+        var food = {
+            calories: 0,
+            protein: 0,
+            carbohydrate: 0,
+            fat: 0,
+            saturates: 0,
+            sugar: 0,
+            salt: 0,
+            price: 0
+        };
+
+        for(var key in foodJson) {
+            if(foodJson.hasOwnProperty(key)){
+                if(foodJson[key].weight >= 1){
+                    for(var keyAlt in food) {
+                        if(food.hasOwnProperty(keyAlt)){
+                            food[keyAlt] += (foodJson[key][keyAlt] / 100) * foodJson[key].weight;
+                        }
+                    }
+                }
+            }
+        }
+
+        return food;
+    }
 }
