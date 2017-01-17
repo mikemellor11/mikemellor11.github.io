@@ -579,6 +579,65 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "17/01/2017",
+                "sets": [
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 8,
+                        "split": "00:02:38:161",
+                        "target": true
+                    },
+                    {
+                        "weight": 117.5,
+                        "reps": 8,
+                        "split": "00:02:54:738",
+                        "target": true
+                    },
+                    {
+                        "weight": 127.5,
+                        "reps": 8,
+                        "split": "00:03:34:359",
+                        "target": true
+                    },
+                    {
+                        "weight": 135,
+                        "reps": 8,
+                        "split": "00:04:48:166",
+                        "target": true
+                    },
+                    {
+                        "weight": 127.5,
+                        "reps": 8,
+                        "split": "00:03:52:237",
+                        "target": true
+                    },
+                    {
+                        "weight": 117.5,
+                        "reps": 8,
+                        "split": "00:04:52:468",
+                        "target": true
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 8,
+                        "split": "00:04:34:465",
+                        "target": true
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:04:22:108",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -1641,6 +1700,29 @@
                         "weight": 105,
                         "reps": 8,
                         "split": "00:01:42:623",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "17/01/2017",
+                "sets": [
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:01:28:611",
+                        "target": true
+                    },
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:01:39:136",
                         "target": true
                     }
                 ]
