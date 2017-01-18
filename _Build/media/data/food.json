@@ -414,5 +414,18 @@
         "sugar": 0.1,
         "salt": 0.04,
         "price": 0.16
+    },
+    "lentils": {
+        "weight": 0,
+        "max": 200,
+        "min": 0,
+        "calories": 82,
+        "protein": 6.1,
+        "carbohydrate": 10.9,
+        "fat": 0.6,
+        "saturates": 0.01,
+        "sugar": 0.1,
+        "salt": 0.03,
+        "price": 0.189
     }
 }
