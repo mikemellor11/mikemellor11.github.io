@@ -20,17 +20,6 @@ function baseJS(){
 		price: 0
 	};
 
-	var foodAverages = {
-		calories: 0,
-		protein: 0,
-		carbohydrate: 0,
-		fat: 0,
-		saturates: 0,
-		sugar: 0,
-		salt: 0,
-		price: 0
-	};
-
 	socket.on('closeWindow', function (data) {
 		window.close();
 	});
@@ -48,17 +37,6 @@ function baseJS(){
 		weightJson = weight;
 		foodJson = foodArg;
 		foodJsonArr = Object.keys(foodJson).map(function(k) { return k; });
-
-		for(var keyAlt in food){
-			var hold = [];
-			for(var key in foodJson) {
-				if(foodJson.hasOwnProperty(key)){
-					hold.push(foodJson[key][keyAlt] * foodJson[key].max);
-				}
-			}
-			var sum = hold.reduce(function(a, b) { return a + b; });
-			foodAverages[keyAlt] = sum / hold.length;
-		}
 
 		updateData();
 
@@ -146,18 +124,6 @@ function baseJS(){
 	socket.on('updateFood', function (data) {
 		foodJson = data;
 		foodJsonArr = Object.keys(foodJson).map(function(k) { return k; });
-
-		for(var keyAlt in food){
-			var hold = [];
-			for(var key in foodJson) {
-				if(foodJson.hasOwnProperty(key)){
-					hold.push(foodJson[key][keyAlt] * foodJson[key].max);
-				}
-			}
-			var sum = hold.reduce(function(a, b) { return a + b; });
-			foodAverages[keyAlt] = sum / hold.length;
-		}
-
 		buildDynamicHtml(true);
 	});
 
@@ -203,66 +169,23 @@ function baseJS(){
 			randoming = false;
 			$('.food').trigger('change');
 		} else {
-			var biggest = null;
-			var biggestSave = null;
-
-			for(var keyAlt in food) {
-				var target = contentJson.attributes.targets.food[keyAlt];
-				var percent = food[keyAlt] / target.target;
-				if(biggest === null || percent > biggest){
-					biggestSave = keyAlt;
-					biggest = percent;
-				}
-			}
-			
 			var random = 0;
 			var hold;
 			var value;
-			var maxLoops = 0;
 
 			do{
 				random = Math.floor(Math.random()*((foodJsonArr.length - 1)-0+1)+0)
 				hold = $('#' + foodJsonArr[random].replace(/ /g, ''));
 				value = +hold.val();
-
-				var maxAdd = (foodJson[foodJsonArr[random]].max - value);
-
-				value += Math.floor(Math.random()*(maxAdd-0+1)+0);
-
-				var target = contentJson.attributes.targets.food[biggestSave];
-
-				while((food[biggestSave] + (value * (foodJson[foodJsonArr[random]][biggestSave] / 100))) > (target.target + target.margin.upper) && value > 0){
-					value--;
-				}
-
-				maxLoops += 1;
-
-				if(maxLoops > foodJsonArr.length * 2){
-					$('.food input').val(0);
-
-					for(var key in foodJson) {
-						if(foodJson.hasOwnProperty(key)){
-							if(foodJson[key].min > 0){
-								$('#' + key.replace(/ /g, '')).val(foodJson[key].min);
-							}
-						}
-					}
-
-					$('.food').trigger('change');
-					setTimeout(function(){
-						randomMealPlan();
-					});
-
-					return;
-				}
-
 			} while (
-					value <= 0 ||
-					value >= foodJson[foodJsonArr[random]].max || 
-					(foodJson[foodJsonArr[random]][biggestSave] * foodJson[foodJsonArr[random]].max) > foodAverages[biggestSave]
+					value >= foodJson[foodJsonArr[random]].max
 				)
 
-			hold.val(value);
+			var maxAdd = (foodJson[foodJsonArr[random]].max - value);
+
+			value += Math.floor(Math.random()*(maxAdd-0+1)+0);
+
+			hold.val(++value);
 
 			$('.food').trigger('change');
 
@@ -709,7 +632,15 @@ function displaySelect(current, length, name, handler, inc, start){
 	return html;
 }
 
+function getTrimmedMean(data, trimAmount) {
+	var trimCount = Math.floor(trimAmount*data.length);
 
+	var trimData = data.sort(function(a, b){
+		return a - b;
+	}).slice(trimCount).slice(0, -trimCount);
+
+	return trimData.reduce(function (a, b) { return a + b; })/trimData.length;
+}
 
 
 
