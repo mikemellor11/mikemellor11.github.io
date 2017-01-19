@@ -170,22 +170,53 @@ function baseJS(){
 			$('.food').trigger('change');
 		} else {
 			var random = 0;
+			var randomFood = '';
+			var randomFoodJson = '';
 			var hold;
 			var value;
+			var suitable = true;
+			var maxAdd = 0;
 
 			do{
+				suitable = true;
 				random = Math.floor(Math.random()*((foodJsonArr.length - 1)-0+1)+0)
-				hold = $('#' + foodJsonArr[random].replace(/ /g, ''));
-				value = +hold.val();
+				randomFood = foodJsonArr[random];
+				randomFoodJson = foodJson[randomFood];
+
+				if(randomFoodJson.notIf){
+					for(var i = 0; i < randomFoodJson.notIf.length; i++){
+						if(foodJson[randomFoodJson.notIf[i]].weight > 0){
+							suitable = false;
+							break;
+						}
+					}
+				}
+
+				if(randomFoodJson.onlyIf){
+					for(var i = 0; i < randomFoodJson.onlyIf.length; i++){
+						if(foodJson[randomFoodJson.onlyIf[i]].weight <= 0){
+							suitable = false;
+							break;
+						}
+					}
+				}
+
+				if(suitable){
+					hold = $('#' + randomFood.replace(/ /g, ''));
+					value = +hold.val();
+				}
 			} while (
-					value >= foodJson[foodJsonArr[random]].max
+					!suitable ||
+					value >= randomFoodJson.max
 				)
 
-			var maxAdd = (foodJson[foodJsonArr[random]].max - value);
+			maxAdd = (randomFoodJson.max - value) * 0.5;
 
 			value += Math.floor(Math.random()*(maxAdd-0+1)+0);
 
-			hold.val(++value);
+			value = randomFoodJson.multiple * Math.round(value / randomFoodJson.multiple);
+
+			hold.val(value);
 
 			$('.food').trigger('change');
 
