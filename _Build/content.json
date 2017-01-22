@@ -31,7 +31,7 @@
                     "GDA": 55,
                     "target": 194,
                     "margin": {
-                        "upper": 90,
+                        "upper": 100,
                         "lower": 20
                     }
                 },

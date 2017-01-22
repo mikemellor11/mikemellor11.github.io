@@ -105,6 +105,9 @@
         "max": 200,
         "min": 0,
         "multiple": 55,
+        "notIf": [
+            "egg white"
+        ],
         "calories": 143,
         "protein": 14.1,
         "carbohydrate": 0.1,
@@ -439,6 +442,9 @@
         "max": 400,
         "min": 0,
         "multiple": 1,
+        "notIf": [
+            "egg"
+        ],
         "calories": 48,
         "protein": 10.9,
         "carbohydrate": 0.8,
