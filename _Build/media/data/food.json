@@ -495,5 +495,19 @@
         "sugar": 0.1,
         "salt": 0.001,
         "price": 0.27
+    },
+    "bisto gravy": {
+        "weight": 15,
+        "max": 100,
+        "min": 0,
+        "multiple": 1,
+        "calories": 397,
+        "protein": 1.7,
+        "carbohydrate": 59.8,
+        "fat": 16.3,
+        "saturates": 11.2,
+        "sugar": 12.2,
+        "salt": 14.33,
+        "price": 0.6
     }
 }
