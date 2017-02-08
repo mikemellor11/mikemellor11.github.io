@@ -697,6 +697,65 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "08/02/2017",
+                "sets": [
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 112.5,
+                        "reps": 8,
+                        "split": "00:02:22:068",
+                        "target": true
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:04:08:494",
+                        "target": true
+                    },
+                    {
+                        "weight": 130,
+                        "reps": 8,
+                        "split": "00:04:10:717",
+                        "target": true
+                    },
+                    {
+                        "weight": 137.5,
+                        "reps": 7,
+                        "split": "00:04:26:433",
+                        "target": false
+                    },
+                    {
+                        "weight": 130,
+                        "reps": 8,
+                        "split": "00:03:39:100",
+                        "target": true
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:05:03:040",
+                        "target": true
+                    },
+                    {
+                        "weight": 112.5,
+                        "reps": 8,
+                        "split": "00:04:49:202",
+                        "target": true
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:03:18:240",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -1985,6 +2044,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "08/02/2017",
+                "sets": [
+                    {
+                        "weight": 107.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 107.5,
+                        "reps": 8,
+                        "split": "00:01:37:116",
+                        "target": true
+                    },
+                    {
+                        "weight": 107.5,
+                        "reps": 8,
+                        "split": "00:01:34:590",
+                        "target": true
+                    }
+                ]
             }
         ],
         "reps": 8,
@@ -2148,6 +2230,41 @@
                         "weight": 85,
                         "reps": 8,
                         "split": "00:02:31:115",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "08/02/2017",
+                "sets": [
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:02:15:325",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:01:42:120",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:01:45:344",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:01:57:776",
                         "target": true
                     }
                 ]
