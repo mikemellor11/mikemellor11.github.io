@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 170,
+        "weight": 240,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -56,7 +56,7 @@
         "price": 0.115
     },
     "brown rice": {
-        "weight": 130,
+        "weight": 0,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -194,7 +194,7 @@
         "price": 1.55
     },
     "red kidney beans": {
-        "weight": 20,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -396,7 +396,7 @@
         "price": 0.09
     },
     "mince": {
-        "weight": 250,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
