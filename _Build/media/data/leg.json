@@ -768,6 +768,65 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "15/02/2017",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:05:35:466",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:02:34:741",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:02:35:692",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:04:04:455",
+                        "target": true
+                    },
+                    {
+                        "weight": 105,
+                        "reps": 6,
+                        "split": "00:04:32:643",
+                        "target": false
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:02:59:554",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:03:52:200",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:03:28:895",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:43:158",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
