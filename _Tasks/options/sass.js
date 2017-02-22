@@ -1,5 +1,5 @@
 module.exports = {
-	dev: {
+    dev: {
         options: {
             outputStyle: 'expanded',
             sourceMap: false,
@@ -10,9 +10,14 @@ module.exports = {
                 'bower_components/normalize-scss/sass'
             ]
         },
-        files: {
-            '_Output/css/general.css': '_Build/sass/general.scss'
-        }
+        files: [{
+            expand: true,
+            cwd: '_Build/sass/',
+            src: ['**/*.scss', '!**/_*.scss'],
+            dest: '_Output/css/',
+            ext: '.css',
+            flatten: true
+        }]
     },
     dist: {
         options: {
@@ -27,7 +32,12 @@ module.exports = {
         },
         files: [
             {
-                '_Output/css/general.css': '_Build/sass/general.scss'
+                expand: true,
+                cwd: '_Build/sass/',
+                src: ['**/*.scss', '!**/_*.scss'],
+                dest: '_Output/css/',
+                ext: '.css',
+                flatten: true
             },
             {
                 expand: true,

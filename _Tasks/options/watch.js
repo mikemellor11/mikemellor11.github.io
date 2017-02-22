@@ -1,31 +1,22 @@
 module.exports = {
+    options: {
+        spawn: false
+    },
 	scripts: {
         files: ['_Build/js/**/*.js'],
-        tasks: ['jshint', 'concat:dev', 'karma:unit:run'],
-        options: {
-            spawn: false,
-        }
+        tasks: ['jshint', 'concat:dev', 'karma:unit:run']
     },
     styles: {
         files: ['_Build/sass/**/*.scss'],
-        tasks: ['sass:dev', 'postcss'],
-        options: {
-            spawn: false,
-        }
+        tasks: ['sass:dev', 'postcss']
     },
     html: {
         files: ['_Build/*.html', '_Build/*.json', '_Build/handlebars/**/*', '!_Build/handlebars/partials/generated/**/*', '_Build/media/**/*.json'],
-        tasks: ['jsonlint', 'tv4', 'compile-handlebars', 'htmlmin', 'clean:build'],
-        options: {
-            spawn: false,
-        }
+        tasks: ['jsonlint', 'tv4', 'compile-handlebars', 'htmlmin', 'clean:build']
     },
     assets: {
         files: ['_Build/media/**/*'],
-        tasks: ['copy:assets'],
-        options: {
-            spawn: false,
-        }
+        tasks: ['copy:assets']
     },
     svg: {
         files: ['_Build/svg/**/*', '_Build/icons/**/*'],
@@ -36,16 +27,10 @@ module.exports = {
     },
     smokeTests: {
         files: ['_Test/casperjs/modules/**/*.js'],
-        tasks: ['casperjs:local'],
-        options: {
-            spawn: false,
-        }
+        tasks: ['casperjs:local']
     },
     unitTests: {
         files: ['_Test/karma/**/*'],
-        tasks: ['karma:unit:run'],
-        options: {
-            spawn: false,
-        }
+        tasks: ['karma:unit:run']
     }
 }

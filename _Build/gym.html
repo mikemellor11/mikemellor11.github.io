@@ -7,40 +7,39 @@
 	<main class="container">
 		<div class="innerContainer ut-padding ut-mobileFullChildren">
 
-			<div class="twoThirds ut-vertAlignTop">
+			<div class="full">
 				<h3>Max weight</h3>
 				{{> chart name='chart3'}}
 			</div>
 
-			<div class="third last">
+			<!-- <div class="third last">
 				<h3>Targets hit</h3>
 				{{> chart name='chart2' class="delta--full"}}
 
 				<h3>Intensity</h3>
 				{{> chart name='chart4' class="delta--full"}}
-			</div>
+			</div> -->
 
 			<div class="full">
 				<h3>Sets</h3>
 				{{> chart name='chart1'}}
 			</div>
 
-			<div class="half">
+			<div class="full">
 				<h3>Weight</h3>
 				{{> chart name='chart5'}}
 			</div>
 
-			<div class="half last">
+			<div class="full">
 				<h3>Macros</h3>
 				{{> chart name='chart6'}}
 			</div>
 
-			<div class="fifth">
-				<ul class="d3__list--workouts">
-				</ul>
+			<div class="quarter d3__calendar">
+				<h3>Febuary</h3>
 			</div>
 
-			<div class="fourFifths ut-vertAlignTop last">
+			<div class="threeQuarters ut-vertAlignTop last">
 				<table class="siteStatus table__responsive d3-exercise">
 				</table>
 			</div>
@@ -65,8 +64,52 @@
 			chartManager.init(function(){
 				var gym = Gym(chartManager.all);
 				var chest = Gym(chartManager.chest);
+				var dates = gym.date(true);
 
-				chartManager.htmlList('.d3__list--workouts', gym.date(true).splice(0, 10));
+				var startWeek = moment().startOf('month').week();
+				var endWeek = moment().endOf('month').week();
+
+				console.log(dates.indexOf('15/02/2017'));
+
+				let calendar = []
+				for(var week = startWeek; week<=endWeek;week++){
+					calendar.push({
+						days:Array(7).fill(0).map((n, i) => moment().week(week).startOf('week').clone().add(n + i, 'day'))
+					});
+				}
+
+				var html = '<h3>' + moment().format('MMMM') + '</h3><ul class="d3__list--workouts">';
+				html += calendar.reduce(function(html, day){
+							return html + day.days.reduce(function(html, day){
+
+									var newHtml = '<li class="';
+
+									if(day.isSame(moment(), 'day')){
+										newHtml += 'today';
+									}
+
+									if(dates.indexOf(day.format('DD/MM/YYYY')) !== -1){
+										newHtml += ' workout';
+									}
+
+									newHtml += '"';
+
+									if(dates.indexOf(day.format('DD/MM/YYYY')) !== -1){
+										newHtml += 'data-date="' + day.format('DD/MM/YYYY') + '"';
+									}
+
+									newHtml += '>';
+
+									newHtml += day.format('D') + '</li>'
+
+									return html + newHtml;
+								}, '');
+						}, '');
+				html += '</ul>';
+
+				d3.select('.d3__calendar').html(html);
+
+				/*chartManager.htmlList('.d3__list--workouts', gym.date(true).splice(0, 10));*/
 
 				chartManager.htmlWorkout('.d3-exercise', gym.last());
 
@@ -189,7 +232,7 @@
 					Bar('.chart3', true)
 						.data(data3)
 						.att({
-							width: 674,
+							width: 1020,
 							barGap: 0.025,
 							padding: {
 								left: 0.025,
@@ -208,7 +251,7 @@
 						.render();
 				}, delay);
 
-				setTimeout(function(){
+				/*setTimeout(function(){
 					d3.select('.chart2').node().parentNode.classList.add('async--finished');
 
 					Pie('.chart2', true)
@@ -229,9 +272,9 @@
 						})
 						.init()
 						.render();
-				}, delay += delaySpeed);
+				}, delay += delaySpeed);*/
 
-				setTimeout(function(){
+				/*setTimeout(function(){
 					d3.select('.chart4').node().parentNode.classList.add('async--finished');
 
 					Pie('.chart4', true)
@@ -246,7 +289,7 @@
 						})
 						.init()
 						.render();
-				}, delay += delaySpeed);
+				}, delay += delaySpeed);*/
 
 				setTimeout(function(){
 					d3.select('.chart1').node().parentNode.classList.add('async--finished');
@@ -273,7 +316,7 @@
 					Line('.chart5', true)
 						.data(data5)
 						.att({
-							width: 501,
+							width: 1020,
 							xLabel: "Week",
 							yLabel: "Weight (kg)",
 							margin: {
@@ -293,7 +336,7 @@
 					Line('.chart6', true)
 						.data(data6)
 						.att({
-							width: 501,
+							width: 1020,
 							xLabel: "Week",
 							yLabel: "Weight (g)",
 							margin: {
@@ -307,13 +350,13 @@
 				}, delay += delaySpeed);
 
 				document.querySelector('.d3__list--workouts').onclick = function(e){
-					if(e.target.classList.contains('d3__list--workouts')){
+					if(!e.target.classList.contains('workout')){
 						return;
 					}
 
-			    	chartManager.htmlWorkout('.d3-exercise', gym.workout(e.target.innerHTML));
-			    	this.querySelector('.externalLink').classList.remove('externalLink');
-			    	e.target.classList.add('externalLink');
+			    	chartManager.htmlWorkout('.d3-exercise', gym.workout(e.target.dataset.date));
+			    	/*this.querySelector('.externalLink').classList.remove('externalLink');
+			    	e.target.classList.add('externalLink');*/
 			    };
 			});
 

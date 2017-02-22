@@ -145,3 +145,34 @@ svg{
 		position: absolute;
 	}
 }
+
+.d3__calendar{
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		color: $color0;
+		text-align: center;
+	}
+
+	li{
+		width: calc((100% / 7) - 4px);
+		background: $color1;
+		margin: 1px;
+		padding: 5px;
+		box-sizing: border-box;
+		border-radius: 2px;
+	}
+
+	.today{
+		background: $color4;
+	}
+
+	.workout{
+		background: $color5;
+		cursor: pointer;
+	}
+}

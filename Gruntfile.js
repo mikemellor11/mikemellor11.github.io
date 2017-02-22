@@ -11,8 +11,17 @@ module.exports = function(grunt) {
 
     grunt.initConfig(config);
 
+    // CONCAT/UGLIFY DYNAMIC
+    grunt.file.expand({cwd: '_Build/js/', flatten: true}, '**/++*.js').forEach(function(d){
+        var file = d.slice(d.indexOf('++') + 2);
+        var group = file.slice(0, file.indexOf('.'));
+
+        config.concat.dev.files[0]['public/js/' + group + '.js'] = '_Build/js/**/' + group + '*.js';
+        config.concat.dist.files[0]['.tmp/js/' + group + '.js'] = '_Build/js/**/' + group + '*.js';
+    });
+
     // Load all grunt npm tasks with the prefix 'grunt-'
-    require('load-grunt-tasks')(grunt);
+    require('jit-grunt')(grunt);
 
     // Load all custom tasks found in _Tasks
     grunt.loadTasks('_Tasks');
