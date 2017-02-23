@@ -56,7 +56,7 @@
         "price": 0.115
     },
     "brown rice": {
-        "weight": 0,
+        "weight": 110,
         "max": 400,
         "min": 0,
         "multiple": 1,

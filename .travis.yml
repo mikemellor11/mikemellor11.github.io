@@ -4,9 +4,8 @@ node_js:
 before_install:
   - npm install -g grunt-cli
   - npm install -g bower
-install:
-  - npm run setup
   - npm install glob
+  - bower install
 script:
   - npm run production
   - npm test
