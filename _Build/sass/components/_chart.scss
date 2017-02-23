@@ -24,7 +24,7 @@ polyline{
   stroke: $color1;
 }
 
-$colors-list: #47ACB1 #F26522 #F9AA7B #A5A8AA #676766 #ADD5D7 #FFA4AF #FFCD34;
+$colors-list: #47ACB1 #F26522 #F9AA7B #A5A8AA #676766 #ADD5D7 #FFA4AF #FFCD34 #00FF00 #FF0000;
 
 @each $current-color in $colors-list {
     $i: index($colors-list, $current-color);

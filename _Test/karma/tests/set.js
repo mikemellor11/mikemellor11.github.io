@@ -164,6 +164,22 @@ describe('set.js', function () {
 
     // UTILITY //
 
+    it('return weight of rep for each item in group', function () {
+        group.each(function(d, i){
+            expect(!isNaN(d.weight)).to.equal(true);
+        })
+    });
+
+    it('return mapped object for last item in group', function () {
+        expect(group.last().map(function(d, i){
+            return {
+                weight: d.weight
+            }
+        })).to.deep.equal([{
+            weight: 70
+        }]);
+    });
+
     it('return amount of sets in object', function () {
         expect(group.length()).to.equal(6);
     });

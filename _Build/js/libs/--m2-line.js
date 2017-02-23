@@ -228,7 +228,9 @@ Line.prototype.render = function(){
 
 		if(att.symbols){
 			g_Plots.append("path")
-				.attr("class", function(d, i){return 'line__symbol ' + att.colors[(lineIndex % att.colors.length)]})
+				.attr("class", function(d, i){
+					return 'line__symbol ' + ((d.color) ? d.color : att.colors[(lineIndex % att.colors.length)]);
+				})
 				.attr('opacity', 0);
 
 			g_Plots.merge(plots).select("path")

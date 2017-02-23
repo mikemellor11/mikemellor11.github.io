@@ -143,6 +143,18 @@
 			}
 		},
 
+		each: function(cb){
+			this.data.forEach(function(d, i){
+				cb(d, i);
+			});
+		},
+
+		map: function(cb){
+			return this.data.map(function(d, i){
+				return cb(d, i);
+			});
+		},
+
 		length: function(){
 			return this.data.length;
 		}

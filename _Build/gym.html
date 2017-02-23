@@ -69,9 +69,7 @@
 				var startWeek = moment().startOf('month').week();
 				var endWeek = moment().endOf('month').week();
 
-				console.log(dates.indexOf('15/02/2017'));
-
-				let calendar = []
+				var calendar = []
 				for(var week = startWeek; week<=endWeek;week++){
 					calendar.push({
 						days:Array(7).fill(0).map((n, i) => moment().week(week).startOf('week').clone().add(n + i, 'day'))
@@ -183,15 +181,15 @@
 					var workout = d.workouts();
 					var exercise = d.exercise();
 					var sets = workout.sets();
-					var weights = sets.weight();
 
 					data.push({
 						"label": exercise,
-						"values": weights.map(function(dl, il){
+						"values": sets.map(function(dl, il){
 							return {
 			                    "id": il,
-			                    "value": dl,
-			                    "label": (il === (weights.length - 1)) ? exercise : ''
+			                    "value": dl.weight,
+			                    "label": (il === (sets.length() - 1)) ? exercise : '',
+			                    "color": (!dl.target) ? 'fill10' : null
 			                }
 						})
 					});
