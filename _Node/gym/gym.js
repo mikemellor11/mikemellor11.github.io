@@ -10,7 +10,34 @@ var foodJson = loadJson('food');
 
 var lastKg = weightJson[weightJson.length - 1].weight;
 
-if(weightJson[weightJson.length - 1].date !== today && process.argv[2] !== 'skip'){
+if(process.argv[2] === 'cardio'){
+    stdio.question('Weight (' + lastKg + 'kg)', function (err, vers) {
+        if(vers.length <= 0){}
+        else if(isNaN(vers)){
+            console.log("Enter a valid number without units e.g 80");
+            return;
+        } else {
+            lastKg = +vers;
+        }
+
+        stdio.question('Cardio (0 mins)', function (err, vers) {
+            if(vers.length <= 0){}
+            else if(isNaN(vers)){
+                console.log("Enter a valid number without units e.g 80");
+                return;
+            }
+
+            weightJson.push({
+                date: today,
+                weight: lastKg,
+                food: calculateFood(foodJson),
+                cardio: +vers
+            });
+
+            saveJson(weightJson, 'weight');
+        });
+    });
+} else if(weightJson[weightJson.length - 1].date !== today && process.argv[2] !== 'skip'){
     stdio.question('Weight (' + lastKg + 'kg)', function (err, vers) {
         if(vers.length <= 0){}
         else if(isNaN(vers)){

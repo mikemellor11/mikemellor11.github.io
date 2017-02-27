@@ -159,7 +159,7 @@ svg{
 	}
 
 	li{
-		width: calc((100% / 7) - 4px);
+		width: calc((100% / 7) - 2px);
 		background: $color1;
 		margin: 1px;
 		padding: 5px;
@@ -174,5 +174,11 @@ svg{
 	.workout{
 		background: $color5;
 		cursor: pointer;
+	}
+
+	.label{
+		background: none;
+		color: $color1;	
+		padding: 0;
 	}
 }

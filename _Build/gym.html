@@ -40,6 +40,7 @@
 			</div>
 
 			<div class="threeQuarters ut-vertAlignTop last">
+				<h3>Workout</h3>
 				<table class="siteStatus table__responsive d3-exercise">
 				</table>
 			</div>
@@ -77,6 +78,11 @@
 				}
 
 				var html = '<h3>' + moment().format('MMMM') + '</h3><ul class="d3__list--workouts">';
+
+				html += calendar[0].days.reduce(function(html, day){
+							return html + '<li class="label">' + day.format('ddd') + '</li>';
+						}, '');
+
 				html += calendar.reduce(function(html, day){
 							return html + day.days.reduce(function(html, day){
 
