@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 240,
+        "weight": 140,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -42,7 +42,7 @@
         "price": 0.13
     },
     "broccoli": {
-        "weight": 220,
+        "weight": 330,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -56,7 +56,7 @@
         "price": 0.115
     },
     "brown rice": {
-        "weight": 110,
+        "weight": 90,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -152,7 +152,7 @@
         "price": 0.44
     },
     "protein shake": {
-        "weight": 0,
+        "weight": 100,
         "max": 100,
         "min": 0,
         "multiple": 25,
@@ -166,7 +166,7 @@
         "price": 0.974
     },
     "banana": {
-        "weight": 290,
+        "weight": 220,
         "max": 300,
         "min": 0,
         "multiple": 118,
@@ -292,7 +292,7 @@
         "price": 0.57
     },
     "sweet potato": {
-        "weight": 230,
+        "weight": 330,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -320,7 +320,7 @@
         "price": 0.208
     },
     "virgin olive oil": {
-        "weight": 0,
+        "weight": 4,
         "max": 5,
         "min": 0,
         "multiple": 1,
@@ -382,7 +382,7 @@
         "price": 0.2
     },
     "new potatoes": {
-        "weight": 65,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -396,7 +396,7 @@
         "price": 0.09
     },
     "mince": {
-        "weight": 0,
+        "weight": 150,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -469,7 +469,7 @@
         "price": 0.16
     },
     "lentils": {
-        "weight": 200,
+        "weight": 300,
         "max": 200,
         "min": 0,
         "multiple": 1,
