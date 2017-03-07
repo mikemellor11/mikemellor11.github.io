@@ -2678,6 +2678,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "07/03/2017",
+                "sets": [
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:02:00:257",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:02:15:260",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:02:05:264",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:02:11:298",
+                        "target": true
+                    }
+                ]
             }
         ]
     }

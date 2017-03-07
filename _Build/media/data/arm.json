@@ -947,6 +947,65 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "07/03/2017",
+                "sets": [
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:39:944",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:48:251",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:02:01:978",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:02:22:029",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:02:27:734",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:02:41:362",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:03:39:131",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:24:623",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:02:14:333",
+                        "target": true
+                    }
+                ]
             }
         ],
         "reps": 8,

@@ -945,6 +945,65 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "07/03/2017",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:02:46:789",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:03:14:371",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:04:46:737",
+                        "target": true
+                    },
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:04:06:547",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:03:20:539",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:04:14:685",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:03:47:899",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:59:590",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
