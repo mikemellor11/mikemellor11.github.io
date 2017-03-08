@@ -65,6 +65,7 @@
 			chartManager.init(function(){
 				var gym = Gym(chartManager.all);
 				var chest = Gym(chartManager.chest);
+				var weight = Weight(chartManager.weight);
 				var dates = gym.date(true);
 
 				var startWeek = moment().startOf('month').week();
@@ -94,6 +95,10 @@
 
 									if(dates.indexOf(day.format('DD/MM/YYYY')) !== -1){
 										newHtml += ' workout';
+									}
+
+									if(weight.weight(day.format('DD/MM/YYYY')).cardio() > 0){
+										newHtml += ' cardio';
 									}
 
 									newHtml += '"';

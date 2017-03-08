@@ -1,0 +1,47 @@
+[
+    {
+        "date": "01/07/2016",
+        "weight": 100,
+        "calories": 2000,
+        "food": {
+            "calories": 10,
+            "protein": 20,
+            "carbohydrate": 30,
+            "fat": 40,
+            "saturates": 50,
+            "sugar": 60,
+            "salt": 70,
+            "price": 80
+        }
+    },
+    {
+        "date": "01/08/2016",
+        "weight": 200,
+        "food": {
+            "calories": 110,
+            "protein": 120,
+            "carbohydrate": 130,
+            "fat": 140,
+            "saturates": 150,
+            "sugar": 160,
+            "salt": 170,
+            "price": 180
+        },
+        "cardio": 20
+    },
+    {
+        "date": "01/09/2016",
+        "weight": 300,
+        "food": {
+            "calories": 210,
+            "protein": 220,
+            "carbohydrate": 230,
+            "fat": 240,
+            "saturates": 250,
+            "sugar": 260,
+            "salt": 270,
+            "price": 280
+        },
+        "cardio": 30
+    }
+]
