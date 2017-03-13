@@ -37,7 +37,8 @@ module.exports = function(config) {
         '**/*.json'   : ['json_fixtures'],
         '_Build/js/libs/--gym.js' : 'coverage',
         '_Build/js/libs/--workout.js' : 'coverage',
-        '_Build/js/libs/--set.js' : 'coverage'
+        '_Build/js/libs/--set.js' : 'coverage',
+        '_Build/js/libs/--weight.js' : 'coverage'
     },
 
     jsonFixturesPreprocessor: {
