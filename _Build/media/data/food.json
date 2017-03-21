@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 150,
+        "weight": 210,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -42,7 +42,7 @@
         "price": 0.13
     },
     "broccoli": {
-        "weight": 0,
+        "weight": 210,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -56,7 +56,7 @@
         "price": 0.115
     },
     "brown rice": {
-        "weight": 75,
+        "weight": 0,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -194,7 +194,7 @@
         "price": 1.55
     },
     "red kidney beans": {
-        "weight": 45,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -292,7 +292,7 @@
         "price": 0.57
     },
     "sweet potato": {
-        "weight": 300,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -382,7 +382,7 @@
         "price": 0.2
     },
     "new potatoes": {
-        "weight": 0,
+        "weight": 375,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -469,7 +469,7 @@
         "price": 0.16
     },
     "lentils": {
-        "weight": 45,
+        "weight": 225,
         "max": 200,
         "min": 0,
         "multiple": 1,
