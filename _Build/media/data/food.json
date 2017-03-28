@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 210,
+        "weight": 150,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -42,7 +42,7 @@
         "price": 0.13
     },
     "broccoli": {
-        "weight": 210,
+        "weight": 240,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -382,7 +382,7 @@
         "price": 0.2
     },
     "new potatoes": {
-        "weight": 375,
+        "weight": 450,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -396,7 +396,7 @@
         "price": 0.09
     },
     "mince": {
-        "weight": 220,
+        "weight": 225,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -469,7 +469,7 @@
         "price": 0.16
     },
     "lentils": {
-        "weight": 225,
+        "weight": 150,
         "max": 200,
         "min": 0,
         "multiple": 1,
@@ -497,7 +497,7 @@
         "price": 0.27
     },
     "bisto gravy": {
-        "weight": 15,
+        "weight": 0,
         "max": 100,
         "min": 0,
         "multiple": 1,
