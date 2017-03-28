@@ -181,9 +181,53 @@ svg{
 		cursor: pointer;
 	}
 
+	.cardio.workout{
+		background: $color2;
+	}
+
 	.label{
 		background: none;
 		color: $color1;	
 		padding: 0;
+	}
+}
+
+.calendar__key{
+	margin: 0;
+
+	&:first-child{
+		margin-top: $spacing;
+	}
+	
+	span{
+		margin-left: $spacing * 0.5;
+		width: 0.75em;
+		height: 0.75em;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.calendar__key--today{
+	span{
+		background: $color4;
+	}
+}
+
+.calendar__key--cardio{
+	span{
+		background: $color6;
+	}
+}
+
+.calendar__key--workout{
+	span{
+		background: $color5;
+	}
+}
+
+.calendar__key--cardio.calendar__key--workout{
+	span{
+		background: $color2;
 	}
 }

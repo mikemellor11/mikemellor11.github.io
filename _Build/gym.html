@@ -8,7 +8,7 @@
 		<div class="innerContainer ut-padding ut-mobileFullChildren">
 
 			<div class="full">
-				<h3>Max weight</h3>
+				<h3>Total volume</h3>
 				{{> chart name='chart3'}}
 			</div>
 
@@ -35,28 +35,23 @@
 				{{> chart name='chart6'}}
 			</div>
 
-			<div class="quarter d3__calendar">
-				<h3>Febuary</h3>
+			<div class="full ut-relative ut-textAlignCenter">
+				<div class="half d3__calendar">
+					<h3>Febuary</h3>
+				</div>
+				<div class="ut-marginTop">
+					<p class="calendar__key calendar__key--cardio">Cardio: <span></span></p>
+					<p class="calendar__key calendar__key--workout">Workout: <span></span></p>
+					<p class="calendar__key calendar__key--cardio calendar__key--workout">Cardio &amp; Workout: <span></span></p>
+					<p class="calendar__key calendar__key--today">Today: <span></span></p>
+				</div>
 			</div>
 
-			<div class="threeQuarters ut-vertAlignTop last">
+			<div class="full ut-vertAlignTop last">
 				<h3>Workout</h3>
 				<table class="siteStatus table__responsive d3-exercise">
 				</table>
 			</div>
-
-			<div class="full last ut-vertAlignTop">
-				<div class="ut-padding ut-marginBottom">
-					<select class="full js-chartSelect">
-						{{#each index.charts}}
-							<option>{{name}}</option>
-						{{/each}}
-					</select>
-				</div>
-				<div class="key">
-				</div>
-			</div>
-
 		</div>
 	</main>
 
@@ -228,7 +223,7 @@
 					data3.push({
 			            "id": i,
 			            "label": exercise,
-			            "value": d.max()
+			            "value": d.volume()
 			        });
 				});
 
@@ -248,9 +243,9 @@
 								right: 0.025
 							},
 							displayBar: true,
-							yLabel: "Max weight",
+							yLabel: "Total volume (kg)",
 							margin: {
-								left: 60
+								left: 70
 							},
 							stagger: 50,
 							delaySpeed: delaySpeed,
