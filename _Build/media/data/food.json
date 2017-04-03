@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 150,
+        "weight": 225,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -166,7 +166,7 @@
         "price": 0.974
     },
     "banana": {
-        "weight": 220,
+        "weight": 200,
         "max": 300,
         "min": 0,
         "multiple": 118,
@@ -208,7 +208,7 @@
         "price": 0.125
     },
     "smooth peanut butter": {
-        "weight": 20,
+        "weight": 0,
         "max": 25,
         "min": 0,
         "multiple": 1,
@@ -292,7 +292,7 @@
         "price": 0.57
     },
     "sweet potato": {
-        "weight": 0,
+        "weight": 270,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -382,7 +382,7 @@
         "price": 0.2
     },
     "new potatoes": {
-        "weight": 450,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -396,7 +396,7 @@
         "price": 0.09
     },
     "mince": {
-        "weight": 225,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -469,7 +469,7 @@
         "price": 0.16
     },
     "lentils": {
-        "weight": 150,
+        "weight": 180,
         "max": 200,
         "min": 0,
         "multiple": 1,
