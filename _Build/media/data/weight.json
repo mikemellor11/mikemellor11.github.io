@@ -764,5 +764,19 @@
             "price": 4.35245
         },
         "cardio": 15
+    },
+    {
+        "date": "04/04/2017",
+        "weight": 82.3,
+        "food": {
+            "calories": 1491.24,
+            "protein": 181.595,
+            "carbohydrate": 133.375,
+            "fat": 19.04,
+            "saturates": 8.048,
+            "sugar": 77.38500000000002,
+            "salt": 1.4475,
+            "price": 3.44575
+        }
     }
 ]

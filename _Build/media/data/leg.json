@@ -1181,6 +1181,65 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "04/04/2017",
+                "sets": [
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:02:53:116",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:02:36:294",
+                        "target": true
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:03:49:562",
+                        "target": true
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 8,
+                        "split": "00:04:58:891",
+                        "target": true
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:02:48:839",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:03:23:170",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:03:52:408",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:03:38:321",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
