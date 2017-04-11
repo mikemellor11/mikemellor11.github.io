@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 225,
+        "weight": 150,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -42,7 +42,7 @@
         "price": 0.13
     },
     "broccoli": {
-        "weight": 240,
+        "weight": 360,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -292,7 +292,7 @@
         "price": 0.57
     },
     "sweet potato": {
-        "weight": 270,
+        "weight": 180,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -306,7 +306,7 @@
         "price": 0.1
     },
     "chickpeas": {
-        "weight": 0,
+        "weight": 150,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -320,7 +320,7 @@
         "price": 0.208
     },
     "virgin olive oil": {
-        "weight": 3,
+        "weight": 5,
         "max": 5,
         "min": 0,
         "multiple": 1,
@@ -469,7 +469,7 @@
         "price": 0.16
     },
     "lentils": {
-        "weight": 180,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "multiple": 1,
