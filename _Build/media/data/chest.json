@@ -438,6 +438,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "12/04/2017",
+                "sets": [
+                    {
+                        "weight": 62.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 62.5,
+                        "reps": 8,
+                        "split": "00:02:38:537",
+                        "target": true
+                    },
+                    {
+                        "weight": 62.5,
+                        "reps": 8,
+                        "split": "00:03:26:150",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 3,
@@ -988,6 +1011,29 @@
                         "reps": 7,
                         "split": "00:02:44:100",
                         "target": false
+                    }
+                ]
+            },
+            {
+                "date": "12/04/2017",
+                "sets": [
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:38:900",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:04:16:417",
+                        "target": true
                     }
                 ]
             }
@@ -2475,6 +2521,65 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "12/04/2017",
+                "sets": [
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:27:349",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:03:25:066",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:05:36:379",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 6,
+                        "split": "00:05:50:087",
+                        "target": false
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:04:27:901",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:05:36:561",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:03:33:846",
+                        "target": true
+                    },
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:05:19:802",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -3295,6 +3400,41 @@
                         "weight": 80,
                         "reps": 20,
                         "split": "00:01:36:248",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "12/04/2017",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:16:061",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:17:544",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:22:600",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:02:08:586",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:25:785",
                         "target": true
                     }
                 ]
