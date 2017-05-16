@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 150,
+        "weight": 100,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -42,7 +42,7 @@
         "price": 0.13
     },
     "broccoli": {
-        "weight": 360,
+        "weight": 200,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -306,7 +306,7 @@
         "price": 0.1
     },
     "chickpeas": {
-        "weight": 150,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
