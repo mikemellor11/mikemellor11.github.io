@@ -2685,6 +2685,53 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "17/05/2017",
+                "sets": [
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:31:900",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:03:54:297",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 6,
+                        "split": "00:03:48:162",
+                        "target": false
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 6,
+                        "split": "00:03:23:562",
+                        "target": false
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 5,
+                        "split": "00:02:40:588",
+                        "target": false
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:04:04:596",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
