@@ -15,7 +15,8 @@
             "startPercent": 0.75,
             "endPercent": 0.8,
             "incInterval": 3,
-            "equipmentWeight": 20
+            "equipmentWeight": 20,
+            "max": "auto"
         },
         "targets": {
             "food": {

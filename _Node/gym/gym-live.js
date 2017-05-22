@@ -111,7 +111,8 @@ function baseJS(){
 		            "startPercent": (+$('.startPercent', this).val() / 100),
 		            "endPercent": (+$('.endPercent', this).val() / 100),
 		            "incInterval": $('.incInterval', this).val(),
-		            "equipmentWeight": $('.equipmentWeight', this).val()
+		            "equipmentWeight": $('.equipmentWeight', this).val(),
+		            "max": $('.max', this).val()
 				}
 			});
 		});
@@ -325,6 +326,10 @@ function baseJS(){
 					)[key];
 				}
 
+				if(!gD.max){
+					gD.max = 'auto';
+				}
+
 				if(gymData[d.value].sessions){
 					var workout = Workout(gymData[d.value].sessions);
 					var recentWorkout = workout.last();
@@ -346,6 +351,10 @@ function baseJS(){
 						maxLast = recentWorkout.max();
 					}
 
+					if(gD.max !== 'auto'){
+						maxLast = gD.max;
+					}
+
 					// Intervals set and theres enough sessions to calculate
 					if(gD.incInterval > 0 && workout.length() > (gD.incInterval + todayBegan)){
 						readyForIncrease = true;
@@ -359,13 +368,24 @@ function baseJS(){
 							var tempLastMax = lastWorkout.max();
 							var tempVolumeLast = lastWorkout.volume();
 
+							if(tempVolumeLast > holdVolumeLast){
+								holdVolumeLast = tempVolumeLast;
+							}
+							if(tempLastMax > holdLastMax){
+								holdLastMax = tempLastMax;
+							}
+						}
+
+						for(var i = 0; i < gD.incInterval; i++){
+							var index = i + todayBegan;
+							var lastWorkout = workout.fromLast(index);
+							var tempLastMax = lastWorkout.max();
+							var tempVolumeLast = lastWorkout.volume();
+
 							if(tempLastMax < holdLastMax || tempVolumeLast < holdVolumeLast || !lastWorkout.target()){
 								readyForIncrease = false;
 								break;
 							}
-
-							holdVolumeLast = tempVolumeLast;
-							holdLastMax = tempLastMax;
 						}
 					}
 
@@ -420,6 +440,7 @@ function baseJS(){
 				html += displaySelect(gD.peak, 12, 'Peak', 'peak', 1, 1);
 				html += displaySelect((gD.startPercent * 100), 100, 'Start percent', 'startPercent', 1, 0);
 				html += displaySelect((gD.endPercent * 100), 100, 'End percent', 'endPercent', 1, 0);
+				html += displaySelect(gD.max, max, 'Max', 'max', 2.5, 0, true);
 				
 				html += '</div>';
 
@@ -451,7 +472,7 @@ function baseJS(){
 
 				html += '<form data-group="' + $(d).data('group') + '" data-exercise="' + d.value + '" data-target="' + target + '" data-reps="' + gD.reps + '" class="session__submit">';
 
-				html += displaySelect(target, 200, 'Weight', 'weight', 2.5, 0);
+				html += displaySelect(target, max, 'Weight', 'weight', 2.5, 0);
 				html += displaySelect(gD.reps, 30, 'Reps', 'reps', 1, 1);
 
 				html += '<button type="submit" class="button button--full ut-marginTop">Set done</button>'
@@ -653,9 +674,14 @@ function displayField(value, name, callout, classes, suffix){
 	return html;
 }
 
-function displaySelect(current, length, name, handler, inc, start){
+function displaySelect(current, length, name, handler, inc, start, auto){
 	var html = '<label for="' + handler + '" class="half ut-textAlignRight">' + name + '</label>';
 	html += '<select id="' + handler + '" class="' + handler + ' half last">';
+
+	if(auto){
+		html += '<option>auto</option>';
+	}
+
 	for(var il = start; il <= length; il+=inc){
 		html += '<option ' + ((il === current) ? 'selected' : '') + '>' + il + '</option>';
 	}
