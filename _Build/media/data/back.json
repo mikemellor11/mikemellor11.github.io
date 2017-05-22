@@ -1155,8 +1155,8 @@
         "sets": 9,
         "peak": 5,
         "increase": 2.5,
-        "startPercent": 0.8,
-        "endPercent": 0.8,
+        "startPercent": 1,
+        "endPercent": 1,
         "incInterval": 6,
         "equipmentWeight": 10,
         "sessions": [
@@ -2628,9 +2628,69 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "22/05/2017",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:50:121",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:24:566",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:20:652",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:03:21:112",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:34:784",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:55:529",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:54:385",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:03:54:748",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:21:691",
+                        "target": true
+                    }
+                ]
             }
         ],
-        "reps": 8
+        "reps": 8,
+        "max": 40
     },
     {
         "exercise": "Shrugs",

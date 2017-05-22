@@ -1082,6 +1082,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "22/05/2017",
+                "sets": [
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 7,
+                        "split": "00:01:45:221",
+                        "target": false
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 5,
+                        "split": "00:02:05:167",
+                        "target": false
+                    }
+                ]
             }
         ],
         "reps": 8,
@@ -2732,6 +2755,65 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "22/05/2017",
+                "sets": [
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:03:18:060",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:02:39:342",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 7,
+                        "split": "00:02:08:232",
+                        "target": false
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 6,
+                        "split": "00:04:02:603",
+                        "target": false
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 6,
+                        "split": "00:04:12:145",
+                        "target": false
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 6,
+                        "split": "00:02:34:418",
+                        "target": false
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:04:36:626",
+                        "target": true
+                    },
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:03:35:145",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -2740,7 +2822,8 @@
         "increase": 2.5,
         "startPercent": 0.8,
         "incInterval": 3,
-        "equipmentWeight": 20
+        "equipmentWeight": 20,
+        "max": 97.5
     },
     {
         "exercise": "Push ups",
