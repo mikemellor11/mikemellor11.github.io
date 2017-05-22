@@ -41,6 +41,9 @@
 			            },
 			            "equipmentWeight": {
 			            	"type": "number"
+			            },
+			            "max": {
+			            	"type": ["number", "string"]
 			            }
 	            	}
 		        },
