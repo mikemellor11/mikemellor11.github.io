@@ -1322,6 +1322,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "23/05/2017",
+                "sets": [
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:04:37:644",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:03:57:172",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -1331,6 +1354,7 @@
         "startPercent": 0.75,
         "endPercent": 0.75,
         "incInterval": 3,
-        "equipmentWeight": 20
+        "equipmentWeight": 20,
+        "max": 110
     }
 ]

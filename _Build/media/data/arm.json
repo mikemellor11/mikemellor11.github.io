@@ -2,7 +2,7 @@
     {
         "exercise": "Bicep curls",
         "sets": 9,
-        "peak": 5,
+        "peak": 1,
         "sessions": [
             {
                 "date": "12/10/2016",
@@ -1318,6 +1318,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "23/05/2017",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:31:240",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:03:43:882",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:17:602",
+                        "target": true
+                    }
+                ]
             }
         ],
         "reps": 8,
@@ -1325,7 +1348,8 @@
         "startPercent": 0.95,
         "endPercent": 0.95,
         "incInterval": 6,
-        "equipmentWeight": 10
+        "equipmentWeight": 10,
+        "max": 40
     },
     {
         "exercise": "Overhead tricep"
