@@ -1336,6 +1336,65 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "27/05/2017",
+                "sets": [
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:02:15:200",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:00:385",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:03:07:163",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 4,
+                        "split": "00:01:58:872",
+                        "target": false
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:03:10:839",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:03:12:127",
+                        "target": true
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:04:18:652",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:02:43:420",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -1347,7 +1406,7 @@
     },
     {
         "exercise": "Lateral Raises",
-        "sets": 3,
+        "sets": 9,
         "increase": 2.5,
         "peak": 1,
         "startPercent": 1,
@@ -1895,13 +1954,73 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "27/05/2017",
+                "sets": [
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:602",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:02:15:681",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:02:22:185",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:02:25:871",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:02:26:040",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:02:53:602",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:02:34:825",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:55:174",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:02:27:195",
+                        "target": true
+                    }
+                ]
             }
         ],
-        "reps": 8
+        "reps": 8,
+        "max": null
     },
     {
         "exercise": "Front Raises",
-        "sets": 3,
+        "sets": 9,
         "increase": 2.5,
         "peak": 3,
         "startPercent": 1,
@@ -2449,13 +2568,73 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "27/05/2017",
+                "sets": [
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:950",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:01:180",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:964",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:921",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:726",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:909",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:01:037",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:549",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:940",
+                        "target": true
+                    }
+                ]
             }
         ],
-        "reps": 8
+        "reps": 8,
+        "max": null
     },
     {
         "exercise": "Wide lateral Raises",
-        "sets": 3,
+        "sets": 9,
         "increase": 2.5,
         "peak": 3,
         "startPercent": 1,
@@ -3003,8 +3182,68 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "27/05/2017",
+                "sets": [
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:01:253",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:01:536",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:01:346",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:721",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:860",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:465",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:824",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:837",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 8,
+                        "split": "00:00:00:904",
+                        "target": true
+                    }
+                ]
             }
         ],
-        "reps": 8
+        "reps": 8,
+        "max": null
     }
 ]
