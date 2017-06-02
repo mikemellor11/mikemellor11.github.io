@@ -2814,6 +2814,65 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "02/06/2017",
+                "sets": [
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:01:24:246",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:01:51:968",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:02:19:047",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 6,
+                        "split": "00:03:27:578",
+                        "target": false
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 4,
+                        "split": "00:02:35:346",
+                        "target": false
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 5,
+                        "split": "00:02:48:087",
+                        "target": false
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:03:05:614",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:52:526",
+                        "target": true
+                    },
+                    {
+                        "weight": 77.5,
+                        "reps": 7,
+                        "split": "00:02:05:801",
+                        "target": false
+                    }
+                ]
             }
         ],
         "sets": 9,
