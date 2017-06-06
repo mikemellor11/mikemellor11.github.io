@@ -1380,6 +1380,41 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "06/06/2017",
+                "sets": [
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:03:41:881",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:03:31:671",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:03:31:102",
+                        "target": true
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:05:09:409",
+                        "target": true
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 4,
+                        "split": "00:05:18:150",
+                        "target": false
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -1390,6 +1425,6 @@
         "endPercent": 0.75,
         "incInterval": 3,
         "equipmentWeight": 20,
-        "max": 100
+        "max": 110
     }
 ]
