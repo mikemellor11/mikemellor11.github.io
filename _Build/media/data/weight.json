@@ -1017,5 +1017,19 @@
             "salt": 1.142,
             "price": 2.2078
         }
+    },
+    {
+        "date": "11/06/2017",
+        "weight": 80.6,
+        "food": {
+            "calories": 1089.55,
+            "protein": 129.53,
+            "carbohydrate": 95.38,
+            "fat": 17.335,
+            "saturates": 7.702999999999999,
+            "sugar": 69.16,
+            "salt": 1.142,
+            "price": 2.2078
+        }
     }
 ]

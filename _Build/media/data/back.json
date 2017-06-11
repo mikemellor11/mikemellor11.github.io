@@ -1174,17 +1174,64 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "11/06/2017",
+                "sets": [
+                    {
+                        "weight": 112.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:03:40:460",
+                        "target": true
+                    },
+                    {
+                        "weight": 125,
+                        "reps": 8,
+                        "split": "00:03:56:867",
+                        "target": true
+                    },
+                    {
+                        "weight": 132.5,
+                        "reps": 8,
+                        "split": "00:06:06:458",
+                        "target": true
+                    },
+                    {
+                        "weight": 140,
+                        "reps": 4,
+                        "split": "00:08:16:081",
+                        "target": false
+                    },
+                    {
+                        "weight": 130,
+                        "reps": 6,
+                        "split": "00:03:56:679",
+                        "target": false
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:06:24:613",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
         "reps": 8,
         "peak": 5,
         "increase": 2.5,
-        "startPercent": 0.75,
-        "endPercent": 0.75,
+        "startPercent": 0.8,
+        "endPercent": 0.7,
         "incInterval": 3,
         "equipmentWeight": 20,
-        "max": 140
+        "max": null
     },
     {
         "exercise": "Lean-over Rows",
@@ -4621,6 +4668,41 @@
                         "weight": 82.5,
                         "reps": 8,
                         "split": "00:01:40:712",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "11/06/2017",
+                "sets": [
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:01:41:069",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:26:974",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:17:599",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:24:901",
                         "target": true
                     }
                 ]
