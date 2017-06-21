@@ -1399,6 +1399,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "21/06/2017",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:03:04:770",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:34:813",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:48:202",
+                        "target": true
+                    }
+                ]
             }
         ],
         "reps": 8,
