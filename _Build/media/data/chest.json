@@ -2937,6 +2937,35 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "24/06/2017",
+                "sets": [
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:33:879",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 7,
+                        "split": "00:03:05:957",
+                        "target": false
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 3,
+                        "split": "00:03:50:278",
+                        "target": false
+                    }
+                ]
             }
         ],
         "sets": 9,
