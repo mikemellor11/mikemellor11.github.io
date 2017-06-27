@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 100,
+        "weight": 355,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -28,7 +28,7 @@
         "price": 1.32
     },
     "wholemeal bread": {
-        "weight": 0,
+        "weight": 80,
         "max": 200,
         "min": 0,
         "multiple": 40,
@@ -42,7 +42,7 @@
         "price": 0.13
     },
     "broccoli": {
-        "weight": 200,
+        "weight": 225,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -87,7 +87,7 @@
         "price": 0.1
     },
     "semi skimmed milk": {
-        "weight": 110,
+        "weight": 0,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -101,7 +101,7 @@
         "price": 0.043
     },
     "egg": {
-        "weight": 0,
+        "weight": 110,
         "max": 200,
         "min": 0,
         "multiple": 55,
@@ -135,7 +135,7 @@
         "price": 0.49
     },
     "unsalted butter": {
-        "weight": 0,
+        "weight": 5,
         "max": 50,
         "min": 0,
         "multiple": 1,
@@ -152,7 +152,7 @@
         "price": 0.44
     },
     "protein shake": {
-        "weight": 100,
+        "weight": 0,
         "max": 100,
         "min": 0,
         "multiple": 25,
@@ -166,7 +166,7 @@
         "price": 0.974
     },
     "banana": {
-        "weight": 200,
+        "weight": 120,
         "max": 300,
         "min": 0,
         "multiple": 118,
@@ -194,7 +194,7 @@
         "price": 1.55
     },
     "red kidney beans": {
-        "weight": 0,
+        "weight": 30,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -236,7 +236,7 @@
         "price": 0.2
     },
     "low fat natural yogurt": {
-        "weight": 0,
+        "weight": 100,
         "max": 200,
         "min": 0,
         "multiple": 1,
@@ -292,7 +292,7 @@
         "price": 0.57
     },
     "sweet potato": {
-        "weight": 180,
+        "weight": 240,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -306,7 +306,7 @@
         "price": 0.1
     },
     "chickpeas": {
-        "weight": 0,
+        "weight": 70,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -320,7 +320,7 @@
         "price": 0.208
     },
     "virgin olive oil": {
-        "weight": 5,
+        "weight": 3,
         "max": 5,
         "min": 0,
         "multiple": 1,
@@ -337,7 +337,7 @@
         "price": 0.35
     },
     "tuna": {
-        "weight": 0,
+        "weight": 110,
         "max": 448,
         "min": 0,
         "multiple": 112,
@@ -368,7 +368,7 @@
         "price": 0.21
     },
     "red grapefruit": {
-        "weight": 0,
+        "weight": 50,
         "max": 100,
         "min": 0,
         "multiple": 1,
@@ -382,7 +382,7 @@
         "price": 0.2
     },
     "new potatoes": {
-        "weight": 0,
+        "weight": 150,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -396,7 +396,7 @@
         "price": 0.09
     },
     "mince": {
-        "weight": 0,
+        "weight": 240,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -410,7 +410,7 @@
         "price": 0.533
     },
     "sprout": {
-        "weight": 0,
+        "weight": 170,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -424,7 +424,7 @@
         "price": 0.2
     },
     "salmon": {
-        "weight": 0,
+        "weight": 100,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -455,7 +455,7 @@
         "price": 0.6
     },
     "spinach": {
-        "weight": 0,
+        "weight": 100,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -483,7 +483,7 @@
         "price": 0.189
     },
     "rice noodles": {
-        "weight": 0,
+        "weight": 160,
         "max": 200,
         "min": 0,
         "multiple": 1,

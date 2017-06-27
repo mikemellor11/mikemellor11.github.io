@@ -2966,6 +2966,41 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "27/06/2017",
+                "sets": [
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:52:832",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:01:33:561",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:01:52:915",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 5,
+                        "split": "00:05:59:800",
+                        "target": false
+                    }
+                ]
             }
         ],
         "sets": 9,
