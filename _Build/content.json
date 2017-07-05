@@ -22,15 +22,15 @@
             "food": {
                 "calories": {
                     "GDA": 2500,
-                    "target": 2400,
+                    "target": 3200,
                     "margin": {
-                        "upper": 70,
-                        "lower": 70
+                        "upper": 150,
+                        "lower": 50
                     }
                 },
                 "protein": {
                     "GDA": 55,
-                    "target": 194,
+                    "target": 215,
                     "margin": {
                         "upper": 100,
                         "lower": 20
@@ -38,18 +38,18 @@
                 },
                 "carbohydrate": {
                     "GDA": 300,
-                    "target": 194,
+                    "target": 320,
                     "margin": {
-                        "upper": 20,
+                        "upper": 70,
                         "lower": 70
                     }
                 },
                 "fat": {
                     "GDA": 43,
-                    "target": 43,
+                    "target": 80,
                     "margin": {
-                        "upper": 10,
-                        "lower": 25
+                        "upper": 20,
+                        "lower": 20
                     }
                 },
                 "saturates": {
@@ -80,7 +80,7 @@
                     "GDA": 5,
                     "target": 5,
                     "margin": {
-                        "upper": 1,
+                        "upper": 5,
                         "lower": 5
                     }
                 }

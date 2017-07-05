@@ -1438,14 +1438,55 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "05/07/2017",
+                "sets": [
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:03:25:774",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:04:27:124",
+                        "target": true
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 7,
+                        "split": "00:04:21:643",
+                        "target": false
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 4,
+                        "split": "00:05:32:983",
+                        "target": false
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 6,
+                        "split": "00:04:44:864",
+                        "target": false
+                    }
+                ]
             }
         ],
         "sets": 9,
         "reps": 8,
         "peak": 5,
         "increase": 2.5,
-        "startPercent": 0.75,
-        "endPercent": 0.75,
+        "startPercent": 0.8,
+        "endPercent": 0.6,
         "incInterval": 3,
         "equipmentWeight": 20,
         "max": 110
