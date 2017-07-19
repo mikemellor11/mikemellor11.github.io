@@ -3057,10 +3057,57 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "19/07/2017",
+                "sets": [
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:01:685",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:36:778",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:50:139",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:57:206",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:39:045",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:54:386",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:58:286",
+                        "target": true
+                    }
+                ]
             }
         ],
         "reps": 8,
-        "max": 30
+        "max": 35
     },
     {
         "exercise": "Shrugs",
@@ -5164,6 +5211,41 @@
                         "weight": 80,
                         "reps": 8,
                         "split": "00:01:54:384",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "19/07/2017",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:184",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:609",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:156",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:384",
                         "target": true
                     }
                 ]

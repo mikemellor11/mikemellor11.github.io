@@ -516,7 +516,8 @@
         "startPercent": 1,
         "endPercent": 1,
         "incInterval": 3,
-        "equipmentWeight": 20
+        "equipmentWeight": 20,
+        "max": null
     },
     {
         "exercise": "Bench press decline",
@@ -3142,6 +3143,53 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "19/07/2017",
+                "sets": [
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:01:52:413",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:02:14:296",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 6,
+                        "split": "00:03:11:177",
+                        "target": false
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 5,
+                        "split": "00:02:07:296",
+                        "target": false
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:02:51:145",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 5,
+                        "split": "00:02:16:099",
+                        "target": false
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -3151,7 +3199,7 @@
         "startPercent": 0.8,
         "incInterval": 3,
         "equipmentWeight": 20,
-        "max": 75
+        "max": 97.5
     },
     {
         "exercise": "Push ups",
@@ -4033,6 +4081,17 @@
                         "weight": 80,
                         "reps": 20,
                         "split": "00:01:39:357",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "19/07/2017",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:00:00:782",
                         "target": true
                     }
                 ]
