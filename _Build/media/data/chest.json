@@ -3190,6 +3190,65 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "26/07/2017",
+                "sets": [
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:01:00:984",
+                        "target": true
+                    },
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:01:44:578",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:13:289",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:02:07:875",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 5,
+                        "split": "00:03:09:398",
+                        "target": false
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 5,
+                        "split": "00:01:45:774",
+                        "target": false
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 5,
+                        "split": "00:02:07:159",
+                        "target": false
+                    },
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:02:00:371",
+                        "target": true
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:02:22:112",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -3199,7 +3258,7 @@
         "startPercent": 0.8,
         "incInterval": 3,
         "equipmentWeight": 20,
-        "max": 97.5
+        "max": null
     },
     {
         "exercise": "Push ups",
@@ -4092,6 +4151,41 @@
                         "weight": 80,
                         "reps": 20,
                         "split": "00:00:00:782",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "26/07/2017",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:29:335",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:36:669",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:45:826",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:55:082",
                         "target": true
                     }
                 ]

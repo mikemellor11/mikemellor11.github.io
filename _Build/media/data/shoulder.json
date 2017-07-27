@@ -1524,6 +1524,112 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "21/07/2017",
+                "sets": [
+                    {
+                        "weight": 32.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:57:617",
+                        "target": true
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:02:30:040",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:03:15:064",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:02:51:150",
+                        "target": true
+                    },
+                    {
+                        "weight": 32.5,
+                        "reps": 8,
+                        "split": "00:01:47:871",
+                        "target": true
+                    },
+                    {
+                        "weight": 32.5,
+                        "reps": 8,
+                        "split": "00:01:12:050",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "27/07/2017",
+                "sets": [
+                    {
+                        "weight": 32.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:43:488",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:02:11:904",
+                        "target": true
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:02:35:483",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 4,
+                        "split": "00:02:22:957",
+                        "target": false
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 6,
+                        "split": "00:03:00:149",
+                        "target": false
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:03:05:561",
+                        "target": true
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:02:35:322",
+                        "target": true
+                    },
+                    {
+                        "weight": 27.5,
+                        "reps": 8,
+                        "split": "00:00:00:085",
+                        "target": true
+                    }
+                ]
             }
         ],
         "sets": 9,
@@ -1538,7 +1644,7 @@
         "exercise": "Lateral Raises",
         "sets": 9,
         "increase": 2.5,
-        "peak": 1,
+        "peak": 5,
         "startPercent": 1,
         "endPercent": 1,
         "incInterval": 8,
@@ -2266,16 +2372,122 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "21/07/2017",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:38:871",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:02:11:752",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:42:765",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:02:12:809",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:02:14:818",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:02:35:036",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:34:366",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "27/07/2017",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:08:286",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:13:265",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:19:618",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:22:152",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:16:907",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:30:140",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:26:597",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:10:064",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:734",
+                        "target": true
+                    }
+                ]
             }
         ],
         "reps": 8,
-        "max": 12.5
+        "max": 10
     },
     {
         "exercise": "Front Raises",
         "sets": 9,
         "increase": 2.5,
-        "peak": 3,
+        "peak": 5,
         "startPercent": 1,
         "endPercent": 1,
         "incInterval": 6,
@@ -3003,16 +3215,122 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "21/07/2017",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:653",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:384",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:305",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:505",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:174",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:963",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:048",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "27/07/2017",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:354",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:898",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:285",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:995",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:125",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:815",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:026",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:773",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:389",
+                        "target": true
+                    }
+                ]
             }
         ],
         "reps": 8,
-        "max": 12.5
+        "max": 10
     },
     {
         "exercise": "Wide lateral Raises",
         "sets": 9,
         "increase": 2.5,
-        "peak": 3,
+        "peak": 5,
         "startPercent": 1,
         "endPercent": 1,
         "incInterval": 8,
@@ -3710,9 +4028,115 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "21/07/2017",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:368",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:650",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:848",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:920",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:185",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:646",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:805",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "27/07/2017",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:347",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:229",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:883",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:633",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:917",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:01:184",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:800",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:773",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:03:15:642",
+                        "target": true
+                    }
+                ]
             }
         ],
         "reps": 8,
-        "max": 12.5
+        "max": 10
     }
 ]
