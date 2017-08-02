@@ -1539,6 +1539,53 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "02/08/2017",
+                "sets": [
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:26:848",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:16:570",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:38:537",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:02:52:434",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:25:696",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:49:353",
+                        "target": true
+                    },
+                    {
+                        "weight": 32.5,
+                        "reps": 8,
+                        "split": "00:01:23:808",
+                        "target": true
+                    }
+                ]
             }
         ],
         "reps": 8,
@@ -1547,7 +1594,7 @@
         "endPercent": 0.95,
         "incInterval": 6,
         "equipmentWeight": 10,
-        "max": 40
+        "max": 35
     },
     {
         "exercise": "Overhead tricep"
