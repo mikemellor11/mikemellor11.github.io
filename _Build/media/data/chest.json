@@ -507,6 +507,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "03/08/2017",
+                "sets": [
+                    {
+                        "weight": 62.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 62.5,
+                        "reps": 7,
+                        "split": "00:02:15:171",
+                        "target": false
+                    },
+                    {
+                        "weight": 62.5,
+                        "reps": 6,
+                        "split": "00:02:54:912",
+                        "target": false
+                    }
+                ]
             }
         ],
         "sets": 3,
@@ -517,7 +540,7 @@
         "endPercent": 1,
         "incInterval": 3,
         "equipmentWeight": 20,
-        "max": null
+        "max": 60
     },
     {
         "exercise": "Bench press decline",
@@ -1138,7 +1161,7 @@
     },
     {
         "exercise": "Bench press",
-        "endPercent": 0.8,
+        "endPercent": 0.7,
         "sessions": [
             {
                 "date": "13/10/2016",
@@ -3249,9 +3272,56 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "03/08/2017",
+                "sets": [
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:01:05:282",
+                        "target": true
+                    },
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:01:55:762",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:33:685",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:02:50:778",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 5,
+                        "split": "00:03:51:874",
+                        "target": false
+                    },
+                    {
+                        "weight": 77.5,
+                        "reps": 8,
+                        "split": "00:01:47:034",
+                        "target": true
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:01:28:779",
+                        "target": true
+                    }
+                ]
             }
         ],
-        "sets": 9,
+        "sets": 7,
         "reps": 8,
         "peak": 5,
         "increase": 2.5,

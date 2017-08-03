@@ -1369,7 +1369,7 @@
     },
     {
         "exercise": "Lean-over Rows",
-        "sets": 9,
+        "sets": 7,
         "peak": 5,
         "increase": 2.5,
         "startPercent": 1,
@@ -3230,6 +3230,53 @@
                         "weight": 35,
                         "reps": 8,
                         "split": "00:02:10:168",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "03/08/2017",
+                "sets": [
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:01:46:023",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:02:03:824",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:02:31:410",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:02:33:062",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:02:08:375",
+                        "target": true
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:02:38:964",
                         "target": true
                     }
                 ]
@@ -5550,6 +5597,41 @@
                         "weight": 80,
                         "reps": 8,
                         "split": "00:02:51:281",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "03/08/2017",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:04:260",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:13:193",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:37:695",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:40:966",
                         "target": true
                     }
                 ]
