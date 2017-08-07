@@ -1355,9 +1355,56 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "07/08/2017",
+                "sets": [
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 112.5,
+                        "reps": 8,
+                        "split": "00:02:52:048",
+                        "target": true
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:04:08:304",
+                        "target": true
+                    },
+                    {
+                        "weight": 125,
+                        "reps": 8,
+                        "split": "00:05:20:449",
+                        "target": true
+                    },
+                    {
+                        "weight": 132.5,
+                        "reps": 8,
+                        "split": "00:05:57:722",
+                        "target": true
+                    },
+                    {
+                        "weight": 112.5,
+                        "reps": 8,
+                        "split": "00:06:36:652",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:04:31:554",
+                        "target": true
+                    }
+                ]
             }
         ],
-        "sets": 9,
+        "sets": 7,
         "reps": 8,
         "peak": 5,
         "increase": 2.5,
@@ -3684,6 +3731,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "07/08/2017",
+                "sets": [
+                    {
+                        "weight": 112.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 112.5,
+                        "reps": 8,
+                        "split": "00:01:35:724",
+                        "target": true
+                    },
+                    {
+                        "weight": 112.5,
+                        "reps": 8,
+                        "split": "00:02:58:935",
+                        "target": true
+                    }
+                ]
             }
         ],
         "reps": 8,
@@ -5632,6 +5702,41 @@
                         "weight": 80,
                         "reps": 8,
                         "split": "00:02:40:966",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "07/08/2017",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:01:33:425",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:01:50:014",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:03:477",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:17:137",
                         "target": true
                     }
                 ]
