@@ -259,6 +259,7 @@ function baseJS(){
 		var index = 0;
 
 		contentJson.index.charts.forEach(function(d, i){
+			if(d.name === 'weight'){index++; return;}
 			d3.json('media/data/' + d.name + '.json', function(err, JSON){
 				if(err){
 					console.log("error: ", err);
@@ -524,7 +525,7 @@ function baseJS(){
 			$('.dynamic').get(4).innerHTML = '';
 
 			html = '<div class="shopping">';
-			html += '<h2>Shopping for a day (4 meals)</h2>';
+			html += '<h2>Shopping for a day</h2>';
 
 			for(var key in foodJson) {
 				if(foodJson.hasOwnProperty(key)){
@@ -543,81 +544,6 @@ function baseJS(){
 			html += '</div>';
 
 			$('.dynamic').get(4).innerHTML = html;
-
-
-
-			$('.dynamic').get(5).innerHTML = '';
-
-			html = '<div class="shopping">';
-			html += '<h2>Shopping for first half of a week (12 meals)</h2>';
-
-			for(var key in foodJson) {
-				if(foodJson.hasOwnProperty(key)){
-					if(foodJson[key].weight > 0){
-						html += '<p>';
-						html += key + ' - ' + (foodJson[key].weight * 3);
-						html += '</p>';
-					}
-				}
-			}
-
-			html += '<h3>£';
-			html += +(food.price * 3).toFixed(2);
-			html += '</h3>';
-
-			html += '</div>';
-
-			$('.dynamic').get(5).innerHTML = html;
-
-
-
-			$('.dynamic').get(6).innerHTML = '';
-
-			html = '<div class="shopping">';
-			html += '<h2>Shopping for second half of a week (16 meals)</h2>';
-
-			for(var key in foodJson) {
-				if(foodJson.hasOwnProperty(key)){
-					if(foodJson[key].weight > 0){
-						html += '<p>';
-						html += key + ' - ' + (foodJson[key].weight * 4);
-						html += '</p>';
-					}
-				}
-			}
-
-			html += '<h3>£';
-			html += +(food.price * 4).toFixed(2);
-			html += '</h3>';
-
-			html += '</div>';
-
-			$('.dynamic').get(6).innerHTML = html;
-
-
-
-			$('.dynamic').get(7).innerHTML = '';
-
-			html = '<div class="shopping">';
-			html += '<h2>Shopping for a week (28 meals)</h2>';
-
-			for(var key in foodJson) {
-				if(foodJson.hasOwnProperty(key)){
-					if(foodJson[key].weight > 0){
-						html += '<p>';
-						html += key + ' - ' + (foodJson[key].weight * 7);
-						html += '</p>';
-					}
-				}
-			}
-
-			html += '<h3>£';
-			html += +(food.price * 7).toFixed(2);
-			html += '</h3>';
-
-			html += '</div>';
-
-			$('.dynamic').get(7).innerHTML = html;
 		}
 	}
 
