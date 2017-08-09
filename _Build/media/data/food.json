@@ -28,7 +28,7 @@
         "price": 1.32
     },
     "wholemeal bread": {
-        "weight": 80,
+        "weight": 160,
         "max": 200,
         "min": 0,
         "multiple": 40,
@@ -152,7 +152,7 @@
         "price": 0.44
     },
     "protein shake": {
-        "weight": 0,
+        "weight": 50,
         "max": 100,
         "min": 0,
         "multiple": 25,
@@ -337,7 +337,7 @@
         "price": 0.35
     },
     "tuna": {
-        "weight": 110,
+        "weight": 0,
         "max": 448,
         "min": 0,
         "multiple": 112,
@@ -424,7 +424,7 @@
         "price": 0.2
     },
     "salmon": {
-        "weight": 100,
+        "weight": 0,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -483,7 +483,7 @@
         "price": 0.63
     },
     "spinach": {
-        "weight": 100,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -525,7 +525,7 @@
         "price": 0.467
     },
     "rice noodles": {
-        "weight": 160,
+        "weight": 250,
         "max": 200,
         "min": 0,
         "multiple": 1,
@@ -553,7 +553,7 @@
         "price": 0.6
     },
     "black bean sauce": {
-        "weight": 0,
+        "weight": 100,
         "max": 100,
         "min": 0,
         "multiple": 1,
