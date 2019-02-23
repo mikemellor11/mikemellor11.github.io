@@ -1,11 +1,5 @@
-module.exports = function (value, option) {
-  var arr = "[";
-
-  for(var key in value){
-  	arr += "\"" + value[key] + "\", ";
-  }
-
-  arr += "]";
-
-  return arr;
+module.exports = function (option) {
+	var array = Array.prototype.slice.call(arguments,0);
+	array.pop();
+	return array;
 };

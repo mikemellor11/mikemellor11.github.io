@@ -1,12 +1,20 @@
 {
     "attributes": {
+        "title": "Code / Gym / Sleep",
         "googleTrackingID": "UA-87144334-1",
-        "internal": {
-            "url": "http://mikemellor11.github.io/"
-        },
-        "local": {
-            "url": "http://localhost:9001/"
-        },
+        "root": "_Output",
+        "repo": "bespoke/mikemellor11.github.io",
+        "modernizr": [
+            "flexbox",
+            "csscalc"
+        ],
+        "uncss": [
+            "<%= root %>/*.html"
+        ],
+        "template": {},
+        "toggle": {}
+    },
+    "content": {
         "gymDefaults": {
             "sets": 9,
             "reps": 8,
@@ -86,146 +94,5 @@
                 }
             }
         }
-    },
-    "index": {
-        "charts": [
-            {
-                "name": "chest",
-                "altName": "Chest"
-            },
-            {
-                "name": "back",
-                "altName": "Back"
-            },
-            {
-                "name": "shoulder",
-                "altName": "Shoulders"
-            },
-            {
-                "name": "leg",
-                "altName": "Legs"
-            },
-            {
-                "name": "arm",
-                "altName": "Arms"
-            },
-            {
-                "name": "weight",
-                "altName": "Weight"
-            }
-        ],
-        "callouts": [
-            "code",
-            "gym",
-            "contact"
-        ],
-        "sideCallouts": [
-            {
-                "text": "Current max lifts",
-                "key": "max",
-                "classes": "callout--alt",
-                "charts": [
-                    [
-                        {
-                            "group": "back",
-                            "exercise": "Deadlifts"
-                        },
-                        {
-                            "group": "leg",
-                            "exercise": "Squats"
-                        }
-                    ],
-                    [
-                        {
-                            "group": "chest",
-                            "exercise": "Bench press"
-                        },
-                        {
-                            "group": "shoulder",
-                            "exercise": "Overhead press"
-                        }
-                    ]
-                ]
-            },
-            {
-                "text": "End of year goals",
-                "key": "goal",
-                "classes": "callout--goal",
-                "charts": [
-                    [
-                        {
-                            "group": "back",
-                            "exercise": "Deadlifts"
-                        },
-                        {
-                            "group": "leg",
-                            "exercise": "Squats"
-                        }
-                    ],
-                    [
-                        {
-                            "group": "chest",
-                            "exercise": "Bench press"
-                        },
-                        {
-                            "group": "shoulder",
-                            "exercise": "Overhead press"
-                        }
-                    ]
-                ]
-            }
-        ]
-    },
-    "global": {
-        "title": "Code / Gym / Sleep",
-        "loading": "loading...",
-        "navigation": [
-            {
-                "url": "index",
-                "name": "Home",
-                "icon": "home",
-                "text": "Homepage of website"
-            },
-            {
-                "url": "code",
-                "name": "Code",
-                "icon": "graduation-cap",
-                "text": "Things i think i know"
-            },
-            {
-                "url": "gym",
-                "name": "Gym",
-                "icon": "chart-area",
-                "text": "Charts and info"
-            },
-            {
-                "url": "contact",
-                "name": "Contact",
-                "icon": "user",
-                "text": "Get in touch<br>(Sleep doesn't really make sense)"
-            }
-        ],
-        "social": [
-            {
-                "url": "https://twitter.com/mikemellor11",
-                "name": "Twitter",
-                "icon": "twitter"
-            },
-            {
-                "url": "http://stackoverflow.com/users/1213795/mike-mellor",
-                "name": "Stack Overflow",
-                "icon": "stackoverflow"
-            },
-            {
-                "url": "https://github.com/mikemellor11",
-                "name": "Github",
-                "icon": "github-circled"
-            },
-            {
-                "url": "https://www.linkedin.com/in/michael-mellor-279852121",
-                "name": "LinkedIn",
-                "icon": "linkedin"
-            }
-        ]
     }
 }

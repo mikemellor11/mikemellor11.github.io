@@ -1,28 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js loading modern {{target}}" lang="en">
 
     {{> head}}
 
     <body>
         {{> svgSprite}}
 
-        {{> @partial-block}}
+        {{> header}}
+
+        {{~> @partial-block}}
 
         {{> footer}}
 
-        <script type="text/javascript">
-            function baseJS(){
-                chartManager.charts = [
-                    {{#each index.charts}}
-                        {
-                            "name": "{{name}}"
-                        },
-                    {{/each}}
-                ];
-            }
-        </script>
-
-        <script type="text/javascript" src="js/script.js"></script>
+        {{#if entry}}
+            <script type="text/javascript" src="js/{{entry}}.js"></script>
+        {{else}}
+            <script type="text/javascript" src="js/script.js"></script>
+        {{/if}}
 
         {{> tracking}}
     </body>

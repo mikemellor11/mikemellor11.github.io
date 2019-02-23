@@ -1,15 +1,17 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{{@root.global.title}}}</title>
+    <title>{{{@root.attributes.title}}}</title>
     <meta name="description" content="Personal site for tracking gym progress and writing html/css/js posts">
     <meta name="author" content="Mike Mellor">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
-    <script type="text/javascript" src="js/crucial.js"></script>
-    <link rel="stylesheet" href="css/general.css">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
     
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/general.css">
+
+    {{> phonegap}}
+
+    {{> electron}}
 </head>

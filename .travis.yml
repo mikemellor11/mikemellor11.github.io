@@ -5,7 +5,6 @@ before_install:
   - npm install -g grunt-cli
   - npm install -g bower
   - npm install glob
-  - bower install
   - npm run repoSetup
 script:
   - npm run production
