@@ -1,17 +1,17 @@
 @import "breakpoint";
 @import "normalize";
 
-@import "lab-ui/_mixins.scss";
-@import "_mixins.scss";
+@import "lab-ui/_mixins";
+@import "_mixins";
 
-@import "lab-ui/_variables.scss";
-@import "_variables.scss";
+@import "lab-ui/_variables";
+@import "_variables";
 
-@import "lab-ui/_defaults.scss";
-@import "_defaults.scss";
+@import "lab-ui/_defaults";
+@import "_defaults";
 
-@import "lab-ui/_animations.scss";
-@import "_animations.scss";
+@import "lab-ui/_animations";
+@import "_animations";
 
 @include normalize();
 
@@ -19,3 +19,7 @@
 @import "lab-ui/_typography";
 @import "lab-ui/_icon";
 @import "lab-ui/_utilities";
+
+@import "@fishawack/lab-d3/_Build/sass/components/_chart";
+
+@import "components/chart";

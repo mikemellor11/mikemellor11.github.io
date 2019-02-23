@@ -23,7 +23,7 @@
     "@fishawack/config-grunt": "4.1.6"
   },
   "dependencies": {
-    "@fishawack/lab-d3": "2.1.6",
+    "@fishawack/lab-d3": "2.1.7",
     "@fishawack/lab-ui": "9.0.0",
     "breakpoint-sass": "2.7.1",
     "dayjs": "1.8.6",
