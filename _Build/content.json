@@ -4,6 +4,24 @@
         "googleTrackingID": "UA-87144334-1",
         "root": "_Output",
         "repo": "bespoke/mikemellor11.github.io",
+        "copy": [
+            {
+                "src": "_Build/.htaccess",
+                "dest": "_Output/.htaccess"
+            },
+            {
+                "src": "_Build/robots.txt",
+                "dest": "_Output/robots.txt"
+            },
+            {
+                "src": "_Build/sitemap.xml",
+                "dest": "_Output/sitemap.xml"
+            },
+            {
+                "src": "_Build/CNAME",
+                "dest": "_Output/CNAME"
+            }
+        ],
         "modernizr": [
             "flexbox",
             "csscalc"
