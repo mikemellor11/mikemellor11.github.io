@@ -1,5 +1,5 @@
 describe('weight.js', function () {
-	var group = null;
+	/*var group = null;
 
     before(function(){
         fixture.setBase('_Test/karma/fixtures');
@@ -125,5 +125,5 @@ describe('weight.js', function () {
         group.each(function(d, i){
             expect(!isNaN(d.weight)).to.equal(true);
         })
-    });
+    });*/
 });

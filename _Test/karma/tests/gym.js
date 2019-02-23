@@ -1,7 +1,7 @@
 describe('gym.js', function () {
 	var group = null;
 
-    before(function(){
+    /*before(function(){
         fixture.setBase('_Test/karma/fixtures');
         group = Gym(fixture.load('gym1.json').concat(fixture.load('gym2.json')));
     });
@@ -407,5 +407,5 @@ describe('gym.js', function () {
 
     it('return amount of groups in object', function () {
         expect(group.length()).to.equal(4);
-    });
+    });*/
 });

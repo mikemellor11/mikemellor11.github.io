@@ -1,6 +1,5 @@
 var x = require('casper').selectXPath,
-	url = casper.cli.get('url'),
-	contentJson = JSON.parse(casper.cli.get('contentJson'));
+	url = casper.cli.get('url');
 
 casper.test.begin('Testing index', function suite(test) {
 	require('./modules/include.js')(test);
