@@ -18,12 +18,25 @@ import { timeParse } from "d3-time-format";
 		.att({
 			margin: {
 				bottom: 40,
-				left: 40
+				left: 55
 			},
 			scale: {
 				x: "date"
 			},
+			min: {
+				y: 50
+			},
+			max: {
+				y: 100
+			},
 			parseDate: timeParse('%d/%m/%Y'),
+			axis: {
+				y: {
+					ticks: 10,
+					tickFormat: "{value}kg",
+					tickFormatCustom: true
+				}
+			}
 		})
 		.render();
 

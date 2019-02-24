@@ -1,15 +1,21 @@
 {{#> base}}
-	<section class="ut-textAlignCenter">
+	<main class="ut-textAlignCenter container ut-padding">
 		<h1>Code / Gym / Sleep</h1>
 
-		<p>Fancied a full restyle so removed all styles, will implement soon</p>
+		<div class="grid grid--halfs ut-marginTop">
+			<div class="ut-padding">
+				<p>Last workout - <span class="js-lastWorkout"></span> days</p>
+			</div>
+			<div class="ut-padding">
+				<p>Current weight - <span class="js-weight"></span>kg</p>
+			</div>
+		</div>
 
-		<p>Last workout - <span class="js-lastWorkout"></span> days</p>
-		<p>Current weight - <span class="js-weight"></span>kg</p>
-
-		<h2>Weight over last 12 months</h2>
+		<p>Weight over last 12 months</p>
 		<div class="labD3">
 		    <svg class="chart chart--weight"></svg>
 		</div>
-	</section>
+
+		<p class="alert alert--warn">Fancied a full restyle so removed all styles, will implement soon</p>
+	</main>
 {{/base}}

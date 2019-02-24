@@ -15,9 +15,17 @@
 
 @include normalize();
 
+#svgSprite {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+}
+
 @import "lab-ui/_grid";
 @import "lab-ui/_typography";
 @import "lab-ui/_icon";
+@import "lab-ui/_alert";
 @import "lab-ui/_utilities";
 
 @import "@fishawack/lab-d3/_Build/sass/components/_chart";
