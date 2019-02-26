@@ -45,7 +45,7 @@ import { timeParse } from "d3-time-format";
 					value: ".1f"
 				},
 				offset: {
-					x: 20,
+					x: 25,
 					y: 0
 				}
 			},

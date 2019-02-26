@@ -1,6 +1,4 @@
 .labD3{
-	font-size: 0.8em;
-
 	.level--0--plot, .level--0--value{
 		display: none;
 		font-size: 0.8em;
@@ -21,6 +19,15 @@
 			.level--0--value{
 				display: none;
 			}
+		}
+	}
+
+	@each $current-color in $colors-list {
+		$i: index($colors-list, $current-color);
+
+		.fill#{$i} { 
+			fill: $current-color;
+			color: $current-color;
 		}
 	}
 }
