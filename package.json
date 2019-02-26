@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@fishawack/lab-d3": "2.1.7",
-    "@fishawack/lab-ui": "9.0.0",
+    "@fishawack/lab-ui": "9.0.5",
     "breakpoint-sass": "2.7.1",
     "dayjs": "1.8.6",
     "normalize-scss": "7.0.0"

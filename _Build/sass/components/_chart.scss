@@ -1,5 +1,26 @@
 .labD3{
+	font-size: 0.8em;
+
 	.level--0--plot, .level--0--value{
 		display: none;
+		font-size: 0.8em;
+	}
+
+	.level--0:last-child{
+		.level--0--value{
+			display: block;
+		}
+	}
+
+	.level--1{
+		&:nth-child(1), &:nth-child(3){
+			.level--1--line{
+				stroke-width: 1px !important;
+			}
+
+			.level--0--value{
+				display: none;
+			}
+		}
 	}
 }

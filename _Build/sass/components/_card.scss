@@ -1,0 +1,7 @@
+.card{
+	color: $color0;
+}
+
+.card__body{
+	padding: #{$spacing * 2} $spacing;
+}

@@ -25,9 +25,15 @@
 @import "lab-ui/_grid";
 @import "lab-ui/_typography";
 @import "lab-ui/_icon";
-@import "lab-ui/_alert";
+@import "lab-ui/_flex.scss";
+@import "lab-ui/_card.scss";
 @import "lab-ui/_utilities";
 
 @import "@fishawack/lab-d3/_Build/sass/components/_chart";
 
+/* Lab Ui Overwrites */
+@import "components/card.scss";
 @import "components/chart";
+
+/* Custom Components */
+@import "components/shades";

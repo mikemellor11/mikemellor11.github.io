@@ -2,20 +2,68 @@
 	<main class="ut-textAlignCenter container ut-padding">
 		<h1>Code / Gym / Sleep</h1>
 
-		<div class="grid grid--halfs ut-marginTop">
-			<div class="ut-padding">
-				<p>Last workout - <span class="js-lastWorkout"></span> days</p>
+		<div class="grid grid--gutters ut-marginTop">
+			<div class="grid__third">
+				<ul class="grid grid--fulls ut-clearListOnly shades ut-textAlignLeft">
+					{{#each (object '[
+						{
+							"title": "Days since last workout",
+							"data": "lastWorkout",
+							"suffix": "days"
+						},
+						{
+							"title": "Current Weight",
+							"data": "weight",
+							"suffix": "kg"
+						},
+						{
+							"title": "Time",
+							"data": "timeSpent",
+							"suffix": "hours"
+						},
+						{
+							"title": "Reps",
+							"data": "reps",
+							"suffix": "reps"
+						},
+						{
+							"title": "Sets",
+							"data": "sets",
+							"suffix": "sets"
+						},
+						{
+							"title": "Weight Lifted",
+							"data": "lifted",
+							"suffix": "kg"
+						}
+					]')}}
+					<li class="flex">
+						<article class="grid__inner card card__bg flex flex--vert">
+							<div class="card__body flex__grow">
+								<div class="ut-tableChildren ut-vertAlignChildrenMiddle">
+									<div class="ut-fullWidth">
+										<h3>{{{title}}}</h3>
+										<p><span class="js-{{data}}">0</span> {{suffix}}</p>
+									</div>
+									<div>
+										{{> icon name="spin3" class="icon--reverse icon--large"}}
+									</div>
+								</div>
+							</div>
+						</article>
+					</li>
+					{{/each}}
+				</ul>
 			</div>
-			<div class="ut-padding">
-				<p>Current weight - <span class="js-weight"></span>kg</p>
+
+			<div class="grid__twoThirds">
+				<p>Weight over time</p>
+				<div class="labD3">
+				    <svg class="chart chart--weight"></svg>
+				</div>
+				<ul class="chart--key">
+				</ul>
 			</div>
 		</div>
-
-		<p>Weight over last 12 months</p>
-		<div class="labD3">
-		    <svg class="chart chart--weight"></svg>
-		</div>
-
-		<p class="alert alert--warn">Fancied a full restyle so removed all styles, will implement soon</p>
 	</main>
 {{/base}}
