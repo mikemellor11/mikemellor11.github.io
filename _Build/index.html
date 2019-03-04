@@ -2,8 +2,17 @@
 	<main class="ut-textAlignCenter container ut-padding">
 		<h1>Code / Gym / Sleep</h1>
 
-		<div class="grid grid--gutters ut-marginTop">
-			<div class="grid__third">
+		<div class="grid grid--fulls--mobile grid--gutters ut-marginTop">
+			<div class="grid__twoThirds">
+				<p>Weight over time</p>
+				<div class="labD3">
+				    <svg class="chart chart--weight"></svg>
+				</div>
+				<ul class="labD3 chart--key ut-textAlignLeft">
+				</ul>
+			</div>
+
+			<div class="grid__third ut-marginTop--mobile">
 				<ul class="grid grid--fulls ut-clearListOnly shades ut-textAlignLeft">
 					{{#each (object '[
 						{
@@ -53,15 +62,6 @@
 						</article>
 					</li>
 					{{/each}}
-				</ul>
-			</div>
-
-			<div class="grid__twoThirds">
-				<p>Weight over time</p>
-				<div class="labD3">
-				    <svg class="chart chart--weight"></svg>
-				</div>
-				<ul class="labD3 chart--key ut-textAlignLeft">
 				</ul>
 			</div>
 		</div>

@@ -17,8 +17,9 @@ import { timeParse } from "d3-time-format";
 		.init()
 		.att({
 			margin: {
-				bottom: 40,
-				left: 55
+				bottom: 0,
+				left: 55,
+				right: 20
 			},
 			scale: {
 				x: "date"
