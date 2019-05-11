@@ -11,7 +11,7 @@
   "scripts": {
     "start": "npm start $npm_package_vars_config",
     "setup": "npm install --no-save && npm run content && npm run repoSetup",
-    "deploy": "npm run production && cd _Output && git add --all && git commit --allow-empty -m 'Deployed' && git reset --soft HEAD~2 && git commit -m 'Deployed' && git push origin master -f",
+    "deploy": "ssh-add -A && npm run production && cd _Output && git add --all && git commit --allow-empty -m 'Deployed' && git reset --soft HEAD~2 && git commit -m 'Deployed' && git push origin master -f",
     "production": "npm run production $npm_package_vars_config",
     "content": "npm run content $npm_package_vars_config",
     "test": "npm test $npm_package_vars_config",
