@@ -19,7 +19,7 @@ import { timeParse } from "d3-time-format";
 			margin: {
 				bottom: 0,
 				left: 55,
-				right: 20
+				right: 55
 			},
 			scale: {
 				x: "date"
@@ -111,6 +111,10 @@ import { timeParse } from "d3-time-format";
 							{
 								key: "01/06/2019",
 								value: 85
+							},
+							{
+								key: "01/09/2019",
+								value: 80
 							}
 						]
 					},
@@ -128,6 +132,10 @@ import { timeParse } from "d3-time-format";
 							{
 								key: "01/06/2019",
 								value: 63.5
+							},
+							{
+								key: "01/09/2019",
+								value: 65
 							}
 						]
 					},
