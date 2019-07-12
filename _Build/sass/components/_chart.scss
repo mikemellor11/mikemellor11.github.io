@@ -32,10 +32,9 @@
 	}
 }
 
+/* uncss:ignore */
 .labD3__line{
-	opacity: 1;
-	
 	@include breakpoint(max-width $mobileMax){
-		font-size: 0.8em;
+		font-size: 0.75em;
 	}
 }

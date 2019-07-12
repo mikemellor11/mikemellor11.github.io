@@ -31,7 +31,7 @@ import { timeParse } from "d3-time-format";
 				y: 60
 			},
 			max: {
-				y: 100
+				y: 110
 			},
 			parseDate: timeParse('%d/%m/%Y'),
 			axis: {
@@ -53,6 +53,7 @@ import { timeParse } from "d3-time-format";
 			colors: {
 				"Mike": "fill1",
 				"Sophie": "fill2",
+				"Dad": "fill4",
 				"Targets": "fill3"
 			}
 		})
@@ -60,202 +61,238 @@ import { timeParse } from "d3-time-format";
 
 	Utility.load("media/data/weight.json", (mike) => {
 		Utility.load("media/data/sophie.json", (sophie) => {
-			sophie = JSON.parse(sophie);
-			mike = JSON.parse(mike);
+			Utility.load("media/data/dad.json", (dad) => {
+				sophie = JSON.parse(sophie);
+				mike = JSON.parse(mike);
+				dad = JSON.parse(dad);
 
-			var latest = mike[mike.length - 1];
+				var latest = mike[mike.length - 1];
 
-			new Text('.js-weight')
-				.init()
-				.att({
-					value: {
-						format: {
-							value: ".1f"
+				new Text('.js-weight')
+					.init()
+					.att({
+						value: {
+							format: {
+								value: ".1f"
+							}
 						}
-					}
-				})
-				.data([{value: latest.weight}])
-				.render();
+					})
+					.data([{value: latest.weight}])
+					.render();
 
-			new Text('.js-lastWorkout')
-				.init()
-				.data([{value: dayjs().diff(dayjs(latest.date, "DD/MM/YYYY"), 'days')}])
-				.render();
+				new Text('.js-lastWorkout')
+					.init()
+					.data([{value: dayjs().diff(dayjs(latest.date, "DD/MM/YYYY"), 'days')}])
+					.render();
 
-			mike = mike.filter((d) => {
-					return d.date.split("/")[2] === "2019";
-				}).map((d) => {
-					return {
-						key: d.date,
-						value: d.weight
-					};
-				});
+				mike = mike.filter((d) => {
+						return d.date.split("/")[2] === "2019";
+					}).map((d) => {
+						return {
+							key: d.date,
+							value: d.weight
+						};
+					});
 
-			sophie = sophie.filter((d) => {
-					return d.date.split("/")[2] === "2019";
-				}).map((d) => {
-					return {
-						key: d.date,
-						value: d.weight
-					};
-				});
+				sophie = sophie.filter((d) => {
+						return d.date.split("/")[2] === "2019";
+					}).map((d) => {
+						return {
+							key: d.date,
+							value: d.weight
+						};
+					});
 
-			chart.data([
-					{
-						key: "Targets",
-						values: [
-							{
-								key: "23/02/2019",
-								value: mike[0].value
-							},
-							{
-								key: "01/06/2019",
-								value: 85
-							},
-							{
-								key: "01/09/2019",
-								value: 80
-							}
-						]
-					},
-					{
-						key: "Mike",
-						values: mike
-					},
-					{
-						key: "Targets",
-						values: [
-							{
-								key: "23/02/2019",
-								value: sophie[0].value
-							},
-							{
-								key: "01/06/2019",
-								value: 63.5
-							},
-							{
-								key: "01/09/2019",
-								value: 65
-							}
-						]
-					},
-					{
-						key: "Sophie",
-						values: sophie
-					}
-				])
-				.render();
+				dad = dad.filter((d) => {
+						return d.date.split("/")[2] === "2019";
+					}).map((d) => {
+						return {
+							key: d.date,
+							value: d.weight
+						};
+					});
 
-			new Key('.chart--key')
-				.init()
-				.att(chart.att())
-				.data(chart.data())
-				.att({
-					key: [
+				chart.data([
 						{
-							key: "Mike"
+							key: "Targets",
+							values: [
+								{
+									key: "23/02/2019",
+									value: mike[0].value
+								},
+								{
+									key: "01/06/2019",
+									value: 85
+								},
+								{
+									key: "01/09/2019",
+									value: 80
+								}
+							]
 						},
 						{
-							key: "Sophie"
+							key: "Mike",
+							values: mike
 						},
 						{
-							key: "Targets"
+							key: "Targets",
+							values: [
+								{
+									key: "23/02/2019",
+									value: sophie[0].value
+								},
+								{
+									key: "01/06/2019",
+									value: 63.5
+								},
+								{
+									key: "01/09/2019",
+									value: 65
+								}
+							]
+						},
+						{
+							key: "Sophie",
+							values: sophie
+						},
+						{
+							key: "Targets",
+							values: [
+								{
+									key: "23/02/2019",
+									value: dad[0].value
+								},
+								{
+									key: "12/07/2019",
+									value: 100
+								},
+								{
+									key: "01/09/2019",
+									value: 97.5
+								}
+							]
+						},
+						{
+							key: "Dad",
+							values: dad
 						}
-					]
-				})
-				.render();
+					])
+					.render();
+
+				new Key('.chart--key')
+					.init()
+					.att(chart.att())
+					.data(chart.data())
+					.att({
+						key: [
+							{
+								key: "Mike"
+							},
+							{
+								key: "Sophie"
+							},
+							{
+								key: "Dad"
+							},
+							{
+								key: "Targets"
+							}
+						]
+					})
+					.render();
+			});
 		});
-	});
 
-	Utility.load("media/data/arm.json", (response) => {
-		var data = JSON.parse(response);
+		Utility.load("media/data/arm.json", (response) => {
+			var data = JSON.parse(response);
 
-		Utility.load("media/data/back.json", (response) => {
-			data = data.concat(JSON.parse(response));
-
-			Utility.load("media/data/chest.json", (response) => {
+			Utility.load("media/data/back.json", (response) => {
 				data = data.concat(JSON.parse(response));
 
-				Utility.load("media/data/leg.json", (response) => {
+				Utility.load("media/data/chest.json", (response) => {
 					data = data.concat(JSON.parse(response));
 
-					Utility.load("media/data/shoulder.json", (response) => {
+					Utility.load("media/data/leg.json", (response) => {
 						data = data.concat(JSON.parse(response));
 
-						var sets = data.reduce((a, b) => {
-							return a.concat(b.sessions.reduce((a, b) => {
-								return a.concat(b.sets.map((d) => {
-									return d;
-								}));
-							}, []));
-						}, []);
+						Utility.load("media/data/shoulder.json", (response) => {
+							data = data.concat(JSON.parse(response));
 
-						var hours = sets.reduce((a, b) => {
-							var split = b.split.split(':');
-							var hours = +split[0];
-							var minutes = +split[1] / 60;
-							var seconds = +split[2] / 60 / 60;
-							var milliseconds = +split[3] / 60 / 60 / 60;
+							var sets = data.reduce((a, b) => {
+								return a.concat(b.sessions.reduce((a, b) => {
+									return a.concat(b.sets.map((d) => {
+										return d;
+									}));
+								}, []));
+							}, []);
 
-							return a + hours + minutes + seconds + milliseconds;
-						}, 0);
+							var hours = sets.reduce((a, b) => {
+								var split = b.split.split(':');
+								var hours = +split[0];
+								var minutes = +split[1] / 60;
+								var seconds = +split[2] / 60 / 60;
+								var milliseconds = +split[3] / 60 / 60 / 60;
 
-						var reps = sets.reduce((a, b) => {
-							return a + b.reps;
-						}, 0);
+								return a + hours + minutes + seconds + milliseconds;
+							}, 0);
 
-						var lifted = sets.reduce((a, b) => {
-							return a + b.weight;
-						}, 0);
+							var reps = sets.reduce((a, b) => {
+								return a + b.reps;
+							}, 0);
 
-						new Text('.js-timeSpent')
-							.init()
-							.att({
-								value: {
-									format: {
-										value: ",.0f"
+							var lifted = sets.reduce((a, b) => {
+								return a + b.weight;
+							}, 0);
+
+							new Text('.js-timeSpent')
+								.init()
+								.att({
+									value: {
+										format: {
+											value: ",.0f"
+										}
 									}
-								}
-							})
-							.data([{value: hours}])
-							.render();
+								})
+								.data([{value: hours}])
+								.render();
 
-						new Text('.js-sets')
-							.init()
-							.att({
-								value: {
-									format: {
-										value: ",.0f"
+							new Text('.js-sets')
+								.init()
+								.att({
+									value: {
+										format: {
+											value: ",.0f"
+										}
 									}
-								}
-							})
-							.data([{value: sets.length}])
-							.render();
+								})
+								.data([{value: sets.length}])
+								.render();
 
-						new Text('.js-reps')
-							.init()
-							.att({
-								value: {
-									format: {
-										value: ",.0f"
+							new Text('.js-reps')
+								.init()
+								.att({
+									value: {
+										format: {
+											value: ",.0f"
+										}
 									}
-								}
-							})
-							.data([{value: reps}])
-							.render();
+								})
+								.data([{value: reps}])
+								.render();
 
-						new Text('.js-lifted')
-							.init()
-							.att({
-								value: {
-									format: {
-										value: ",.0f"
+							new Text('.js-lifted')
+								.init()
+								.att({
+									value: {
+										format: {
+											value: ",.0f"
+										}
 									}
-								}
-							})
-							.data([{value: lifted}])
-							.render();
-						});
+								})
+								.data([{value: lifted}])
+								.render();
+							});
+					});
 				});
 			});
 		});
