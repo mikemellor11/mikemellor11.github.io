@@ -26,18 +26,20 @@ export function parse_query_string(query) {
     return query_string;
 };
 
-export function load(path, cb, mimetype) {
-    var xobj = new XMLHttpRequest();
-    if(mimetype){
-        xobj.overrideMimeType(mimetype);
-    }
-    xobj.open('GET', path, true);
-    xobj.onreadystatechange = function () {
-        if(xobj.readyState === 4 && (+xobj.status === 200 || +xobj.status === 0)){
-            cb(xobj.responseText);
+export function load(path, mimetype) {
+    return new Promise((resolve) => {
+        var xobj = new XMLHttpRequest();
+        if(mimetype){
+            xobj.overrideMimeType(mimetype);
         }
-    };
-    xobj.send(null);  
+        xobj.open('GET', path, true);
+        xobj.onreadystatechange = function () {
+            if(xobj.readyState === 4 && (+xobj.status === 200 || +xobj.status === 0)){
+                resolve(JSON.parse(xobj.responseText));
+            }
+        };
+        xobj.send(null);
+    });
 };
 
 export function classList(el) {

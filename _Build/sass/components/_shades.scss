@@ -1,8 +1,0 @@
-.shades{
-	@for $i from 0 through 5{
-		li:nth-child(#{$i + 1}) .card__bg{
-			@debug $i * 10%;
-			background-color: darken($card, $i * 7.5%);
-		}
-	}
-}

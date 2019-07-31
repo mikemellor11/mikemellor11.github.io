@@ -2,68 +2,10 @@
 	<main class="ut-textAlignCenter container ut-padding">
 		<h1>Code / Gym / Sleep</h1>
 
-		<div class="grid grid--fulls--mobile grid--gutters ut-marginTop">
-			<div class="grid__twoThirds">
-				<p>Weight over time</p>
-				<div class="labD3">
-				    <svg class="chart chart--weight"></svg>
-				</div>
-				<ul class="labD3 chart--key ut-textAlignLeft">
-				</ul>
-			</div>
-
-			<div class="grid__third ut-marginTop--mobile">
-				<ul class="grid grid--fulls ut-clearListOnly shades ut-textAlignLeft">
-					{{#each (object '[
-						{
-							"title": "Days since last workout",
-							"data": "lastWorkout",
-							"suffix": "days"
-						},
-						{
-							"title": "Current Weight",
-							"data": "weight",
-							"suffix": "kg"
-						},
-						{
-							"title": "Time",
-							"data": "timeSpent",
-							"suffix": "hours"
-						},
-						{
-							"title": "Reps",
-							"data": "reps",
-							"suffix": "reps"
-						},
-						{
-							"title": "Sets",
-							"data": "sets",
-							"suffix": "sets"
-						},
-						{
-							"title": "Weight Lifted",
-							"data": "lifted",
-							"suffix": "kg"
-						}
-					]')}}
-					<li class="flex">
-						<article class="grid__inner card card__bg flex flex--vert">
-							<div class="card__body flex__grow">
-								<div class="ut-tableChildren ut-vertAlignChildrenMiddle">
-									<div class="ut-fullWidth">
-										<h3>{{{title}}}</h3>
-										<p><span class="js-{{data}}">0</span> {{suffix}}</p>
-									</div>
-									<div>
-										{{> icon name="spin3" class="icon--reverse icon--large"}}
-									</div>
-								</div>
-							</div>
-						</article>
-					</li>
-					{{/each}}
-				</ul>
-			</div>
+		<p>Weight over time</p>
+		<div class="labD3">
+		    <svg class="chart chart--weight"></svg>
 		</div>
+		<ul class="labD3 chart--key ut-textAlignLeft"></ul>
 	</main>
 {{/base}}
