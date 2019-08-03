@@ -1,7 +1,12 @@
 "use strict";
 
 import * as Utility from "./libs/utility";
+
 import { Line, Text, Key } from "@fishawack/lab-d3";
+
+import dayjs from "dayjs";
+import customParseFormat from 'dayjs/plugin/customParseFormat';	
+dayjs.extend(customParseFormat);
 
 (() => {
 	if(navigator.userAgent === 'jsdom'){ return; }
@@ -31,7 +36,7 @@ import { Line, Text, Key } from "@fishawack/lab-d3";
 					};
 				});
 
-			chart.data(people.map((d, i) => {
+			var targets = people.map((d, i) => {
 					return {
 						key: "Targets",
 						values: [{
@@ -39,7 +44,49 @@ import { Line, Text, Key } from "@fishawack/lab-d3";
 							value: data[i].values[0].value
 						}].concat(d.targets)
 					};
-				}).concat(data))
+				});
+
+			var averages = data.map((d) => {
+					var arr = d.values.slice(-4);
+
+					return (arr.reduce((a, b) => {
+						if(a.last){
+							a.total += b.value - a.last.value;
+						}
+
+						a.last = b;
+
+						return a;
+					}, {last: null, total: 0}).total / arr.length);
+				});
+
+			var predictions = people.map((d, i) => {
+					var last = data[i].values[data[i].values.length - 1];
+					var target = targets[i].values[targets[i].values.length - 1];
+
+					var start = dayjs(target.key, "DD/MM/YYYY");
+					var end = dayjs(last.key, "DD/MM/YYYY");
+					var weeks = start.diff(end, 'weeks');
+
+					return {
+						key: "Predicted",
+						values: [
+							{
+								key: last.key,
+								value: last.value
+							},
+							{
+								key: target.key,
+								value: last.value + (averages[i] * weeks)
+							}
+						]
+					};
+				});
+
+			data = targets.concat(data);
+			data = predictions.concat(data);
+
+			chart.data(data)
 				.render();
 
 			new Key('.chart--key')

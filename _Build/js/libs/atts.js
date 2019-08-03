@@ -1,4 +1,4 @@
-import { timeParse } from "d3-time-format";
+import { timeParse, timeFormat } from "d3-time-format";
 
 export default {
 	margin: {
@@ -23,6 +23,9 @@ export default {
 		y: {
 			tickFormat: "{value}kg",
 			tickFormatCustom: true
+		},
+		x: {
+			tickFormat: timeFormat('%b')
 		}
 	},
 	value: {
@@ -39,7 +42,8 @@ export default {
 		"Mike": "fill1",
 		"Sophie": "fill2",
 		"Dad": "fill4",
-		"Targets": "fill3"
+		"Targets": "fill3",
+		"Predicted": "fill5"
 	},
 	stagger: 0
 };

@@ -1,3 +1,4 @@
+/* uncss:ignore start */
 .labD3{
 	.level--0--plot, .level--0--value{
 		display: none;
@@ -11,8 +12,8 @@
 	}
 
 	.level--1{
-		&:nth-child(1), &:nth-child(3), &:nth-child(5){
-			
+		&:nth-child(-n + 3) text{
+			display: none !important;
 		}
 	}
 
@@ -26,16 +27,15 @@
 	}
 }
 
-/* uncss:ignore */
 .labD3__line{
 	@include breakpoint(max-width $mobileMax){
 		font-size: 0.75em;
 	}
 }
 
-/* uncss:ignore */
 .labD3__key{
-	ul, li:nth-child(-n + 2){
+	ul, li:nth-child(-n + 6){
 		display: none;
 	}
 }
+/* uncss:ignore end */
