@@ -4,6 +4,10 @@ export default [
 		"file": "weight",
 		"targets": [
 			{
+		        "key": "23/02/2019",
+		        "value": 94.25
+		    },
+			{
 				"key": "01/06/2019",
 				"value": 85
 			},
@@ -16,6 +20,10 @@ export default [
 	{
 		"name": "Sophie",
 		"targets": [
+			{
+		        "key": "24/02/2019",
+		        "value": 76.2
+		    },
 			{
 				"key": "01/06/2019",
 				"value": 63.5

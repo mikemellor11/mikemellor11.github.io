@@ -6,7 +6,10 @@ import { Line, Text, Key } from "@fishawack/lab-d3";
 
 import dayjs from "dayjs";
 import customParseFormat from 'dayjs/plugin/customParseFormat';	
+import isBetween from "dayjs/plugin/isBetween";
+
 dayjs.extend(customParseFormat);
+dayjs.extend(isBetween);
 
 (() => {
 	if(navigator.userAgent === 'jsdom'){ return; }
@@ -26,7 +29,8 @@ dayjs.extend(customParseFormat);
 					return {
 						key: people[i].name,
 						values: d.filter((d) => {
-								return d.date.split("/")[2] === "2019";
+								// return dayjs(d.date, "DD/MM/YYYY").isBetween(dayjs(), dayjs().subtract(4, 'months'));
+								return dayjs(d.date, "DD/MM/YYYY").isSame(dayjs(), 'year');
 							}).map((d) => {
 								return {
 									key: d.date,
@@ -39,10 +43,7 @@ dayjs.extend(customParseFormat);
 			var targets = people.map((d, i) => {
 					return {
 						key: "Targets",
-						values: [{
-							key: data[i].values[0].key,
-							value: data[i].values[0].value
-						}].concat(d.targets)
+						values: d.targets
 					};
 				});
 
@@ -69,11 +70,11 @@ dayjs.extend(customParseFormat);
 					var weeks = start.diff(end, 'weeks');
 
 					return {
-						key: "Predicted",
+						key: d.name,
 						values: [
 							{
 								key: last.key,
-								value: last.value
+								value: last.value,
 							},
 							{
 								key: target.key,

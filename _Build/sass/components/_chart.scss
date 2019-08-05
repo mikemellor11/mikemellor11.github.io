@@ -12,8 +12,15 @@
 	}
 
 	.level--1{
-		&:nth-child(-n + 3) text{
-			display: none !important;
+		&:nth-child(-n + 3) {
+			path{
+				opacity: 0.5;
+				stroke-dasharray: 5 5;
+			}
+
+			text{
+				display: none !important;
+			}
 		}
 	}
 
