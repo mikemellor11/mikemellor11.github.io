@@ -46,5 +46,18 @@ export default [
 				"value": 97.5
 			}
 		]
+	},
+	{
+		"name": "Mum",
+		"targets": [
+			{
+				"key": "10/08/2019",
+				"value": 74.1
+			},
+			{
+				"key": "01/09/2019",
+				"value": 72.5
+			}
+		]
 	}
 ];

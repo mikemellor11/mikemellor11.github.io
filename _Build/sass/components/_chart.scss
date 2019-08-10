@@ -12,10 +12,14 @@
 	}
 
 	.level--1{
-		&:nth-child(-n + 3) {
+		&:nth-child(-n + 4) {
 			path{
 				opacity: 0.5;
 				stroke-dasharray: 5 5;
+
+				@include breakpoint(max-width $mobileMax){
+					stroke-dasharray: 2 2;
+				}
 			}
 
 			text{
@@ -41,7 +45,7 @@
 }
 
 .labD3__key{
-	ul, li:nth-child(-n + 6){
+	ul, li:nth-child(-n + 8){
 		display: none;
 	}
 }

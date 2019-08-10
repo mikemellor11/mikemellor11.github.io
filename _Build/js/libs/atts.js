@@ -42,8 +42,8 @@ export default {
 		"Mike": "fill1",
 		"Sophie": "fill2",
 		"Dad": "fill4",
-		"Targets": "fill3",
-		"Predicted": "fill5"
+		"Mum": "fill5",
+		"Targets": "fill3"
 	},
 	stagger: 0
 };
