@@ -1,5 +1,7 @@
 "use strict";
 
+import "es6-promise/auto";
+
 import * as Utility from "./libs/utility";
 
 import { Line, Text, Key } from "@fishawack/lab-d3";

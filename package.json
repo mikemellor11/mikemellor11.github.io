@@ -27,6 +27,7 @@
     "@fishawack/lab-ui": "9.0.5",
     "breakpoint-sass": "2.7.1",
     "dayjs": "1.8.6",
+    "es6-promise": "4.2.5",
     "normalize-scss": "7.0.0"
   }
 }
