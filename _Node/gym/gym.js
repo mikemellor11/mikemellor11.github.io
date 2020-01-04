@@ -1,4 +1,4 @@
-require('../../_Tasks/helpers/include.js')();
+require('@fishawack/config-grunt/_Tasks/helpers/include.js')();
 require('./functions.js')();
 
 var moment = require('moment');
@@ -64,11 +64,7 @@ if(process.argv[2] === 'cardio'){
 function init(){
     require('./server.js')();
 
-    io.on('connection', function (socket) {
-        socket.on('closeWindow', function(){
-            exitHandler({exit:true});
-        });
-
+    this.io.on('connection', function (socket) {
         socket.on('saveLift', function(data){
             modifyJson(loadJson(data.group), data, socket, 'exerciseLevel', function(d, i){
 
@@ -111,6 +107,7 @@ function init(){
             });
         });
 
+        socket.on('closeWindow', function(){exitHandler({exit:true});});
         process.on('exit', exitHandler.bind(null,{cleanup:true}));
         process.on('SIGINT', exitHandler.bind(null, {exit:true, socket: socket}));
         process.on('uncaughtException', exitHandler.bind(null, {exit:true, socket: socket}));

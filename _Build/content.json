@@ -33,6 +33,32 @@
         "toggle": {}
     },
     "content": {
+        "charts": [
+            {
+                "name": "chest",
+                "altName": "Chest"
+            },
+            {
+                "name": "back",
+                "altName": "Back"
+            },
+            {
+                "name": "shoulder",
+                "altName": "Shoulders"
+            },
+            {
+                "name": "leg",
+                "altName": "Legs"
+            },
+            {
+                "name": "arm",
+                "altName": "Arms"
+            },
+            {
+                "name": "weight",
+                "altName": "Weight"
+            }
+        ],
         "gymDefaults": {
             "sets": 9,
             "reps": 8,

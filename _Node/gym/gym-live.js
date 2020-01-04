@@ -135,7 +135,7 @@ function baseJS(){
 
 		for(var keyAlt in food) {
 			if(food.hasOwnProperty(keyAlt)){
-				var target = contentJson.attributes.targets.food[keyAlt];
+				var target = contentJson.content.targets.food[keyAlt];
 
 				if(food[keyAlt] > (target.target + target.margin.upper)){
 
@@ -258,39 +258,36 @@ function baseJS(){
 		html = '<form class="exercises">';
 		var index = 0;
 
-		contentJson.index.charts.forEach(function(d, i){
+		contentJson.content.charts.forEach(function(d, i){
 			if(d.name === 'weight'){index++; return;}
-			d3.json('media/data/' + d.name + '.json', function(err, JSON){
-				if(err){
-					console.log("error: ", err);
-				}
+			window.Utility.load('media/data/' + d.name + '.json')
+				.then(function(JSON){
+					html += '<div class="ut-vertAlignTop">';
+					html += '<h2>' + d.altName + '</h2>';
 
-				html += '<div class="ut-vertAlignTop">';
-				html += '<h2>' + d.altName + '</h2>';
-
-				JSON.forEach(function(dl){
-					html += '<div>';
-					html += '<input class="group checkbox-custom"';
-					html += ' data-group="' + d.name + '"';
-					html += ' id="' + dl.exercise + '"';
-					html += ' value="' + dl.exercise + '"';
-					html += (dl.exercise === 'asdf') ? 'checked' : '';
-					html += ' type="checkbox"/>';
-					html += ' <label class="checkbox-custom-label" for="' + dl.exercise + '">';
-					html += '<span class="checkbox-custom-icon"></span><span class="checkbox-custom-text">'
-					html += dl.exercise + '</span></label>';
+					JSON.forEach(function(dl){
+						html += '<div>';
+						html += '<input class="group checkbox-custom"';
+						html += ' data-group="' + d.name + '"';
+						html += ' id="' + dl.exercise + '"';
+						html += ' value="' + dl.exercise + '"';
+						html += (dl.exercise === 'asdf') ? 'checked' : '';
+						html += ' type="checkbox"/>';
+						html += ' <label class="checkbox-custom-label" for="' + dl.exercise + '">';
+						html += '<span class="checkbox-custom-icon"></span><span class="checkbox-custom-text">'
+						html += dl.exercise + '</span></label>';
+						html += '</div>';
+					});
 					html += '</div>';
+
+					if (index++ === contentJson.content.charts.length - 1){ 
+						html += '</form>';
+
+						$('.dynamic').get(0).innerHTML = html;
+
+						buildDynamicHtml(true);
+					}
 				});
-				html += '</div>';
-
-				if (index++ === contentJson.index.charts.length - 1){ 
-					html += '</form>';
-
-					$('.dynamic').get(0).innerHTML = html;
-
-					buildDynamicHtml(true);
-				}
-			});
 		});
 	}
 
@@ -319,11 +316,11 @@ function baseJS(){
 				var maxSession = 0;
 				var volume = 0;
 
-				for(var key in contentJson.attributes.gymDefaults){
+				for(var key in contentJson.content.gymDefaults){
 					gD[key] = (
 						(gymData[d.value][key] !== undefined) ? 
 							gymData[d.value] : 
-							contentJson.attributes.gymDefaults
+							contentJson.content.gymDefaults
 					)[key];
 				}
 
@@ -503,7 +500,7 @@ function baseJS(){
 
 		for(var keyAlt in food) {
 			if(food.hasOwnProperty(keyAlt)){
-				var target = contentJson.attributes.targets.food[keyAlt];
+				var target = contentJson.content.targets.food[keyAlt];
 				html += '<p ' + ((food[keyAlt] > target.target) ? 'class="high"' : '') + '>';
 				html += keyAlt
 				html += ': ' + +food[keyAlt].toFixed(2);
@@ -550,20 +547,17 @@ function baseJS(){
 	function updateData(){
 		var index = 0;
 
-		contentJson.index.charts.forEach(function(d, i){
-			d3.json('media/data/' + d.name + '.json', function(err, JSON){
-				if(err){
-					console.log("error: ", err);
-				}
-				
-				JSON.forEach(function(dl){
-					gymData[dl.exercise] = dl;
-				});
+		contentJson.content.charts.forEach(function(d, i){
+			window.Utility.load('media/data/' + d.name + '.json')
+				.then(function(JSON){
+					JSON.forEach(function(dl){
+						gymData[dl.exercise] = dl;
+					});
 
-				if (index++ === contentJson.index.charts.length - 1){ 
-					buildDynamicHtml();
-				}
-			});
+					if (index++ === contentJson.content.charts.length - 1){ 
+						buildDynamicHtml();
+					}
+				});
 		});
 	}
 

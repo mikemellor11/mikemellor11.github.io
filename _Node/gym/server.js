@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
     	switch(tempPath){
             case '/':
-    			fs.readFile(__dirname + '/index.html', function(error, data){
+    			fs.readFile(__dirname + '/../../_Output/workout.html', function(error, data){
                     if (error){
                         res.writeHead(404);
                         res.write("opps this doesn't exist - 404");
@@ -31,8 +31,8 @@ module.exports = function(grunt) {
                     }
                 });
                 break;
-            case '/script.js':
-                fs.readFile(__dirname + '/../../_Output/js/script.js', function(error, data){
+            case '/d3.js':
+                fs.readFile(__dirname + '/../../_Output/js/d3.js', function(error, data){
                     if (error){
                         res.writeHead(404);
                         res.write("opps this doesn't exist - 404");

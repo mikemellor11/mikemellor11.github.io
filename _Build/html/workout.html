@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" class="no-training">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="general.css">
+		<link rel="stylesheet" type="text/css" href="local.css">
+		<script src="crucial.js"></script>
+	</head>
+	<body class="ut-maxHeight">
+		<header class="container ut-overflowAuto">
+			<div class="ut-padding ut-tableChildren ut-borderBox">
+				<h1>Gym live</h1>
+				<div>
+					<button class="button--clear icon icon--large showMenu">
+
+					</button>
+				</div>
+				<h2 class="ut-noMargin ut-maxWidth ut-textAlignRight">
+					Session: <span id="time"></span>
+				</h2>
+			</div>
+		</header>
+		<main class="container ut-overflowAuto ut-maxHeight">
+			<div class="ut-padding">
+				<div class="dynamic"> 
+				</div>
+				<div class="dynamic"> 
+				</div>
+				<div class="dynamic"> 
+				</div>
+				<div class="dynamic half ut-vertAlignTop"></div><div class="dynamic half ut-vertAlignTop last"></div></div>
+			</div>
+		</main>
+		<script src="socket.io.js"></script>
+		<script src="moment.js"></script>
+		<script src="jquery.slim.js"></script>
+		<script src="gym-live.js"></script>
+		<script src="d3.js"></script>
+
+		<script type="text/javascript">
+			baseJS();
+		</script>
+	</body>
+</html>

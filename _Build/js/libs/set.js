@@ -184,4 +184,4 @@
 		return h + m + s + +ms;
 	}
 
-})(typeof exports === 'undefined' ? this : exports);
+})(window);

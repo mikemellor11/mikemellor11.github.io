@@ -21,9 +21,7 @@ module.exports = function(grunt) {
     }
 
     this.saveJson = function(json, file){
-        fs.writeFile('_Build/media/data/' + file + '.json', JSON.stringify(json, null, 4), function (err) {
-            if (err) return console.log(err);
-        });
+        fs.writeFileSync('_Build/media/data/' + file + '.json', JSON.stringify(json, null, 4));
     }
 
     this.exitHandler = function(options, err) {
