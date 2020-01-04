@@ -28,8 +28,8 @@ window.baseJS = function(){
 	   socket.emit('closeWindow');
 	}
 
-	$('.showMenu').on('click', function(){
-		$('.exercises').toggleClass('show');
+	$('.js-trigger').on('click', function(){
+		$($(this).data('target')).toggleClass('active');
 	});
 
 	socket.on('buildHtml', function (data, weight, foodArg) {
@@ -255,7 +255,7 @@ window.baseJS = function(){
 
 		$('.dynamic').get(0).innerHTML = '';
 
-		html = '<form class="exercises">';
+		html = '<form class="sidemenu js-sidemenu">';
 		var index = 0;
 
 		contentJson.content.charts.forEach(function(d, i){

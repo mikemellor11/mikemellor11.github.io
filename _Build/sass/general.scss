@@ -27,75 +27,16 @@
 @import "lab-ui/_icon";
 @import "lab-ui/_flex.scss";
 @import "lab-ui/_card.scss";
+@import "lab-ui/_icon.scss";
+@import "lab-ui/_button.scss";
+
 @import "lab-ui/_utilities";
 
 @import "@fishawack/lab-d3/_Build/sass/components/_chart";
 
 /* Lab Ui Overwrites */
-@import "components/card.scss";
-@import "components/chart";
+@import "components/_card.scss";
+@import "components/_chart.scss";
 
 /* Custom Components */
-
-
-
-/* uncss:ignore start */
-header{
-	display: block !important;
-}
-
-.tag_reveals{
-    border-bottom: 2px solid #2F4552;
-    padding-bottom: 40px;
-    margin-bottom: 20px;
-}
-
-.tag_reveals:last-child{
-    border-bottom: none;
-    margin-bottom: 0px;
-}
-
-.exercises{
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	background: white;
-	padding: 10px 40px 10px 20px;
-	transform: translateX(-100%);
-	transition: transform 0.2s;
-	box-sizing: border-box;
-	z-index: 2;
-}
-
-.exercises.show{
-	transform: translateX(0);
-}
-
-.exercises h2{
-	margin: 0;
-	margin-top: 20px;
-}
-
-.exercises div:first-child h2{
-	margin-top: 0px;
-}
-
-.high{
-	color: red;
-}
-
-.shopping h2{
-	margin-bottom: 0;
-}
-
-.shopping p{
-	margin: 0;
-}
-
-.food label{
-	min-width: 250px;
-	display: inline-block;
-	text-transform: capitalize;
-}
-/* uncss:ignore end */
+@import "components/_sidemenu.scss";
