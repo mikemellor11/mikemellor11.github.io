@@ -107,10 +107,10 @@ function init(){
             });
         });
 
-        socket.on('closeWindow', function(){exitHandler({exit:true});});
+        /*socket.on('closeWindow', function(){exitHandler({exit:true});});
         process.on('exit', exitHandler.bind(null,{cleanup:true}));
         process.on('SIGINT', exitHandler.bind(null, {exit:true, socket: socket}));
-        process.on('uncaughtException', exitHandler.bind(null, {exit:true, socket: socket}));
+        process.on('uncaughtException', exitHandler.bind(null, {exit:true, socket: socket}));*/
 
         socket.emit('buildHtml', 
             JSON.parse(fs.readFileSync('_Build/content.json')),

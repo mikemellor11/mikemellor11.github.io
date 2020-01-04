@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                     }
                 });
                 break;
-            case '/general.css':
+            case '/css/general.css':
     			fs.readFile(__dirname + '/../../_Output/css/general.css', function(error, data){
                     if (error){
                         res.writeHead(404);
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                     }
                 });
                 break;
-            case '/d3.js':
+            case '/js/d3.js':
                 fs.readFile(__dirname + '/../../_Output/js/d3.js', function(error, data){
                     if (error){
                         res.writeHead(404);
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                     }
                 });
                 break;
-            case '/crucial.js':
+            case '/js/crucial.js':
                 fs.readFile(__dirname + '/../../_Output/js/crucial.js', function(error, data){
                     if (error){
                         res.writeHead(404);
