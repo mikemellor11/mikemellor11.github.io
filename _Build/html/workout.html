@@ -1,35 +1,26 @@
-<!doctype html>
-<html lang="en" class="no-training">
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/general.css">
-		<script src="js/crucial.js"></script>
-	</head>
-	<body class="ut-maxHeight">
-		<header class="container ut-overflowAuto">
-			<div class="ut-padding ut-tableChildren ut-borderBox">
-				<h1>Gym live</h1>
-				<div>
-					<button class="button--clear icon icon--large showMenu">
+{{#> base script="workout"}}
+	<header class="container ut-overflowAuto">
+		<div class="ut-padding ut-tableChildren ut-borderBox">
+			<h1>Gym live</h1>
+			<div>
+				<button class="button--clear icon icon--large showMenu">
 
-					</button>
-				</div>
-				<h2 class="ut-noMargin ut-maxWidth ut-textAlignRight">
-					Session: <span id="time"></span>
-				</h2>
+				</button>
 			</div>
-		</header>
-		<main class="container ut-overflowAuto ut-maxHeight">
-			<div class="ut-padding">
-				<div class="dynamic"> 
-				</div>
-				<div class="dynamic"> 
-				</div>
-				<div class="dynamic"> 
-				</div>
-				<div class="dynamic half ut-vertAlignTop"></div><div class="dynamic half ut-vertAlignTop last"></div></div>
+			<h2 class="ut-noMargin ut-maxWidth ut-textAlignRight">
+				Session: <span id="time"></span>
+			</h2>
+		</div>
+	</header>
+	<main class="container ut-overflowAuto ut-maxHeight">
+		<div class="ut-padding">
+			<div class="dynamic"> 
 			</div>
-		</main>
-		<script src="js/d3.js"></script>
-	</body>
-</html>
+			<div class="dynamic"> 
+			</div>
+			<div class="dynamic"> 
+			</div>
+			<div class="dynamic half ut-vertAlignTop"></div><div class="dynamic half ut-vertAlignTop last"></div></div>
+		</div>
+	</main>
+{{/base}}

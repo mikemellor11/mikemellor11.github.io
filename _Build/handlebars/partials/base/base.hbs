@@ -12,10 +12,10 @@
 
         {{> footer}}
 
-        {{#if entry}}
-            <script type="text/javascript" src="js/{{entry}}.js"></script>
-        {{else}}
-            <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+
+        {{#if script}}
+            <script type="text/javascript" src="js/{{script}}.js"></script>
         {{/if}}
 
         {{> tracking}}

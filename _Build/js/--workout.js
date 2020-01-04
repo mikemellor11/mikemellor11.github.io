@@ -15,4 +15,8 @@ window.$ = require('jquery-slim');
 
 import "./libs/gym-live.js";
 
-window.baseJS();
+(() => {
+	if(navigator.userAgent === 'jsdom'){ return; }
+
+	window.baseJS();
+})();
