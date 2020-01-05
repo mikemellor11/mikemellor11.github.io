@@ -1,8 +1,8 @@
 [
     {
         "exercise": "Bicep curls",
-        "sets": 9,
-        "peak": 1,
+        "sets": 3,
+        "peak": 3,
         "sessions": [
             {
                 "date": "12/10/2016",
@@ -1586,14 +1586,37 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "05/01/2020",
+                "sets": [
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": false
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:00:57:635",
+                        "target": false
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:02:06:471",
+                        "target": false
+                    }
+                ]
             }
         ],
         "reps": 8,
         "increase": 2.5,
-        "startPercent": 0.95,
-        "endPercent": 0.95,
+        "startPercent": 0.75,
+        "endPercent": 1,
         "incInterval": 6,
-        "equipmentWeight": 10,
-        "max": 35
+        "equipmentWeight": 0,
+        "max": 20
     }
 ]

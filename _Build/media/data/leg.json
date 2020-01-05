@@ -1602,16 +1602,39 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "05/01/2020",
+                "sets": [
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": false
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:01:50:088",
+                        "target": false
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:02:38:150",
+                        "target": false
+                    }
+                ]
             }
         ],
-        "sets": 9,
+        "sets": 3,
         "reps": 8,
-        "peak": 5,
+        "peak": 3,
         "increase": 2.5,
-        "startPercent": 0.8,
-        "endPercent": 0.6,
+        "startPercent": 0.75,
+        "endPercent": 1,
         "incInterval": 3,
         "equipmentWeight": 20,
-        "max": null
+        "max": 50
     }
 ]
