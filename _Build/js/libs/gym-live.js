@@ -82,13 +82,13 @@ window.baseJS = function(){
 			socket.emit('saveLift', {
 				"exercise": $(this).data('exercise'),
 				"group": $(this).data('group'),
-				"weight": $('.weight', this).val(),
-				"reps": $('.reps', this).val(),
+				"weight": $('.js-actualWeight', this).val(),
+				"reps": $('.js-actualReps', this).val(),
 				"split":  $('#time').text(),
 				"target": (
-						+$('.weight', this).val() > $(this).data('target') ||
+						+$('.js-actualWeight', this).val() > $(this).data('target') ||
 						(
-							+$('.weight', this).val() >= $(this).data('target') &&
+							+$('.js-actualWeight', this).val() >= $(this).data('target') &&
 							+$('.reps', this).val() >= $(this).data('reps')
 						)
 					)
@@ -104,15 +104,15 @@ window.baseJS = function(){
 				"exercise": $(this).data('exercise'),
 				"group": $(this).data('group'),
 				"gymDefaults": {
-					"sets": $('.sets', this).val(),
-		            "reps": $('.reps', this).val(),
-		            "peak": $('.peak', this).val(),
-		            "increase": $('.increase', this).val(),
-		            "startPercent": (+$('.startPercent', this).val() / 100),
-		            "endPercent": (+$('.endPercent', this).val() / 100),
-		            "incInterval": $('.incInterval', this).val(),
-		            "equipmentWeight": $('.equipmentWeight', this).val(),
-		            "max": $('.max', this).val()
+					"sets": $('.js-sets', this).val(),
+		            "reps": $('.js-reps', this).val(),
+		            "peak": $('.js-peak', this).val(),
+		            "increase": $('.js-increase', this).val(),
+		            "startPercent": (+$('.js-startPercent', this).val() / 100),
+		            "endPercent": (+$('.js-endPercent', this).val() / 100),
+		            "incInterval": $('.js-incInterval', this).val(),
+		            "equipmentWeight": $('.js-equipmentWeight', this).val(),
+		            "max": $('.js-max', this).val()
 				}
 			});
 		});
@@ -559,18 +559,6 @@ window.baseJS = function(){
 	}
 }
 
-function pageJS(){
-
-}
-
-function displayField(value, name, callout, classes, suffix){
-	var html = '<div class="callout ut-marginBottom ' + ((callout) ? callout : '') + ' ' + ((classes) ? classes : '') + '">';
-	html += '<h3 class="ut-noMargin">' + name + '</h3>';
-	html += '<p class="ut-noMargin">' + value + ' ' + ((suffix) ? suffix : 'kg') + '</p>';
-	html += '</div>';
-	return html;
-}
-
 function displaySelect(current, length, name, handler, inc, start, auto){
 	var html = '';
 
@@ -585,24 +573,6 @@ function displaySelect(current, length, name, handler, inc, start, auto){
 	return html;
 }
 
-function getTrimmedMean(data, trimAmount) {
-	var trimCount = Math.floor(trimAmount*data.length);
-
-	var trimData = data.sort(function(a, b){
-		return a - b;
-	}).slice(trimCount).slice(0, -trimCount);
-
-	return trimData.reduce(function (a, b) { return a + b; })/trimData.length;
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -613,7 +583,7 @@ function update() {
 }
 
 function start() {
-	clocktimer = setInterval("update()", 1);
+	clocktimer = setInterval(update, 1);
 	x.start();
 }
 

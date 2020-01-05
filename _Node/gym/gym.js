@@ -100,7 +100,6 @@ function init(){
 
         socket.on('changeConfig', function(data){
             modifyJson(loadJson(data.group), data, socket, 'exerciseLevel', function(d, i){
-
                 for(var key in data.gymDefaults){
                     d[key] = +data.gymDefaults[key];
                 }
