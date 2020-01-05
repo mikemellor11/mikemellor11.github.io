@@ -76,7 +76,7 @@ window.baseJS = function(){
 			}
 		});
 
-		$('body').on('submit', '.session__submit', function(e){
+		$('body').on('submit', '.js-submit', function(e){
 			e.preventDefault();
 
 			socket.emit('saveLift', {
@@ -97,7 +97,7 @@ window.baseJS = function(){
 			reset();
 		});
 
-		$('body').on('change', '.change__config', function(e){
+		$('body').on('change', '.js-config', function(e){
 			e.preventDefault();
 
 			socket.emit('changeConfig', {
@@ -267,7 +267,8 @@ window.baseJS = function(){
 
 					JSON.forEach(function(dl){
 						html += '<div>';
-						html += '<input class="group checkbox-custom"';
+						html += '<input ' + ((index === 1) ? 'checked' : '') + ' class="group checkbox-custom"';
+						// html += '<input class="group checkbox-custom"';
 						html += ' data-group="' + d.name + '"';
 						html += ' id="' + dl.exercise + '"';
 						html += ' value="' + dl.exercise + '"';
@@ -292,199 +293,176 @@ window.baseJS = function(){
 	}
 
 	function buildDynamicHtml(verbose){
-		$('.dynamic').get(1).innerHTML = '';
+		window.Utility.blueprint('.js-workout', $('.group:checked').toArray(), (item, d, i) => {
+			var max = 0;
+			var last = 0;
+			var target = 0;
+			var next = 0;
+			var gD = {};
+			var currentSet = 0;
+			var maxLast = 0;
+			var weightSplit = 0;
+			var weightIncrement = 2.5;
+			var readyForIncrease = false;
+			var maxSession = 0;
+			var volume = 0;
 
-		var html = '<div class="ut-tableChildren ut-tableFixed">';
-
-		// Check for none selected set timer to zero
-		var noneChecked = true;
-		
-		$('.group').each(function(i, d){
-			if(d.checked){
-				noneChecked = false;
-
-				var max = 0;
-				var last = 0;
-				var target = 0;
-				var next = 0;
-				var gD = {};
-				var currentSet = 0;
-				var maxLast = 0;
-				var weightSplit = 0;
-				var weightIncrement = 2.5;
-				var readyForIncrease = false;
-				var maxSession = 0;
-				var volume = 0;
-
-				for(var key in contentJson.content.gymDefaults){
-					gD[key] = (
-						(gymData[d.value][key] !== undefined) ? 
-							gymData[d.value] : 
-							contentJson.content.gymDefaults
-					)[key];
-				}
-
-				if(!gD.max){
-					gD.max = 'auto';
-				}
-
-				if(gymData[d.value].sessions){
-					var workout = Workout(gymData[d.value].sessions);
-					var recentWorkout = workout.last();
-					var recentSets = recentWorkout.sets();
-					var todayBegan = 0;
-
-					if(recentWorkout.date() === today){
-						todayBegan = 1;
-					}
-
-					max = workout.max();
-
-					if(todayBegan){
-						currentSet = recentSets.length();
-						volume = recentWorkout.volume();
-						last = recentSets.last().weight();
-						maxLast = workout.fromLast(1).max();
-					} else {
-						maxLast = recentWorkout.max();
-					}
-
-					if(gD.max !== 'auto'){
-						maxLast = gD.max;
-					}
-
-					// Intervals set and theres enough sessions to calculate
-					if(gD.incInterval > 0 && workout.length() > (gD.incInterval + todayBegan)){
-						readyForIncrease = true;
-
-						var holdLastMax = 0;
-						var holdVolumeLast = 0;
-
-						for(var i = 0; i < gD.incInterval; i++){
-							var index = i + todayBegan;
-							var lastWorkout = workout.fromLast(index);
-							var tempLastMax = lastWorkout.max();
-							var tempVolumeLast = lastWorkout.volume();
-
-							if(tempVolumeLast > holdVolumeLast){
-								holdVolumeLast = tempVolumeLast;
-							}
-							if(tempLastMax > holdLastMax){
-								holdLastMax = tempLastMax;
-							}
-						}
-
-						for(var i = 0; i < gD.incInterval; i++){
-							var index = i + todayBegan;
-							var lastWorkout = workout.fromLast(index);
-							var tempLastMax = lastWorkout.max();
-							var tempVolumeLast = lastWorkout.volume();
-
-							if(tempLastMax < holdLastMax || tempVolumeLast < holdVolumeLast || !lastWorkout.target()){
-								readyForIncrease = false;
-								break;
-							}
-						}
-					}
-
-					for (var i = 0; i < gD.sets; ++i) {
-						var base = 0;
-						var incrememnt = 0;
-						var currentWeight = 0;
-
-						if(i < gD.peak){
-							if(gD.peak <= 1){
-								currentWeight = maxLast;
-							} else {
-								base = gD.startPercent * maxLast;
-								incrememnt = maxLast - base;
-								incrememnt /= (gD.peak - 1);
-								currentWeight = base + (incrememnt * i);
-							}
-						} else {
-							base = gD.endPercent * maxLast;
-							incrememnt = maxLast - base;
-							incrememnt /= (gD.sets - gD.peak);
-							currentWeight = maxLast - (incrememnt * (i - (gD.peak - 1)));
-						}
-
-						if(readyForIncrease){
-							currentWeight += gD.increase;
-						}
-
-						if(currentWeight > maxSession){
-							maxSession = currentWeight;
-						}
-
-						if(i === currentSet){
-							target = weightIncrement * Math.round(currentWeight / weightIncrement);
-						} else if(i === currentSet + 1){
-							next = weightIncrement * Math.round(currentWeight / weightIncrement);
-						}
-					}
-
-					weightSplit = ((target - gD.equipmentWeight) * 0.5);
-					if(weightSplit <= 0){
-						weightSplit = 0;
-					}
-				}
-
-				html += '<div class="ut-padding">';
-				html += '<h3 class="ut-textAlignCenter">' + d.value + '</h3>';
-
-				html += '<form data-group="' + $(d).data('group') + '" data-exercise="' + d.value + '" class="change__config">';
-				html += '<div class="half ut-fontLarge">';
-				html += displaySelect(gD.sets, 12, 'Sets', 'sets', 1, 1);
-				html += displaySelect(gD.peak, 12, 'Peak', 'peak', 1, 1);
-				html += displaySelect((gD.startPercent * 100), 100, 'Start percent', 'startPercent', 1, 0);
-				html += displaySelect((gD.endPercent * 100), 100, 'End percent', 'endPercent', 1, 0);
-				html += displaySelect(gD.max, max, 'Max', 'max', 2.5, 0, true);
-				
-				html += '</div>';
-
-				html += '<div class="half ut-fontLarge last">';
-				html += displaySelect(gD.increase, 20, 'Increase', 'increase', 2.5, 0);
-				html += displaySelect(gD.reps, 30, 'Reps', 'reps', 1, 1);
-				html += displaySelect(gD.incInterval, 12, 'Inc interval', 'incInterval', 1, 1);
-				html += displaySelect(gD.equipmentWeight, 40, 'Equipment weight', 'equipmentWeight', 2.5, 0);
-				html += '</div>';
-				html += '</form>';
-
-				html += '<div class="half ut-fontLarge">';
-				html += displayField(maxLast, 'Last max', 'callout--alt', 'half');
-				html += displayField(volume, 'Volume', 'callout--alt', 'half last');
-				html += displayField(readyForIncrease, 'Increase session', readyForIncrease ? 'callout--goal' : 'callout--alt', readyForIncrease ? 'half' : null, ' ');
-				if(readyForIncrease){
-					html += displayField(maxSession, 'Max session', 'callout--alt', 'half last');
-				}
-				html += displayField(currentSet, 'Sets done', null, 'half', ' ');
-				html += displayField(gD.sets - currentSet, 'Sets left', 'callout--alt', 'half last', ' ');
-				html += '</div>';
-
-				html += '<div class="half ut-fontLarge last">';
-				html += displayField(last, 'Last');
-				html += displayField(target, 'Target', 'callout--goal', 'half');
-				html += displayField(weightSplit, 'Weights split', 'callout--alt', 'half last');
-				html += displayField(next, 'Next');
-				html += '</div>';
-
-				html += '<form data-group="' + $(d).data('group') + '" data-exercise="' + d.value + '" data-target="' + target + '" data-reps="' + gD.reps + '" class="session__submit">';
-
-				html += displaySelect(target, max, 'Weight', 'weight', 2.5, 0);
-				html += displaySelect(gD.reps, 30, 'Reps', 'reps', 1, 1);
-
-				html += '<button type="submit" class="button button--full ut-marginTop">Set done</button>'
-				html += '</form>';
-
-				html += '</div>'
+			for(var key in contentJson.content.gymDefaults){
+				gD[key] = (
+					(gymData[d.value][key] !== undefined) ? 
+						gymData[d.value] : 
+						contentJson.content.gymDefaults
+				)[key];
 			}
+
+			if(!gD.max){
+				gD.max = 'auto';
+			}
+
+			if(gymData[d.value].sessions){
+				var workout = Workout(gymData[d.value].sessions);
+				var recentWorkout = workout.last();
+				var recentSets = recentWorkout.sets();
+				var todayBegan = 0;
+
+				if(recentWorkout.date() === today){
+					todayBegan = 1;
+				}
+
+				max = workout.max();
+
+				if(todayBegan){
+					currentSet = recentSets.length();
+					volume = recentWorkout.volume();
+					last = recentSets.last().weight();
+					maxLast = workout.fromLast(1).max();
+				} else {
+					maxLast = recentWorkout.max();
+				}
+
+				if(gD.max !== 'auto'){
+					maxLast = gD.max;
+				}
+
+				// Intervals set and theres enough sessions to calculate
+				if(gD.incInterval > 0 && workout.length() > (gD.incInterval + todayBegan)){
+					readyForIncrease = true;
+
+					var holdLastMax = 0;
+					var holdVolumeLast = 0;
+
+					for(var i = 0; i < gD.incInterval; i++){
+						var index = i + todayBegan;
+						var lastWorkout = workout.fromLast(index);
+						var tempLastMax = lastWorkout.max();
+						var tempVolumeLast = lastWorkout.volume();
+
+						if(tempVolumeLast > holdVolumeLast){
+							holdVolumeLast = tempVolumeLast;
+						}
+						if(tempLastMax > holdLastMax){
+							holdLastMax = tempLastMax;
+						}
+					}
+
+					for(var i = 0; i < gD.incInterval; i++){
+						var index = i + todayBegan;
+						var lastWorkout = workout.fromLast(index);
+						var tempLastMax = lastWorkout.max();
+						var tempVolumeLast = lastWorkout.volume();
+
+						if(tempLastMax < holdLastMax || tempVolumeLast < holdVolumeLast || !lastWorkout.target()){
+							readyForIncrease = false;
+							break;
+						}
+					}
+				}
+
+				for (var i = 0; i < gD.sets; ++i) {
+					var base = 0;
+					var incrememnt = 0;
+					var currentWeight = 0;
+
+					if(i < gD.peak){
+						if(gD.peak <= 1){
+							currentWeight = maxLast;
+						} else {
+							base = gD.startPercent * maxLast;
+							incrememnt = maxLast - base;
+							incrememnt /= (gD.peak - 1);
+							currentWeight = base + (incrememnt * i);
+						}
+					} else {
+						base = gD.endPercent * maxLast;
+						incrememnt = maxLast - base;
+						incrememnt /= (gD.sets - gD.peak);
+						currentWeight = maxLast - (incrememnt * (i - (gD.peak - 1)));
+					}
+
+					if(readyForIncrease){
+						currentWeight += gD.increase;
+					}
+
+					if(currentWeight > maxSession){
+						maxSession = currentWeight;
+					}
+
+					if(i === currentSet){
+						target = weightIncrement * Math.round(currentWeight / weightIncrement);
+					} else if(i === currentSet + 1){
+						next = weightIncrement * Math.round(currentWeight / weightIncrement);
+					}
+				}
+
+				weightSplit = ((target - gD.equipmentWeight) * 0.5);
+				if(weightSplit <= 0){
+					weightSplit = 0;
+				}
+			}
+
+			item.querySelector('.js-title').innerText = d.value;
+
+			item.querySelector('.js-config').dataset.group = $(d).data('group');
+			item.querySelector('.js-config').dataset.exercise = d.value;
+
+			item.querySelector('.js-sets').innerHTML = displaySelect(gD.sets, 12, 'Sets', 'sets', 1, 1);
+			item.querySelector('.js-peak').innerHTML = displaySelect(gD.peak, 12, 'Peak', 'peak', 1, 1);
+			item.querySelector('.js-startPercent').innerHTML = displaySelect((gD.startPercent * 100), 100, 'Start percent', 'startPercent', 5, 0);
+			item.querySelector('.js-endPercent').innerHTML = displaySelect((gD.endPercent * 100), 100, 'End percent', 'endPercent', 5, 0);
+			item.querySelector('.js-max').innerHTML = displaySelect(gD.max, max, 'Max', 'max', 2.5, 0, true);
+
+			item.querySelector('.js-increase').innerHTML = displaySelect(gD.increase, 20, 'Increase', 'increase', 2.5, 0);
+			item.querySelector('.js-reps').innerHTML = displaySelect(gD.reps, 30, 'Reps', 'reps', 1, 1);
+			item.querySelector('.js-incInterval').innerHTML = displaySelect(gD.incInterval, 12, 'Inc interval', 'incInterval', 1, 1);
+			item.querySelector('.js-equipmentWeight').innerHTML = displaySelect(gD.equipmentWeight, 40, 'Equipment weight', 'equipmentWeight', 2.5, 0);
+
+			item.querySelector('.js-lastMax').innerText = `${maxLast}kg`;
+			item.querySelector('.js-volume').innerText = `${volume}kg`;
+			item.querySelector('.js-readyForIncrease').innerText = readyForIncrease;
+
+			if(readyForIncrease){
+				item.querySelector('.js-maxSession').innerText = maxSession;
+			}
+
+			item.querySelector('.js-currentSet').innerText = currentSet;
+			item.querySelector('.js-remainingSet').innerText = gD.sets - currentSet;
+
+
+			item.querySelector('.js-last').innerText = `${last}kg`;
+			item.querySelector('.js-target').innerText = `${target}kg`;
+			item.querySelector('.js-weightSplit').innerText = `${weightSplit}kg`;
+			item.querySelector('.js-next').innerText = `${next}kg`;
+
+			item.querySelector('.js-submit').dataset.group = $(d).data('group');
+			item.querySelector('.js-submit').dataset.exercise = d.value;
+			item.querySelector('.js-submit').dataset.target = target;
+			item.querySelector('.js-submit').dataset.reps = gD.reps;
+
+			item.querySelector('.js-actualWeight').innerHTML = displaySelect(target, max, 'Weight', 'weight', 2.5, 0);
+			item.querySelector('.js-actualReps').innerHTML = displaySelect(gD.reps, 30, 'Reps', 'reps', 1, 1);
 		});
 
-		html += '</div>';
-
-		$('.dynamic').get(1).innerHTML = html;
-
-		if(noneChecked){
+		if(!$('.group:checked').toArray().length){
 			reset();
 			stop();
 		}
@@ -493,7 +471,7 @@ window.baseJS = function(){
 
 		$('.dynamic').get(3).innerHTML = '';
 
-		html = '<div class="shopping">';
+		var html = '<div class="shopping">';
 		html += '<h2>Macros</h2>'
 
 		calculateFood();
@@ -595,8 +573,7 @@ function displayField(value, name, callout, classes, suffix){
 }
 
 function displaySelect(current, length, name, handler, inc, start, auto){
-	var html = '<label for="' + handler + '" class="half ut-textAlignRight">' + name + '</label>';
-	html += '<select id="' + handler + '" class="' + handler + ' half last">';
+	var html = '';
 
 	if(auto){
 		html += '<option>auto</option>';
@@ -605,7 +582,7 @@ function displaySelect(current, length, name, handler, inc, start, auto){
 	for(var il = start; il <= length; il+=inc){
 		html += '<option ' + ((il === current) ? 'selected' : '') + '>' + il + '</option>';
 	}
-	html += '</select>';
+
 	return html;
 }
 

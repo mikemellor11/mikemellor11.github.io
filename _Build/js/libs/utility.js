@@ -51,3 +51,32 @@ export function classList(el) {
         remove: function(c) { list.remove(c); return this; }
     };
 }
+
+var blueprints = {};
+export function blueprint(selector, array, cb){
+    var node = document.querySelector(selector);
+
+    var blueprint;
+
+    if(blueprints[selector]){
+        blueprint = blueprints[selector];
+    } else {
+        blueprint = node.children[0];
+        blueprint.classList.remove('ut-hide');
+        blueprints[selector] = blueprint;
+    }
+
+    var docFrag = document.createDocumentFragment();
+
+    array.forEach(function(d, i){
+        var item = blueprint.cloneNode(true);
+
+        cb(item, d, i);
+
+        docFrag.appendChild(item);
+    });
+
+    node.innerHTML = '';
+
+    node.appendChild(docFrag);
+};
