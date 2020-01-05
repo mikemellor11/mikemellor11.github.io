@@ -31,8 +31,22 @@ module.exports = function(grunt) {
                     }
                 });
                 break;
-            case '/js/d3.js':
-                fs.readFile(__dirname + '/../../_Output/js/d3.js', function(error, data){
+            case '/js/script.js':
+                fs.readFile(__dirname + '/../../_Output/js/script.js', function(error, data){
+                    if (error){
+                        res.writeHead(404);
+                        res.write("opps this doesn't exist - 404");
+                        res.end();
+                    }
+                    else{
+                        res.writeHead(200, {'Content-Type': 'application/javascript'});
+                        res.write(data, "utf8");
+                        res.end();
+                    }
+                });
+                break;
+            case '/js/workout.js':
+                fs.readFile(__dirname + '/../../_Output/js/workout.js', function(error, data){
                     if (error){
                         res.writeHead(404);
                         res.write("opps this doesn't exist - 404");
