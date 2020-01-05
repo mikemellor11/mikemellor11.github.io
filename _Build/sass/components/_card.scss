@@ -2,6 +2,22 @@
 	color: $color0;
 }
 
-.card__body{
-	padding: #{$spacing * 2} $spacing;
+.card--workout{
+	padding: $spacing;
+	position: relative;
+	display: table;
+	white-space: nowrap;
+
+	& > *{
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	p{
+		width: 100%;
+		margin: 0;
+		text-align: right;
+		font-size: 1.75em;
+		padding-left: $spacing;
+	}
 }

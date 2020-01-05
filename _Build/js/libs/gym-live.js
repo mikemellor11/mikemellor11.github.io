@@ -267,8 +267,7 @@ window.baseJS = function(){
 
 					JSON.forEach(function(dl){
 						html += '<div>';
-						html += '<input ' + ((index === 1) ? 'checked' : '') + ' class="group checkbox-custom"';
-						// html += '<input class="group checkbox-custom"';
+						html += '<input class="group checkbox-custom"';
 						html += ' data-group="' + d.name + '"';
 						html += ' id="' + dl.exercise + '"';
 						html += ' value="' + dl.exercise + '"';
@@ -438,14 +437,14 @@ window.baseJS = function(){
 
 			item.querySelector('.js-lastMax').innerText = `${maxLast}kg`;
 			item.querySelector('.js-volume').innerText = `${volume}kg`;
-			item.querySelector('.js-readyForIncrease').innerText = readyForIncrease;
+			item.querySelector('.js-increaseSession').innerText = readyForIncrease;
 
 			if(readyForIncrease){
 				item.querySelector('.js-maxSession').innerText = maxSession;
 			}
 
-			item.querySelector('.js-currentSet').innerText = currentSet;
-			item.querySelector('.js-remainingSet').innerText = gD.sets - currentSet;
+			item.querySelector('.js-setsDone').innerText = currentSet;
+			item.querySelector('.js-setsLeft').innerText = gD.sets - currentSet;
 
 
 			item.querySelector('.js-last').innerText = `${last}kg`;
