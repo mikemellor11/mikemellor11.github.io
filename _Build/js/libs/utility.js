@@ -53,15 +53,15 @@ export function classList(el) {
 }
 
 var blueprints = {};
-export function blueprint(selector, array, cb){
-    var node = document.querySelector(selector);
+export function blueprint(selector, array, cb, root){
+    var nodes = (root || document).querySelectorAll(selector);
 
     var blueprint;
 
     if(blueprints[selector]){
         blueprint = blueprints[selector];
     } else {
-        blueprint = node.children[0];
+        blueprint = nodes[0].children[0];
         blueprint.classList.remove('ut-hide');
         blueprints[selector] = blueprint;
     }
@@ -76,7 +76,9 @@ export function blueprint(selector, array, cb){
         docFrag.appendChild(item);
     });
 
-    node.innerHTML = '';
+    for(var i = nodes.length; i--;){
+        nodes[i].innerHTML = '';
 
-    node.appendChild(docFrag);
+        nodes[i].appendChild(docFrag);
+    }
 };

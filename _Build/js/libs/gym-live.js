@@ -25,7 +25,7 @@ window.baseJS = function(){
 	});
 
 	window.onbeforeunload = function(){
-	   socket.emit('closeWindow');
+	   //socket.emit('closeWindow');
 	}
 
 	$('.js-trigger').on('click', function(){
@@ -253,42 +253,27 @@ window.baseJS = function(){
 
 		$('.dynamic').get(2).innerHTML = html;
 
-		$('.dynamic').get(0).innerHTML = '';
+		var groups = contentJson.content.charts.filter((d) => d.name !== 'weight');
 
-		html = '<form class="sidemenu js-sidemenu">';
-		var index = 0;
+		Promise.all(groups.map((d) => window.Utility.load('media/data/' + d.name + '.json')))
+			.then((d) => {
+				window.Utility.blueprint(
+					'.js-sidemenu',
+					d,
+					(item, d, i) => {
+						item.querySelector('.js-title').innerText = groups[i].altName;
 
-		contentJson.content.charts.forEach(function(d, i){
-			if(d.name === 'weight'){index++; return;}
-			window.Utility.load('media/data/' + d.name + '.json')
-				.then(function(JSON){
-					html += '<div class="ut-vertAlignTop">';
-					html += '<h2>' + d.altName + '</h2>';
+						window.Utility.blueprint('.js-exercises', d, ((item, d, i) => {
+							item.querySelector('.js-input').dataset.group = groups[i].name;
+							item.querySelector('.js-input').value = d.exercise;
+							item.querySelector('.js-input').id = d.exercise;
 
-					JSON.forEach(function(dl){
-						html += '<div>';
-						html += '<input class="group checkbox-custom"';
-						html += ' data-group="' + d.name + '"';
-						html += ' id="' + dl.exercise + '"';
-						html += ' value="' + dl.exercise + '"';
-						html += (dl.exercise === 'asdf') ? 'checked' : '';
-						html += ' type="checkbox"/>';
-						html += ' <label class="checkbox-custom-label" for="' + dl.exercise + '">';
-						html += '<span class="checkbox-custom-icon"></span><span class="checkbox-custom-text">'
-						html += dl.exercise + '</span></label>';
-						html += '</div>';
-					});
-					html += '</div>';
-
-					if (index++ === contentJson.content.charts.length - 1){ 
-						html += '</form>';
-
-						$('.dynamic').get(0).innerHTML = html;
-
-						buildDynamicHtml(true);
+							item.querySelector('.js-label').innerText = d.exercise;
+							item.querySelector('.js-label').htmlFor = d.exercise;
+						}), item);
 					}
-				});
-		});
+				);
+			});
 	}
 
 	function buildDynamicHtml(verbose){
