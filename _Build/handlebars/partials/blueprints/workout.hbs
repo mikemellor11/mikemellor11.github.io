@@ -1,9 +1,10 @@
-<div class="
+<ul class="
     js-workout
     ut-tableChildren
     ut-tableFixed
+    ut-clearListOnly
 ">
-    <div class="
+    <li class="
         ut-paddingHorz
         ut-hide
     ">
@@ -16,79 +17,58 @@
                 grid--halfs
             "
     	>
-            <div>
-                {{#each (array
-                    "Sets"
-                    "Peak"
-                    "Start Percent"
-                    "End percent"
-                    "Max"
-                )}}
+            {{#each (array
+                "Sets"
+                "Peak"
+                "Start Percent"
+                "End percent"
+                "Max"
+                "Increase"
+                "Reps"
+                "Inc interval"
+                "Equipment weight"
+            )}}
+                <div>
                     <label>{{this}}</label>
                     <select class="js-{{camel this}}"></select>
-                {{/each}}
-            </div>
-            <div>
-                {{#each (array
-                    "Increase"
-                    "Reps"
-                    "Inc interval"
-                    "Equipment weight"
-                )}}
-                    <label>{{this}}</label>
-                    <select class="js-{{camel this}}"></select>
-                {{/each}}
-            </div>
+                </div>
+            {{/each}}
         </form>
         
-        <div class="
+        <ul class="
             grid
             grid--halfs
             grid--gutters
+            grid--vertGutters
+            ut-clearListOnly
         ">
-            <div class="
-                grid
-                grid--fulls
-                grid--vertGutters
-            ">
-                {{#each (array
-                    "Last max"
-                    "Volume"
-                    "Increase session"
-                    "Max session"
-                    "Sets done"
-                    "Sets left"
-                )}}
+            {{#each (array
+                "Last max"
+                "Volume"
+                "Increase session"
+                "Max session"
+                "Sets done"
+                "Sets left"
+                "Last"
+                "Target"
+                "Weight split"
+                "Next"
+            )}}
+                <li>
                     <div class="
                         card
                         card--workout
+                        ut-padding
+                        ut-tableChildren
+                        ut-vertAlignChildrenMiddle
+                        ut-noWrap
                     ">
                         <h3>{{this}}</h3>
                         <p class="js-{{camel this}}"></p>
                     </div>
-                {{/each}}
-            </div>
-            <div class="
-                grid
-                grid--fulls
-                grid--vertGutters
-            ">
-                {{#each (array
-                    "Last"
-                    "Target"
-                    "Weight split"
-                    "Next"
-                )}}
-                    <div class="
-                        card
-                        card--workout
-                    ">
-                        <h3>{{this}}</h3>
-                        <p class="js-{{camel this}}"></p>
-                    </div>
-                {{/each}}
-            </div>
-        </div>
+                </li>
+            {{/each}}
+        </ul>
 
         <form class="
             js-submit
@@ -102,5 +82,5 @@
 
             <button type="submit" class="button">Set done</button>
         </form>
-    </div>
-</div>
+    </li>
+</ul>

@@ -42,7 +42,7 @@ window.baseJS = function(){
 
 		buildStaticHtml(data);
 
-		$('body').on('click', '.random', function(){
+		$('body').on('click', '.js-random', function(){
 			randoming = true;
 			$('.food input').val(0);
 
@@ -125,7 +125,7 @@ window.baseJS = function(){
 	socket.on('updateFood', function (data) {
 		foodJson = data;
 		foodJsonArr = Object.keys(foodJson).map(function(k) { return k; });
-		buildDynamicHtml(true);
+		buildDynamicHtml();
 	});
 
 	function randomMealPlan(){
@@ -228,30 +228,17 @@ window.baseJS = function(){
 	}
 
 	function buildStaticHtml(){
-		$('.dynamic').get(2).innerHTML = '';
+		window.Utility.blueprint(
+			'.js-food',
+			Object.keys(foodJson),
+			(item, d, i) => {
+				item.querySelector('.js-label').innerText = d;
+				item.querySelector('.js-label').htmlFor = d.replace(/ /g, '');
 
-		var html = '<form class="food">';
-
-		for(var key in foodJson) {
-			if(foodJson.hasOwnProperty(key)){
-				html += '<div>';
-				html += '<label for="' + key.replace(/ /g, '') + '">';
-				html += key + '</label>';
-
-				html += '<input class="foodItem"'; 
-				html += ' type="number"';
-				html += ' id="' + key.replace(/ /g, '') + '"';
-				html += ' value="' + foodJson[key].weight + '"';
-				html +=' />';
-				html += '</div>';
+				item.querySelector('.js-input').value = foodJson[d].weight;
+				item.querySelector('.js-input').id = d.replace(/ /g, '');
 			}
-		}
-
-		html += '<button class="button button--full ut-marginTop random">Random meal plan</button>';
-		html += '<button type="submit" class="button button--full ut-marginTop">Save</button>';
-		html += '</form>';
-
-		$('.dynamic').get(2).innerHTML = html;
+		);
 
 		var groups = contentJson.content.charts.filter((d) => d.name !== 'weight');
 
@@ -480,30 +467,28 @@ window.baseJS = function(){
 
 
 
-		if(verbose){
-			$('.dynamic').get(4).innerHTML = '';
+		$('.dynamic').get(4).innerHTML = '';
 
-			html = '<div class="shopping">';
-			html += '<h2>Shopping for a day</h2>';
+		html = '<div class="shopping">';
+		html += '<h2>Shopping for a day</h2>';
 
-			for(var key in foodJson) {
-				if(foodJson.hasOwnProperty(key)){
-					if(foodJson[key].weight > 0){
-						html += '<p>';
-						html += key + ' - ' + foodJson[key].weight;
-						html += '</p>';
-					}
+		for(var key in foodJson) {
+			if(foodJson.hasOwnProperty(key)){
+				if(foodJson[key].weight > 0){
+					html += '<p>';
+					html += key + ' - ' + foodJson[key].weight;
+					html += '</p>';
 				}
 			}
-
-			html += '<h3>£';
-			html += +food.price.toFixed(2);
-			html += '</h3>';
-
-			html += '</div>';
-
-			$('.dynamic').get(4).innerHTML = html;
 		}
+
+		html += '<h3>£';
+		html += +food.price.toFixed(2);
+		html += '</h3>';
+
+		html += '</div>';
+
+		$('.dynamic').get(4).innerHTML = html;
 	}
 
 	function updateData(){
