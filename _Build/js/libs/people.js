@@ -91,5 +91,18 @@ export default [
 				"value": 70
 			}
 		]
+	},
+    {
+		"name": "Gee",
+		"targets": [
+			{
+				"key": "01/09/2019",
+				"value": 88.7
+			},
+            {
+                "key": "01/12/2019",
+				"value": 85
+			}
+		]
 	}
 ];
