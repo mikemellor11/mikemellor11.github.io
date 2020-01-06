@@ -28,7 +28,7 @@
         "price": 1.32
     },
     "wholemeal bread": {
-        "weight": 0,
+        "weight": 160,
         "max": 200,
         "min": 0,
         "multiple": 40,
@@ -337,7 +337,7 @@
         "price": 0.35
     },
     "tuna": {
-        "weight": 0,
+        "weight": 112,
         "max": 448,
         "min": 0,
         "multiple": 112,
@@ -351,7 +351,7 @@
         "price": 0.78
     },
     "mayo": {
-        "weight": 0,
+        "weight": 20,
         "max": 50,
         "min": 0,
         "multiple": 1,
@@ -567,7 +567,7 @@
         "price": 0.74
     },
     "quorn pieces": {
-        "weight": 166,
+        "weight": 250,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -581,7 +581,7 @@
         "price": 0.6
     },
     "peppers frozen": {
-        "weight": 300,
+        "weight": 200,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -623,7 +623,7 @@
         "price": 0.167
     },
     "curry sauce balti": {
-        "weight": 0,
+        "weight": 250,
         "max": 500,
         "min": 0,
         "multiple": 250,
@@ -637,7 +637,7 @@
         "price": 0.156
     },
     "rice golden": {
-        "weight": 0,
+        "weight": 250,
         "max": 500,
         "min": 0,
         "multiple": 250,
