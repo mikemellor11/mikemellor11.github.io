@@ -89,7 +89,7 @@ window.baseJS = function(){
 						+$('.js-actualWeight', this).val() > $(this).data('target') ||
 						(
 							+$('.js-actualWeight', this).val() >= $(this).data('target') &&
-							+$('.reps', this).val() >= $(this).data('reps')
+							+$('.js-actualReps', this).val() >= $(this).data('reps')
 						)
 					)
 			});
@@ -250,7 +250,7 @@ window.baseJS = function(){
 					(item, d, i) => {
 						item.querySelector('.js-title').innerText = groups[i].altName;
 
-						window.Utility.blueprint('.js-exercises', d, ((item, d, i) => {
+						window.Utility.blueprint('.js-exercises', d, ((item, d) => {
 							item.querySelector('.js-input').dataset.group = groups[i].name;
 							item.querySelector('.js-input').value = d.exercise;
 							item.querySelector('.js-input').id = d.exercise;
