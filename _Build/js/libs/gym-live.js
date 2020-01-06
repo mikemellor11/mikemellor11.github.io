@@ -448,62 +448,17 @@ window.baseJS = function(){
 			}
 
 			item.querySelector('.js-title').innerText = d;
-			item.querySelector('.js-calories').innerText = +food[d].toFixed(2);
+			item.querySelector('.js-calories').innerText = +food[d].toFixed(0);
 			item.querySelector('.js-gda').innerText = target.GDA;
 			item.querySelector('.js-aim').innerText = target.target;
 			item.querySelector('.js-lower').innerText = target.target - target.margin.lower;
 			item.querySelector('.js-upper').innerText = target.target + target.margin.upper;
 		});
 
-		/*$('.dynamic').get(3).innerHTML = '';
-
-		var html = '<div class="shopping">';
-		html += '<h2>Macros</h2>'
-
-		calculateFood();
-
-		for(var keyAlt in food) {
-			if(food.hasOwnProperty(keyAlt)){
-				var target = contentJson.content.targets.food[keyAlt];
-				html += '<p ' + ((food[keyAlt] > target.target) ? 'class="high"' : '') + '>';
-				html += keyAlt
-				html += ': ' + +food[keyAlt].toFixed(2);
-				html += ' - (' + target.GDA + ' / ' + target.target;
-				html += ') - (' + (target.target - target.margin.lower);
-				html += ' - ' + (target.target + target.margin.upper) + ')';
-				
-				html += '</p>';
-			}
-		}
-
-		html += '</div>';
-
-		$('.dynamic').get(3).innerHTML = html;*/
-
-
-
-		$('.dynamic').get(4).innerHTML = '';
-
-		html = '<div class="shopping">';
-		html += '<h2>Shopping for a day</h2>';
-
-		for(var key in foodJson) {
-			if(foodJson.hasOwnProperty(key)){
-				if(foodJson[key].weight > 0){
-					html += '<p>';
-					html += key + ' - ' + foodJson[key].weight;
-					html += '</p>';
-				}
-			}
-		}
-
-		html += '<h3>£';
-		html += +food.price.toFixed(2);
-		html += '</h3>';
-
-		html += '</div>';
-
-		$('.dynamic').get(4).innerHTML = html;
+		window.Utility.blueprint('.js-shopping', Object.keys(foodJson), (item, d, i) => {
+			item.querySelector('.js-title').innerText = d;
+			item.querySelector('.js-weight').innerText = foodJson[d].weight;
+		});
 	}
 
 	function updateData(){
