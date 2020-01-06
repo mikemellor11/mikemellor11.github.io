@@ -580,7 +580,7 @@
         "salt": 0.8,
         "price": 0.6
     },
-    "peppers (frozen)": {
+    "peppers frozen": {
         "weight": 0,
         "max": 400,
         "min": 0,
@@ -594,7 +594,7 @@
         "salt": 0.01,
         "price": 0.145
     },
-    "peppers (frozen)": {
+    "peppers frozen": {
         "weight": 0,
         "max": 400,
         "min": 0,
@@ -608,7 +608,7 @@
         "salt": 0.01,
         "price": 0.145
     },
-    "onions (frozen)": {
+    "onions frozen": {
         "weight": 0,
         "max": 400,
         "min": 0,
@@ -622,7 +622,7 @@
         "salt": 0.01,
         "price": 0.165
     },
-    "apple (gala)": {
+    "apple gala": {
         "weight": 0,
         "max": 200,
         "min": 0,
