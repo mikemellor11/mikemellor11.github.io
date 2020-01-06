@@ -438,9 +438,24 @@ window.baseJS = function(){
 			stop();
 		}
 
+		calculateFood();
 
+		window.Utility.blueprint('.js-macros', Object.keys(food), (item, d, i) => {
+			var target = contentJson.content.targets.food[d];
 
-		$('.dynamic').get(3).innerHTML = '';
+			if(food[d] > target.target){
+				item.classList.add('ut-highlight');
+			}
+
+			item.querySelector('.js-title').innerText = d;
+			item.querySelector('.js-calories').innerText = +food[d].toFixed(2);
+			item.querySelector('.js-gda').innerText = target.GDA;
+			item.querySelector('.js-aim').innerText = target.target;
+			item.querySelector('.js-lower').innerText = target.target - target.margin.lower;
+			item.querySelector('.js-upper').innerText = target.target + target.margin.upper;
+		});
+
+		/*$('.dynamic').get(3).innerHTML = '';
 
 		var html = '<div class="shopping">';
 		html += '<h2>Macros</h2>'
@@ -463,7 +478,7 @@ window.baseJS = function(){
 
 		html += '</div>';
 
-		$('.dynamic').get(3).innerHTML = html;
+		$('.dynamic').get(3).innerHTML = html;*/
 
 
 
