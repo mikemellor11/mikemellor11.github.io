@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 355,
+        "weight": 0,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -28,7 +28,7 @@
         "price": 1.32
     },
     "wholemeal bread": {
-        "weight": 160,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "multiple": 40,
@@ -42,7 +42,7 @@
         "price": 0.13
     },
     "broccoli": {
-        "weight": 225,
+        "weight": 0,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -55,7 +55,7 @@
         "salt": 0.02,
         "price": 0.115
     },
-    "brown rice": {
+    "rice brown": {
         "weight": 0,
         "max": 400,
         "min": 0,
@@ -101,7 +101,7 @@
         "price": 0.043
     },
     "egg": {
-        "weight": 110,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "multiple": 55,
@@ -135,7 +135,7 @@
         "price": 0.49
     },
     "unsalted butter": {
-        "weight": 5,
+        "weight": 0,
         "max": 50,
         "min": 0,
         "multiple": 1,
@@ -152,7 +152,7 @@
         "price": 0.44
     },
     "protein shake": {
-        "weight": 50,
+        "weight": 0,
         "max": 100,
         "min": 0,
         "multiple": 25,
@@ -166,7 +166,7 @@
         "price": 0.974
     },
     "banana": {
-        "weight": 120,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 118,
@@ -194,7 +194,7 @@
         "price": 1.55
     },
     "red kidney beans": {
-        "weight": 30,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -236,7 +236,7 @@
         "price": 0.2
     },
     "low fat natural yogurt": {
-        "weight": 100,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "multiple": 1,
@@ -292,7 +292,7 @@
         "price": 0.57
     },
     "sweet potato": {
-        "weight": 240,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -306,7 +306,7 @@
         "price": 0.1
     },
     "chickpeas": {
-        "weight": 70,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -320,7 +320,7 @@
         "price": 0.208
     },
     "virgin olive oil": {
-        "weight": 3,
+        "weight": 0,
         "max": 5,
         "min": 0,
         "multiple": 1,
@@ -368,7 +368,7 @@
         "price": 0.21
     },
     "red grapefruit": {
-        "weight": 50,
+        "weight": 0,
         "max": 100,
         "min": 0,
         "multiple": 1,
@@ -382,7 +382,7 @@
         "price": 0.2
     },
     "new potatoes": {
-        "weight": 150,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -396,7 +396,7 @@
         "price": 0.09
     },
     "mince": {
-        "weight": 240,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -455,7 +455,7 @@
         "price": 0.6
     },
     "basa": {
-        "weight": 100,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -469,7 +469,7 @@
         "price": 1.04
     },
     "baby spinach": {
-        "weight": 100,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -525,7 +525,7 @@
         "price": 0.467
     },
     "rice noodles": {
-        "weight": 250,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "multiple": 1,
@@ -553,7 +553,7 @@
         "price": 0.6
     },
     "black bean sauce": {
-        "weight": 100,
+        "weight": 0,
         "max": 100,
         "min": 0,
         "multiple": 1,
@@ -567,7 +567,7 @@
         "price": 0.74
     },
     "quorn pieces": {
-        "weight": 0,
+        "weight": 166,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -581,21 +581,7 @@
         "price": 0.6
     },
     "peppers frozen": {
-        "weight": 0,
-        "max": 400,
-        "min": 0,
-        "multiple": 1,
-        "calories": 23,
-        "protein": 0.8,
-        "carbohydrate": 3.8,
-        "fat": 0.5,
-        "saturates": 0,
-        "sugar": 3.7,
-        "salt": 0.01,
-        "price": 0.145
-    },
-    "peppers frozen": {
-        "weight": 0,
+        "weight": 300,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -609,7 +595,7 @@
         "price": 0.145
     },
     "onions frozen": {
-        "weight": 0,
+        "weight": 216,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -623,7 +609,7 @@
         "price": 0.165
     },
     "apple gala": {
-        "weight": 0,
+        "weight": 100,
         "max": 200,
         "min": 0,
         "multiple": 100,
@@ -635,5 +621,33 @@
         "sugar": 11.6,
         "salt": 0.01,
         "price": 0.167
-    }
+    },
+    "curry sauce balti": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 250,
+        "calories": 51,
+        "protein": 0.9,
+        "carbohydrate": 7.8,
+        "fat": 1.5,
+        "saturates": 0.2,
+        "sugar": 3.7,
+        "salt": 0.63,
+        "price": 0.156
+    },
+    "rice golden": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 250,
+        "calories": 156,
+        "protein": 3.5,
+        "carbohydrate": 31,
+        "fat": 1.5,
+        "saturates": 0.2,
+        "sugar": 0.5,
+        "salt": 0.43,
+        "price": 0.196
+    },
 }
