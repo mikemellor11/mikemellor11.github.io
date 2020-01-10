@@ -28,7 +28,7 @@
         "price": 1.32
     },
     "wholemeal bread": {
-        "weight": 160,
+        "weight": 320,
         "max": 200,
         "min": 0,
         "multiple": 40,
@@ -135,7 +135,7 @@
         "price": 0.49
     },
     "unsalted butter": {
-        "weight": 0,
+        "weight": 5,
         "max": 50,
         "min": 0,
         "multiple": 1,
