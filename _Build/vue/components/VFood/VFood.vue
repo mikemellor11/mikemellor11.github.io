@@ -3,21 +3,51 @@
 		class="food"
 		v-on:submit.prevent="submit"
 	>
-	    <ul>
+	    <ul
+	    	class="
+	    		grid
+				grid--quarters
+				grid--gutters
+				grid--vertGutters
+				ut-clearListOnly
+	    	"
+	    >
 	        <li
 	        	v-for="(food, key) in foods"
         	>
-	            <label
-	            	v-text="key"
-	            />
-	            <input 
-	            	type="number"
-	            	v-model.number="food.weight"
-	            />
+	        	<article
+					class="card"
+				>
+					<div
+						class="
+							card__body
+						"
+					>
+			            <h3>
+			            	<label
+			            		v-text="key"
+			            	/>
+			            </h3>
+			            <input 
+			            	type="number"
+			            	v-model.number="food.weight"
+			            />
+			        </div>
+			    </article>
 	        </li>
 	    </ul>
-	    <button class="button">Random meal plan</button>
-	    <button type="submit" class="button">Save</button>
+	    <button
+	    	class="button"
+			v-on:click.prevent="random"
+    	>
+    		Random meal plan
+    	</button>
+	    <button
+	    	type="submit"
+	    	class="button"
+    	>
+    		Save
+    	</button>
 	</form>
 </template>
 

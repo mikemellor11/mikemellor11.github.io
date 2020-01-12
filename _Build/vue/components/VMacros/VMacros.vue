@@ -18,7 +18,7 @@
 					class="card"
 					:class="{
 						'active': macro.value > (macro.target - macro.margin.lower) && macro.value < (macro.target + macro.margin.upper),
-						'deactive': macro.value > macro.target
+						'deactive': macro.value > (macro.target + macro.margin.upper)
 					}"
 				>
 					<div
@@ -26,12 +26,12 @@
 							card__body
 						"
 					>
-						<span v-text="key"/>: 
-						<span v-text="macro.value.toFixed(1)"/> - (
-						<span v-text="macro.GDA"/> / 
-						<span v-text="macro.target"/> ) - (
-						<span v-text="macro.target - macro.margin.lower"/> - 
-						<span v-text="macro.target + macro.margin.upper"/> )
+						<h3 v-text="key"/>
+						<p>Current: <span v-text="macro.value.toFixed(1)"/></p>
+						<p>GDA: <span v-text="macro.GDA"/></p>
+						<p>Target: <span v-text="macro.target"/></p>
+						<p>Min: <span v-text="macro.target - macro.margin.lower"/></p>
+						<p>Max: <span v-text="macro.target + macro.margin.upper"/></p>
 					</div>
 				</article>
 			</li>
