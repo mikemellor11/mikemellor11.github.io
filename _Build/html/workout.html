@@ -9,7 +9,7 @@
 			ut-noWrap
 			ut-vertAlignChildrenMiddle
 		">
-			<h1 class="ut-fullWidth">Gym live</h1>
+			<h1 class="ut-fullWidth">Workout</h1>
 			
 			<div>
 				<button
@@ -34,22 +34,9 @@
 		ut-padding
 	">
 		<div class="ut-padding">
-			{{> sidemenu}}
+			<div id="exercises"></div>
 
 			{{> workout}}
-
-			<div class="
-				grid
-				grid--thirds
-				grid--gutters
-			">
-				<div id="food"></div>
-				<div id="shopping"></div>
-				<div id="macros"></div>
-			</div>
-
-			<!-- {{> shopping}} -->
-
 		</div>
 	</main>
 {{/base}}

@@ -1,0 +1,31 @@
+<header>
+	<ul class="
+		ut-clearList
+	">
+		{{#each (array
+			(object 
+				title="Home"
+				url="index"
+			)
+			(object 
+				title="Diet"
+				url="diet"
+			)
+			(object 
+				title="Workout"
+				url="workout"
+			)
+		)}}
+			<li>
+				<a
+					class="
+						ut-padding
+					"
+					href="{{url}}.html"
+				>
+					{{title}}
+				</a>
+			</li>
+		{{/each}}
+	</ul>
+</header>

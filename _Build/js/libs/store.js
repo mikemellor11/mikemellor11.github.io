@@ -6,7 +6,18 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
     	foods: null,
-        macros: null
+        macros: null,
+        defaults: {
+            "sets": 9,
+            "reps": 8,
+            "peak": 5,
+            "increase": 5,
+            "startPercent": 0.75,
+            "endPercent": 0.8,
+            "incInterval": 3,
+            "equipmentWeight": 20,
+            "max": "auto"
+        }
     },
 
     mutations: {
