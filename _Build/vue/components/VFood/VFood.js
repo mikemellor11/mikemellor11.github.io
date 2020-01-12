@@ -1,23 +1,26 @@
 "use strict";
 
-import * as Utility from "../../../js/libs/utility.js";
-
 export default {
-	data(){
-		return {
-			food: null
-		};
+	computed: {
+		foods() {
+			return this.$store.state.foods;
+	    }
+	},
+
+	watch: {
+		foods: {
+			deep: true,
+			handler(){
+				this.$store.commit('foods', this.foods);
+			}
+		}
 	},
 
 	methods: {
 		submit(){
 			if(window.socket){
-				window.socket.emit('saveFood', this.food);
+				window.socket.emit('saveFood', this.foods);
 			}
 		}
-	},
-
-	mounted(){
-		Utility.load("media/data/food.json").then(d => this.food = d);
 	}
 };

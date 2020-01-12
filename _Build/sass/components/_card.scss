@@ -1,5 +1,13 @@
 .card{
 	color: $color0;
+
+	&.active{
+		background-color: $colorGood;
+	}
+
+	&.deactive{
+		background-color: $colorBad;
+	}
 }
 
 .card--workout{

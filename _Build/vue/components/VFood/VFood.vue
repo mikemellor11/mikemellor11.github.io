@@ -5,14 +5,14 @@
 	>
 	    <ul>
 	        <li
-	        	v-for="(item, key) in food"
+	        	v-for="(food, key) in foods"
         	>
 	            <label
 	            	v-text="key"
 	            />
 	            <input 
 	            	type="number"
-	            	v-model.number="item.weight"
+	            	v-model.number="food.weight"
 	            />
 	        </li>
 	    </ul>
