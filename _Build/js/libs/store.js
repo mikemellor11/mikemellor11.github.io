@@ -16,5 +16,26 @@ export default new Vuex.Store({
         macros(state, value){
             state.macros = value;
         }
+    },
+
+    getters: {
+        macros(state){
+            var calculate = {};
+
+            for(var macro in state.macros){
+                if(state.macros.hasOwnProperty(macro)){
+                    calculate[macro] = state.macros[macro];
+                    calculate[macro].value = 0;
+
+                    for(var food in state.foods){
+                        if(state.foods.hasOwnProperty(food)){
+                            calculate[macro].value += (state.foods[food][macro] / 100) * state.foods[food].weight;
+                        }
+                    }
+                }
+            }
+
+            return calculate;
+        }
     }
 });
