@@ -2,10 +2,9 @@
 	<section>
 		<h2>Macros</h2>
 		<ul
-			v-if="macros && foods"
 			class="
 				grid
-				grid--quarters
+				grid--halfs
 				grid--gutters
 				grid--vertGutters
 				ut-clearListOnly

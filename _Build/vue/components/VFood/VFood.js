@@ -25,16 +25,14 @@ export default {
 				window.socket.emit('saveFood', this.foods);
 			}
 		},
-		random(){
+		reset(){
 			for(var food in this.foods) {
 				if(this.foods.hasOwnProperty(food)){
 					this.foods[food].weight = this.foods[food].min || 0;
 				}
 			}
-			
-			this.generate();
 		},
-		generate(){
+		random(){
 			var found = true;
 
 			for(var key in this.macros) {
@@ -49,7 +47,7 @@ export default {
 						}
 						
 						this.$nextTick(() => {
-							this.generate();
+							this.random();
 						});
 
 						return;
@@ -112,7 +110,7 @@ export default {
 				this.foods[randomFood].weight = value;
 
 				setTimeout(() => {
-					this.generate();
+					this.random();
 				});
 			}
 		}

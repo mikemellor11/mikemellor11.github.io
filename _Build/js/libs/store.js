@@ -36,6 +36,15 @@ export default new Vuex.Store({
             }
 
             return calculate;
+        },
+        shopping(state){
+            return Object.keys(state.foods || {})
+                .map(d => {
+                    state.foods[d].key = d;
+                    return state.foods[d];
+                })
+                .filter(d => d.weight)
+                .sort((a, b) => a.key.localeCompare(b.key));
         }
     }
 });
