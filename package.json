@@ -33,6 +33,12 @@
     "normalize-scss": "7.0.0",
     "socket.io": "1.6.0",
     "socket.io-client": "1.6.0",
-    "stdio": "0.2.7"
+    "stdio": "0.2.7",
+    "vue": "2.5.17",
+    "vue-lorem-ipsum": "0.0.1",
+    "vue-router": "3.0.1",
+    "vue2-filters": "0.3.0",
+    "vuex": "3.0.1",
+    "vuex-persistedstate": "2.5.4"
   }
 }
