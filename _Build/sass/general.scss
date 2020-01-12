@@ -48,3 +48,22 @@
 .ut-highlight{
 	color: red;
 }
+
+.shopping{
+	position: relative;
+
+	& > ul{
+		position: absolute;
+		background-color: darken($color0, 10%);
+		top: 100%;
+		z-index: 1;
+		pointer-events: none;
+		display: none;
+	}
+
+	&:hover{
+		& > ul{
+			display: block;
+		}
+	}
+}
