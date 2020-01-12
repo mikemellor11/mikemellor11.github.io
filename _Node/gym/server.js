@@ -117,7 +117,7 @@ module.exports = function(grunt) {
                 }
                 break;
         }
-    }).listen(8888, '127.0.0.1'));
+    }).listen(8888, '0.0.0.0'));
 
-    opn('http://127.0.0.1:8888');
+    opn('http://localhost:8888');
 }
