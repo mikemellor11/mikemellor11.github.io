@@ -1,7 +1,7 @@
 <template>
 	<ul class="js-sidemenu">
 	    <li
-	    	v-for="(area, key) in areas"
+	    	v-for="(area, key) in exercises"
     	>
 	        <h2 v-text="key"/>
 	        <ul
@@ -10,6 +10,7 @@
 	            <li>
 	                <input
 	                	:id="exercise.exercise"
+	                	v-model="exercise.active"
 	                	class="js-input group"
 	                	type="checkbox"
                 	/>

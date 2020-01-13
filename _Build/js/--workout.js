@@ -22,4 +22,14 @@ import "./libs/gym-live.js";
 	window.socket = require("socket.io-client")(`http://${window.location.hostname}:8888`);
 
 	var exercises = new Vue({el: '#exercises', store, render: h => h(require('../vue/components/VExercises/VExercises.vue').default)});
+
+	var keys = Object.keys(store.state.exercises);
+		
+	Promise.all(keys.map(d => window.Utility.load(`media/data/${d.toLowerCase()}.json`)))
+		.then((areas) => {
+			store.commit('exercises', areas.reduce((prev, next, i) => {
+				prev[keys[i]] = next;
+				return prev;
+			}, {}));
+		});
 })();

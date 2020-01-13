@@ -1,6 +1,6 @@
 {
     "chicken breast": {
-        "weight": 0,
+        "weight": 250,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -56,7 +56,7 @@
         "price": 0.115
     },
     "rice brown": {
-        "weight": 0,
+        "weight": 250,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -152,7 +152,7 @@
         "price": 0.44
     },
     "protein shake": {
-        "weight": 0,
+        "weight": 100,
         "max": 100,
         "min": 0,
         "multiple": 25,
@@ -567,7 +567,7 @@
         "price": 0.74
     },
     "quorn pieces": {
-        "weight": 250,
+        "weight": 0,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -637,7 +637,7 @@
         "price": 0.156
     },
     "rice golden": {
-        "weight": 250,
+        "weight": 0,
         "max": 500,
         "min": 0,
         "multiple": 250,

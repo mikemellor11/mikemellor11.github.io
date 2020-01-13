@@ -17,6 +17,13 @@ export default new Vuex.Store({
             "incInterval": 3,
             "equipmentWeight": 20,
             "max": "auto"
+        },
+        exercises: {
+            Chest: null,
+            Back: null,
+            Shoulders: null,
+            Legs: null,
+            Arms: null
         }
     },
 
@@ -26,6 +33,9 @@ export default new Vuex.Store({
     	},
         macros(state, value){
             state.macros = value;
+        },
+        exercises(state, value){
+            state.exercises = value;
         }
     },
 
