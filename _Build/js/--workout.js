@@ -22,6 +22,7 @@ import "./libs/gym-live.js";
 	window.socket = require("socket.io-client")(`http://${window.location.hostname}:8888`);
 
 	var exercises = new Vue({el: '#exercises', store, render: h => h(require('../vue/components/VExercises/VExercises.vue').default)});
+	var workout = new Vue({el: '#workout', store, render: h => h(require('../vue/components/VWorkout/VWorkout.vue').default)});
 
 	var keys = Object.keys(store.state.exercises);
 		

@@ -4,10 +4,10 @@
 	    	v-for="(area, key) in exercises"
     	>
 	        <h2 v-text="key"/>
-	        <ul
-	        	v-for="exercise in area"
-        	>
-	            <li>
+	        <ul>
+	            <li
+	            	v-for="exercise in area"
+	            >
 	                <input
 	                	:id="exercise.exercise"
 	                	v-model="exercise.active"
