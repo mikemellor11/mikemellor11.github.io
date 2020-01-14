@@ -1609,14 +1609,37 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "13/01/2020",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": false
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:02:13:561",
+                        "target": false
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:57:071",
+                        "target": false
+                    }
+                ]
             }
         ],
         "reps": 8,
         "increase": 2.5,
-        "startPercent": 0.75,
+        "startPercent": 1,
         "endPercent": 1,
         "incInterval": 6,
-        "equipmentWeight": 0,
+        "equipmentWeight": 10,
         "max": 20
     }
 ]

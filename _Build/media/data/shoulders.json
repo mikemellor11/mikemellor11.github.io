@@ -1700,6 +1700,29 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "13/01/2020",
+                "sets": [
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": false
+                    },
+                    {
+                        "weight": 35,
+                        "reps": 8,
+                        "split": "00:02:09:842",
+                        "target": false
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 7,
+                        "split": "00:02:02:124",
+                        "target": false
+                    }
+                ]
             }
         ],
         "sets": 3,
@@ -3492,9 +3515,9 @@
     },
     {
         "exercise": "Wide lateral Raises",
-        "sets": 7,
+        "sets": 3,
         "increase": 2.5,
-        "peak": 5,
+        "peak": 1,
         "startPercent": 1,
         "endPercent": 1,
         "incInterval": 8,
@@ -4343,6 +4366,29 @@
                         "reps": 8,
                         "split": "00:01:27:183",
                         "target": true
+                    }
+                ]
+            },
+            {
+                "date": "13/01/2020",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:30:511",
+                        "target": false
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:40:096",
+                        "target": false
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:07:332",
+                        "target": false
                     }
                 ]
             }
