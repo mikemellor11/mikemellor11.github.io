@@ -10,7 +10,7 @@
 				v-for="item in shopping"
 				class="shopping"
 			>
-				<p>{{item.key}}: <span v-text="item.weight"/>g</p>
+				<p>{{item.key}}: <span v-text="item.weight"/>g <span v-text="item.multiple > 1 ? `(x${item.weight / item.multiple})` : ''"/></p>
 
 				<ul>
 					<li v-for="(macro, key) in macros">{{key}}: <span v-text="((item[key] / 100) * item.weight).toFixed(1)"/></li>
