@@ -37,6 +37,7 @@
 
 /* Lab Ui Overwrites */
 @import "components/_card.scss";
+@import "components/_form.scss";
 @import "components/_chart.scss";
 
 /* Custom Components */
@@ -48,6 +49,16 @@
 
 .ut-highlight{
 	color: red;
+}
+
+.highlight{
+	&.active{
+		color: $colorWarn;
+	}
+
+	&.deactive{
+		color: $colorBad;
+	}
 }
 
 .shopping{

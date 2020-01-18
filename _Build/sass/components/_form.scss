@@ -1,0 +1,18 @@
+input[type="number"]{
+    background-color: $form;
+    border: none;
+    width: 100%;
+    min-width: 80px;
+    padding: $spacing;
+    box-sizing: border-box;
+    border-radius: $borderRadius;
+    outline: none;
+    border: 1px solid $formBorder;
+    appearance: none;
+    min-width: $formMin;
+
+    &:focus, &:active {
+        border: 1px solid $formBorder--active;
+        color: $formActive;
+    }
+}

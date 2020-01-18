@@ -4,7 +4,7 @@
 		<ul
 			class="
 				grid
-				grid--halfs
+				grid--thirds
 				grid--gutters
 				grid--vertGutters
 				ut-clearListOnly

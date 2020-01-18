@@ -46,6 +46,9 @@ export default {
 	},
 
 	methods: {
+		percent(key, value){
+			return ((value / this.macros[key].GDA) * 100).toFixed(1);
+		},
 		submit(){
 			if(window.socket){
 				window.socket.emit('saveFood', this.foods);

@@ -41,27 +41,49 @@
 
 		    <ul
 		    	class="
+		    		grid
+		    		grid--fulls
+		    		grid--vertGutters
 					ut-clearListOnly
 		    	"
 		    >
 		        <li
 		        	v-for="(food, key) in sorted"
 	        	>
-	        		<div class="form__group">
-					    <label
-					    	for="search"
-					    	v-text="key"
-					    />
-					    <input
-					    	type="number"
-			    			v-model.number="food.weight"
-					    	:step="food.multiple"
-					    	id="search"
-					    	placeholder="Search"
-					    	class="form__input"
-					    	role="search"
-				    	/>
-					</div>
+	        		<article class="
+						card
+	        		">
+		        		<div class="card__body form__group">
+						    <label
+						    	:for="key"
+						    >
+						    	{{key | capitalize}}
+							</label>
+
+							<ul>
+								<li
+									v-for="(detail, key) in macros"
+									class="highlight"
+									:class="{
+										'deactive': percent(key, food[key]) > 20,
+										'active': percent(key, food[key]) > 10
+									}"
+								>
+									<span v-text="`${key}: `"/><span v-text="`${food[key]} (${percent(key, food[key])}%)`"/>
+								</li>
+							</ul>
+
+						    <input
+						    	type="number"
+				    			v-model.number="food.weight"
+						    	:step="food.multiple"
+						    	:id="key"
+						    	placeholder="Search"
+						    	class="form__input"
+						    	role="textbox"
+					    	/>
+						</div>
+					</article>
 		        </li>
 		    </ul>
 		</form>
