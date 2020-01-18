@@ -20,7 +20,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@fishawack/config-grunt": "4.1.6"
+    "@fishawack/config-grunt": "4.4.10"
   },
   "dependencies": {
     "@fishawack/lab-d3": "2.2.4",
