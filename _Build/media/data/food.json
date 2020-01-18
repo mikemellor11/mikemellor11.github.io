@@ -649,5 +649,33 @@
         "sugar": 0.5,
         "salt": 0.43,
         "price": 0.196
+    },
+    "tofu": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 1,
+        "calories": 61,
+        "protein": 6.6,
+        "carbohydrate": 1.8,
+        "fat": 3,
+        "saturates": 0.5,
+        "sugar": 0.5,
+        "salt": 0.051,
+        "price": 0.401
+    },
+    "mug shot spicy": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 60,
+        "calories": 88,
+        "protein": 3.1,
+        "carbohydrate": 17.4,
+        "fat": 0.4,
+        "saturates": 0.1,
+        "sugar": 2.1,
+        "salt": 0.38,
+        "price": 0.833
     }
 }
