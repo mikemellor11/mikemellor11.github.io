@@ -39,6 +39,7 @@
 		            <input 
 		            	type="number"
 		            	v-model.number="food.weight"
+		            	:step="food.multiple"
 		            />
 		        </li>
 		    </ul>
