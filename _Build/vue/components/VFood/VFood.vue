@@ -39,6 +39,42 @@
 		    	/>
 			</div>
 
+			<div class="form__group">
+				<label
+					for="high"
+					v-text="'High'"
+				/>
+				<select
+					id="high"
+					v-model="filter.high"
+				>
+					<option selected value> -- select an option -- </option>
+					<option
+						v-for="(detail, key) in macros"
+						:value="key"
+						v-text="key"
+					/>
+				</select>
+			</div>
+
+			<div class="form__group">
+				<label
+					for="low"
+					v-text="'Low'"
+				/>
+				<select
+					id="low"
+					v-model="filter.low"
+				>
+					<option selected value> -- select an option -- </option>
+					<option
+						v-for="(detail, key) in macros"
+						:value="key"
+						v-text="key"
+					/>
+				</select>
+			</div>
+
 		    <ul
 		    	class="
 		    		grid
@@ -65,8 +101,8 @@
 									v-for="(detail, key) in macros"
 									class="highlight"
 									:class="{
-										'deactive': percent(key, food[key]) > 20,
-										'active': percent(key, food[key]) > 10
+										'deactive': percent(key, food[key]) >= 20,
+										'active': percent(key, food[key]) >= 10
 									}"
 								>
 									<span v-text="`${key}: `"/><span v-text="`${food[key]} (${percent(key, food[key])}%)`"/>

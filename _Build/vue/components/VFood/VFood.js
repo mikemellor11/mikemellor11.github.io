@@ -3,7 +3,11 @@
 export default {
 	data(){
 		return {
-			search: ''
+			search: '',
+			filter: {
+				high: '',
+				low: ''
+			}
 		};
 	},
 
@@ -14,6 +18,14 @@ export default {
 			for(var key in this.foods){
 				if(this.foods.hasOwnProperty(key)){
 					if(!this.search || key.includes(this.search)){
+						if(this.filter.high && this.percent(this.filter.high, this.foods[key][this.filter.high]) < 10){
+							continue;
+						}
+
+						if(this.filter.low && this.percent(this.filter.low, this.foods[key][this.filter.low]) > 2.5){
+							continue;
+						}
+
 						filtered[key] = this.foods[key];
 					}
 				}
