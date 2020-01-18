@@ -23,24 +23,45 @@
 	    	>
 	    		Save
 	    	</button>
+
+			<div class="form__group">
+			    <label
+			    	for="search"
+			    	v-text="'Search'"
+			    />
+			    <input
+			    	type="text"
+	    			v-model="search"
+			    	id="search"
+			    	placeholder="Search"
+			    	class="form__input"
+			    	role="search"
+		    	/>
+			</div>
+
 		    <ul
 		    	class="
 					ut-clearListOnly
 		    	"
 		    >
 		        <li
-		        	v-for="(food, key) in foods"
+		        	v-for="(food, key) in sorted"
 	        	>
-		        	<h3>
-		            	<label
-		            		v-text="key"
-		            	/>
-		            </h3>
-		            <input 
-		            	type="number"
-		            	v-model.number="food.weight"
-		            	:step="food.multiple"
-		            />
+	        		<div class="form__group">
+					    <label
+					    	for="search"
+					    	v-text="key"
+					    />
+					    <input
+					    	type="number"
+			    			v-model.number="food.weight"
+					    	:step="food.multiple"
+					    	id="search"
+					    	placeholder="Search"
+					    	class="form__input"
+					    	role="search"
+				    	/>
+					</div>
 		        </li>
 		    </ul>
 		</form>

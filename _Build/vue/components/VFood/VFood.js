@@ -1,7 +1,33 @@
 "use strict";
 
 export default {
+	data(){
+		return {
+			search: ''
+		};
+	},
+
 	computed: {
+		filtered(){
+			var filtered = {};
+
+			for(var key in this.foods){
+				if(this.foods.hasOwnProperty(key)){
+					if(!this.search || key.includes(this.search)){
+						filtered[key] = this.foods[key];
+					}
+				}
+			}
+
+			return filtered;
+		},
+		sorted(){
+			var sorted = {};
+
+			Object.keys(this.filtered).sort().forEach(d => sorted[d] = this.filtered[d]);
+
+			return sorted;
+		},
 		foods() {
 			return this.$store.state.foods;
 	    },
