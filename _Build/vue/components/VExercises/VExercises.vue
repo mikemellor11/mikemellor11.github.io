@@ -9,14 +9,14 @@
 	            	v-for="exercise in area"
 	            >
 	                <input
-	                	:id="exercise.exercise"
+	                	:id="exercise.title"
 	                	v-model="exercise.active"
 	                	class="js-input group"
 	                	type="checkbox"
                 	/>
 	                <label
-	                	:for="exercise.exercise"
-	                	v-text="exercise.exercise"
+	                	:for="exercise.title"
+	                	v-text="exercise.title"
                 	/>
 	            </li>
 	        </ul>

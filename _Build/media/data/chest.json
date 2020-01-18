@@ -1,6 +1,17 @@
 [
     {
-        "exercise": "Bench press incline",
+        "title": "Bench press incline",
+        "defaults": {
+            "sets": 3,
+            "reps": 8,
+            "peak": 1,
+            "increase": 2.5,
+            "startPercent": 1,
+            "endPercent": 1,
+            "incInterval": 3,
+            "equipmentWeight": 20,
+            "max": 60
+        },
         "sessions": [
             {
                 "date": "13/11/2016",
@@ -554,23 +565,20 @@
                     }
                 ]
             }
-        ],
-        "sets": 3,
-        "reps": 8,
-        "peak": 1,
-        "increase": 2.5,
-        "startPercent": 1,
-        "endPercent": 1,
-        "incInterval": 3,
-        "equipmentWeight": 20,
-        "max": 60
+        ]
     },
     {
-        "exercise": "Bench press decline",
-        "sets": 3,
-        "peak": 1,
-        "startPercent": 1,
-        "endPercent": 1,
+        "title": "Bench press decline",
+        "defaults": {
+            "sets": 3,
+            "peak": 1,
+            "startPercent": 1,
+            "endPercent": 1,
+            "reps": 8,
+            "increase": 2.5,
+            "incInterval": 3,
+            "equipmentWeight": 20
+        },
         "sessions": [
             {
                 "date": "16/10/2016",
@@ -1176,15 +1184,21 @@
                     }
                 ]
             }
-        ],
-        "reps": 8,
-        "increase": 2.5,
-        "incInterval": 3,
-        "equipmentWeight": 20
+        ]
     },
     {
-        "exercise": "Bench press",
-        "endPercent": 1,
+        "title": "Bench press",
+        "defaults": {
+            "endPercent": 1,
+            "sets": 3,
+            "reps": 8,
+            "peak": 3,
+            "increase": 2.5,
+            "startPercent": 1,
+            "incInterval": 3,
+            "equipmentWeight": 20,
+            "max": 60
+        },
         "sessions": [
             {
                 "date": "13/10/2016",
@@ -3436,24 +3450,21 @@
                     }
                 ]
             }
-        ],
-        "sets": 3,
-        "reps": 8,
-        "peak": 3,
-        "increase": 2.5,
-        "startPercent": 1,
-        "incInterval": 3,
-        "equipmentWeight": 20,
-        "max": 60
+        ]
     },
     {
-        "exercise": "Push ups",
-        "sets": 3,
-        "peak": 1,
-        "increase": 0,
-        "startPercent": 1,
-        "endPercent": 1,
-        "incInterval": 1,
+        "title": "Push ups",
+        "defaults": {
+            "sets": 3,
+            "peak": 1,
+            "increase": 0,
+            "startPercent": 1,
+            "endPercent": 1,
+            "incInterval": 1,
+            "reps": 20,
+            "equipmentWeight": 0,
+            "max": null
+        },
         "sessions": [
             {
                 "date": "16/10/2016",
@@ -4399,9 +4410,6 @@
                     }
                 ]
             }
-        ],
-        "reps": 20,
-        "equipmentWeight": 0,
-        "max": null
+        ]
     }
 ]

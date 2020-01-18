@@ -15,33 +15,26 @@
 		    	"
 	        >
 		        <h3
-		        	v-text="exercise.exercise"
+		        	v-text="exercise.title"
 		        />
 
-		        <!-- <form
+		        <form
 		        	class="
-		                js-config
 		                grid
 		                grid--halfs
 		            "
+		            v-on:change="defaults"
 		    	>
-		            {{#each (array
-		                "Sets"
-		                "Peak"
-		                "Start Percent"
-		                "End percent"
-		                "Max"
-		                "Increase"
-		                "Reps"
-		                "Inc interval"
-		                "Equipment weight"
-		            )}}
-		                <div>
-		                    <label>{{this}}</label>
-		                    <select class="js-{{camel this}}"></select>
-		                </div>
-		            {{/each}}
-		        </form> -->
+	                <div
+	                	v-for="(value, key) in exercise.defaults"
+	                >
+	                    <label v-text="key"/>
+	                    <input
+	                    	type="number"
+	                    	v-model.number="exercise.defaults[key]"
+                    	/>
+	                </div>
+		        </form>
 		        
 		        <!-- <ul class="
 		            grid

@@ -1,8 +1,17 @@
 [
     {
-        "exercise": "Bicep curls",
-        "sets": 3,
-        "peak": 3,
+        "title": "Bicep curls",
+        "defaults": {
+            "reps": 8,
+            "increase": 2.5,
+            "startPercent": 1,
+            "endPercent": 1,
+            "incInterval": 6,
+            "equipmentWeight": 10,
+            "max": 20,
+            "sets": 3,
+            "peak": 3
+        },
         "sessions": [
             {
                 "date": "12/10/2016",
@@ -1633,13 +1642,6 @@
                     }
                 ]
             }
-        ],
-        "reps": 8,
-        "increase": 2.5,
-        "startPercent": 1,
-        "endPercent": 1,
-        "incInterval": 6,
-        "equipmentWeight": 10,
-        "max": 20
+        ]
     }
 ]

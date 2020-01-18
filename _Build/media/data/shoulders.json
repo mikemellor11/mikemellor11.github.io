@@ -1,8 +1,17 @@
 [
     {
-        "exercise": "Overhead press",
-        "startPercent": 1,
-        "endPercent": 1,
+        "title": "Overhead press",
+        "defaults": {
+            "startPercent": 1,
+            "endPercent": 1,
+            "sets": 3,
+            "reps": 8,
+            "peak": 3,
+            "increase": 2.5,
+            "incInterval": 3,
+            "equipmentWeight": 20,
+            "max": 35
+        },
         "sessions": [
             {
                 "date": "14/10/2016",
@@ -1724,24 +1733,21 @@
                     }
                 ]
             }
-        ],
-        "sets": 3,
-        "reps": 8,
-        "peak": 3,
-        "increase": 2.5,
-        "incInterval": 3,
-        "equipmentWeight": 20,
-        "max": 35
+        ]
     },
     {
-        "exercise": "Lateral Raises",
-        "sets": 7,
-        "increase": 2.5,
-        "peak": 5,
-        "startPercent": 1,
-        "endPercent": 1,
-        "incInterval": 8,
-        "equipmentWeight": 10,
+        "title": "Lateral Raises",
+        "defaults": {
+            "sets": 7,
+            "increase": 2.5,
+            "peak": 5,
+            "startPercent": 1,
+            "endPercent": 1,
+            "incInterval": 8,
+            "equipmentWeight": 10,
+            "reps": 8,
+            "max": 10
+        },
         "sessions": [
             {
                 "date": "14/10/2016",
@@ -2619,19 +2625,21 @@
                     }
                 ]
             }
-        ],
-        "reps": 8,
-        "max": 10
+        ]
     },
     {
-        "exercise": "Front Raises",
-        "sets": 7,
-        "increase": 2.5,
-        "peak": 5,
-        "startPercent": 1,
-        "endPercent": 1,
-        "incInterval": 6,
-        "equipmentWeight": 10,
+        "title": "Front Raises",
+        "defaults": {
+            "sets": 7,
+            "increase": 2.5,
+            "peak": 5,
+            "startPercent": 1,
+            "endPercent": 1,
+            "incInterval": 6,
+            "equipmentWeight": 10,
+            "reps": 8,
+            "max": 10
+        },
         "sessions": [
             {
                 "date": "14/10/2016",
@@ -3509,19 +3517,21 @@
                     }
                 ]
             }
-        ],
-        "reps": 8,
-        "max": 10
+        ]
     },
     {
-        "exercise": "Wide lateral Raises",
-        "sets": 3,
-        "increase": 2.5,
-        "peak": 1,
-        "startPercent": 1,
-        "endPercent": 1,
-        "incInterval": 8,
-        "equipmentWeight": 10,
+        "title": "Wide lateral Raises",
+        "defaults": {
+            "sets": 3,
+            "increase": 2.5,
+            "peak": 1,
+            "startPercent": 1,
+            "endPercent": 1,
+            "incInterval": 8,
+            "equipmentWeight": 10,
+            "reps": 8,
+            "max": 10
+        },
         "sessions": [
             {
                 "date": "14/10/2016",
@@ -4392,8 +4402,6 @@
                     }
                 ]
             }
-        ],
-        "reps": 8,
-        "max": 10
+        ]
     }
 ]

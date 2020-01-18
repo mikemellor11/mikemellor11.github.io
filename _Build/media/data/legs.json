@@ -1,6 +1,17 @@
 [
     {
-        "exercise": "Squats",
+        "title": "Squats",
+        "defaults": {
+            "sets": 3,
+            "reps": 8,
+            "peak": 3,
+            "increase": 2.5,
+            "startPercent": 1,
+            "endPercent": 1,
+            "incInterval": 3,
+            "equipmentWeight": 20,
+            "max": 40
+        },
         "sessions": [
             {
                 "date": "12/10/2016",
@@ -1649,15 +1660,6 @@
                     }
                 ]
             }
-        ],
-        "sets": 3,
-        "reps": 8,
-        "peak": 3,
-        "increase": 2.5,
-        "startPercent": 1,
-        "endPercent": 1,
-        "incInterval": 3,
-        "equipmentWeight": 20,
-        "max": 40
+        ]
     }
 ]
