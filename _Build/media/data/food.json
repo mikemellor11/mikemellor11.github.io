@@ -306,7 +306,7 @@
         "price": 0.1
     },
     "chickpeas": {
-        "weight": 800,
+        "weight": 400,
         "max": 300,
         "min": 0,
         "multiple": 400,
@@ -497,7 +497,7 @@
         "price": 0.16
     },
     "lentils": {
-        "weight": 0,
+        "weight": 390,
         "max": 200,
         "min": 0,
         "multiple": 390,
@@ -567,7 +567,7 @@
         "price": 0.74
     },
     "quorn pieces": {
-        "weight": 200,
+        "weight": 250,
         "max": 400,
         "min": 0,
         "multiple": 1,
