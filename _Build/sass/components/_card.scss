@@ -1,14 +1,20 @@
+/* uncss:ignore start */
 .card{
 	color: $color0;
 
-	&.active{
+	&.card--warn{
+		background-color: $colorWarn;
+	}
+
+	&.card--good{
 		background-color: $colorGood;
 	}
 
-	&.deactive{
+	&.card--bad{
 		background-color: $colorBad;
 	}
 }
+/* uncss:ignore end */
 
 .card--workout{
 	p{

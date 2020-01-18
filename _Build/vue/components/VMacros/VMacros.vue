@@ -16,8 +16,9 @@
 				<article
 					class="card"
 					:class="{
-						'active': macro.value > (macro.target - macro.margin.lower) && macro.value < (macro.target + macro.margin.upper),
-						'deactive': macro.value > (macro.target + macro.margin.upper)
+						'card--good': macro.value > (macro.target - macro.margin.lower) && macro.value < (macro.target + macro.margin.upper),
+						'card--warn': macro.value > (macro.target * 0.5),
+						'card--bad': macro.value > (macro.target + macro.margin.upper)
 					}"
 				>
 					<div
