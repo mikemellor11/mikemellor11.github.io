@@ -194,7 +194,7 @@
         "price": 1.55
     },
     "red kidney beans": {
-        "weight": 0,
+        "weight": 240,
         "max": 300,
         "min": 0,
         "multiple": 240,
@@ -208,7 +208,7 @@
         "price": 0.229
     },
     "smooth peanut butter": {
-        "weight": 25,
+        "weight": 75,
         "max": 25,
         "min": 0,
         "multiple": 1,
@@ -306,7 +306,7 @@
         "price": 0.1
     },
     "chickpeas": {
-        "weight": 400,
+        "weight": 240,
         "max": 300,
         "min": 0,
         "multiple": 240,
@@ -497,7 +497,7 @@
         "price": 0.16
     },
     "lentils": {
-        "weight": 390,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "multiple": 265,
