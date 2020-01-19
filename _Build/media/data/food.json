@@ -197,7 +197,7 @@
         "weight": 0,
         "max": 300,
         "min": 0,
-        "multiple": 1,
+        "multiple": 240,
         "calories": 105,
         "protein": 6.9,
         "carbohydrate": 15,
@@ -205,7 +205,7 @@
         "saturates": 0.01,
         "sugar": 1,
         "salt": 0.03,
-        "price": 0.125
+        "price": 0.229
     },
     "smooth peanut butter": {
         "weight": 25,
@@ -309,7 +309,7 @@
         "weight": 400,
         "max": 300,
         "min": 0,
-        "multiple": 400,
+        "multiple": 240,
         "calories": 122,
         "protein": 7.7,
         "carbohydrate": 16.5,
@@ -317,7 +317,7 @@
         "saturates": 0.2,
         "sugar": 0.01,
         "salt": 0.03,
-        "price": 0.208
+        "price": 0.308
     },
     "virgin olive oil": {
         "weight": 0,
@@ -677,5 +677,61 @@
         "sugar": 2.1,
         "salt": 0.38,
         "price": 0.833
+    },
+    "pinto bean": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 235,
+        "calories": 100,
+        "protein": 6.9,
+        "carbohydrate": 13,
+        "fat": 0.6,
+        "saturates": 0.1,
+        "sugar": 0.5,
+        "salt": 0.01,
+        "price": 0.234
+    },
+    "cannellini bean": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 235,
+        "calories": 97,
+        "protein": 7.7,
+        "carbohydrate": 11,
+        "fat": 0.6,
+        "saturates": 0.1,
+        "sugar": 0.7,
+        "salt": 0.01,
+        "price": 0.234
+    },
+    "black eye beans": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 235,
+        "calories": 98,
+        "protein": 6.6,
+        "carbohydrate": 15,
+        "fat": 0.6,
+        "saturates": 0.2,
+        "sugar": 0.5,
+        "salt": 0.01,
+        "price": 0.234
+    },
+    "spinach leaves": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 265,
+        "calories": 33,
+        "protein": 3.4,
+        "carbohydrate": 2.2,
+        "fat": 0.6,
+        "saturates": 0.1,
+        "sugar": 0.5,
+        "salt": 0.07,
+        "price": 0.245
     }
 }
