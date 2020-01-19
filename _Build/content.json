@@ -27,7 +27,8 @@
             "csscalc"
         ],
         "uncss": [
-            "<%= root %>/*.html"
+            "<%= root %>/*.html",
+            ".tmp/vue/**/*.vue"
         ],
         "template": {},
         "toggle": {}
