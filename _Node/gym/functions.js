@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     
     this.modifyJson = function(json, data, socket, level, callback){
         json.forEach(function(d, i){
-            if(d.exercise === data.exercise){
+            if(d.title === data.title){
                 if(level === 'exerciseLevel'){
                     callback(d, i);
                     level = 'done';

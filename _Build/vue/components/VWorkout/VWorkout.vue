@@ -23,12 +23,14 @@
 		                grid
 		                grid--halfs
 		            "
-		            v-on:change="defaults"
+		            v-on:change="defaults(exercise, key)"
 		    	>
 	                <div
 	                	v-for="(value, key) in exercise.defaults"
 	                >
-	                    <label v-text="key"/>
+	                    <label
+	                    	v-text="key"
+	                    />
 	                    <input
 	                    	type="number"
 	                    	v-model.number="exercise.defaults[key]"
