@@ -38,40 +38,27 @@
 	                </div>
 		        </form>
 		        
-		        <!-- <ul class="
+		        <ul class="
 		            grid
 		            grid--halfs
 		            grid--gutters
 		            grid--vertGutters
 		            ut-clearListOnly
 		        ">
-		            {{#each (array
-		                "Last max"
-		                "Volume"
-		                "Increase session"
-		                "Max session"
-		                "Sets done"
-		                "Sets left"
-		                "Last"
-		                "Target"
-		                "Weight split"
-		                "Next"
-		            )}}
-		                <li>
-		                    <div class="
-		                        card
-		                        card--workout
-		                        ut-padding
-		                        ut-tableChildren
-		                        ut-vertAlignChildrenMiddle
-		                        ut-noWrap
-		                    ">
-		                        <h3>{{this}}</h3>
-		                        <p class="js-{{camel this}}"></p>
-		                    </div>
-		                </li>
-		            {{/each}}
-		        </ul> -->
+	                <li
+	                	v-for="(stat, key) in stats(exercise)"
+	                >
+	                    <div class="
+	                        card
+	                        card--workout
+	                        ut-padding
+	                        ut-noWrap
+	                    ">
+	                        <h3 v-text="key"/>
+	                        <p v-text="stat"/>
+	                    </div>
+	                </li>
+		        </ul>
 
 		        <form class="
 		            js-submit
