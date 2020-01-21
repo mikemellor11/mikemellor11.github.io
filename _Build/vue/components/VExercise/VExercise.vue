@@ -46,10 +46,13 @@
 	        </li>
 	    </ul>
 
-	    <form class="
-	        js-submit
-	        ut-textAlignRight
-	    ">
+	    <form 
+	    	v-on:submit.prevent="onSubmit"
+	    	class="
+	        	js-submit
+	        	ut-textAlignRight
+	    	"
+    	>
 	        <label
             	v-text="'Weight'"
             />

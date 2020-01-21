@@ -43,7 +43,7 @@ export default {
 				var recentSets = recentWorkout.sets();
 				var todayBegan = 0;
 
-				if(recentWorkout.date() === today){
+				if(recentSets.data.length && recentWorkout.date() === today){
 					todayBegan = 1;
 				}
 
@@ -171,6 +171,30 @@ export default {
 			}
 		},
 		onSubmit(){
+			if(!this.exercise.sessions || this.exercise.sessions[this.exercise.sessions.length - 1].date !== moment().format('DD/MM/YYYY')){
+                if(!this.exercise.sessions){
+                    this.exercise.sessions = [];
+                }
+
+                this.exercise.sessions.push({
+                    date: moment().format('DD/MM/YYYY'),
+                    sets: []
+                });
+            }
+
+            this.exercise.sessions[this.exercise.sessions.length - 1].sets.push({
+                "weight": this.result.weight,
+                "reps": this.result.reps,
+                "split":  "00:03:09:830",
+                "target": (
+						+this.result.weight > this.stats.target ||
+						(
+							+this.result.weight >= this.stats.target &&
+							+this.result.reps >= this.exercise.defaults.reps
+						)
+					)
+            });
+
 			if(window.socket){
 				window.socket.emit('saveLift', {
 					"title": this.exercise.title,
