@@ -10,21 +10,7 @@
 			ut-vertAlignChildrenMiddle
 		">
 			<h1 class="ut-fullWidth">Workout</h1>
-			
-			<div>
-				<button
-					class="
-						button
-						js-trigger
-					"
-					data-target=".js-sidemenu"
-				>
-					{{> icon 
-						name="spin3"
-						class="icon--reverse"
-					}}
-				</button>
-			</div>
+
 			<h2>
 				Session: <span id="time"></span>
 			</h2>
@@ -35,11 +21,14 @@
 	">
 		<div class="
 			grid
-			grid--halfs
 			grid--gutters
 		">
-			<div id="exercises"></div>
-			<div id="workout"></div>
+			<div class="grid__quarter">
+				<div id="exercises"></div>
+			</div>
+			<div class="grid__threeQuarters">
+				<div id="workout"></div>
+			</div>
 		</div>
 	</main>
 {{/base}}

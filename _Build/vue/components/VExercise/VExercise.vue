@@ -7,7 +7,7 @@
 	    <form
 	    	class="
 	            grid
-	            grid--halfs
+	            grid--thirds
 	        "
 	        v-on:change="defaults"
 		>
@@ -26,7 +26,7 @@
 	    
 	    <ul class="
 	        grid
-	        grid--halfs
+	        grid--thirds
 	        grid--gutters
 	        grid--vertGutters
 	        ut-clearListOnly
@@ -39,6 +39,7 @@
 	                card--workout
 	                ut-padding
 	                ut-noWrap
+	                ut-tableChildren
 	            ">
 	                <h3 v-text="key"/>
 	                <p v-text="stat"/>
@@ -51,23 +52,28 @@
 	    	class="
 	        	js-submit
 	        	ut-textAlignRight
+	        	grid
+	        	grid--halfs
 	    	"
     	>
-	        <label
-            	v-text="'Weight'"
-            />
-            <input
-            	type="number"
-            	v-model.number="result.weight"
-        	/>
-
-        	<label
-            	v-text="'Reps'"
-            />
-            <input
-            	type="number"
-            	v-model.number="result.reps"
-        	/>
+    		<div>
+		        <label
+	            	v-text="'Weight'"
+	            />
+	            <input
+	            	type="number"
+	            	v-model.number="result.weight"
+	        	/>
+	        </div>
+			<div>
+	        	<label
+	            	v-text="'Reps'"
+	            />
+	            <input
+	            	type="number"
+	            	v-model.number="result.reps"
+	        	/>
+	        </div>
 
 	        <button type="submit" class="button">Set done</button>
 	    </form>

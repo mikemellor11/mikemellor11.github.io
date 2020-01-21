@@ -10,7 +10,7 @@ import * as capitalize from "vue2-filters/src/string/capitalize";
 (() => {
 	if(navigator.userAgent === 'jsdom'){ return; }
 
-	window.socket = require("socket.io-client")(`http://${window.location.hostname}:8888`);
+	window.socket = require("socket.io-client")(`http://${window.location.hostname}:8888`, { reconnection: false });
 
 	Vue.filter('capitalize', capitalize.default);
 
