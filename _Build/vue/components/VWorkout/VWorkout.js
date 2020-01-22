@@ -4,6 +4,9 @@ export default {
 	computed: {
 		exercises(){
 			return this.$store.state.exercises;
+		},
+		stopwatch(){
+			return this.$root.stopwatch.$children[0];
 		}
 	},
 

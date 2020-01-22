@@ -14,15 +14,14 @@ import "./libs/gym.js";
 
 window.moment = require('moment');
 
-import "./libs/gym-live.js";
-
 (() => {
 	if(navigator.userAgent === 'jsdom'){ return; }
 
 	window.socket = require("socket.io-client")(`http://${window.location.hostname}:8888`, { reconnection: false });
 
-	var exercises = new Vue({el: '#exercises', store, render: h => h(require('../vue/components/VExercises/VExercises.vue').default)});
-	var workout = new Vue({el: '#workout', store, render: h => h(require('../vue/components/VWorkout/VWorkout.vue').default)});
+	var stopwatch = new Vue({el: '#stopwatch', store, render: h => h(require('../vue/components/VStopwatch/VStopwatch.vue').default)});
+	var exercises = new Vue({el: '#exercises', store, render: h => h(require('../vue/components/VExercises/VExercises.vue').default), data: { stopwatch }});
+	var workout = new Vue({el: '#workout', store, render: h => h(require('../vue/components/VWorkout/VWorkout.vue').default), data: { stopwatch }});
 
 	var keys = Object.keys(store.state.exercises);
 		

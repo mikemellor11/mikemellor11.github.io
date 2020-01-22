@@ -15,6 +15,7 @@
 		    	"
 		    	:area="key"
 		    	:exercise="exercise"
+		    	:stopwatch="stopwatch"
 	        />
 		</template>
 	</ul>

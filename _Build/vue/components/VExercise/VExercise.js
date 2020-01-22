@@ -14,10 +14,14 @@ export default {
 
 	props: [
 		'exercise',
-		'area'
+		'area',
+		'stopwatch'
 	],
 
 	computed: {
+		time(){
+			return this.stopwatch.time;
+		},
 		stats(){
 			var max = 0;
 			var last = 0;
@@ -153,7 +157,7 @@ export default {
 
 
 				last: `${last}kg`,
-				target: `${target}kg`,
+				target: target,
 				weightSplit: `${weightSplit}kg`,
 				next: `${next}kg`
 			};
@@ -185,7 +189,7 @@ export default {
             this.exercise.sessions[this.exercise.sessions.length - 1].sets.push({
                 "weight": this.result.weight,
                 "reps": this.result.reps,
-                "split":  "00:03:09:830",
+                "split":  this.stopwatch.time,
                 "target": (
 						+this.result.weight > this.stats.target ||
 						(
@@ -201,7 +205,7 @@ export default {
 					"group": this.area.toLowerCase(),
 					"weight": this.result.weight,
 					"reps": this.result.reps,
-					"split":  "00:03:09:830",
+					"split":  this.stopwatch.time,
 					"target": (
 							+this.result.weight > this.stats.target ||
 							(
@@ -211,6 +215,8 @@ export default {
 						)
 				});
 			}
+
+			this.stopwatch.reset();
 		}
 	}
 };
