@@ -10,7 +10,7 @@
             "endPercent": 1,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 40
+            "max": 50
         },
         "sessions": [
             {
@@ -1657,6 +1657,29 @@
                         "reps": 8,
                         "split": "00:02:22:681",
                         "target": false
+                    }
+                ]
+            },
+            {
+                "date": "22/01/2020",
+                "sets": [
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:02:23:684",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:02:21:023",
+                        "target": true
                     }
                 ]
             }

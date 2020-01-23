@@ -1641,6 +1641,23 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "22/01/2020",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:03:42:916",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
