@@ -32,4 +32,10 @@ window.moment = require('moment');
 				return prev;
 			}, {}));
 		});
+
+	if(window.socket){
+		window.socket.on('closeWindow', function (data) {
+			window.close();
+		});
+	}
 })();

@@ -1,5 +1,10 @@
-$color1: #A6D6F7;
+$color1: #3E367E;
+$color2: darken($color1, 7.5%);
+$color3: lighten($color1, 30%);
 
 $colorGood: #77dd77;
 $colorWarn: #ffb347;
 $colorBad: #FF6666;
+
+$radius: 10px;
+$borderRadius: $radius;

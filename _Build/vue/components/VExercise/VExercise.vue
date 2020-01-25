@@ -20,6 +20,7 @@
 	            <input
 	            	type="number"
 	            	v-model.number="exercise.defaults[key]"
+	            	step="0.25"
 	        	/>
 	        </div>
 	    </form>
@@ -63,6 +64,7 @@
 	            <input
 	            	type="number"
 	            	v-model.number="result.weight"
+	            	step="0.25"
 	        	/>
 	        </div>
 			<div>
@@ -72,6 +74,7 @@
 	            <input
 	            	type="number"
 	            	v-model.number="result.reps"
+	            	step="0.25"
 	        	/>
 	        </div>
 

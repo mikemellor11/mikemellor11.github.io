@@ -1,6 +1,6 @@
 /* uncss:ignore start */
 .card{
-	color: $color0;
+	border-radius: $radius;
 
 	&.card--warn{
 		background-color: $colorWarn;
@@ -24,4 +24,8 @@
 		font-size: 1.75em;
 		padding-left: $spacing;
 	}
+}
+
+.card__header{
+	border-bottom: solid 1px $color2;
 }

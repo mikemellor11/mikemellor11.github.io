@@ -1,17 +1,71 @@
 {{#> base script="index"}}
 	<main class="
-		ut-textAlignCenter
-		container
-		ut-padding
-		ut-paddingVert--mobile
-		ut-padding-0--mobile
+		grid
+		grid--gutters
+		grid--vertGutters
 	">
-		<h1>Code / Gym / Sleep</h1>
-
-		<p>Weight over time</p>
-		<div class="labD3">
-		    <svg class="chart chart--weight"></svg>
+		<div class="
+			grid__half
+			flex
+		">
+			<article class="
+				card
+				flex
+				flex--vert
+				grid__inner
+			">
+				<header class="
+					card__header
+				">
+					<h3 class="
+						ut-padding-2
+					">
+						Workouts
+					</h3>
+				</header>
+				<div class="
+					card__body
+					flex__grow
+				">
+					<div class="labD3">
+					    <svg class="chart"></svg>
+					</div>
+				</div>
+			</article>
 		</div>
-		<ul class="labD3 chart--key ut-textAlignLeft"></ul>
+		<div class="
+			grid__half
+			flex
+		">
+			<article class="
+				card
+				flex
+				flex--vert
+				grid__inner
+			">
+				<header class="
+					card__header
+				">
+					<h3 class="
+						ut-padding-2
+					">
+						Weight over time
+					</h3>
+				</header>
+				<div class="
+					card__body
+					flex__grow
+				">
+					<div class="labD3">
+					    <svg class="chart chart--weight"></svg>
+					</div>
+				</div>
+				<footer class="
+					card__footer
+				">
+					<ul class="labD3 chart--key ut-textAlignLeft"></ul>
+				</footer>
+			</article>
+		</div>
 	</main>
 {{/base}}

@@ -3,8 +3,11 @@ import { timeParse, timeFormat } from "d3-time-format";
 export default {
 	margin: {
 		bottom: 0,
-		left: 55,
-		right: 55
+		left: 60,
+		right: 25
+	},
+	padding: {
+		space: 15
 	},
 	scale: {
 		x: "date"
@@ -21,11 +24,7 @@ export default {
 	parseDate: timeParse('%d/%m/%Y'),
 	axis: {
 		y: {
-			tickFormat: "{value}kg",
-			tickFormatCustom: true
-		},
-		x: {
-			tickFormat: timeFormat('%b')
+			structure: "{value}kg"
 		}
 	},
 	value: {
