@@ -24,7 +24,7 @@ export default [
 				"value": 80
 			}
 		]
-	},
+	}/*,
 	{
 		"name": "Sophie",
 		"targets": [
@@ -117,5 +117,5 @@ export default [
 				"value": 60
 			}
 		]
-	}
+	}*/
 ];

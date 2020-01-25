@@ -37,29 +37,16 @@
 
 /* Lab Ui Overwrites */
 @import "components/_card.scss";
+@import "components/_typography.scss";
 @import "components/_form.scss";
+@import "components/_grid.scss";
 @import "components/_chart.scss";
+@import "components/_utilities.scss";
 
 /* Custom Components */
+@import "components/_background.scss";
 @import "components/_sidemenu.scss";
-
-.ut-hide{
-	display: none;
-}
-
-.ut-highlight{
-	color: red;
-}
-
-.highlight{
-	&.active{
-		color: $colorWarn;
-	}
-
-	&.deactive{
-		color: $colorBad;
-	}
-}
+@import "components/_header.scss";
 
 .shopping{
 	position: relative;

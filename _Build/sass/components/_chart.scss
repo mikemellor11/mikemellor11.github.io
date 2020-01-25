@@ -1,52 +1,55 @@
 /* uncss:ignore start */
 .labD3{
-	.level--0--plot, .level--0--value{
+	color: $color3;
+	fill: $color3;
+	
+	.level--0--plot,
+	.level--0--value,
+	.x.axis .tick line {
 		display: none;
-		font-size: 0.8em;
 	}
 
-	.level--0:last-child{
-		.level--0--value{
-			display: block;
-		}
-	}
+	// .level--0:last-child{
+	// 	.level--0--value{
+	// 		display: block;
+	// 	}
+	// }
 
-	.level--1{
-		&:nth-child(-n + 4) {
-			path{
-				opacity: 0.5;
-				stroke-dasharray: 5 5;
+	// .level--1{
+	// 	&:nth-child(-n + 4) {
+	// 		path{
+	// 			opacity: 0.5;
+	// 			stroke-dasharray: 5 5;
 
-				@include breakpoint(max-width $mobileMax){
-					stroke-dasharray: 2 2;
-				}
-			}
+	// 			@include breakpoint(max-width $mobileMax){
+	// 				stroke-dasharray: 2 2;
+	// 			}
+	// 		}
 
-			text{
-				display: none !important;
-			}
-		}
-	}
+	// 		text{
+	// 			display: none !important;
+	// 		}
+	// 	}
+	// }
 
-	@each $current-color in $colors-list {
-		$i: index($colors-list, $current-color);
+	// @each $current-color in $colors-list {
+	// 	$i: index($colors-list, $current-color);
 
-		.fill#{$i} { 
-			fill: $current-color;
-			color: $current-color;
-		}
-	}
-}
-
-.labD3__line{
-	@include breakpoint(max-width $mobileMax){
-		font-size: 0.75em;
-	}
+	// 	.fill#{$i} { 
+	// 		fill: $current-color;
+	// 		color: $current-color;
+	// 	}
+	// }
 }
 
 .labD3__key{
-	ul, li:nth-child(-n + 8){
+	ul, 
+	/* li:nth-child(-n + 8) */{
 		display: none;
 	}
+}
+
+.labD3 svg .axis line, .labD3 svg .axis path, .labD3 svg .baseline{
+	stroke: transparentize($color3, 0.75);
 }
 /* uncss:ignore end */

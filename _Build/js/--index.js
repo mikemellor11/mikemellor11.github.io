@@ -63,7 +63,7 @@ dayjs.extend(isBetween);
 					}, {last: null, total: 0}).total / arr.length);
 				});
 
-			var predictions = people.map((d, i) => {
+			/*var predictions = people.map((d, i) => {
 					var last = data[i].values[data[i].values.length - 1];
 					var target = targets[i].values[targets[i].values.length - 1];
 
@@ -84,10 +84,12 @@ dayjs.extend(isBetween);
 							}
 						]
 					};
-				});
+				});*/
 
-			data = targets.concat(data);
-			data = predictions.concat(data);
+			//data = targets.concat(data);
+			//data = predictions.concat(data);
+
+			console.log(data);
 
 			chart.data(data)
 				.render();

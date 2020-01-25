@@ -1,0 +1,17 @@
+.ut-hide{
+	display: none;
+}
+
+.ut-highlight{
+	color: red;
+}
+
+.highlight{
+	&.active{
+		color: $colorWarn;
+	}
+
+	&.deactive{
+		color: $colorBad;
+	}
+}
