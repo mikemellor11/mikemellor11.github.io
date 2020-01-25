@@ -67,7 +67,7 @@ export default {
 				}
 
 				// Intervals set and theres enough sessions to calculate
-				if(gD.incInterval > 0 && workout.length() > (gD.incInterval + todayBegan)){
+				if(recentWorkout.sets().length() && gD.incInterval > 0 && workout.length() > (gD.incInterval + todayBegan)){
 					readyForIncrease = true;
 
 					var holdLastMax = 0;
