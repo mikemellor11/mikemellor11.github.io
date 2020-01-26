@@ -194,7 +194,7 @@
         "price": 1.55
     },
     "red kidney beans": {
-        "weight": 240,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 240,
@@ -208,7 +208,7 @@
         "price": 0.229
     },
     "smooth peanut butter": {
-        "weight": 75,
+        "weight": 100,
         "max": 25,
         "min": 0,
         "multiple": 1,
@@ -497,7 +497,7 @@
         "price": 0.16
     },
     "lentils": {
-        "weight": 0,
+        "weight": 265,
         "max": 200,
         "min": 0,
         "multiple": 265,
@@ -665,7 +665,7 @@
         "price": 0.401
     },
     "mug shot spicy": {
-        "weight": 120,
+        "weight": 0,
         "max": 500,
         "min": 0,
         "multiple": 60,
