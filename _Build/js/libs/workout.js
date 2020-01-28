@@ -1,100 +1,100 @@
-(function(exports){
-	exports.Workout = function(data){
-		if(!data){
+var Set = require('./set.js');
+
+module.exports = function(data){
+	if(!data){
+		return null;
+	}
+	
+	if (!(this instanceof module.exports)) { 
+		return new module.exports(data);
+	}
+	
+	this.data = data;
+};
+
+module.exports.prototype = {
+
+	// Fluent methods
+	first() {
+		return this.fromFirst();
+	},
+
+	fromFirst(index) {
+		index = (index) ? index : 0;
+
+		if(isNaN(index) || index > (this.data.length - 1) || index < 0){
 			return null;
 		}
-		
-		if (!(this instanceof Workout)) { 
-			return new Workout(data);
+
+		return module.exports([this.data[0 + index]]);
+	},
+
+	last() {
+		return this.fromLast();
+	},
+
+	fromLast(index) {
+		index = (index) ? index : 0;
+
+		if(isNaN(index) || index > (this.data.length - 1) || index < 0){
+			return null;
 		}
-		this.data = data;
-	};
 
-	exports.Workout.prototype = {
+		return module.exports([this.data[this.data.length - 1 - index]]);
+	},
 
-		// Fluent methods
-		first: function(){
-			return this.fromFirst();
-		},
+	workout(cond) {
+		return module.exports(this.data.filter(function(d, i){
+			return cond === d.date;
+		}));
+	},
 
-		fromFirst: function(index){
-			index = (index) ? index : 0;
+	// Utility methods
+	max(object) {
+		return this.sets().max(object);
+	},
 
-			if(isNaN(index) || index > (this.data.length - 1) || index < 0){
-				return null;
-			}
+	volume() {
+		return this.sets().volume();
+	},
 
-			return exports.Workout([this.data[0 + index]]);
-		},
+	intensity() {
+		return this.sets().intensity();
+	},
 
-		last: function(){
-			return this.fromLast();
-		},
+	target() {
+		return this.sets().target();
+	},
 
-		fromLast: function(index){
-			index = (index) ? index : 0;
-
-			if(isNaN(index) || index > (this.data.length - 1) || index < 0){
-				return null;
-			}
-
-			return exports.Workout([this.data[this.data.length - 1 - index]]);
-		},
-
-		workout: function(cond){
-			return exports.Workout(this.data.filter(function(d, i){
-				return cond === d.date;
-			}));
-		},
-
-		// Utility methods
-		max: function(object){
-			return this.sets().max(object);
-		},
-
-		volume: function(){
-			return this.sets().volume();
-		},
-
-		intensity: function(){
-			return this.sets().intensity();
-		},
-
-		target: function(){
-			return this.sets().target();
-		},
-
-		date: function(reverse){
-			if(this.data.length > 1){
-				return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
-					return d.date;
-				});
-			} else {
-				return this.data[0].date;
-			}
-		},
-
-		sets: function(reverse){
-			if(this.data.length > 1){
-				return exports.Set(((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
-					return d.sets;
-				}).reduce(function(a, b){
-					return a.concat(b);
-				}));
-			} else {
-				return exports.Set(this.data[0].sets);
-			}
-		},
-
-		each: function(cb){
-			this.data.forEach(function(d, i){
-				cb(exports.Workout([d]), i);
+	date(reverse) {
+		if(this.data.length > 1){
+			return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
+				return d.date;
 			});
-		},
-
-		length: function(){
-			return this.data.length;
+		} else {
+			return this.data[0].date;
 		}
-	};
+	},
 
-})(window);
+	sets(reverse) {
+		if(this.data.length > 1){
+			return Set(((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
+				return d.sets;
+			}).reduce(function(a, b){
+				return a.concat(b);
+			}));
+		} else {
+			return Set(this.data[0].sets);
+		}
+	},
+
+	each(cb) {
+		this.data.forEach(function(d, i){
+			cb(module.exports([d]), i);
+		});
+	},
+
+	length() {
+		return this.data.length;
+	}
+};
