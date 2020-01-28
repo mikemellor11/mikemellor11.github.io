@@ -1,7 +1,9 @@
+var Set = require('../../../_Build/js/libs/set.js');
+
 describe('set.js', function () {
 	var group = null;
 
-    /*before(function(){
+    before(function(){
         fixture.setBase('_Test/karma/fixtures');
         fixture.load('set.json');
         group = Set(fixture.json[0]);
@@ -182,5 +184,5 @@ describe('set.js', function () {
 
     it('return amount of sets in object', function () {
         expect(group.length()).to.equal(6);
-    });*/
+    });
 });

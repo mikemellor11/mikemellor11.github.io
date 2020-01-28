@@ -1,9 +1,7 @@
-describe('workout.js', function () {
+var Workout = require('../../../_Build/js/libs/workout.js');
 
-    it('group should be an instanceof Workout', function () {
-        expect(1).to.equal(1);
-    });
-	/*var group = null;
+describe('workout.js', function () {
+	var group = null;
 
     before(function(){
         fixture.setBase('_Test/karma/fixtures');
@@ -214,5 +212,5 @@ describe('workout.js', function () {
 
     it('return amount of workouts in object', function () {
         expect(group.length()).to.equal(3);
-    });*/
+    });
 });
