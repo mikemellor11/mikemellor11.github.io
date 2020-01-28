@@ -2,12 +2,12 @@
     {
         "title": "Squats",
         "defaults": {
-            "sets": 3,
+            "sets": 5,
             "reps": 8,
             "peak": 3,
             "increase": 2.5,
-            "startPercent": 1,
-            "endPercent": 1,
+            "startPercent": 0.75,
+            "endPercent": 0.75,
             "incInterval": 3,
             "equipmentWeight": 20,
             "max": 50
@@ -1679,6 +1679,41 @@
                         "weight": 50,
                         "reps": 8,
                         "split": "00:02:21:023",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "28/01/2020",
+                "sets": [
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:02:54:607",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:02:56:523",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:03:41:314",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:01:56:523",
                         "target": true
                     }
                 ]
