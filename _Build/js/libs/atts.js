@@ -37,12 +37,15 @@ export default {
 			y: 0
 		}
 	},
-	colors: {
+/*	colors: {
 		"Mike": "fill1",
 		"Sophie": "fill2",
 		"Dad": "fill4",
 		"Mum": "fill5",
 		"Targets": "fill3"
 	},
-	stagger: 0
+	stagger: 0,*/
+	symbols: ['Circle'],
+    symbolsSize: 0.05,
+    symbolsRatio: true
 };
