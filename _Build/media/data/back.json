@@ -6004,6 +6004,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "29/01/2020",
+                "sets": [
+                    {
+                        "weight": 0,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:02:01:077",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:02:22:301",
+                        "target": true
+                    }
+                ]
             }
         ]
     }

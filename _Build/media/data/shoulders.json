@@ -10,7 +10,7 @@
             "increase": 2.5,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 35
+            "max": 40
         },
         "sessions": [
             {
@@ -1755,15 +1755,38 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "29/01/2020",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:08:611",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 6,
+                        "split": "00:02:12:405",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
     {
         "title": "Lateral Raises",
         "defaults": {
-            "sets": 7,
+            "sets": 3,
             "increase": 2.5,
-            "peak": 5,
+            "peak": 1,
             "startPercent": 1,
             "endPercent": 1,
             "incInterval": 8,
@@ -2647,15 +2670,38 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "29/01/2020",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:29:878",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:02:12:031",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:635",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
     {
         "title": "Front Raises",
         "defaults": {
-            "sets": 7,
+            "sets": 3,
             "increase": 2.5,
-            "peak": 5,
+            "peak": 1,
             "startPercent": 1,
             "endPercent": 1,
             "incInterval": 6,
@@ -3536,6 +3582,29 @@
                         "weight": 10,
                         "reps": 8,
                         "split": "00:00:00:737",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "29/01/2020",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:00:647",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:02:28:991",
                         "target": true
                     }
                 ]
@@ -4444,6 +4513,29 @@
                         "weight": 10,
                         "reps": 8,
                         "split": "00:00:58:519",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "29/01/2020",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:47:163",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:31:454",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:25:674",
                         "target": true
                     }
                 ]
