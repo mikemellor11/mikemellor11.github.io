@@ -2,6 +2,8 @@
 
 import moment from "moment";
 
+var Workout = require('../../../js/libs/workout.js');
+
 export default {
 	data(){
 		return {
@@ -42,7 +44,7 @@ export default {
 			}
 
 			if(this.exercise.sessions){
-				var workout = window.Workout(this.exercise.sessions);
+				var workout = Workout(this.exercise.sessions);
 				var recentWorkout = workout.last();
 				var recentSets = recentWorkout.sets();
 				var todayBegan = 0;
