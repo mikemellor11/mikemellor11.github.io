@@ -1,3 +1,10 @@
+var dayjs = require("dayjs");
+var customParseFormat = require('dayjs/plugin/customParseFormat');
+var isBetween = require("dayjs/plugin/isBetween");
+
+dayjs.extend(customParseFormat);
+dayjs.extend(isBetween);
+
 module.exports = function(data){
 	if(!data){
 		return null;
@@ -47,6 +54,36 @@ module.exports.prototype = {
 		}));
 	},
 
+	/*
+	How weight is trending either up or down over the last 4 workouts
+	*/
+	trend(){
+		var arr = this.data.slice(-4);
+
+		return (arr.reduce((a, b) => {
+			if(a.last){
+				a.total += b.weight - a.last.weight;
+			}
+
+			a.last = b;
+
+			return a;
+		}, {last: null, total: 0}).total / arr.length);
+	},
+
+	/*
+	What the predicted weight will be based on trend
+	*/
+	predicted(){
+		var last = this.last().data[0];
+		var date = dayjs(last.date, "DD/MM/YYYY").add(4, 'weeks');
+
+		return module.exports([{
+			date: date.format('DD/MM/YYYY'),
+			weight: last.weight + (this.trend() * 4)
+		}]);
+	},
+
 	// Utility methods
 	cardio(reverse) {
 		if(this.data.length){
@@ -62,10 +99,26 @@ module.exports.prototype = {
 		return null;
 	},
 
-	each(cb) {
-		this.data.forEach(function(d, i){
-			cb(d, i);
+	filter() {
+		return module.exports(this.data.filter((d) => {
+			// return true;
+			// return dayjs(d.date, "DD/MM/YYYY").isBetween(dayjs(), dayjs().subtract(4, 'months'));
+			// return dayjs(d.date, "DD/MM/YYYY").isSame(dayjs(), 'year');
+			return dayjs(d.date, "DD/MM/YYYY").isBetween(dayjs().subtract(2, 'months'), dayjs().add(4, 'months'));
+		}));
+	},
+
+	values() {
+		return this.data.map((d) => {
+			return {
+				key: d.date,
+				value: d.weight
+			};
 		});
+	},
+
+	each(cb) {
+		this.data.forEach((d, i) => cb(d, i));
 	},
 
 	length() {

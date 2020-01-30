@@ -4,24 +4,28 @@ export default [
 		"file": "weight",
 		"targets": [
 			{
-		        "key": "23/02/2019",
-		        "value": 94.25
+		        "date": "23/02/2019",
+		        "weight": 94.25
 		    },
 			{
-				"key": "01/06/2019",
-				"value": 85
+				"date": "01/06/2019",
+				"weight": 85
 			},
 			{
-				"key": "01/09/2019",
-				"value": 80
+				"date": "01/09/2019",
+				"weight": 80
 			},
 			{
-				"key": "01/11/2019",
-				"value": 80
+				"date": "01/11/2019",
+				"weight": 80
 			},
 			{
-				"key": "01/01/2020",
-				"value": 80
+				"date": "01/01/2020",
+				"weight": 85
+			},
+			{
+				"date": "01/02/2020",
+				"weight": 85
 			}
 		]
 	}/*,
@@ -29,24 +33,24 @@ export default [
 		"name": "Sophie",
 		"targets": [
 			{
-		        "key": "24/02/2019",
-		        "value": 76.2
+		        "date": "24/02/2019",
+		        "weight": 76.2
 		    },
 			{
-				"key": "01/06/2019",
-				"value": 63.5
+				"date": "01/06/2019",
+				"weight": 63.5
 			},
 			{
-				"key": "01/09/2019",
-				"value": 65
+				"date": "01/09/2019",
+				"weight": 65
 			},
 			{
-				"key": "01/11/2019",
-				"value": 70
+				"date": "01/11/2019",
+				"weight": 70
 			},
 			{
-				"key": "01/01/2020",
-				"value": 70
+				"date": "01/01/2020",
+				"weight": 70
 			}
 		]
 	},
@@ -54,20 +58,20 @@ export default [
 		"name": "Dad",
 		"targets": [
 			{
-				"key": "12/07/2019",
-				"value": 100
+				"date": "12/07/2019",
+				"weight": 100
 			},
 			{
-				"key": "01/09/2019",
-				"value": 97.5
+				"date": "01/09/2019",
+				"weight": 97.5
 			},
 			{
-				"key": "01/11/2019",
-				"value": 95
+				"date": "01/11/2019",
+				"weight": 95
 			},
 			{
-				"key": "01/01/2020",
-				"value": 95
+				"date": "01/01/2020",
+				"weight": 95
 			}
 		]
 	},
@@ -75,20 +79,20 @@ export default [
 		"name": "Mum",
 		"targets": [
 			{
-				"key": "10/08/2019",
-				"value": 74.1
+				"date": "10/08/2019",
+				"weight": 74.1
 			},
 			{
-				"key": "01/09/2019",
-				"value": 72.5
+				"date": "01/09/2019",
+				"weight": 72.5
 			},
 			{
-				"key": "01/11/2019",
-				"value": 70
+				"date": "01/11/2019",
+				"weight": 70
 			},
 			{
-				"key": "01/01/2020",
-				"value": 70
+				"date": "01/01/2020",
+				"weight": 70
 			}
 		]
 	},
@@ -96,12 +100,12 @@ export default [
 		"name": "Gee",
 		"targets": [
 			{
-				"key": "01/09/2019",
-				"value": 88.7
+				"date": "01/09/2019",
+				"weight": 88.7
 			},
             {
-                "key": "01/12/2019",
-				"value": 85
+                "date": "01/12/2019",
+				"weight": 85
 			}
 		]
 	},
@@ -109,12 +113,12 @@ export default [
 		"name": "May",
 		"targets": [
 			{
-				"key": "01/09/2019",
-				"value": 65
+				"date": "01/09/2019",
+				"weight": 65
 			},
             {
-                "key": "01/12/2019",
-				"value": 60
+                "date": "01/12/2019",
+				"weight": 60
 			}
 		]
 	}*/
