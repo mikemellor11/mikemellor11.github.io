@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - 10.0.0
 addons:
-  ssh_known_hosts: git.example.com
+  ssh_known_hosts: bitbucket.org
 before_install:
   - npm i -g npm@6.11.2
   - npm install -g grunt-cli
