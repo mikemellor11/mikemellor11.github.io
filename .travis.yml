@@ -4,7 +4,7 @@ node_js:
 addons:
   ssh_known_hosts: bitbucket.org
 before_install:
-  - npm i -g npm@6.11.2
+  - npm i -g npm@6.13.4
   - npm install -g grunt-cli
   - npm run repoSetup
 script:
