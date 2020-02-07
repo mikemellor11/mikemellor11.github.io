@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - 10.0.0
 before_install:
-  - ssh -o "StrictHostKeyChecking no" bitbucket.org
+  - ssh -o 'StrictHostKeyChecking no' bitbucket.org cat /etc/ssh/ssh_host_dsa_key.pub >>~/.ssh/known_hosts
   - npm i -g npm@6.11.2
   - npm install -g grunt-cli
   - npm run repoSetup
