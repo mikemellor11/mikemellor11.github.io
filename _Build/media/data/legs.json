@@ -6,8 +6,8 @@
             "reps": 8,
             "peak": 3,
             "increase": 2.5,
-            "startPercent": 0.75,
-            "endPercent": 0.75,
+            "startPercent": 1,
+            "endPercent": 1,
             "incInterval": 3,
             "equipmentWeight": 20,
             "max": 50
@@ -1714,6 +1714,29 @@
                         "weight": 45,
                         "reps": 8,
                         "split": "00:01:56:523",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "08/02/2020",
+                "sets": [
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:01:04:838",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:02:00:137",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:02:24:521",
                         "target": true
                     }
                 ]
