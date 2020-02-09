@@ -1,7 +1,8 @@
 <template>
 	<div>
 		<div class="labD3">
-		    <svg ref="chart"></svg>
+			<table v-if="this.self.chart === 'Table'" ref="chart"></table>
+		    <svg v-else ref="chart"></svg>
 		</div>
 		<ul ref="key" class="labD3 chart--key"></ul>
 	</div>

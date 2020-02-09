@@ -1798,7 +1798,7 @@
                         "weight": 40,
                         "reps": 7,
                         "split": "00:02:12:286",
-                        "target": true
+                        "target": false
                     }
                 ]
             }

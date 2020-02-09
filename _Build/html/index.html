@@ -121,20 +121,20 @@
 				<h3 class="
 					ut-padding
 				">
-					Workouts
+					Latest workout
 				</h3>
 			</header>
 			<div class="
 				card__body
 				flex__grow
 			">
-				<div class="js-chart"></div>
+				<vchart
+					class="
+						ut-hideKey
+					"
+					type="workout"
+				></vchart>
 			</div>
-			<!-- <footer class="
-				card__footer
-			">
-				<ul class="labD3 chart--key ut-textAlignLeft"></ul>
-			</footer> -->
 		</article>
 
 		<article class="
@@ -162,11 +162,6 @@
 					type="volume"
 				></vchart>
 			</div>
-			<!-- <footer class="
-				card__footer
-			">
-				<ul class="labD3 chart--key ut-textAlignLeft"></ul>
-			</footer> -->
 		</article>
 	</main>
 {{/base}}

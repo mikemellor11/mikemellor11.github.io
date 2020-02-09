@@ -34,7 +34,8 @@ export default {
 			colors: ['fill3'],
 			margin: {
 				left: 62.5
-			}
+			},
+			aspectRatio: 0.75
 		};
 	}
 };

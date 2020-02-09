@@ -1,12 +1,13 @@
 "use strict";
 
-import { Bar, Line, Pie, BarStacked, Key } from "@fishawack/lab-d3";
+import { Bar, Line, Pie, BarStacked, Table, Key } from "@fishawack/lab-d3";
 
 var charts = {
 	Bar,
 	Line,
 	Pie,
 	BarStacked,
+	Table,
 	Key
 };
 
@@ -14,12 +15,14 @@ import max from "../../../js/libs/charts/max.js";
 import intensity from "../../../js/libs/charts/intensity.js";
 import weight from "../../../js/libs/charts/weight.js";
 import volume from "../../../js/libs/charts/volume.js";
+import workout from "../../../js/libs/charts/workout.js";
 
 var types = {
 	max,
 	intensity,
 	weight,
-	volume
+	volume,
+	workout
 };
 
 export default {

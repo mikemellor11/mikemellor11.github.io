@@ -36,3 +36,27 @@
 		opacity: 0.8;
 	}
 }
+
+.labD3__table{
+	border-spacing: 0;
+
+	tr:first-child{
+		color: $color0;
+	}
+
+	tr:nth-child(even){
+		background-color: $color2;
+	}
+
+	td:first-child{
+		width: 100%;
+		padding-left: 0;
+		text-align: left;
+	}
+
+	td{
+		padding: $spacing * 0.5;
+		padding-left: $spacing;
+		text-align: center;
+	}
+}
