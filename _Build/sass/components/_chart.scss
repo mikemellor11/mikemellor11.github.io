@@ -18,7 +18,6 @@
 .labD3 svg .axis line, .labD3 svg .axis path, .labD3 svg .baseline{
 	stroke: transparentize($color3, 0.75);
 }
-/* uncss:ignore end */
 
 .chart--key{
 	text-align: center;
@@ -30,6 +29,7 @@
 		padding: 0 $spacing;
 	}
 }
+/* uncss:ignore end */
 
 .labD3__barstacked{
 	.level--0:nth-child(2){
