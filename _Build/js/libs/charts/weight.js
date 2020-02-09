@@ -45,10 +45,10 @@ export default {
 			},
 			min: {
 				x: dayjs().subtract(4, 'months').format('DD/MM/YYYY'),
-				y: 60
+				y: 70
 			},
 			max: {
-				y: 110
+				y: 100
 			},
 			parseDate: timeParse('%d/%m/%Y'),
 			axis: {
