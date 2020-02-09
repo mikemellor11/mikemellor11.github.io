@@ -14,38 +14,9 @@
 				card__header
 			">
 				<h3 class="
-					ut-padding-2
+					ut-padding
 				">
-					Macros
-				</h3>
-			</header>
-			<div class="
-				card__body
-				flex__grow
-			">
-				<div class="labD3">
-				    <!-- <svg class="chart chart--weight"></svg> -->
-				</div>
-			</div>
-			<!-- <footer class="
-				card__footer
-			">
-				<ul class="labD3 chart--key ut-textAlignLeft"></ul>
-			</footer> -->
-		</article>
-
-		<article class="
-			card
-			flex
-			flex--vert
-		">
-			<header class="
-				card__header
-			">
-				<h3 class="
-					ut-padding-2
-				">
-					Intensity
+					Current / Max's
 				</h3>
 			</header>
 			<div class="
@@ -53,7 +24,10 @@
 				flex__grow
 			">
 				<vchart
-					type="intensity"
+					class="
+						ut-hideKey
+					"
+					type="max"
 				></vchart>
 			</div>
 		</article>
@@ -67,7 +41,7 @@
 				card__header
 			">
 				<h3 class="
-					ut-padding-2
+					ut-padding
 				">
 					Weight
 				</h3>
@@ -91,24 +65,25 @@
 				card__header
 			">
 				<h3 class="
-					ut-padding-2
+					ut-padding
 				">
-					Current / Max's
+					Macros
 				</h3>
 			</header>
 			<div class="
 				card__body
 				flex__grow
 			">
-				<vchart
-					type="max"
-				></vchart>
+				<table>
+					{{#each (load "_Build/media/data/macros.json")}}
+						<tr>
+							<td class="ut-fullWidth">{{capitalize @key}}</td>
+							<td>{{target}}</td>
+							<td class="ut-paddingLeft">{{{desired (math target '-' GDA)}}}</td>
+						</tr>
+					{{/each}}
+				</table>
 			</div>
-			<!-- <footer class="
-				card__footer
-			">
-				<ul class="labD3 chart--key ut-textAlignLeft"></ul>
-			</footer> -->
 		</article>
 
 		<article class="
@@ -120,7 +95,31 @@
 				card__header
 			">
 				<h3 class="
-					ut-padding-2
+					ut-padding
+				">
+					Intensity
+				</h3>
+			</header>
+			<div class="
+				card__body
+				flex__grow
+			">
+				<vchart
+					type="intensity"
+				></vchart>
+			</div>
+		</article>
+
+		<article class="
+			card
+			flex
+			flex--vert
+		">
+			<header class="
+				card__header
+			">
+				<h3 class="
+					ut-padding
 				">
 					Workouts
 				</h3>
@@ -147,7 +146,7 @@
 				card__header
 			">
 				<h3 class="
-					ut-padding-2
+					ut-padding
 				">
 					Maximums
 				</h3>

@@ -35,13 +35,15 @@ export default {
 			plot: {
 				label: 'key'
 			},
-			aspectRatio: 1,
+			aspectRatio: 0.625,
 			margin: {
 				top: 0,
 				bottom: 0,
 				left: 0,
 				right: 0
-			}
+			},
+			innerRadius: 0.5,
+			transitionSpeed: 2000
 		};
 	}
 };

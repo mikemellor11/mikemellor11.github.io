@@ -7,11 +7,21 @@
 }
 
 .highlight{
-	&.active{
+	&.good{
+		color: $colorGood;
+	}
+
+	&.active, &.warn{
 		color: $colorWarn;
 	}
 
-	&.deactive{
+	&.deactive, &.bad{
 		color: $colorBad;
+	}
+}
+
+.ut-hideKey{
+	.chart--key{
+		display: none;
 	}
 }

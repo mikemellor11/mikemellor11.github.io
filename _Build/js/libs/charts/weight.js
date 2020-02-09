@@ -1,4 +1,6 @@
-import { timeParse } from "d3-time-format";
+import { timeParse, timeFormat } from "d3-time-format";
+
+var dayjs = require("dayjs");
 
 var Weight = require('../weight.js');
 
@@ -17,11 +19,11 @@ export default {
 			},
 			{
 				key: "Target",
-				values: Weight(Targets.weight).filter().values()
+				values: Weight(Targets.weight).values()
 			},
 			{
 				key: "Weight",
-				values: Weight(weight).filter().values()
+				values: Weight(weight).values()
 			}
 		];
 	},
@@ -42,6 +44,7 @@ export default {
 				label: "key"
 			},
 			min: {
+				x: dayjs().subtract(4, 'months').format('DD/MM/YYYY'),
 				y: 60
 			},
 			max: {
@@ -51,21 +54,16 @@ export default {
 			axis: {
 				y: {
 					structure: "{value}kg"
-				}
-			},
-			value: {
-				structure: "{value}kg",
-				format: {
-					value: ".1f"
 				},
-				offset: {
-					x: 25,
-					y: 0
+				x: {
+					structure: timeFormat("%y-%m-%d"),
+					ticks: 5
 				}
 			},
 			symbols: ['Circle'],
 		    symbolsSize: 0.05,
-		    symbolsRatio: true
+		    symbolsRatio: true,
+		    aspectRatio: 0.75
 		};
 	}
 };
