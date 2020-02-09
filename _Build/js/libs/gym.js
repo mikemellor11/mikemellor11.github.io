@@ -95,7 +95,7 @@ module.exports.prototype = {
 	},
 
 	workouts(reverse) {
-		if(this.data.length > 1){
+		if(this.data.length){
 			return Workout(
 				((reverse) 
 					? [].concat(this.data).reverse() 
@@ -107,12 +107,23 @@ module.exports.prototype = {
 				})
 			);
 		} else {
-			return Workout(this.data[0].sessions);
+			return Workout([]);
 		}
 	},
 
 	sets(reverse) {
 		return this.workouts(reverse).sets();
+	},
+
+	filter(start, end) {
+		return module.exports(
+			this.data.map((d, i) => {
+				return this.manipulate(d, Workout(d.sessions).filter(start, end).data);
+			})
+			.filter((d, i) => {
+				return d.sessions.length;
+			})
+		);
 	},
 
 	date(reverse) {

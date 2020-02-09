@@ -1,3 +1,10 @@
+var dayjs = require("dayjs");
+var customParseFormat = require('dayjs/plugin/customParseFormat');
+var isBetween = require("dayjs/plugin/isBetween");
+
+dayjs.extend(customParseFormat);
+dayjs.extend(isBetween);
+
 var Set = require('./set.js');
 
 module.exports = function(data){
@@ -66,6 +73,16 @@ module.exports.prototype = {
 		return this.sets().target();
 	},
 
+	// Filter by date, either string 01/01/2020 or number of days/months from current date. Can pass months/weeks/days string as third parameter to be used in number from calculation
+	filter(start, end) {
+		return module.exports(this.data.filter((d) => {
+			// return true;
+			// return dayjs(d.date, "DD/MM/YYYY").isBetween(dayjs(), dayjs().subtract(4, 'months'));
+			// return dayjs(d.date, "DD/MM/YYYY").isSame(dayjs(), 'year');
+			return dayjs(d.date, "DD/MM/YYYY").isBetween(start, end);
+		}));
+	},
+
 	date(reverse) {
 		if(this.data.length > 1){
 			return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
@@ -77,14 +94,14 @@ module.exports.prototype = {
 	},
 
 	sets(reverse) {
-		if(this.data.length > 1){
+		if(this.data.length){
 			return Set(((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
 				return d.sets;
 			}).reduce(function(a, b){
 				return a.concat(b);
 			}));
 		} else {
-			return Set(this.data[0].sets);
+			return Set([]);
 		}
 	},
 

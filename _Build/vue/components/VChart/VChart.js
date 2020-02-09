@@ -13,11 +13,13 @@ var charts = {
 import max from "../../../js/libs/charts/max.js";
 import intensity from "../../../js/libs/charts/intensity.js";
 import weight from "../../../js/libs/charts/weight.js";
+import volume from "../../../js/libs/charts/volume.js";
 
 var types = {
 	max,
 	intensity,
-	weight
+	weight,
+	volume
 };
 
 export default {
