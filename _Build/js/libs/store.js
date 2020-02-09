@@ -1,4 +1,4 @@
-import Vue from "vue";
+import Vue from "vue/dist/vue.js";
 import Vuex from "vuex";
 
 Vue.use(Vuex);
@@ -24,7 +24,8 @@ export default new Vuex.Store({
             Shoulders: null,
             Legs: null,
             Arms: null
-        }
+        },
+        weight: null
     },
 
     mutations: {
@@ -36,6 +37,9 @@ export default new Vuex.Store({
         },
         exercises(state, value){
             state.exercises = value;
+        },
+        weight(state, value){
+            state.weight = value;
         }
     },
 

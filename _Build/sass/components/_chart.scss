@@ -7,43 +7,10 @@
 	.x.axis .tick line {
 		display: none;
 	}
-
-	// .level--0:last-child{
-	// 	.level--0--value{
-	// 		display: block;
-	// 	}
-	// }
-
-	// .level--1{
-	// 	&:nth-child(-n + 4) {
-	// 		path{
-	// 			opacity: 0.5;
-	// 			stroke-dasharray: 5 5;
-
-	// 			@include breakpoint(max-width $mobileMax){
-	// 				stroke-dasharray: 2 2;
-	// 			}
-	// 		}
-
-	// 		text{
-	// 			display: none !important;
-	// 		}
-	// 	}
-	// }
-
-	// @each $current-color in $colors-list {
-	// 	$i: index($colors-list, $current-color);
-
-	// 	.fill#{$i} { 
-	// 		fill: $current-color;
-	// 		color: $current-color;
-	// 	}
-	// }
 }
 
 .labD3__key{
-	ul, 
-	/* li:nth-child(-n + 8) */{
+	ul{
 		display: none;
 	}
 }
@@ -52,3 +19,20 @@
 	stroke: transparentize($color3, 0.75);
 }
 /* uncss:ignore end */
+
+.chart--key{
+	text-align: center;
+	padding-left: 0;
+	margin-top: $spacing;
+	
+	& > *{
+		display: inline-block;
+		padding: 0 $spacing;
+	}
+}
+
+.labD3__barstacked{
+	.level--0:nth-child(2){
+		opacity: 0.8;
+	}
+}

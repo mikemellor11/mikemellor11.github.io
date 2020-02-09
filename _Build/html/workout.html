@@ -1,31 +1,34 @@
-{{#> base script="workout"}}
-	<header class="
-		ut-padding
-	">
-		<div class="
-			ut-tableChildren
-			ut-fullWidth
-			ut-borderBox
-			ut-noWrap
-			ut-vertAlignChildrenMiddle
+{{#> base}}
+	<main
+		id="app" 
+		class="
+			ut-padding
+		"
+	>
+		<header class="
+			ut-padding
 		">
-			<h1 class="ut-fullWidth">Workout</h1>
+			<div class="
+				ut-tableChildren
+				ut-fullWidth
+				ut-borderBox
+				ut-noWrap
+				ut-vertAlignChildrenMiddle
+			">
+				<h1 class="ut-fullWidth">Workout</h1>
 
-			<div id="stopwatch"></div>
-		</div>
-	</header>
-	<main class="
-		ut-padding
-	">
+				<vstopwatch ref="stopwatch"></vstopwatch>
+			</div>
+		</header>
 		<div class="
 			grid
 			grid--gutters
 		">
 			<div class="grid__quarter">
-				<div id="exercises"></div>
+				<vexercises></vexercises>
 			</div>
 			<div class="grid__threeQuarters">
-				<div id="workout"></div>
+				<vworkout></vworkout>
 			</div>
 		</div>
 	</main>

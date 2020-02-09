@@ -6,7 +6,7 @@ export default {
 			return this.$store.state.exercises;
 		},
 		stopwatch(){
-			return this.$root.stopwatch.$children[0];
+			return this.$root.$refs.stopwatch;
 		}
 	},
 

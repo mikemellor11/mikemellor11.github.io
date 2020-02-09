@@ -1,19 +1,22 @@
-{{#> base script="diet"}}
-	<header class="
-		ut-padding
-	">
-		<h1 class="ut-fullWidth">Diet</h1>
-	</header>
-	<main class="
-		ut-padding
-	">
+{{#> base}}
+	<main 
+		id="app"
+		class="
+			ut-padding
+		"
+	>
+		<header class="
+			ut-padding
+		">
+			<h1 class="ut-fullWidth">Diet</h1>
+		</header>
 		<div class="
 			grid
 			grid--gutters
 		">
-			<div class="grid__third"><div id="food"></div></div>
-			<div class="grid__sixth"><div id="shopping"></div></div>
-			<div class="grid__half"><div id="macros"></div></div>
+			<div class="grid__third"><vfood></vfood></div>
+			<div class="grid__sixth"><vshopping></vshopping></div>
+			<div class="grid__half"><vmacros></vmacros></div>
 		</div>
 	</main>
 {{/base}}

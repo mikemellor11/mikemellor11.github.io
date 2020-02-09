@@ -1,7 +1,10 @@
-{{#> base script="index"}}
-	<main class="
-		cssgrid
-	">
+{{#> base}}
+	<main
+		id="app" 
+		class="
+			cssgrid
+		"
+	>
 		<article class="
 			card
 			flex
@@ -49,15 +52,10 @@
 				card__body
 				flex__grow
 			">
-				<div class="labD3">
-				    <!-- <svg class="chart chart--weight"></svg> -->
-				</div>
+				<vchart
+					type="intensity"
+				></vchart>
 			</div>
-			<!-- <footer class="
-				card__footer
-			">
-				<ul class="labD3 chart--key ut-textAlignLeft"></ul>
-			</footer> -->
 		</article>
 
 		<article class="
@@ -78,15 +76,10 @@
 				card__body
 				flex__grow
 			">
-				<div class="labD3">
-				    <svg class="chart chart--weight"></svg>
-				</div>
+				<vchart
+					type="weight"
+				></vchart>
 			</div>
-			<!-- <footer class="
-				card__footer
-			">
-				<ul class="labD3 chart--key ut-textAlignLeft"></ul>
-			</footer> -->
 		</article>
 
 		<article class="
@@ -100,16 +93,16 @@
 				<h3 class="
 					ut-padding-2
 				">
-					Volume
+					Current / Max's
 				</h3>
 			</header>
 			<div class="
 				card__body
 				flex__grow
 			">
-				<div class="labD3">
-				    <!-- <svg class="chart chart--weight"></svg> -->
-				</div>
+				<vchart
+					type="max"
+				></vchart>
 			</div>
 			<!-- <footer class="
 				card__footer
@@ -136,9 +129,7 @@
 				card__body
 				flex__grow
 			">
-				<div class="labD3">
-				    <!-- <svg class="chart chart--weight"></svg> -->
-				</div>
+				<div class="js-chart"></div>
 			</div>
 			<!-- <footer class="
 				card__footer
@@ -165,9 +156,9 @@
 				card__body
 				flex__grow
 			">
-				<div class="labD3">
-				    <!-- <svg class="chart chart--weight"></svg> -->
-				</div>
+				<!-- <vchart
+					type="bar"
+				></vchart> -->
 			</div>
 			<!-- <footer class="
 				card__footer
