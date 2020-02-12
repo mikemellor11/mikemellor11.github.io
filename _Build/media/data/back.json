@@ -2,15 +2,15 @@
     {
         "title": "Deadlifts",
         "defaults": {
-            "sets": 3,
+            "sets": 5,
             "reps": 8,
             "peak": 3,
             "increase": 2.5,
-            "startPercent": 1,
+            "startPercent": 0.8,
             "endPercent": 1,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 80
+            "max": 90
         },
         "sessions": [
             {
@@ -1502,6 +1502,41 @@
                         "weight": 80,
                         "reps": 8,
                         "split": "00:01:50:216",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "12/02/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:01:54:242",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:03:24:548",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:02:18:738",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:03:30:703",
                         "target": true
                     }
                 ]
@@ -3937,7 +3972,7 @@
         "title": "Pull ups",
         "defaults": {
             "endPercent": 1,
-            "sets": 3,
+            "sets": 5,
             "reps": 10,
             "peak": 1,
             "increase": 0,
@@ -6099,6 +6134,41 @@
                         "weight": 80,
                         "reps": 10,
                         "split": "00:02:07:758",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "12/02/2020",
+                "sets": [
+                    {
+                        "weight": 0,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:38:004",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:48:944",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:43:628",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:45:231",
                         "target": true
                     }
                 ]
