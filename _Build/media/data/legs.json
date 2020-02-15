@@ -1740,6 +1740,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "15/02/2020",
+                "sets": [
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:01:45:394",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:02:08:593",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:02:16:581",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:02:09:716",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:02:38:074",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
