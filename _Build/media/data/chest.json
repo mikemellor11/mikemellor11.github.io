@@ -633,6 +633,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "18/02/2020",
+                "sets": [
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:01:37:266",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:01:57:762",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -1322,6 +1345,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "18/02/2020",
+                "sets": [
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:01:54:107",
+                        "target": true
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:02:57:824",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -1329,7 +1375,7 @@
         "title": "Bench press",
         "defaults": {
             "endPercent": 1,
-            "sets": 4,
+            "sets": 5,
             "reps": 8,
             "peak": 1,
             "increase": 2.5,
@@ -3686,6 +3732,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "18/02/2020",
+                "sets": [
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:01:36:646",
+                        "target": true
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:02:07:888",
+                        "target": true
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:01:46:949",
+                        "target": true
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:02:23:846",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -4706,6 +4787,29 @@
                         "weight": 80,
                         "reps": 15,
                         "split": "00:03:05:777",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "18/02/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:02:44:568",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:03:11:621",
                         "target": true
                     }
                 ]
