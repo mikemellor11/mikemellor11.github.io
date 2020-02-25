@@ -1587,9 +1587,9 @@
             "startPercent": 1,
             "endPercent": 1,
             "incInterval": 6,
-            "equipmentWeight": 10,
+            "equipmentWeight": 5,
             "reps": 8,
-            "max": 20
+            "max": 17.5
         },
         "sessions": [
             {
@@ -3603,6 +3603,41 @@
                         "weight": 20,
                         "reps": 8,
                         "split": "00:01:38:015",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "25/02/2020",
+                "sets": [
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:02:37:659",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:01:07:028",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:00:24:669",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:01:26:147",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:02:04:704",
                         "target": true
                     }
                 ]
