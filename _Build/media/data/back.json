@@ -6,11 +6,11 @@
             "reps": 8,
             "peak": 3,
             "increase": 2.5,
-            "startPercent": 0.8,
+            "startPercent": 0.75,
             "endPercent": 1,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 90
+            "max": 100
         },
         "sessions": [
             {
@@ -1573,6 +1573,41 @@
                         "reps": 8,
                         "split": "00:03:14:782",
                         "target": true
+                    }
+                ]
+            },
+            {
+                "date": "26/02/2020",
+                "sets": [
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:02:44:925",
+                        "target": true
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 8,
+                        "split": "00:02:45:308",
+                        "target": true
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 8,
+                        "split": "00:02:42:553",
+                        "target": true
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 7,
+                        "split": "00:03:20:501",
+                        "target": false
                     }
                 ]
             }
@@ -6309,6 +6344,41 @@
                         "weight": 80,
                         "reps": 10,
                         "split": "00:02:16:488",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "26/02/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:37:804",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:38:513",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:43:612",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:47:483",
                         "target": true
                     }
                 ]
