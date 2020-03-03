@@ -17,17 +17,26 @@
 			">
 				<h1 class="ut-fullWidth">Workout</h1>
 
+				<button
+					class="
+						js-active
+						ut-marginRight
+					"
+					data-target=".js-sidemenu"
+				>
+					{{> icon name="spin3"}}
+				</button>
+
 				<vstopwatch ref="stopwatch"></vstopwatch>
 			</div>
 		</header>
-		<div class="
-			grid
-			grid--gutters
-		">
-			<div class="grid__quarter">
-				<vexercises></vexercises>
-			</div>
-			<div class="grid__threeQuarters">
+		<div>
+			<vexercises></vexercises>
+			<div class="
+				ut-tableChildren
+				ut-tableFixed
+				ut-fullWidth
+			">
 				<vworkout></vworkout>
 			</div>
 		</div>

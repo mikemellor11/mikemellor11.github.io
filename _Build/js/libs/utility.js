@@ -82,3 +82,17 @@ export function blueprint(selector, array, cb, root){
         nodes[i].appendChild(docFrag);
     }
 };
+
+export function toggles(){
+    let nodes = document.querySelectorAll('.js-active');
+
+    for(var i = nodes.length; i--;){
+        nodes[i].onclick = function(e) {
+            let nodes = document.querySelectorAll(this.dataset.target);
+
+            for(var j = nodes.length; j--;){
+                nodes[j].classList.toggle('active');
+            }
+        };
+    }
+}

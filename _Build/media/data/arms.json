@@ -7,10 +7,10 @@
             "startPercent": 1,
             "endPercent": 1,
             "incInterval": 6,
-            "equipmentWeight": 10,
+            "equipmentWeight": 5,
             "max": 20,
             "sets": 5,
-            "peak": 3
+            "peak": 1
         },
         "sessions": [
             {
@@ -1701,6 +1701,111 @@
                         "weight": 20,
                         "reps": 8,
                         "split": "00:01:47:631",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "15/02/2020",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:26:509",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:47:563",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:02:15:179",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:53:655",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "23/02/2020",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:28:263",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:48:417",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:55:669",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:50:916",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "01/03/2020",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:58:396",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:53:986",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:02:06:344",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:55:348",
                         "target": true
                     }
                 ]

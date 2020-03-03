@@ -2,15 +2,15 @@
     {
         "title": "Deadlifts",
         "defaults": {
-            "sets": 3,
+            "sets": 5,
             "reps": 8,
             "peak": 3,
             "increase": 2.5,
-            "startPercent": 1,
+            "startPercent": 0.75,
             "endPercent": 1,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 80
+            "max": 100
         },
         "sessions": [
             {
@@ -1505,19 +1505,124 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "12/02/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:01:54:242",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:03:24:548",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:02:18:738",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:03:30:703",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "19/02/2020",
+                "sets": [
+                    {
+                        "weight": 72.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:01:48:569",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:02:29:924",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:02:28:710",
+                        "target": true
+                    },
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:03:14:782",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "26/02/2020",
+                "sets": [
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:02:44:925",
+                        "target": true
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 8,
+                        "split": "00:02:45:308",
+                        "target": true
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 8,
+                        "split": "00:02:42:553",
+                        "target": true
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 7,
+                        "split": "00:03:20:501",
+                        "target": false
+                    }
+                ]
             }
         ]
     },
     {
         "title": "Lean-over Rows",
         "defaults": {
-            "sets": 4,
+            "sets": 5,
             "peak": 1,
             "increase": 2.5,
             "startPercent": 1,
             "endPercent": 1,
             "incInterval": 6,
-            "equipmentWeight": 10,
+            "equipmentWeight": 5,
             "reps": 8,
             "max": 20
         },
@@ -3501,6 +3606,111 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "18/02/2020",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:55:367",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:44:443",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:38:852",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:36:142",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:38:015",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "25/02/2020",
+                "sets": [
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:02:37:659",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:01:07:028",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:00:24:669",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:01:26:147",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:02:04:704",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "03/03/2020",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:57:105",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:53:552",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:02:04:063",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:51:837",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -3937,7 +4147,7 @@
         "title": "Pull ups",
         "defaults": {
             "endPercent": 1,
-            "sets": 3,
+            "sets": 5,
             "reps": 10,
             "peak": 1,
             "increase": 0,
@@ -6099,6 +6309,111 @@
                         "weight": 80,
                         "reps": 10,
                         "split": "00:02:07:758",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "12/02/2020",
+                "sets": [
+                    {
+                        "weight": 0,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:38:004",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:48:944",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:43:628",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:45:231",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "19/02/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:24:728",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:42:824",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:42:170",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:02:16:488",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "26/02/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:37:804",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:38:513",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:43:612",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:47:483",
                         "target": true
                     }
                 ]

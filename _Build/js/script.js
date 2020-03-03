@@ -45,6 +45,8 @@ window.d3 = require("d3");
 	Utility.load("media/data/macros.json").then(d => store.commit('macros', d));
 	Utility.load("media/data/weight.json").then((d) => store.commit('weight', d));
 
+	Utility.toggles();
+
 	if(window.socket){
 		window.socket.on('closeWindow', function (data) {
 			window.close();

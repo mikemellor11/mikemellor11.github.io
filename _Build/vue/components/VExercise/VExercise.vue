@@ -7,6 +7,7 @@
 	    <form
 	    	class="
 	            grid
+	            grid--gutters
 	            grid--thirds
 	        "
 	        v-on:change="defaults"
@@ -31,6 +32,7 @@
 	        grid--gutters
 	        grid--vertGutters
 	        ut-clearListOnly
+	        ut-marginTop
 	    ">
 	        <li
 	        	v-for="(stat, key) in stats"
@@ -54,6 +56,7 @@
 	        	js-submit
 	        	ut-textAlignRight
 	        	grid
+	        	grid--gutters
 	        	grid--halfs
 	    	"
     	>

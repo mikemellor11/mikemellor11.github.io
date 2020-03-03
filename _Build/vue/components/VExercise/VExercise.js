@@ -177,6 +177,8 @@ export default {
 			}
 		},
 		onSubmit(){
+			var stats = this.stats;
+
 			if(!this.exercise.sessions || this.exercise.sessions[this.exercise.sessions.length - 1].date !== moment().format('DD/MM/YYYY')){
                 if(!this.exercise.sessions){
                     this.exercise.sessions = [];
@@ -188,17 +190,19 @@ export default {
                 });
             }
 
+            var target = (
+					+this.result.weight > stats.target ||
+					(
+						+this.result.weight >= stats.target &&
+						+this.result.reps >= this.exercise.defaults.reps
+					)
+				);
+
             this.exercise.sessions[this.exercise.sessions.length - 1].sets.push({
                 "weight": this.result.weight,
                 "reps": this.result.reps,
                 "split":  this.stopwatch.time,
-                "target": (
-						+this.result.weight > this.stats.target ||
-						(
-							+this.result.weight >= this.stats.target &&
-							+this.result.reps >= this.exercise.defaults.reps
-						)
-					)
+                "target": target
             });
 
 			if(window.socket){
@@ -208,13 +212,7 @@ export default {
 					"weight": this.result.weight,
 					"reps": this.result.reps,
 					"split":  this.stopwatch.time,
-					"target": (
-							+this.result.weight > this.stats.target ||
-							(
-								+this.result.weight >= this.stats.target &&
-								+this.result.reps >= this.exercise.defaults.reps
-							)
-						)
+					"target": target
 				});
 			}
 

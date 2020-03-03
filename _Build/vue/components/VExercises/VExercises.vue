@@ -1,5 +1,10 @@
 <template>
-	<ul class="js-sidemenu">
+	<ul
+		class="
+			sidemenu
+			js-sidemenu
+		"
+	>
 	    <li
 	    	v-for="(area, key) in exercises"
     	>
