@@ -1871,19 +1871,54 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "04/03/2020",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:57:016",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:50:895",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:07:155",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:02:20:175",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
     {
         "title": "Lateral Raises",
         "defaults": {
-            "sets": 3,
+            "sets": 5,
             "increase": 2.5,
             "peak": 1,
             "startPercent": 1,
             "endPercent": 1,
             "incInterval": 8,
-            "equipmentWeight": 10,
+            "equipmentWeight": 5,
             "reps": 8,
             "max": 10
         },
@@ -2786,6 +2821,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "04/03/2020",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:33:988",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:56:513",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:59:130",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:29:652",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:17:718",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -2798,7 +2868,7 @@
             "startPercent": 1,
             "endPercent": 1,
             "incInterval": 6,
-            "equipmentWeight": 10,
+            "equipmentWeight": 5,
             "reps": 8,
             "max": 10
         },
@@ -3771,6 +3841,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "04/03/2020",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:37:155",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:08:448",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:41:440",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:35:782",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:51:827",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -3783,7 +3888,7 @@
             "startPercent": 1,
             "endPercent": 1,
             "incInterval": 8,
-            "equipmentWeight": 10,
+            "equipmentWeight": 5,
             "reps": 8,
             "max": 10
         },
@@ -4792,6 +4897,41 @@
                         "weight": 10,
                         "reps": 8,
                         "split": "00:01:38:596",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "04/03/2020",
+                "sets": [
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:34:658",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:21:199",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:39:703",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:01:17:270",
+                        "target": true
+                    },
+                    {
+                        "weight": 10,
+                        "reps": 8,
+                        "split": "00:00:59:933",
                         "target": true
                     }
                 ]
