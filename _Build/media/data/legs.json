@@ -6,11 +6,11 @@
             "reps": 8,
             "peak": 3,
             "increase": 2.5,
-            "startPercent": 1,
+            "startPercent": 0.75,
             "endPercent": 1,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 60
+            "max": 70
         },
         "sessions": [
             {
@@ -1872,6 +1872,41 @@
                         "reps": 8,
                         "split": "00:03:35:956",
                         "target": true
+                    }
+                ]
+            },
+            {
+                "date": "14/03/2020",
+                "sets": [
+                    {
+                        "weight": 52.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 62.5,
+                        "reps": 8,
+                        "split": "00:02:33:060",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:02:48:858",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 6,
+                        "split": "00:03:47:766",
+                        "target": false
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 6,
+                        "split": "00:03:02:294",
+                        "target": false
                     }
                 ]
             }
