@@ -10,7 +10,7 @@
             "endPercent": 1,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 45
+            "max": 50
         },
         "sessions": [
             {
@@ -725,6 +725,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "17/03/2020",
+                "sets": [
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:01:34:710",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:02:17:676",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -739,7 +762,7 @@
             "increase": 2.5,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 65
+            "max": 70
         },
         "sessions": [
             {
@@ -1506,6 +1529,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "17/03/2020",
+                "sets": [
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:01:53:384",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:02:00:740",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -1515,12 +1561,12 @@
             "endPercent": 1,
             "sets": 5,
             "reps": 8,
-            "peak": 1,
+            "peak": 3,
             "increase": 2.5,
-            "startPercent": 1,
+            "startPercent": 0.75,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 65
+            "max": 70
         },
         "sessions": [
             {
@@ -4010,6 +4056,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "17/03/2020",
+                "sets": [
+                    {
+                        "weight": 52.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 62.5,
+                        "reps": 8,
+                        "split": "00:01:44:009",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:01:58:368",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:01:58:417",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:02:25:195",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -5122,6 +5203,29 @@
                         "weight": 80,
                         "reps": 20,
                         "split": "00:02:59:552",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "17/03/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:00:00:580",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:00:00:842",
                         "target": true
                     }
                 ]
