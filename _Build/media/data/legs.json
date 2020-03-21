@@ -1909,6 +1909,41 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "21/03/2020",
+                "sets": [
+                    {
+                        "weight": 60,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:02:51:249",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:03:15:522",
+                        "target": true
+                    },
+                    {
+                        "weight": 60,
+                        "reps": 8,
+                        "split": "00:04:47:900",
+                        "target": false
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:04:33:976",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
