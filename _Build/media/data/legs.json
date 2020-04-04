@@ -1979,6 +1979,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "04/04/2020",
+                "sets": [
+                    {
+                        "weight": 52.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 62.5,
+                        "reps": 8,
+                        "split": "00:02:29:459",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:03:30:989",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:04:51:192",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:04:45:170",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
