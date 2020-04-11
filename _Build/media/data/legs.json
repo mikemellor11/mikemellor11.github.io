@@ -2014,6 +2014,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "11/04/2020",
+                "sets": [
+                    {
+                        "weight": 52.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 62.5,
+                        "reps": 8,
+                        "split": "00:02:19:597",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:03:20:933",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:04:35:823",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:05:09:284",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
