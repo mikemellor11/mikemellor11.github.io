@@ -2091,5 +2091,20 @@
                 ]
             }
         ]
+    },
+    {
+        "title": "Tricep dips",
+        "defaults": {
+            "endPercent": 1,
+            "sets": 3,
+            "reps": 10,
+            "peak": 1,
+            "increase": 0,
+            "startPercent": 1,
+            "incInterval": 1,
+            "equipmentWeight": 0,
+            "max": null
+        },
+        "sessions": []
     }
 ]
