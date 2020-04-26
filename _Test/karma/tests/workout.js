@@ -1,4 +1,5 @@
 var Workout = require('../../../_Build/js/libs/workout.js');
+var dayjs = require("dayjs");
 
 describe('workout.js', function () {
     var group = null;
@@ -10,7 +11,9 @@ describe('workout.js', function () {
         fixture.load('workout-1.json');
         group = Workout(fixture.json[0]);
 
+        // Fixture two contains todays date as latest workout
         fixture.load('workout-2.json');
+        fixture.json[0][fixture.json[0].length - 1].date = dayjs().format('DD/MM/YYYY');
         fixture2 = Workout(fixture.json[0]);
     });
 
@@ -184,7 +187,7 @@ describe('workout.js', function () {
     });
 
     it('return the number of consecutive successful workouts that hit target', function () {
-        expect(fixture2.consecutiveTargets()).to.equal(3);
+        expect(fixture2.consecutiveTargets()).to.equal(2);
     });
 
     // DATE //

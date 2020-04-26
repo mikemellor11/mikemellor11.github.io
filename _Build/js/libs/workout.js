@@ -73,10 +73,18 @@ module.exports.prototype = {
 		return this.sets().target();
 	},
 
-	// Loop backwards over workouts while the max weight remains the same. If the target was hit and the volume matches then increment count
+	// Loop backwards over workouts while the max weight remains the same.
+	// If the target was hit and the volume matches then increment count.
+	// If the latest workout is in progress then skip over as it shouldn't count towards target calculation
 	consecutiveTargets() {
 		var index = 0;
+		var count = 0;
 		var current = this.fromLast(index);
+
+		if(current.date() === dayjs().format('DD/MM/YYYY')){
+			current = this.fromLast(++index);
+		}
+
 		var max = current.max();
 		var volume = current.volume();
 		
@@ -86,11 +94,11 @@ module.exports.prototype = {
 			current.target() &&
 			current.volume() === volume
 		){
-			index++;
-			current = this.fromLast(index);
+			current = this.fromLast(++index);
+			count++;
 		}
 
-		return index;
+		return count;
 	},
 
 	// Filter by date, either string 01/01/2020 or number of days/months from current date. Can pass months/weeks/days string as third parameter to be used in number from calculation
