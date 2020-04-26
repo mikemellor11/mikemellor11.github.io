@@ -8,7 +8,7 @@
             "endPercent": 1,
             "incInterval": 6,
             "equipmentWeight": 5,
-            "max": 20,
+            "max": null,
             "sets": 5,
             "peak": 1
         },

@@ -10,7 +10,7 @@
             "endPercent": 1,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 50
+            "max": null
         },
         "sessions": [
             {
@@ -877,7 +877,7 @@
             "increase": 5,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 70
+            "max": null
         },
         "sessions": [
             {
@@ -1796,7 +1796,7 @@
             "startPercent": 0.75,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 70
+            "max": null
         },
         "sessions": [
             {

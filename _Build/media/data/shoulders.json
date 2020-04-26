@@ -10,7 +10,7 @@
             "increase": 2.5,
             "incInterval": 3,
             "equipmentWeight": 20,
-            "max": 42.5
+            "max": null
         },
         "sessions": [
             {
@@ -2165,7 +2165,7 @@
             "incInterval": 6,
             "equipmentWeight": 5,
             "reps": 8,
-            "max": 12.5
+            "max": null
         },
         "sessions": [
             {
@@ -3360,7 +3360,7 @@
             "incInterval": 8,
             "equipmentWeight": 5,
             "reps": 8,
-            "max": 12.5
+            "max": null
         },
         "sessions": [
             {
@@ -4625,7 +4625,7 @@
             "incInterval": 8,
             "equipmentWeight": 5,
             "reps": 8,
-            "max": 10
+            "max": null
         },
         "sessions": [
             {
