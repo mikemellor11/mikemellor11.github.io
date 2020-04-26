@@ -1,12 +1,17 @@
 var Workout = require('../../../_Build/js/libs/workout.js');
 
 describe('workout.js', function () {
-	var group = null;
+    var group = null;
+    var fixture2 = null
 
     before(function(){
         fixture.setBase('_Test/karma/fixtures');
-        fixture.load('workout.json');
+
+        fixture.load('workout-1.json');
         group = Workout(fixture.json[0]);
+
+        fixture.load('workout-2.json');
+        fixture2 = Workout(fixture.json[0]);
     });
 
     afterEach(function(){
@@ -176,6 +181,10 @@ describe('workout.js', function () {
 
     it('return if the target was hit for all sets', function () {
         expect(group.target()).to.equal(true);
+    });
+
+    it('return the number of consecutive successful workouts that hit target', function () {
+        expect(fixture2.consecutiveTargets()).to.equal(3);
     });
 
     // DATE //

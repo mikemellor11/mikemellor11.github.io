@@ -38,6 +38,7 @@ export default {
 			var maxSession = 0;
 			var volume = 0;
 			var today = moment().format('DD/MM/YYYY');
+			var consecutiveTargets = 0;
 
 			if(!gD.max){
 				gD.max = 'auto';
@@ -48,6 +49,7 @@ export default {
 				var recentWorkout = workout.last();
 				var recentSets = recentWorkout.sets();
 				var todayBegan = 0;
+				consecutiveTargets = workout.consecutiveTargets();
 
 				if(recentSets.data.length && recentWorkout.date() === today){
 					todayBegan = 1;
@@ -68,41 +70,9 @@ export default {
 					maxLast = gD.max;
 				}
 
-				// Intervals set and theres enough sessions to calculate
-				if(recentWorkout.sets().length() && gD.incInterval > 0 && workout.length() > (gD.incInterval + todayBegan)){
-					readyForIncrease = true;
+				readyForIncrease = consecutiveTargets >= gD.incInterval;
 
-					var holdLastMax = 0;
-					var holdVolumeLast = 0;
-
-					for(var i = 0; i < gD.incInterval; i++){
-						var index = i + todayBegan;
-						var lastWorkout = workout.fromLast(index);
-						var tempLastMax = lastWorkout.max();
-						var tempVolumeLast = lastWorkout.volume();
-
-						if(tempVolumeLast > holdVolumeLast){
-							holdVolumeLast = tempVolumeLast;
-						}
-						if(tempLastMax > holdLastMax){
-							holdLastMax = tempLastMax;
-						}
-					}
-
-					for(i = 0; i < gD.incInterval; i++){
-						index = i + todayBegan;
-						lastWorkout = workout.fromLast(index);
-						tempLastMax = lastWorkout.max();
-						tempVolumeLast = lastWorkout.volume();
-
-						if(tempLastMax < holdLastMax || tempVolumeLast < holdVolumeLast || !lastWorkout.target()){
-							readyForIncrease = false;
-							break;
-						}
-					}
-				}
-
-				for (i = 0; i < gD.sets; ++i) {
+				for (var i = 0; i < gD.sets; ++i) {
 					var base = 0;
 					var incrememnt = 0;
 					var currentWeight = 0;
@@ -161,7 +131,8 @@ export default {
 				last: `${last}kg`,
 				target: target,
 				weightSplit: `${weightSplit}kg`,
-				next: `${next}kg`
+				next: `${next}kg`,
+				consecutiveTargets
 			};
 		}
 	},

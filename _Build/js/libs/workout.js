@@ -73,6 +73,26 @@ module.exports.prototype = {
 		return this.sets().target();
 	},
 
+	// Loop backwards over workouts while the max weight remains the same. If the target was hit and the volume matches then increment count
+	consecutiveTargets() {
+		var index = 0;
+		var current = this.fromLast(index);
+		var max = current.max();
+		var volume = current.volume();
+		
+		while(
+			current !== null &&
+			current.max() === max &&
+			current.target() &&
+			current.volume() === volume
+		){
+			index++;
+			current = this.fromLast(index);
+		}
+
+		return index;
+	},
+
 	// Filter by date, either string 01/01/2020 or number of days/months from current date. Can pass months/weeks/days string as third parameter to be used in number from calculation
 	filter(start, end) {
 		return module.exports(this.data.filter((d) => {
