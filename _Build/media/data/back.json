@@ -1863,7 +1863,7 @@
         "defaults": {
             "sets": 5,
             "peak": 1,
-            "increase": 5,
+            "increase": 2.5,
             "startPercent": 1,
             "endPercent": 1,
             "incInterval": 3,
@@ -4198,6 +4198,41 @@
                         "weight": 20,
                         "reps": 8,
                         "split": "00:00:49:367",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "28/04/2020",
+                "sets": [
+                    {
+                        "weight": 25,
+                        "reps": 8,
+                        "split": "00:00:53:050",
+                        "target": true
+                    },
+                    {
+                        "weight": 25,
+                        "reps": 8,
+                        "split": "00:01:23:410",
+                        "target": true
+                    },
+                    {
+                        "weight": 25,
+                        "reps": 8,
+                        "split": "00:01:02:253",
+                        "target": true
+                    },
+                    {
+                        "weight": 25,
+                        "reps": 8,
+                        "split": "00:01:04:022",
+                        "target": true
+                    },
+                    {
+                        "weight": 25,
+                        "reps": 8,
+                        "split": "00:01:13:286",
                         "target": true
                     }
                 ]
