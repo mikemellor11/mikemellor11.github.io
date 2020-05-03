@@ -2089,6 +2089,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "03/05/2020",
+                "sets": [
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:50:730",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:02:16:143",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:02:22:321",
+                        "target": true
+                    },
+                    {
+                        "weight": 20,
+                        "reps": 8,
+                        "split": "00:01:58:464",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
