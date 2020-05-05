@@ -2163,6 +2163,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "05/05/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:36:013",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:58:311",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:26:238",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
