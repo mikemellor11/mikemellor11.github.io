@@ -909,6 +909,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "12/05/2020",
+                "sets": [
+                    {
+                        "weight": 55,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 55,
+                        "reps": 8,
+                        "split": "00:01:44:533",
+                        "target": true
+                    },
+                    {
+                        "weight": 55,
+                        "reps": 8,
+                        "split": "00:02:05:025",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -1871,6 +1894,29 @@
                         "weight": 75,
                         "reps": 8,
                         "split": "00:03:07:128",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "12/05/2020",
+                "sets": [
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:01:42:221",
+                        "target": true
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:01:51:579",
                         "target": true
                     }
                 ]
@@ -4658,6 +4704,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "12/05/2020",
+                "sets": [
+                    {
+                        "weight": 57.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:01:52:184",
+                        "target": true
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:02:43:342",
+                        "target": true
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:01:59:169",
+                        "target": true
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:02:47:659",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -5954,6 +6035,29 @@
                         "weight": 80,
                         "reps": 10,
                         "split": "00:02:14:342",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "12/05/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:51:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:02:06:918",
                         "target": true
                     }
                 ]

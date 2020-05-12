@@ -2221,6 +2221,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "12/05/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:35:467",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:04:116",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:29:824",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
