@@ -2279,6 +2279,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "19/05/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:27:976",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:27:729",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:01:209",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
