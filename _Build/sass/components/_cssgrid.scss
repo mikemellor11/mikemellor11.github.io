@@ -24,7 +24,7 @@
 		grid-row: span 2;
 	}
 
-	@include breakpoint(max-width $mobileMax){
+	@include breakpoint(max-width $tabletMax){
 		& > *{
 			grid-column: span 4 !important;
 			grid-row: span 1 !important;

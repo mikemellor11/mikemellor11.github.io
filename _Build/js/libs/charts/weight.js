@@ -56,14 +56,31 @@ export default {
 					structure: "{value}kg"
 				},
 				x: {
-					structure: timeFormat("%y-%m-%d"),
+					structure: timeFormat("%b"),
 					ticks: 5
 				}
 			},
 			symbols: ['Circle'],
 		    symbolsSize: 0.05,
 		    symbolsRatio: true,
-		    aspectRatio: 0.75
+			aspectRatio: 0.75,
+			inject: {
+				init(){
+					var a = this.store;
+					var b = a.att;
+					var c = a.chart;
+
+					c.append("defs").append("clipPath").attr("id", "clip").append("rect");
+        			a.draw.attr("clip-path", "url(#clip)");
+				},
+				render(){
+					var a = this.store;
+					var b = a.att;
+					var c = a.chart;
+
+					a.chart.select("#clip rect").attr("width", a.width).attr("height", a.height);
+				}
+			}
 		};
 	}
 };

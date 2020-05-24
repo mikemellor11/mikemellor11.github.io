@@ -27,6 +27,10 @@ export default {
 		{
 			"date": "01/03/2020",
 			"weight": 85
+		},
+		{
+			"date": "01/07/2020",
+			"weight": 85
 		}
 	]
 };
