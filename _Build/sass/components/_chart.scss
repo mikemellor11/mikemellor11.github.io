@@ -58,5 +58,11 @@
 		padding: $spacing * 0.5;
 		padding-left: $spacing;
 		text-align: center;
+
+		@include breakpoint(max-width $mobileMax){
+			font-size: 0.75em;
+			padding-left: $spacing * 0.25;
+			padding-right: $spacing * 0.25;
+		}
 	}
 }

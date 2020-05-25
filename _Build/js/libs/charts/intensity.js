@@ -43,7 +43,8 @@ export default {
 				right: 0
 			},
 			innerRadius: 0.5,
-			transitionSpeed: 2000
+			transitionSpeed: 2000,
+			colors: ['fill4', 'fill3', 'fill1']
 		};
 	}
 };

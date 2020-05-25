@@ -1,32 +1,37 @@
 .cssgrid{
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(12, 1fr);
 
 	grid-column-gap: $spacing;
 	grid-row-gap: $spacing;
 
 	& > *:nth-child(1){
-		grid-column: span 2;
+		grid-column: span 6;
 	}
 
 	& > *:nth-child(2){
-		grid-column: span 2;
+		grid-column: span 6;
 		grid-row: span 2;
 	}
 
-	& > *:nth-child(5){
+	& > *:nth-child(3),
+	& > *:nth-child(4){
 		grid-column: span 3;
+	}
+
+	& > *:nth-child(5){
+		grid-column: span 8;
 		grid-row: span 2;
 	}
 
 	& > *:nth-child(6){
-		grid-column: span 1;
+		grid-column: span 4;
 		grid-row: span 2;
 	}
 
 	@include breakpoint(max-width $tabletMax){
 		& > *{
-			grid-column: span 4 !important;
+			grid-column: span 12 !important;
 			grid-row: span 1 !important;
 		}
 	}

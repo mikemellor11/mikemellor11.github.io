@@ -33,9 +33,12 @@ export default {
 			},
 			colors: ['fill3'],
 			margin: {
-				left: 62.5
+				left: 95
 			},
-			aspectRatio: 0.75
+			aspectRatio: 0.75,
+			label: {
+				y: 'kg'
+			}
 		};
 	}
 };

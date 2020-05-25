@@ -31,8 +31,7 @@ export default {
 					rotate: true
 				},
 				x: {
-					flip: false,
-					structure: "{value}kg"
+					flip: false
 				}
 			},
 			scale: {
@@ -54,12 +53,15 @@ export default {
 			margin: {
 				top: 0,
 				left: 0,
-				bottom: 30,
+				bottom: 50,
 				right: 20
 			},
 			stagger: 0,
 			primaryIndex: 1,
-			aspectRatio: 0.3
+			aspectRatio: 0.3,
+			label: {
+				x: 'kg'
+			}
 		};
 	}
 };
