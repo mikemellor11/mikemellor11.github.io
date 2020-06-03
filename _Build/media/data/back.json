@@ -2018,6 +2018,41 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "03/06/2020",
+                "sets": [
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:02:33:179",
+                        "target": true
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 8,
+                        "split": "00:04:26:519",
+                        "target": true
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 8,
+                        "split": "00:03:22:774",
+                        "target": true
+                    },
+                    {
+                        "weight": 110,
+                        "reps": 8,
+                        "split": "00:04:22:445",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
