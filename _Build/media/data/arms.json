@@ -2453,6 +2453,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "09/06/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:24:240",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:21:586",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:31:975",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
