@@ -2511,6 +2511,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "16/06/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:12:796",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:56:551",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
