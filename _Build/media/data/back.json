@@ -5,7 +5,7 @@
             "sets": 5,
             "reps": 8,
             "peak": 3,
-            "increase": 5,
+            "increase": 2.5,
             "startPercent": 0.75,
             "endPercent": 1,
             "incInterval": 3,
@@ -2120,6 +2120,41 @@
                         "weight": 110,
                         "reps": 8,
                         "split": "00:03:24:035",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "25/06/2020",
+                "sets": [
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 8,
+                        "split": "00:03:24:946",
+                        "target": true
+                    },
+                    {
+                        "weight": 112.5,
+                        "reps": 8,
+                        "split": "00:03:42:650",
+                        "target": true
+                    },
+                    {
+                        "weight": 112.5,
+                        "reps": 8,
+                        "split": "00:04:25:855",
+                        "target": true
+                    },
+                    {
+                        "weight": 112.5,
+                        "reps": 8,
+                        "split": "00:03:38:271",
                         "target": true
                     }
                 ]
