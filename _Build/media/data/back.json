@@ -2169,7 +2169,7 @@
             "increase": 2.5,
             "startPercent": 1,
             "endPercent": 1,
-            "incInterval": 3,
+            "incInterval": 6,
             "equipmentWeight": 5,
             "reps": 8,
             "max": null
@@ -4816,6 +4816,41 @@
                         "weight": 30,
                         "reps": 8,
                         "split": "00:01:20:091",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "30/06/2020",
+                "sets": [
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:01:19:819",
+                        "target": true
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:01:02:082",
+                        "target": true
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:01:39:587",
+                        "target": true
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:01:38:789",
+                        "target": true
+                    },
+                    {
+                        "weight": 30,
+                        "reps": 8,
+                        "split": "00:01:30:459",
                         "target": true
                     }
                 ]
