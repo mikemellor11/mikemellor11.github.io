@@ -2818,6 +2818,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "28/07/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:16:666",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:35:713",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
