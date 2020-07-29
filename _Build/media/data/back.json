@@ -2298,6 +2298,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "29/07/2020",
+                "sets": [
+                    {
+                        "weight": 87.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 100,
+                        "reps": 8,
+                        "split": "00:02:07:971",
+                        "target": true
+                    },
+                    {
+                        "weight": 115,
+                        "reps": 8,
+                        "split": "00:04:39:966",
+                        "target": true
+                    },
+                    {
+                        "weight": 115,
+                        "reps": 8,
+                        "split": "00:03:44:450",
+                        "target": true
+                    },
+                    {
+                        "weight": 115,
+                        "reps": 8,
+                        "split": "00:04:13:076",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
