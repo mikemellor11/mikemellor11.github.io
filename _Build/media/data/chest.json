@@ -1208,6 +1208,29 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "18/08/2020",
+                "sets": [
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 7,
+                        "split": "00:01:47:184",
+                        "target": false
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 6,
+                        "split": "00:02:52:594",
+                        "target": false
+                    }
+                ]
             }
         ]
     },
@@ -2469,6 +2492,29 @@
                         "weight": 85,
                         "reps": 6,
                         "split": "00:04:08:891",
+                        "target": false
+                    }
+                ]
+            },
+            {
+                "date": "18/08/2020",
+                "sets": [
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 7,
+                        "split": "00:02:23:775",
+                        "target": false
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 5,
+                        "split": "00:03:08:500",
                         "target": false
                     }
                 ]
@@ -5711,6 +5757,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "18/08/2020",
+                "sets": [
+                    {
+                        "weight": 62.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 72.5,
+                        "reps": 8,
+                        "split": "00:01:37:860",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:06:690",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:21:194",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:02:39:278",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -7306,6 +7387,29 @@
                         "weight": 80,
                         "reps": 20,
                         "split": "00:01:16:886",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "18/08/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:21:967",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:02:20:762",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:02:51:994",
                         "target": true
                     }
                 ]
