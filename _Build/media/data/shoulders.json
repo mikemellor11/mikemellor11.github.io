@@ -3,7 +3,7 @@
         "title": "Overhead press",
         "defaults": {
             "startPercent": 0.75,
-            "endPercent": 1,
+            "endPercent": 0.8,
             "sets": 5,
             "reps": 8,
             "peak": 3,
@@ -2711,6 +2711,41 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "26/08/2020",
+                "sets": [
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:02:22:125",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:03:44:113",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:02:24:204",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:03:16:534",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -2722,7 +2757,7 @@
             "peak": 1,
             "startPercent": 1,
             "endPercent": 1,
-            "incInterval": 18,
+            "incInterval": 22,
             "equipmentWeight": 5,
             "reps": 8,
             "max": null
@@ -4466,6 +4501,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "26/08/2020",
+                "sets": [
+                    {
+                        "weight": 12.5,
+                        "reps": 8,
+                        "split": "00:00:32:998",
+                        "target": true
+                    },
+                    {
+                        "weight": 12.5,
+                        "reps": 8,
+                        "split": "00:00:39:679",
+                        "target": true
+                    },
+                    {
+                        "weight": 12.5,
+                        "reps": 8,
+                        "split": "00:01:05:066",
+                        "target": true
+                    },
+                    {
+                        "weight": 12.5,
+                        "reps": 8,
+                        "split": "00:00:55:687",
+                        "target": true
+                    },
+                    {
+                        "weight": 12.5,
+                        "reps": 8,
+                        "split": "00:00:57:576",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -4477,7 +4547,7 @@
             "peak": 1,
             "startPercent": 1,
             "endPercent": 1,
-            "incInterval": 18,
+            "incInterval": 22,
             "equipmentWeight": 5,
             "reps": 8,
             "max": null
@@ -6288,6 +6358,41 @@
                         "weight": 12.5,
                         "reps": 8,
                         "split": "00:00:58:983",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "26/08/2020",
+                "sets": [
+                    {
+                        "weight": 12.5,
+                        "reps": 8,
+                        "split": "00:00:41:552",
+                        "target": true
+                    },
+                    {
+                        "weight": 12.5,
+                        "reps": 8,
+                        "split": "00:00:46:604",
+                        "target": true
+                    },
+                    {
+                        "weight": 12.5,
+                        "reps": 8,
+                        "split": "00:00:54:553",
+                        "target": true
+                    },
+                    {
+                        "weight": 12.5,
+                        "reps": 8,
+                        "split": "00:01:16:144",
+                        "target": true
+                    },
+                    {
+                        "weight": 12.5,
+                        "reps": 8,
+                        "split": "00:00:54:450",
                         "target": true
                     }
                 ]
@@ -8152,6 +8257,41 @@
                         "weight": 5,
                         "reps": 10,
                         "split": "00:00:32:189",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "26/08/2020",
+                "sets": [
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:38:753",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:31:523",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:27:749",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:50:813",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:31:766",
                         "target": true
                     }
                 ]
