@@ -1254,6 +1254,29 @@
                         "target": false
                     }
                 ]
+            },
+            {
+                "date": "03/09/2020",
+                "sets": [
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 7,
+                        "split": "00:02:49:470",
+                        "target": false
+                    },
+                    {
+                        "weight": 65,
+                        "reps": 5,
+                        "split": "00:01:54:718",
+                        "target": false
+                    }
+                ]
             }
         ]
     },
@@ -2562,6 +2585,29 @@
                         "reps": 8,
                         "split": "00:05:44:502",
                         "target": true
+                    }
+                ]
+            },
+            {
+                "date": "03/09/2020",
+                "sets": [
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 6,
+                        "split": "00:02:37:837",
+                        "target": false
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 5,
+                        "split": "00:01:43:525",
+                        "target": false
                     }
                 ]
             }
@@ -5870,6 +5916,41 @@
                         "weight": 85,
                         "reps": 8,
                         "split": "00:02:44:144",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "03/09/2020",
+                "sets": [
+                    {
+                        "weight": 65,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 75,
+                        "reps": 8,
+                        "split": "00:01:52:938",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:02:24:220",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:03:13:524",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:03:33:320",
                         "target": true
                     }
                 ]
