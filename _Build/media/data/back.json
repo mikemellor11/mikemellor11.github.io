@@ -2508,6 +2508,35 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "16/09/2020",
+                "sets": [
+                    {
+                        "weight": 90,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:02:49:476",
+                        "target": true
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:04:49:445",
+                        "target": true
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:04:05:690",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
