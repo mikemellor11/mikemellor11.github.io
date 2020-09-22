@@ -3027,6 +3027,29 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "22/09/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:43:630",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:18:436",
+                        "target": true
+                    }
+                ]
             }
         ]
     }
