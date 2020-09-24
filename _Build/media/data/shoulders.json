@@ -2851,6 +2851,41 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "24/09/2020",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:02:44:578",
+                        "target": true
+                    },
+                    {
+                        "weight": 52.5,
+                        "reps": 8,
+                        "split": "00:04:35:864",
+                        "target": true
+                    },
+                    {
+                        "weight": 47.5,
+                        "reps": 8,
+                        "split": "00:02:39:787",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:03:55:222",
+                        "target": true
+                    }
+                ]
             }
         ]
     },
@@ -4743,6 +4778,41 @@
                         "weight": 12.5,
                         "reps": 8,
                         "split": "00:00:45:217",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "24/09/2020",
+                "sets": [
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:00:27:479",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:01:06:241",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:01:04:110",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:02:04:221",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:01:43:673",
                         "target": true
                     }
                 ]
@@ -6708,6 +6778,41 @@
                         "weight": 12.5,
                         "reps": 8,
                         "split": "00:00:43:559",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "24/09/2020",
+                "sets": [
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:00:56:730",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:01:06:381",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:00:40:878",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:00:52:549",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:01:12:564",
                         "target": true
                     }
                 ]
@@ -8712,6 +8817,41 @@
                         "weight": 5,
                         "reps": 10,
                         "split": "00:00:43:896",
+                        "target": true
+                    }
+                ]
+            },
+            {
+                "date": "24/09/2020",
+                "sets": [
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:29:354",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:30:473",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:30:679",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:33:348",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:26:795",
                         "target": true
                     }
                 ]
