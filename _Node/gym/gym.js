@@ -75,9 +75,12 @@ function init(){
 
                     d.sessions.push({
                         date: moment().format('DD/MM/YYYY'),
-                        sets: []
+                        sets: [],
+                        target: false
                     });
                 }
+
+                d.sessions[d.sessions.length - 1].target = data.sessionTarget;
 
                 d.sessions[d.sessions.length - 1].sets.push({
                     "weight": +data.weight,

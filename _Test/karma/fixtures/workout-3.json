@@ -1,0 +1,26 @@
+[
+    {
+        "target": false,
+        "date": "06/04/2020",
+        "sets": [
+            {
+                "weight": 77.5,
+                "reps": 20,
+                "split": "00:00:00:000",
+                "target": true
+            },
+            {
+                "weight": 77.5,
+                "reps": 20,
+                "split": "00:01:42:875",
+                "target": true
+            },
+            {
+                "weight": 77.5,
+                "reps": 20,
+                "split": "00:02:55:020",
+                "target": true
+            }
+        ]
+    }
+]

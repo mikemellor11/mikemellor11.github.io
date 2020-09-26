@@ -70,7 +70,9 @@ module.exports.prototype = {
 	},
 
 	target() {
-		return this.sets().target();
+		let target = this.data.filter(d => d.target == false).length;
+
+		return !target && this.sets().target();
 	},
 
 	// Loop backwards over workouts while the max weight remains the same.
@@ -113,7 +115,7 @@ module.exports.prototype = {
 
 	date(reverse) {
 		if(this.data.length > 1){
-			return ((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
+			return (reverse ? this.data.slice().reverse() : this.data).map(function(d, i){
 				return d.date;
 			});
 		} else {
@@ -123,7 +125,7 @@ module.exports.prototype = {
 
 	sets(reverse) {
 		if(this.data.length){
-			return Set(((reverse) ? [].concat(this.data).reverse() : this.data).map(function(d, i){
+			return Set((reverse ? this.data.slice().reverse() : this.data).map(function(d, i){
 				return d.sets;
 			}).reduce(function(a, b){
 				return a.concat(b);

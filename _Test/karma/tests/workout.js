@@ -4,6 +4,7 @@ var dayjs = require("dayjs");
 describe('workout.js', function () {
     var group = null;
     var fixture2 = null
+    var fixture3 = null;
 
     before(function(){
         fixture.setBase('_Test/karma/fixtures');
@@ -15,6 +16,9 @@ describe('workout.js', function () {
         fixture.load('workout-2.json');
         fixture.json[0][fixture.json[0].length - 1].date = dayjs().format('DD/MM/YYYY');
         fixture2 = Workout(fixture.json[0]);
+
+        fixture.load('workout-3.json');
+        fixture3 = Workout(fixture.json[0]);
     });
 
     afterEach(function(){
@@ -188,6 +192,10 @@ describe('workout.js', function () {
 
     it('return the number of consecutive successful workouts that hit target', function () {
         expect(fixture2.consecutiveTargets()).to.equal(2);
+    });
+
+    it('Target should be false if workout target false', function () {
+        expect(fixture3.target()).to.equal(false);
     });
 
     // DATE //

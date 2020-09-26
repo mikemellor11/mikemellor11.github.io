@@ -157,7 +157,8 @@ export default {
 
                 this.exercise.sessions.push({
                     date: moment().format('DD/MM/YYYY'),
-                    sets: []
+					sets: [],
+					target: false
                 });
             }
 
@@ -174,7 +175,9 @@ export default {
                 "reps": this.result.reps,
                 "split":  this.stopwatch.time,
                 "target": target
-            });
+			});
+			
+			this.exercise.sessions[this.exercise.sessions.length - 1].target = this.stats.setsLeft <= 0;
 
 			if(window.socket){
 				window.socket.emit('saveLift', {
@@ -183,7 +186,8 @@ export default {
 					"weight": this.result.weight,
 					"reps": this.result.reps,
 					"split":  this.stopwatch.time,
-					"target": target
+					"target": target,
+					"sessionTarget": this.exercise.sessions[this.exercise.sessions.length - 1].target
 				});
 			}
 

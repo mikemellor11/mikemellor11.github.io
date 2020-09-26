@@ -69,7 +69,7 @@
         ]
     },
     {
-        "date": "set dynamically in test suite",
+        "date": "set dynamically in test suite to todays date",
         "sets": [
             {
                 "weight": 80,
