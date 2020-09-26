@@ -195,7 +195,11 @@ describe('workout.js', function () {
     });
 
     it('Target should be false if workout target false', function () {
-        expect(fixture3.target()).to.equal(false);
+        expect(fixture3.first().target()).to.equal(false);
+    });
+
+    it('Target should be false if workout target false', function () {
+        expect(fixture3.consecutiveTargets()).to.equal(2);
     });
 
     // DATE //
