@@ -2572,6 +2572,42 @@
                         "target": true
                     }
                 ]
+            },
+            {
+                "date": "09/10/2020",
+                "sets": [
+                    {
+                        "weight": 105,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:00:00:287",
+                        "target": true
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:00:00:270",
+                        "target": true
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:00:00:216",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:00:01:197",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     },
