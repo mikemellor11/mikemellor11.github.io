@@ -3266,6 +3266,30 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "27/10/2020",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:23:047",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 10,
+                        "split": "00:01:29:564",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     }
