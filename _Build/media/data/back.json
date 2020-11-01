@@ -9652,7 +9652,7 @@
                         "reps": 8,
                         "split": "00:01:40:337",
                         "target": true
-                    }
+                    },
                     {
                         "weight": 80,
                         "reps": 8,
