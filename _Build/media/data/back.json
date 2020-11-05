@@ -2749,12 +2749,6 @@
                         "reps": 8,
                         "split": "00:05:15:299",
                         "target": true
-                    },
-                    {
-                        "weight": 0,
-                        "reps": 8,
-                        "split": "00:14:16:279",
-                        "target": true
                     }
                 ],
                 "target": true
