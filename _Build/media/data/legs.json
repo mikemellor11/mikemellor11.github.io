@@ -2922,9 +2922,15 @@
                         "reps": 8,
                         "split": "00:05:39:691",
                         "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
                     }
                 ],
-                "target": false
+                "target": true
             }
         ]
     }
