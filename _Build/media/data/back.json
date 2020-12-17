@@ -6379,6 +6379,42 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "17/12/2020",
+                "sets": [
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:01:08:810",
+                        "target": true
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:01:03:682",
+                        "target": true
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:01:40:372",
+                        "target": true
+                    },
+                    {
+                        "weight": 37.5,
+                        "reps": 8,
+                        "split": "00:01:42:544",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:02:11:722",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     },
