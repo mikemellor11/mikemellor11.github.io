@@ -3040,6 +3040,42 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "14/01/2021",
+                "sets": [
+                    {
+                        "weight": 115,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 130,
+                        "reps": 8,
+                        "split": "00:03:43:033",
+                        "target": true
+                    },
+                    {
+                        "weight": 130,
+                        "reps": 8,
+                        "split": "00:04:31:987",
+                        "target": true
+                    },
+                    {
+                        "weight": 130,
+                        "reps": 8,
+                        "split": "00:05:09:156",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:05:32:032",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     },
