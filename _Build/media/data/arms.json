@@ -3938,6 +3938,30 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "26/01/2021",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:13:273",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 10,
+                        "split": "00:01:39:392",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     }
