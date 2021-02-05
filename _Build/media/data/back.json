@@ -3148,6 +3148,30 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "05/02/2021",
+                "sets": [
+                    {
+                        "weight": 115,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 132.5,
+                        "reps": 8,
+                        "split": "00:03:11:197",
+                        "target": true
+                    },
+                    {
+                        "weight": 132.5,
+                        "reps": 8,
+                        "split": "00:04:08:635",
+                        "target": true
+                    }
+                ],
+                "target": false
             }
         ]
     },
