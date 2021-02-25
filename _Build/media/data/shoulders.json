@@ -3,7 +3,7 @@
         "title": "Overhead press",
         "defaults": {
             "startPercent": 0.75,
-            "endPercent": 0.8,
+            "endPercent": 0.75,
             "sets": 5,
             "reps": 8,
             "peak": 3,
@@ -3570,6 +3570,42 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "25/02/2021",
+                "sets": [
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 57.5,
+                        "reps": 8,
+                        "split": "00:03:21:627",
+                        "target": true
+                    },
+                    {
+                        "weight": 52.5,
+                        "reps": 8,
+                        "split": "00:03:04:514",
+                        "target": false
+                    },
+                    {
+                        "weight": 45,
+                        "reps": 8,
+                        "split": "00:03:47:562",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:03:33:632",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     },
@@ -6180,6 +6216,42 @@
                         "weight": 0,
                         "reps": 8,
                         "split": "00:01:58:005",
+                        "target": true
+                    }
+                ],
+                "target": true
+            },
+            {
+                "date": "25/02/2021",
+                "sets": [
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:00:49:919",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:00:49:824",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:01:26:139",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:01:00:655",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:01:43:245",
                         "target": true
                     }
                 ],
@@ -8864,6 +8936,42 @@
                         "weight": 0,
                         "reps": 8,
                         "split": "00:00:40:094",
+                        "target": true
+                    }
+                ],
+                "target": true
+            },
+            {
+                "date": "25/02/2021",
+                "sets": [
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:00:35:296",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:00:36:520",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:00:56:413",
+                        "target": true
+                    },
+                    {
+                        "weight": 15,
+                        "reps": 8,
+                        "split": "00:01:36:632",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:00:49:713",
                         "target": true
                     }
                 ],
@@ -11587,6 +11695,42 @@
                         "weight": 0,
                         "reps": 10,
                         "split": "00:00:27:347",
+                        "target": true
+                    }
+                ],
+                "target": true
+            },
+            {
+                "date": "25/02/2021",
+                "sets": [
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:32:210",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:30:174",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:39:275",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:44:510",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 10,
+                        "split": "00:00:32:116",
                         "target": true
                     }
                 ],
