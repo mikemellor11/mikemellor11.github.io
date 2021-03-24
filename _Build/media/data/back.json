@@ -3351,7 +3351,7 @@
             "increase": 2.5,
             "startPercent": 1,
             "endPercent": 1,
-            "incInterval": 10,
+            "incInterval": 20,
             "equipmentWeight": 10,
             "reps": 8,
             "max": null
@@ -7215,6 +7215,42 @@
                         "weight": 0,
                         "reps": 8,
                         "split": "00:02:13:514",
+                        "target": true
+                    }
+                ],
+                "target": true
+            },
+            {
+                "date": "24/03/2021",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:26:369",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:21:609",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:24:663",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:35:133",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:02:22:527",
                         "target": true
                     }
                 ],
