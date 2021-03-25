@@ -3678,6 +3678,42 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "25/03/2021",
+                "sets": [
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 57.5,
+                        "reps": 8,
+                        "split": "00:02:41:476",
+                        "target": true
+                    },
+                    {
+                        "weight": 50,
+                        "reps": 8,
+                        "split": "00:04:00:230",
+                        "target": false
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:03:57:402",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:03:37:033",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     },
@@ -6396,6 +6432,42 @@
                         "weight": 0,
                         "reps": 8,
                         "split": "00:01:11:385",
+                        "target": true
+                    }
+                ],
+                "target": true
+            },
+            {
+                "date": "25/03/2021",
+                "sets": [
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:00:57:108",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:00:41:239",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:01:50:122",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:01:29:786",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:02:05:420",
                         "target": true
                     }
                 ],
@@ -9192,6 +9264,42 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "25/03/2021",
+                "sets": [
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:00:47:053",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:00:40:897",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:00:54:530",
+                        "target": true
+                    },
+                    {
+                        "weight": 17.5,
+                        "reps": 8,
+                        "split": "00:01:00:095",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:00:41:993",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     },
@@ -9199,14 +9307,14 @@
         "title": "Wide lateral Raises",
         "defaults": {
             "sets": 5,
-            "increase": 2.5,
+            "increase": 5,
             "peak": 1,
             "startPercent": 1,
             "endPercent": 1,
             "incInterval": 20,
             "equipmentWeight": 0,
             "reps": 10,
-            "max": null
+            "max": 5
         },
         "sessions": [
             {
@@ -12023,6 +12131,36 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "25/03/2021",
+                "sets": [
+                    {
+                        "weight": 7.5,
+                        "reps": 10,
+                        "split": "00:00:29:073",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:30:247",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:29:696",
+                        "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:34:466",
+                        "target": true
+                    }
+                ],
+                "target": false
             }
         ]
     }
