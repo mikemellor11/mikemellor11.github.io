@@ -12158,6 +12158,12 @@
                         "reps": 10,
                         "split": "00:00:34:466",
                         "target": true
+                    },
+                    {
+                        "weight": 5,
+                        "reps": 10,
+                        "split": "00:00:34:466",
+                        "target": true
                     }
                 ],
                 "target": false
