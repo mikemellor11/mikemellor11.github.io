@@ -1922,6 +1922,30 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "21/04/2021",
+                "sets": [
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:01:48:602",
+                        "target": false
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:03:03:041",
+                        "target": false
+                    }
+                ],
+                "target": true
             }
         ]
     },
@@ -3874,6 +3898,30 @@
                         "reps": 8,
                         "split": "00:03:48:433",
                         "target": true
+                    }
+                ],
+                "target": true
+            },
+            {
+                "date": "21/04/2021",
+                "sets": [
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:02:23:412",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:03:47:829",
+                        "target": false
                     }
                 ],
                 "target": true
@@ -8262,6 +8310,42 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "21/04/2021",
+                "sets": [
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 95,
+                        "reps": 8,
+                        "split": "00:02:21:674",
+                        "target": true
+                    },
+                    {
+                        "weight": 82.5,
+                        "reps": 8,
+                        "split": "00:03:18:533",
+                        "target": true
+                    },
+                    {
+                        "weight": 72.5,
+                        "reps": 8,
+                        "split": "00:02:28:060",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:03:09:419",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     },
@@ -10446,6 +10530,30 @@
                     }
                 ],
                 "target": false
+            },
+            {
+                "date": "21/04/2021",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:15:240",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:27:264",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 20,
+                        "split": "00:00:41:798",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     }
