@@ -1994,6 +1994,30 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "12/05/2021",
+                "sets": [
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 70,
+                        "reps": 8,
+                        "split": "00:03:29:288",
+                        "target": false
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:02:38:187",
+                        "target": false
+                    }
+                ],
+                "target": true
             }
         ]
     },
@@ -4017,6 +4041,30 @@
                         "weight": 0,
                         "reps": 8,
                         "split": "00:03:26:152",
+                        "target": true
+                    }
+                ],
+                "target": true
+            },
+            {
+                "date": "12/05/2021",
+                "sets": [
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 92.5,
+                        "reps": 8,
+                        "split": "00:05:14:013",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:03:07:206",
                         "target": true
                     }
                 ],
@@ -8514,6 +8562,42 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "12/05/2021",
+                "sets": [
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 97.5,
+                        "reps": 8,
+                        "split": "00:03:04:201",
+                        "target": true
+                    },
+                    {
+                        "weight": 85,
+                        "reps": 8,
+                        "split": "00:05:39:325",
+                        "target": true
+                    },
+                    {
+                        "weight": 72.5,
+                        "reps": 8,
+                        "split": "00:04:54:591",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:05:31:812",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     },
@@ -10742,6 +10826,30 @@
                         "weight": 0,
                         "reps": 20,
                         "split": "00:00:00:885",
+                        "target": true
+                    }
+                ],
+                "target": true
+            },
+            {
+                "date": "12/05/2021",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:01:21:356",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 20,
+                        "split": "00:00:54:686",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 20,
+                        "split": "00:02:12:754",
                         "target": true
                     }
                 ],
