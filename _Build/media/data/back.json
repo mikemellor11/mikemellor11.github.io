@@ -12385,6 +12385,42 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "26/05/2021",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:19:854",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:10:648",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 8,
+                        "split": "00:02:41:926",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:02:58:694",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     }
