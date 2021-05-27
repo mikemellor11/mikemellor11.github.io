@@ -7795,6 +7795,42 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "27/05/2021",
+                "sets": [
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:05:561",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:25:303",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:03:48:928",
+                        "target": true
+                    },
+                    {
+                        "weight": 40,
+                        "reps": 8,
+                        "split": "00:01:44:948",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 8,
+                        "split": "00:02:04:594",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     },
