@@ -4838,6 +4838,30 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "02/06/2021",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:51:122",
+                        "target": true
+                    },
+                    {
+                        "weight": 0,
+                        "reps": 10,
+                        "split": "00:01:52:632",
+                        "target": true
+                    }
+                ],
+                "target": true
             }
         ]
     }
