@@ -1,9 +1,9 @@
 {
     "chicken breast": {
-        "weight": 355,
+        "weight": 0,
         "max": 400,
         "min": 0,
-        "multiple": 1,
+        "multiple": 200,
         "calories": 141,
         "protein": 30.7,
         "carbohydrate": 0.1,
@@ -28,7 +28,7 @@
         "price": 1.32
     },
     "wholemeal bread": {
-        "weight": 160,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "multiple": 40,
@@ -42,7 +42,7 @@
         "price": 0.13
     },
     "broccoli": {
-        "weight": 225,
+        "weight": 0,
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -55,11 +55,11 @@
         "salt": 0.02,
         "price": 0.115
     },
-    "brown rice": {
-        "weight": 0,
+    "rice brown": {
+        "weight": 250,
         "max": 400,
         "min": 0,
-        "multiple": 1,
+        "multiple": 250,
         "calories": 119,
         "protein": 3.4,
         "carbohydrate": 22.8,
@@ -101,7 +101,7 @@
         "price": 0.043
     },
     "egg": {
-        "weight": 110,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "multiple": 55,
@@ -135,7 +135,7 @@
         "price": 0.49
     },
     "unsalted butter": {
-        "weight": 5,
+        "weight": 0,
         "max": 50,
         "min": 0,
         "multiple": 1,
@@ -152,7 +152,7 @@
         "price": 0.44
     },
     "protein shake": {
-        "weight": 50,
+        "weight": 100,
         "max": 100,
         "min": 0,
         "multiple": 25,
@@ -166,7 +166,7 @@
         "price": 0.974
     },
     "banana": {
-        "weight": 120,
+        "weight": 118,
         "max": 300,
         "min": 0,
         "multiple": 118,
@@ -194,10 +194,10 @@
         "price": 1.55
     },
     "red kidney beans": {
-        "weight": 30,
+        "weight": 0,
         "max": 300,
         "min": 0,
-        "multiple": 1,
+        "multiple": 240,
         "calories": 105,
         "protein": 6.9,
         "carbohydrate": 15,
@@ -205,10 +205,10 @@
         "saturates": 0.01,
         "sugar": 1,
         "salt": 0.03,
-        "price": 0.125
+        "price": 0.229
     },
     "smooth peanut butter": {
-        "weight": 0,
+        "weight": 100,
         "max": 25,
         "min": 0,
         "multiple": 1,
@@ -236,7 +236,7 @@
         "price": 0.2
     },
     "low fat natural yogurt": {
-        "weight": 100,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "multiple": 1,
@@ -292,7 +292,7 @@
         "price": 0.57
     },
     "sweet potato": {
-        "weight": 240,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -306,10 +306,10 @@
         "price": 0.1
     },
     "chickpeas": {
-        "weight": 70,
+        "weight": 240,
         "max": 300,
         "min": 0,
-        "multiple": 1,
+        "multiple": 240,
         "calories": 122,
         "protein": 7.7,
         "carbohydrate": 16.5,
@@ -317,10 +317,10 @@
         "saturates": 0.2,
         "sugar": 0.01,
         "salt": 0.03,
-        "price": 0.208
+        "price": 0.308
     },
     "virgin olive oil": {
-        "weight": 3,
+        "weight": 0,
         "max": 5,
         "min": 0,
         "multiple": 1,
@@ -368,7 +368,7 @@
         "price": 0.21
     },
     "red grapefruit": {
-        "weight": 50,
+        "weight": 0,
         "max": 100,
         "min": 0,
         "multiple": 1,
@@ -382,7 +382,7 @@
         "price": 0.2
     },
     "new potatoes": {
-        "weight": 150,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -396,7 +396,7 @@
         "price": 0.09
     },
     "mince": {
-        "weight": 240,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -438,7 +438,7 @@
         "price": 1.442
     },
     "egg white": {
-        "weight": 0,
+        "weight": "",
         "max": 400,
         "min": 0,
         "multiple": 1,
@@ -455,7 +455,7 @@
         "price": 0.6
     },
     "basa": {
-        "weight": 100,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -469,7 +469,7 @@
         "price": 1.04
     },
     "baby spinach": {
-        "weight": 100,
+        "weight": 0,
         "max": 300,
         "min": 0,
         "multiple": 1,
@@ -497,10 +497,10 @@
         "price": 0.16
     },
     "lentils": {
-        "weight": 0,
+        "weight": 265,
         "max": 200,
         "min": 0,
-        "multiple": 1,
+        "multiple": 265,
         "calories": 82,
         "protein": 6.1,
         "carbohydrate": 10.9,
@@ -525,7 +525,7 @@
         "price": 0.467
     },
     "rice noodles": {
-        "weight": 250,
+        "weight": 0,
         "max": 200,
         "min": 0,
         "multiple": 1,
@@ -553,7 +553,7 @@
         "price": 0.6
     },
     "black bean sauce": {
-        "weight": 100,
+        "weight": 0,
         "max": 100,
         "min": 0,
         "multiple": 1,
@@ -565,5 +565,187 @@
         "sugar": 6.6,
         "salt": 1.8,
         "price": 0.74
+    },
+    "quorn pieces": {
+        "weight": 250,
+        "max": 400,
+        "min": 0,
+        "multiple": 1,
+        "calories": 99,
+        "protein": 13.8,
+        "carbohydrate": 1.7,
+        "fat": 2.6,
+        "saturates": 0.8,
+        "sugar": 0.6,
+        "salt": 0.8,
+        "price": 0.6
+    },
+    "peppers frozen": {
+        "weight": 100,
+        "max": 400,
+        "min": 0,
+        "multiple": 1,
+        "calories": 23,
+        "protein": 0.8,
+        "carbohydrate": 3.8,
+        "fat": 0.5,
+        "saturates": 0,
+        "sugar": 3.7,
+        "salt": 0.01,
+        "price": 0.145
+    },
+    "onions frozen": {
+        "weight": 100,
+        "max": 400,
+        "min": 0,
+        "multiple": 1,
+        "calories": 103,
+        "protein": 1.2,
+        "carbohydrate": 11,
+        "fat": 5.3,
+        "saturates": 0.6,
+        "sugar": 8.6,
+        "salt": 0.01,
+        "price": 0.165
+    },
+    "apple gala": {
+        "weight": 100,
+        "max": 200,
+        "min": 0,
+        "multiple": 100,
+        "calories": 53,
+        "protein": 0.6,
+        "carbohydrate": 11.6,
+        "fat": 0.5,
+        "saturates": 0.1,
+        "sugar": 11.6,
+        "salt": 0.01,
+        "price": 0.167
+    },
+    "curry sauce balti": {
+        "weight": 250,
+        "max": 500,
+        "min": 0,
+        "multiple": 250,
+        "calories": 51,
+        "protein": 0.9,
+        "carbohydrate": 7.8,
+        "fat": 1.5,
+        "saturates": 0.2,
+        "sugar": 3.7,
+        "salt": 0.63,
+        "price": 0.156
+    },
+    "rice golden": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 250,
+        "calories": 156,
+        "protein": 3.5,
+        "carbohydrate": 31,
+        "fat": 1.5,
+        "saturates": 0.2,
+        "sugar": 0.5,
+        "salt": 0.43,
+        "price": 0.196
+    },
+    "tofu": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 1,
+        "calories": 61,
+        "protein": 6.6,
+        "carbohydrate": 1.8,
+        "fat": 3,
+        "saturates": 0.5,
+        "sugar": 0.5,
+        "salt": 0.051,
+        "price": 0.401
+    },
+    "mug shot spicy": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 60,
+        "calories": 88,
+        "protein": 3.1,
+        "carbohydrate": 17.4,
+        "fat": 0.4,
+        "saturates": 0.1,
+        "sugar": 2.1,
+        "salt": 0.38,
+        "price": 0.833
+    },
+    "pinto bean": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 235,
+        "calories": 100,
+        "protein": 6.9,
+        "carbohydrate": 13,
+        "fat": 0.6,
+        "saturates": 0.1,
+        "sugar": 0.5,
+        "salt": 0.01,
+        "price": 0.234
+    },
+    "cannellini bean": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 235,
+        "calories": 97,
+        "protein": 7.7,
+        "carbohydrate": 11,
+        "fat": 0.6,
+        "saturates": 0.1,
+        "sugar": 0.7,
+        "salt": 0.01,
+        "price": 0.234
+    },
+    "black eye beans": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 235,
+        "calories": 98,
+        "protein": 6.6,
+        "carbohydrate": 15,
+        "fat": 0.6,
+        "saturates": 0.2,
+        "sugar": 0.5,
+        "salt": 0.01,
+        "price": 0.234
+    },
+    "spinach leaves": {
+        "weight": 0,
+        "max": 500,
+        "min": 0,
+        "multiple": 265,
+        "calories": 33,
+        "protein": 3.4,
+        "carbohydrate": 2.2,
+        "fat": 0.6,
+        "saturates": 0.1,
+        "sugar": 0.5,
+        "salt": 0.07,
+        "price": 0.245
+    },
+    "chopped tomatoes": {
+        "weight": 0,
+        "max": 800,
+        "min": 0,
+        "multiple": 400,
+        "calories": 25,
+        "protein": 1.5,
+        "carbohydrate": 3.8,
+        "fat": 0.5,
+        "saturates": 0.1,
+        "sugar": 3.2,
+        "salt": 0.1,
+        "price": 0.139
     }
 }
