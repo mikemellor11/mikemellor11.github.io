@@ -3628,6 +3628,36 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "17/06/2021",
+                "sets": [
+                    {
+                        "weight": 117.5,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 135,
+                        "reps": 8,
+                        "split": "00:05:16:072",
+                        "target": true
+                    },
+                    {
+                        "weight": 117.5,
+                        "reps": 8,
+                        "split": "00:05:52:793",
+                        "target": true
+                    },
+                    {
+                        "weight": 102.5,
+                        "reps": 8,
+                        "split": "00:05:32:993",
+                        "target": true
+                    }
+                ],
+                "target": false
             }
         ]
     },
