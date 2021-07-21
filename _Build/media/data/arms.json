@@ -4958,6 +4958,24 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "21/07/2021",
+                "sets": [
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 80,
+                        "reps": 10,
+                        "split": "00:01:29:401",
+                        "target": true
+                    }
+                ],
+                "target": false
             }
         ]
     }
