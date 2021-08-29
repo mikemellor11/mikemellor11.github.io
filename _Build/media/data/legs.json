@@ -3873,6 +3873,30 @@
                     }
                 ],
                 "target": false
+            },
+            {
+                "date": "29/08/2021",
+                "sets": [
+                    {
+                        "weight": 95,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 107.5,
+                        "reps": 8,
+                        "split": "00:04:21:529",
+                        "target": true
+                    },
+                    {
+                        "weight": 95,
+                        "reps": 8,
+                        "split": "00:08:12:007",
+                        "target": false
+                    }
+                ],
+                "target": false
             }
         ]
     }
