@@ -3814,6 +3814,30 @@
                     }
                 ],
                 "target": false
+            },
+            {
+                "date": "01/09/2021",
+                "sets": [
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:00:00:000",
+                        "target": true
+                    },
+                    {
+                        "weight": 137.5,
+                        "reps": 8,
+                        "split": "00:04:21:047",
+                        "target": true
+                    },
+                    {
+                        "weight": 120,
+                        "reps": 8,
+                        "split": "00:07:36:835",
+                        "target": true
+                    }
+                ],
+                "target": false
             }
         ]
     },
