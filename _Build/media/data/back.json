@@ -8473,6 +8473,36 @@
                     }
                 ],
                 "target": true
+            },
+            {
+                "date": "14/09/2021",
+                "sets": [
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:02:15:774",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:31:864",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:01:07:528",
+                        "target": true
+                    },
+                    {
+                        "weight": 42.5,
+                        "reps": 8,
+                        "split": "00:02:49:013",
+                        "target": true
+                    }
+                ],
+                "target": false
             }
         ]
     },
